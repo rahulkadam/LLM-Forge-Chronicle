@@ -1,0 +1,375 @@
+.expert-track {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #f8f9fa;
+}
+
+/* Track Header */
+.track-header {
+  text-align: center;
+  padding: 4rem 2rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #5c6bc0 0%, #3949ab 100%);
+  color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.track-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.track-description {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: white;
+  line-height: 1.6;
+}
+
+/* Prerequisites */
+.expert-prerequisites {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 2rem auto 0;
+  max-width: 900px;
+}
+
+.expert-prerequisites h3 {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.prereq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.prereq-item {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.prereq-title {
+  display: block;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.prereq-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.prereq-item li {
+  padding: 0.5rem 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+}
+
+/* Expert Modules */
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.module-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.module-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.module-header {
+  background: #e8eaf6;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.module-header h3 {
+  color: #3949ab;
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.duration {
+  display: inline-block;
+  background: #3949ab;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.module-content {
+  padding: 1.5rem;
+}
+
+.module-content p {
+  color: #424242;
+  margin-bottom: 1rem;
+}
+
+.topics-list {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  color: #616161;
+}
+
+.module-tools {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.tool {
+  background: #e8eaf6;
+  color: #3949ab;
+  padding: 0.4rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Research Projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.project-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #3949ab;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+}
+
+.project-card h3 {
+  color: #3949ab;
+  margin: 1.5rem 0 1rem;
+}
+
+.project-details {
+  margin: 1.5rem 0;
+}
+
+.objectives h4,
+.deliverables h4 {
+  color: #3949ab;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+/* Contribution Areas */
+.contribution-areas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contribution-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.contribution-card h3 {
+  color: #3949ab;
+  margin-bottom: 1rem;
+}
+
+.contribution-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.contribution-list li {
+  padding: 0.5rem 0;
+  color: #424242;
+}
+
+/* Expert Resources */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.resource-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.resource-card h3 {
+  color: #3949ab;
+  margin-bottom: 1.5rem;
+}
+
+.resource-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.resource-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.resource-name {
+  display: block;
+  color: #3949ab;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.resource-desc {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Recognition */
+.recognition-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-top: 2rem;
+}
+
+.recognition-info h3 {
+  color: #3949ab;
+  margin-bottom: 1.5rem;
+}
+
+.recognition-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.recognition-info li {
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 0.5rem;
+  color: #424242;
+}
+
+/* Links */
+.module-link,
+.project-link,
+.contrib-link,
+.recognition-link {
+  display: inline-block;
+  color: #3949ab;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.module-link:hover,
+.project-link:hover,
+.contrib-link:hover,
+.recognition-link:hover {
+  color: #283593;
+}
+
+/* Section Headers */
+section {
+  margin-bottom: 4rem;
+}
+
+section h2 {
+  color: #3949ab;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: #3949ab;
+  border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .expert-track {
+    padding: 1rem;
+  }
+
+  .track-header {
+    padding: 2rem 1rem;
+  }
+
+  .track-header h1 {
+    font-size: 2rem;
+  }
+
+  .prereq-grid,
+  .module-grid,
+  .project-grid,
+  .contribution-areas,
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recognition-info ul {
+    grid-template-columns: 1fr;
+  }
+
+  section h2 {
+    font-size: 1.75rem;
+  }
+}

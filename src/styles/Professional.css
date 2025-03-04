@@ -1,0 +1,360 @@
+.professional-track {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #f5f7fa;
+}
+
+/* Track Header */
+.track-header {
+  text-align: center;
+  padding: 4rem 2rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+  color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.track-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.track-description {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: white;
+  line-height: 1.6;
+}
+
+.prerequisites {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin: 2rem auto 0;
+  max-width: 600px;
+}
+
+.prerequisites h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.prerequisites ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.prerequisites li {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  color: white;
+}
+
+/* Advanced Modules */
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.module-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.module-card:hover {
+  transform: translateY(-5px);
+}
+
+.module-header {
+  background: #e3f2fd;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.module-header h3 {
+  color: #1565c0;
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.duration {
+  display: inline-block;
+  background: #1565c0;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.module-content {
+  padding: 1.5rem;
+}
+
+/* Industry Projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.project-card h3 {
+  color: #1565c0;
+  margin-bottom: 1rem;
+}
+
+.project-features {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.project-tech {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.tech {
+  background: #e3f2fd;
+  color: #1565c0;
+  padding: 0.4rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Specialized Topics */
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.topic-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.topic-card h3 {
+  color: #1565c0;
+  margin-bottom: 1.5rem;
+}
+
+.topic-content {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.topic-content li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  color: #424242;
+}
+
+/* Tools & Platforms */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.tool-category {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tool-category h3 {
+  color: #1565c0;
+  margin-bottom: 1.5rem;
+}
+
+.tool-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tool-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tool-name {
+  display: block;
+  color: #1565c0;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.tool-desc {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Certification */
+.certification-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-top: 2rem;
+}
+
+.certification-info h3 {
+  color: #1565c0;
+  margin-bottom: 1.5rem;
+}
+
+.certification-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.certification-info li {
+  padding: 1rem;
+  background: #f5f7fa;
+  border-radius: 0.5rem;
+  color: #424242;
+}
+
+/* Section Headers */
+section {
+  margin-bottom: 4rem;
+}
+
+section h2 {
+  color: #1565c0;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: #1565c0;
+  border-radius: 2px;
+}
+
+/* Links */
+.module-link,
+.project-link,
+.topic-link,
+.cert-link {
+  display: inline-block;
+  color: #1565c0;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.module-link:hover,
+.project-link:hover,
+.topic-link:hover,
+.cert-link:hover {
+  color: #0d47a1;
+}
+
+/* Next Steps */
+.next-steps-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.next-step-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.next-step-card:hover {
+  transform: translateY(-5px);
+}
+
+.next-step-card h3 {
+  color: #1565c0;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .professional-track {
+    padding: 1rem;
+  }
+
+  .track-header {
+    padding: 2rem 1rem;
+  }
+
+  .track-header h1 {
+    font-size: 2rem;
+  }
+
+  .prerequisites ul {
+    grid-template-columns: 1fr;
+  }
+
+  section h2 {
+    font-size: 1.75rem;
+  }
+
+  .module-grid,
+  .project-grid,
+  .topics-grid,
+  .tools-grid,
+  .next-steps-options {
+    grid-template-columns: 1fr;
+  }
+
+  .certification-info ul {
+    grid-template-columns: 1fr;
+  }
+}

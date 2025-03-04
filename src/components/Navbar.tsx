@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
     <nav className="navbar">
       <div className="navbar-brand">
         <Link to="/" className="navbar-logo">
-          My React App
+          LLM Forge Chronicle
         </Link>
       </div>
       <div className="navbar-links">
