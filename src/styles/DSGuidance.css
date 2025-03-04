@@ -1,0 +1,177 @@
+.ds-guidance {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ds-guidance h1 {
+  color: #282c34;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.guidance-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.guidance-section h2 {
+  color: #2196F3;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* Info Cards */
+.info-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e9ecef;
+}
+
+.info-card h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.info-card ul, .info-card ol {
+  padding-left: 1.5rem;
+}
+
+.info-card li {
+  margin-bottom: 0.5rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Strategy Grid */
+.strategy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.strategy-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.strategy-card h3 {
+  color: #2196F3;
+  margin-bottom: 1rem;
+}
+
+/* Concept Grid */
+.concept-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.concept-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.concept-card h3 {
+  color: #2196F3;
+  margin-bottom: 1rem;
+}
+
+/* Tips Container */
+.tips-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.tip-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.tip-card h3 {
+  color: #2196F3;
+  margin-bottom: 1rem;
+}
+
+/* Resources Grid */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.resource-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.resource-card h3 {
+  color: #2196F3;
+  margin-bottom: 1rem;
+}
+
+.resource-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.resource-card li {
+  padding: 0.5rem 0;
+  color: #555;
+  border-bottom: 1px solid #eee;
+}
+
+.resource-card li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ds-guidance {
+    padding: 1rem;
+  }
+
+  .guidance-section {
+    padding: 1rem;
+  }
+
+  .strategy-grid,
+  .concept-grid,
+  .tips-container,
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Hover Effects */
+.strategy-card,
+.concept-card,
+.tip-card,
+.resource-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.strategy-card:hover,
+.concept-card:hover,
+.tip-card:hover,
+.resource-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

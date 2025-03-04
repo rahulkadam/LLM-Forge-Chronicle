@@ -1,0 +1,46 @@
+.home {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.home h1 {
+  color: #282c34;
+  margin-bottom: 1rem;
+}
+
+.home p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+}
+
+.features {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.features h2 {
+  color: #282c34;
+  margin-bottom: 1rem;
+}
+
+.features ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.features li {
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #4a4a4a;
+  display: flex;
+  align-items: center;
+}
+
+.features li:before {
+  content: "✓";
+  color: #4CAF50;
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
