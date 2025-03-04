@@ -4,7 +4,9 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Tutorial from './pages/Tutorial';
-import DSGuidance from './pages/DSGuidance';
+import AITutorial from './pages/AITutorial';
+import LLMAgent from './pages/LLMAgent';
+import BuildingLLMAgent from './pages/BuildingLLMAgent';
 import './styles/App.css';
 
 function App() {
@@ -15,8 +17,10 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/tutorial" element={<Tutorial />} />
-            <Route path="/ds-guidance" element={<DSGuidance />} />
+            <Route path="/forge-tutorial" element={<Tutorial />} />
+            <Route path="/ai-tutorial" element={<AITutorial />} />
+            <Route path="/llm-agent" element={<LLMAgent />} />
+            <Route path="/llm-agent/building" element={<BuildingLLMAgent />} />
             <Route path="/about" element={<About />} />
           </Routes>
         </main>

@@ -12,8 +12,9 @@ const Navbar: React.FC = () => {
       </div>
       <div className="navbar-links">
         <Link to="/" className="nav-link">Home</Link>
-        <Link to="/tutorial" className="nav-link">Tutorial</Link>
-        <Link to="/ds-guidance" className="nav-link">DS Guide</Link>
+        <Link to="/forge-tutorial" className="nav-link">Forge Tutorial</Link>
+        <Link to="/ai-tutorial" className="nav-link">AI Tutorial</Link>
+        <Link to="/llm-agent" className="nav-link">LLM Agent</Link>
         <Link to="/about" className="nav-link">About</Link>
       </div>
     </nav>
