@@ -31,6 +31,84 @@
   justify-content: center;
 }
 
+/* Featured Content */
+.featured-content {
+  margin: 3rem 0 4rem 0;
+}
+
+.featured-content h2 {
+  text-align: center;
+}
+
+.featured-content p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  color: #616161;
+  font-size: 1.1rem;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.featured-card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: white;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: transform 0.3s ease;
+}
+
+.featured-card:hover {
+  transform: translateY(-5px);
+}
+
+.featured-card .featured-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.featured-card.llm-agent .featured-background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YWklMjBhZ2VudHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60');
+}
+
+.featured-card.ai-tools .featured-background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGV2ZWxvcGVyJTIwdG9vbHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60');
+}
+
+.featured-content-wrapper {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+}
+
+.featured-card h3 {
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.featured-card p {
+  opacity: 0.9;
+  margin: 0 0 1rem 0;
+  text-align: left;
+}
+
 /* Learning Paths */
 .learning-paths {
   margin-bottom: 4rem;
@@ -288,6 +366,10 @@ section h2 {
 
   .hero h1 {
     font-size: 2rem;
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
   }
 
   .path-cards,

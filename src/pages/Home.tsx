@@ -6,13 +6,39 @@ const Home: React.FC = () => {
   return (
     <div className="home">
       <section className="hero">
-        <h1>Engineering Excellence Hub</h1>
+        <h1>AI Development & LLM Tools Hub</h1>
         <p className="subtitle">
-          Comprehensive guide to AI, ML, and Software Engineering best practices
+          Comprehensive guides to AI tools, LLM agents, and Software Engineering best practices
         </p>
         <div className="hero-cta">
-          <Link to="/getting-started" className="cta-button primary">Start Learning</Link>
-          <Link to="/roadmap" className="cta-button secondary">View Learning Roadmap</Link>
+          <Link to="/llm-agent" className="cta-button primary">Explore LLM Agents</Link>
+          <Link to="/ai-tools" className="cta-button secondary">View AI Tools</Link>
+        </div>
+      </section>
+
+      <section className="featured-content">
+        <h2>Featured Content</h2>
+        <p>
+          Explore our comprehensive guides to LLM agents and AI development tools
+        </p>
+        <div className="featured-grid">
+          <Link to="/llm-agent/building" className="featured-card llm-agent">
+            <div className="featured-background"></div>
+            <div className="featured-content-wrapper">
+              <h3>Building LLM Agents</h3>
+              <p>Learn how to create a file system LLM agent with Python and LangChain</p>
+              <div className="cta-button primary">Explore Tutorial</div>
+            </div>
+          </Link>
+          
+          <Link to="/ai-tools" className="featured-card ai-tools">
+            <div className="featured-background"></div>
+            <div className="featured-content-wrapper">
+              <h3>AI Development Tools</h3>
+              <p>Discover powerful tools like Forge, Cursor, and VS Code that enhance your workflow</p>
+              <div className="cta-button primary">Explore Tools</div>
+            </div>
+          </Link>
         </div>
       </section>
 
@@ -344,8 +370,8 @@ const Home: React.FC = () => {
         <h2>Start Your Learning Journey</h2>
         <p>Choose your path and begin mastering AI engineering</p>
         <div className="cta-buttons">
-          <Link to="/getting-started" className="cta-button primary">Get Started</Link>
-          <Link to="/learning-paths" className="cta-button secondary">Explore Paths</Link>
+          <Link to="/llm-agent" className="cta-button primary">Explore LLM Agents</Link>
+          <Link to="/roadmap" className="cta-button secondary">View Learning Roadmap</Link>
         </div>
       </section>
     </div>
