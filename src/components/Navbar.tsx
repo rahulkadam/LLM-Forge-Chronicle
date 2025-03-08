@@ -58,33 +58,10 @@ const Navbar: React.FC = () => {
       <div className={`navbar-links ${isOpen ? 'active' : ''}`}>
         <Link to="/" className={`nav-link ${isActive('/')}`}>Home</Link>
         
-        <div className="dropdown">
-          <button 
-            className="dropdown-trigger"
-            onClick={(e) => {
-              e.stopPropagation();
-              setShowTutorials(!showTutorials);
-              setShowLLMAgents(false);
-            }}
-          >
-            Tutorials <span className="arrow">▾</span>
-          </button>
-          <div className={`dropdown-content ${showTutorials ? 'show' : ''}`}>
-            <Link to="/forge-tutorial" className={`nav-link ${isActive('/forge-tutorial')}`}>
-              Forge Tutorial
-            </Link>
-            <Link to="/ai-tutorial" className={`nav-link ${isActive('/ai-tutorial')}`}>
-              AI Tutorial
-            </Link>
-          </div>
-        </div>
-
         <Link to="/roadmap" className={`nav-link ${isActive('/roadmap')}`}>
           Learning Path
         </Link>
-        <Link to="/ai-tools" className={`nav-link ${isActive('/ai-tools')}`}>
-          AI Tools
-        </Link>
+        
         <div className="dropdown">
           <button 
             className="dropdown-trigger"
@@ -105,6 +82,28 @@ const Navbar: React.FC = () => {
             </Link>
           </div>
         </div>
+        
+        <div className="dropdown">
+          <button 
+            className="dropdown-trigger"
+            onClick={(e) => {
+              e.stopPropagation();
+              setShowTutorials(!showTutorials);
+              setShowLLMAgents(false);
+            }}
+          >
+            AI Tools <span className="arrow">▾</span>
+          </button>
+          <div className={`dropdown-content ${showTutorials ? 'show' : ''}`}>
+            <Link to="/ai-tools" className={`nav-link ${isActive('/ai-tools')}`}>
+              Overview
+            </Link>
+            <Link to="/forge-tutorial" className={`nav-link ${isActive('/forge-tutorial')}`}>
+              Forge Guide
+            </Link>
+          </div>
+        </div>
+        
         <Link to="/about" className={`nav-link ${isActive('/about')}`}>
           About
         </Link>

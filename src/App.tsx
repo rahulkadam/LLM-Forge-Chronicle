@@ -35,6 +35,7 @@ function App() {
             <Route path="/professional" element={<Professional />} />
             <Route path="/expert" element={<Expert />} />
             <Route path="/roadmap" element={<Roadmap />} />
+            <Route path="/ai-tutorial" element={<AITutorial />} />
             <Route path="/ai-tools" element={<AITools />} />
           </Routes>
         </main>
