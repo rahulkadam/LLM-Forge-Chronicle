@@ -1,0 +1,198 @@
+.roadmap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.roadmap-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.roadmap-header h1 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.roadmap-header .subtitle {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.roadmap-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.roadmap-stage {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.roadmap-stage:hover {
+  transform: translateY(-5px);
+}
+
+.stage-header {
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.stage-header.foundation {
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+}
+
+.stage-header.intermediate {
+  background: linear-gradient(135deg, #2196F3, #1565C0);
+}
+
+.stage-header.advanced {
+  background: linear-gradient(135deg, #9C27B0, #6A1B9A);
+}
+
+.stage-header.expert {
+  background: linear-gradient(135deg, #F44336, #C62828);
+}
+
+.stage-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.difficulty {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.stage-content {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.milestone {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.milestone:hover {
+  transform: translateX(10px);
+}
+
+.milestone h3 {
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.milestone ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.milestone li {
+  margin-bottom: 0.8rem;
+  color: #4a4a4a;
+  display: flex;
+  align-items: center;
+}
+
+.milestone li:before {
+  content: "✓";
+  color: #2196F3;
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.stage-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #2196F3;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+.stage-link:hover {
+  transform: translateX(5px);
+}
+
+.resources-section {
+  margin-top: 4rem;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 16px;
+}
+
+.resources-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.resource-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+}
+
+.resource-card h3 {
+  color: #2196F3;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.resource-card p {
+  color: #666;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .roadmap {
+    padding: 1rem;
+  }
+
+  .roadmap-header h1 {
+    font-size: 2rem;
+  }
+
+  .stage-content {
+    grid-template-columns: 1fr;
+  }
+
+  .milestone:hover {
+    transform: none;
+  }
+
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+} 

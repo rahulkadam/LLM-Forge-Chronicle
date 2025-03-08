@@ -5,12 +5,14 @@ import '../styles/Navbar.css';
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showTutorials, setShowTutorials] = useState(false);
+  const [showLLMAgents, setShowLLMAgents] = useState(false);
   const location = useLocation();
 
   // Close mobile menu when route changes
   useEffect(() => {
     setIsOpen(false);
     setShowTutorials(false);
+    setShowLLMAgents(false);
   }, [location]);
 
   // Close menu when clicking outside
@@ -20,6 +22,7 @@ const Navbar: React.FC = () => {
       if (!target.closest('.navbar')) {
         setIsOpen(false);
         setShowTutorials(false);
+        setShowLLMAgents(false);
       }
     };
 
@@ -43,6 +46,7 @@ const Navbar: React.FC = () => {
             e.stopPropagation();
             setIsOpen(!isOpen);
             setShowTutorials(false);
+            setShowLLMAgents(false);
           }}
         >
           <span></span>
@@ -60,6 +64,7 @@ const Navbar: React.FC = () => {
             onClick={(e) => {
               e.stopPropagation();
               setShowTutorials(!showTutorials);
+              setShowLLMAgents(false);
             }}
           >
             Tutorials <span className="arrow">▾</span>
@@ -74,9 +79,29 @@ const Navbar: React.FC = () => {
           </div>
         </div>
 
-        <Link to="/llm-agent" className={`nav-link ${isActive('/llm-agent')}`}>
-          LLM Agent
+        <Link to="/roadmap" className={`nav-link ${isActive('/roadmap')}`}>
+          Learning Path
         </Link>
+        <div className="dropdown">
+          <button 
+            className="dropdown-trigger"
+            onClick={(e) => {
+              e.stopPropagation();
+              setShowLLMAgents(!showLLMAgents);
+              setShowTutorials(false);
+            }}
+          >
+            LLM Agent <span className="arrow">▾</span>
+          </button>
+          <div className={`dropdown-content ${showLLMAgents ? 'show' : ''}`}>
+            <Link to="/llm-agent" className={`nav-link ${isActive('/llm-agent')}`}>
+              Overview
+            </Link>
+            <Link to="/BuildingLLMAgent" className={`nav-link ${isActive('/BuildingLLMAgent')}`}>
+              Building LLM Agent
+            </Link>
+          </div>
+        </div>
         <Link to="/about" className={`nav-link ${isActive('/about')}`}>
           About
         </Link>
