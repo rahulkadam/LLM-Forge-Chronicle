@@ -82,6 +82,9 @@ const Navbar: React.FC = () => {
         <Link to="/roadmap" className={`nav-link ${isActive('/roadmap')}`}>
           Learning Path
         </Link>
+        <Link to="/ai-tools" className={`nav-link ${isActive('/ai-tools')}`}>
+          AI Tools
+        </Link>
         <div className="dropdown">
           <button 
             className="dropdown-trigger"

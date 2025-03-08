@@ -1,0 +1,405 @@
+.ai-tools {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Hero Section */
+.tools-hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+  color: white;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+}
+
+.tools-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.tools-hero .subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Tools Overview */
+.tools-overview {
+  margin-bottom: 4rem;
+}
+
+.tools-overview p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #424242;
+  margin-bottom: 2rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.benefit-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-card h3 {
+  color: #1a237e;
+  margin-bottom: 1rem;
+}
+
+.benefit-card p {
+  font-size: 1rem;
+  color: #616161;
+  margin-bottom: 0;
+}
+
+/* Featured Tools */
+.featured-tools {
+  margin-bottom: 4rem;
+}
+
+.tool-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+  overflow: hidden;
+}
+
+.tool-header {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 1.5rem;
+}
+
+.tool-header.forge {
+  background: linear-gradient(135deg, #5c258d 0%, #4389a2 100%);
+  color: white;
+}
+
+.tool-header.cursor {
+  background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%);
+  color: white;
+}
+
+.tool-header.vscode {
+  background: linear-gradient(135deg, #373b44 0%, #4286f4 100%);
+  color: white;
+}
+
+.tool-logo {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.tool-logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.tool-name {
+  flex-grow: 1;
+}
+
+.tool-name h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.8rem;
+}
+
+.tool-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tool-tags .tag {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+}
+
+.tool-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.tool-description h4,
+.tool-examples h4 {
+  color: #1a237e;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.tool-description h4:first-child,
+.tool-examples h4:first-child {
+  margin-top: 0;
+}
+
+.tool-description p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #424242;
+  margin-bottom: 1rem;
+}
+
+.tool-description ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tool-description li {
+  margin-bottom: 0.75rem;
+  color: #424242;
+}
+
+.example-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.example-item {
+  background: #f5f5f5;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+}
+
+.example-item h5 {
+  color: #1a237e;
+  margin: 0 0 0.75rem 0;
+}
+
+.example-item p {
+  font-size: 0.9rem;
+  color: #424242;
+  margin: 0;
+}
+
+.resource-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.resource-links a {
+  color: #1a237e;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 1.5rem;
+  font-weight: 500;
+}
+
+.resource-links a:hover {
+  text-decoration: underline;
+}
+
+/* Tool Comparison */
+.tool-comparison {
+  margin-bottom: 4rem;
+}
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.comparison-table th {
+  background: #f5f5f5;
+  color: #1a237e;
+}
+
+.comparison-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.comparison-table tr:hover {
+  background: #f0f7ff;
+}
+
+/* Best Practices */
+.best-practices {
+  margin-bottom: 4rem;
+}
+
+.practices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.practice-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.practice-card h3 {
+  color: #1a237e;
+  margin-bottom: 1rem;
+}
+
+.practice-card p {
+  color: #424242;
+  margin: 0;
+}
+
+/* Future Trends */
+.future-trends {
+  margin-bottom: 4rem;
+}
+
+.trends-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #424242;
+  margin-bottom: 2rem;
+}
+
+.trends-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.trend-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.trend-card h3 {
+  color: #1a237e;
+  margin-bottom: 1rem;
+}
+
+.trend-card p {
+  color: #424242;
+  margin: 0;
+}
+
+/* Getting Started */
+.getting-started {
+  margin-bottom: 4rem;
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.step {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: #1a237e;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.step-content {
+  flex-grow: 1;
+}
+
+.step-content h3 {
+  color: #1a237e;
+  margin: 0 0 0.5rem 0;
+}
+
+.step-content p {
+  color: #424242;
+  margin: 0;
+}
+
+/* Section Styling */
+section {
+  margin-bottom: 4rem;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #1a237e;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .tool-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .tools-hero {
+    padding: 2rem;
+  }
+
+  .tools-hero h1 {
+    font-size: 2rem;
+  }
+
+  .benefits-grid,
+  .practices-grid,
+  .trends-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .step {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

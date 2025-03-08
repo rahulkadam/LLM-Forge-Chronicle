@@ -12,6 +12,7 @@ import PythonModule from './pages/python-module';
 import Professional from './pages/Professional';
 import Expert from './pages/Expert';
 import Roadmap from './pages/Roadmap';
+import AITools from './pages/AITools';
 import './styles/App.css';
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
             <Route path="/professional" element={<Professional />} />
             <Route path="/expert" element={<Expert />} />
             <Route path="/roadmap" element={<Roadmap />} />
+            <Route path="/ai-tools" element={<AITools />} />
           </Routes>
         </main>
       </div>
