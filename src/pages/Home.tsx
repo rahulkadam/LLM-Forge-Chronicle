@@ -39,6 +39,15 @@ const Home: React.FC = () => {
               <div className="cta-button primary">Explore Tools</div>
             </div>
           </Link>
+
+          <Link to="/prompt-engineering" className="featured-card prompt-eng">
+            <div className="featured-background"></div>
+            <div className="featured-content-wrapper">
+              <h3>Prompt Engineering Guide</h3>
+              <p>Master the art and science of creating effective prompts for large language models</p>
+              <div className="cta-button primary">Learn Techniques</div>
+            </div>
+          </Link>
         </div>
       </section>
 

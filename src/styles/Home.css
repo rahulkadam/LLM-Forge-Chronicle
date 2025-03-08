@@ -50,7 +50,7 @@
 
 .featured-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -90,6 +90,10 @@
 
 .featured-card.ai-tools .featured-background {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGV2ZWxvcGVyJTIwdG9vbHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60');
+}
+
+.featured-card.prompt-eng .featured-background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1633409361618-c73427e4e206?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHByb21wdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60');
 }
 
 .featured-content-wrapper {

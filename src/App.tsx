@@ -13,6 +13,7 @@ import Professional from './pages/Professional';
 import Expert from './pages/Expert';
 import Roadmap from './pages/Roadmap';
 import AITools from './pages/AITools';
+import PromptEngineering from './pages/PromptEngineering';
 import './styles/App.css';
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
             <Route path="/roadmap" element={<Roadmap />} />
             <Route path="/ai-tutorial" element={<AITutorial />} />
             <Route path="/ai-tools" element={<AITools />} />
+            <Route path="/prompt-engineering" element={<PromptEngineering />} />
           </Routes>
         </main>
       </div>
