@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/LLM-Forge-Chronicle/static/css/main.3733661a.css",
+    "main.js": "/LLM-Forge-Chronicle/static/js/main.2a091400.js",
+    "index.html": "/LLM-Forge-Chronicle/index.html",
+    "main.3733661a.css.map": "/LLM-Forge-Chronicle/static/css/main.3733661a.css.map",
+    "main.2a091400.js.map": "/LLM-Forge-Chronicle/static/js/main.2a091400.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3733661a.css",
+    "static/js/main.2a091400.js"
+  ]
+}
