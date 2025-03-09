@@ -43,9 +43,9 @@ const About: React.FC = () => {
         <p>Built with modern web technologies to provide the best learning experience:</p>
         <div className="tech-stack">
           <ul>
-            <li>⚛️ React 18 - For building a dynamic and responsive UI</li>
-            <li>📝 TypeScript - For type-safe and maintainable code</li>
-            <li>🛣️ React Router v6 - For seamless navigation</li>
+            <li>⚛️ Modern UI Framework - For building a dynamic and responsive UI</li>
+            <li>📝 Type-Safe Languages - For maintainable and robust code</li>
+            <li>🛣️ Advanced Routing - For seamless navigation</li>
             <li>🎨 CSS Modules - For modular and scoped styling</li>
             <li>📚 Markdown Processing - For rich content rendering</li>
             <li>🔧 Modern Build Tools - For optimal performance</li>
