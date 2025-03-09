@@ -44,14 +44,14 @@ const Navbar: React.FC = () => {
       </div>
       
       <button 
-          className="hamburger"
-          onClick={(e) => {
-            e.stopPropagation();
-            setIsOpen(!isOpen);
-            setShowTutorials(false);
-            setShowLLMAgents(false);
-          }}
-        >
+        className="hamburger"
+        onClick={(e) => {
+          e.stopPropagation();
+          setIsOpen(!isOpen);
+          setShowTutorials(false);
+          setShowLLMAgents(false);
+        }}
+      >
         <div className="hamburger-line"></div>
         <div className="hamburger-line"></div>
         <div className="hamburger-line"></div>
@@ -59,8 +59,8 @@ const Navbar: React.FC = () => {
       
       <ul className={`nav-links ${isOpen ? 'show' : ''}`}>
         <li>
-          <Link to="/about" className={`nav-link ${isActive('/about')}`}>
-            About
+          <Link to="/roadmap" className={`nav-link ${isActive('/roadmap')}`}>
+            Learning Path
           </Link>
         </li>
         
@@ -73,20 +73,20 @@ const Navbar: React.FC = () => {
               setShowLLMAgents(false);
             }}
           >
-            Tutorials <span className="arrow">▾</span>
+            Learn <span className="arrow">▾</span>
           </button>
           <div className={`dropdown-content ${showTutorials ? 'show' : ''}`}>
             <Link to="/foundation" className={`nav-link ${isActive('/foundation')}`}>
               Foundations
             </Link>
-            <Link to="/tutorial" className={`nav-link ${isActive('/tutorial')}`}>
-              Basics
+            <Link to="/professional" className={`nav-link ${isActive('/professional')}`}>
+              Professional
             </Link>
-            <Link to="/ai-tutorial" className={`nav-link ${isActive('/ai-tutorial')}`}>
-              AI Tutorial
+            <Link to="/expert" className={`nav-link ${isActive('/expert')}`}>
+              Expert
             </Link>
             <Link to="/python-module" className={`nav-link ${isActive('/python-module')}`}>
-              Python Module
+              Python Essentials
             </Link>
           </div>
         </li>
@@ -100,43 +100,27 @@ const Navbar: React.FC = () => {
               setShowTutorials(false);
             }}
           >
-            LLM Agent <span className="arrow">▾</span>
+            LLM Development <span className="arrow">▾</span>
           </button>
           <div className={`dropdown-content ${showLLMAgents ? 'show' : ''}`}>
             <Link to="/llm-agent" className={`nav-link ${isActive('/llm-agent')}`}>
-              Overview
+              LLM Basics
             </Link>
             <Link to="/BuildingLLMAgent" className={`nav-link ${isActive('/BuildingLLMAgent')}`}>
-              Building LLM Agent
+              Building Agents
+            </Link>
+            <Link to="/prompt-engineering" className={`nav-link ${isActive('/prompt-engineering')}`}>
+              Prompt Engineering
+            </Link>
+            <Link to="/ai-tools" className={`nav-link ${isActive('/ai-tools')}`}>
+              Tools & Resources
             </Link>
           </div>
         </li>
         
         <li>
-          <Link to="/professional" className={`nav-link ${isActive('/professional')}`}>
-            Professional
-          </Link>
-        </li>
-        
-        <li>
-          <Link to="/expert" className={`nav-link ${isActive('/expert')}`}>
-            Expert
-          </Link>
-        </li>
-        
-        <li>
-          <Link to="/roadmap" className={`nav-link ${isActive('/roadmap')}`}>
-            Learning Path
-          </Link>
-        </li>
-        <li>
-          <Link to="/ai-tools" className={`nav-link ${isActive('/ai-tools')}`}>
-            AI Tools
-          </Link>
-        </li>
-        <li>
-          <Link to="/prompt-engineering" className={`nav-link ${isActive('/prompt-engineering')}`}>
-            Prompt Engineering
+          <Link to="/about" className={`nav-link ${isActive('/about')}`}>
+            About
           </Link>
         </li>
       </ul>

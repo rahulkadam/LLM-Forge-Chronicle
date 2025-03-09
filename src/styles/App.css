@@ -6,11 +6,20 @@
 }
 
 .main-content {
-  flex: 1;
+  margin-top: 80px !important; /* Force margin to prevent overlap */
   padding: 20px;
+  min-height: calc(100vh - 80px); /* viewport height minus navbar height */
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-top: 60px !important;
+    padding: 15px;
+    min-height: calc(100vh - 60px);
+  }
 }
 
 body {

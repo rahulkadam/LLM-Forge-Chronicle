@@ -1,0 +1,14 @@
+.page {
+  padding-top: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-content {
+  position: relative;
+} 

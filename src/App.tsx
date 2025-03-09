@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import Navigation from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Tutorial from './pages/Tutorial';
@@ -14,30 +14,32 @@ import Expert from './pages/Expert';
 import Roadmap from './pages/Roadmap';
 import AITools from './pages/AITools';
 import PromptEngineering from './pages/PromptEngineering';
-import Layout from './components/Layout';
 import './styles/App.css';
 
 function App() {
   return (
     <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/tutorial" element={<Tutorial />} />
-          <Route path="/ai-tutorial" element={<AITutorial />} />
-          <Route path="/foundation" element={<Foundation />} />
-          <Route path="/python-module" element={<PythonModule />} />
-          <Route path="/professional" element={<Professional />} />
-          <Route path="/expert" element={<Expert />} />
-          <Route path="/llm-agent" element={<LLMAgent />} />
-          <Route path="/llm-agent/building" element={<BuildingLLMAgent />} />
-          <Route path="/BuildingLLMAgent" element={<BuildingLLMAgent />} />
-          <Route path="/roadmap" element={<Roadmap />} />
-          <Route path="/ai-tools" element={<AITools />} />
-          <Route path="/prompt-engineering" element={<PromptEngineering />} />
-        </Routes>
-      </Layout>
+      <div className="app">
+        <Navigation />
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/tutorial" element={<Tutorial />} />
+            <Route path="/ai-tutorial" element={<AITutorial />} />
+            <Route path="/foundation" element={<Foundation />} />
+            <Route path="/python-module" element={<PythonModule />} />
+            <Route path="/professional" element={<Professional />} />
+            <Route path="/expert" element={<Expert />} />
+            <Route path="/llm-agent" element={<LLMAgent />} />
+            <Route path="/llm-agent/building" element={<BuildingLLMAgent />} />
+            <Route path="/BuildingLLMAgent" element={<BuildingLLMAgent />} />
+            <Route path="/roadmap" element={<Roadmap />} />
+            <Route path="/ai-tools" element={<AITools />} />
+            <Route path="/prompt-engineering" element={<PromptEngineering />} />
+          </Routes>
+        </main>
+      </div>
     </Router>
   );
 }
