@@ -8,14 +8,16 @@ const Navbar: React.FC = () => {
   const [showLLMAgents, setShowLLMAgents] = useState(false);
   const location = useLocation();
 
-  // Close mobile menu when route changes
+  const isActive = (path: string) => {
+    return location.pathname === path ? 'active' : '';
+  };
+
   useEffect(() => {
     setIsOpen(false);
     setShowTutorials(false);
     setShowLLMAgents(false);
   }, [location]);
 
-  // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
@@ -27,21 +29,17 @@ const Navbar: React.FC = () => {
     };
 
     document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
   }, []);
-
-  const isActive = (path: string) => {
-    return location.pathname === path ? 'active' : '';
-  };
 
   return (
     <nav className="navbar">
-      <div className="navbar-brand">
-        <Link to="/" className="navbar-logo">
-          LLM Forge Chronicle
-        </Link>
-        <button 
-          className={`hamburger ${isOpen ? 'active' : ''}`}
+      <Link to="/" className="logo">Mastering LLM</Link>
+      
+      <button 
+          className="hamburger"
           onClick={(e) => {
             e.stopPropagation();
             setIsOpen(!isOpen);
@@ -49,20 +47,19 @@ const Navbar: React.FC = () => {
             setShowLLMAgents(false);
           }}
         >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+        <div className="hamburger-line"></div>
+        <div className="hamburger-line"></div>
+        <div className="hamburger-line"></div>
+      </button>
       
-      <div className={`navbar-links ${isOpen ? 'active' : ''}`}>
-        <Link to="/" className={`nav-link ${isActive('/')}`}>Home</Link>
+      <ul className={`nav-links ${isOpen ? 'show' : ''}`}>
+        <li>
+          <Link to="/about" className={`nav-link ${isActive('/about')}`}>
+            About
+          </Link>
+        </li>
         
-        <Link to="/roadmap" className={`nav-link ${isActive('/roadmap')}`}>
-          Learning Path
-        </Link>
-        
-        <div className="dropdown">
+        <li className="dropdown">
           <button 
             className="dropdown-trigger"
             onClick={(e) => {
@@ -71,23 +68,25 @@ const Navbar: React.FC = () => {
               setShowLLMAgents(false);
             }}
           >
-            AI Tools <span className="arrow">▾</span>
+            Tutorials <span className="arrow">▾</span>
           </button>
           <div className={`dropdown-content ${showTutorials ? 'show' : ''}`}>
-            <Link to="/ai-tools" className={`nav-link ${isActive('/ai-tools')}`}>
-              Overview
+            <Link to="/foundation" className={`nav-link ${isActive('/foundation')}`}>
+              Foundations
             </Link>
-            <Link to="/forge-tutorial" className={`nav-link ${isActive('/forge-tutorial')}`}>
-              Forge Guide
+            <Link to="/tutorial" className={`nav-link ${isActive('/tutorial')}`}>
+              Basics
+            </Link>
+            <Link to="/ai-tutorial" className={`nav-link ${isActive('/ai-tutorial')}`}>
+              AI Tutorial
+            </Link>
+            <Link to="/python-module" className={`nav-link ${isActive('/python-module')}`}>
+              Python Module
             </Link>
           </div>
-        </div>
+        </li>
         
-        <Link to="/prompt-engineering" className={`nav-link ${isActive('/prompt-engineering')}`}>
-          Prompt Engineering
-        </Link>
-        
-        <div className="dropdown">
+        <li className="dropdown">
           <button 
             className="dropdown-trigger"
             onClick={(e) => {
@@ -106,12 +105,36 @@ const Navbar: React.FC = () => {
               Building LLM Agent
             </Link>
           </div>
-        </div>
+        </li>
         
-        <Link to="/about" className={`nav-link ${isActive('/about')}`}>
-          About
-        </Link>
-      </div>
+        <li>
+          <Link to="/professional" className={`nav-link ${isActive('/professional')}`}>
+            Professional
+          </Link>
+        </li>
+        
+        <li>
+          <Link to="/expert" className={`nav-link ${isActive('/expert')}`}>
+            Expert
+          </Link>
+        </li>
+        
+        <li>
+          <Link to="/roadmap" className={`nav-link ${isActive('/roadmap')}`}>
+            Learning Path
+          </Link>
+        </li>
+        <li>
+          <Link to="/ai-tools" className={`nav-link ${isActive('/ai-tools')}`}>
+            AI Tools
+          </Link>
+        </li>
+        <li>
+          <Link to="/prompt-engineering" className={`nav-link ${isActive('/prompt-engineering')}`}>
+            Prompt Engineering
+          </Link>
+        </li>
+      </ul>
     </nav>
   );
 };
