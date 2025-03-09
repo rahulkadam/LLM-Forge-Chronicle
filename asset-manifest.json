@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/LLM-Forge-Chronicle/static/css/main.25a56a89.css",
-    "main.js": "/LLM-Forge-Chronicle/static/js/main.56836750.js",
-    "index.html": "/LLM-Forge-Chronicle/index.html",
-    "main.25a56a89.css.map": "/LLM-Forge-Chronicle/static/css/main.25a56a89.css.map",
-    "main.56836750.js.map": "/LLM-Forge-Chronicle/static/js/main.56836750.js.map"
+    "main.css": "/static/css/main.25a56a89.css",
+    "main.js": "/static/js/main.bd7a8841.js",
+    "index.html": "/index.html",
+    "main.25a56a89.css.map": "/static/css/main.25a56a89.css.map",
+    "main.bd7a8841.js.map": "/static/js/main.bd7a8841.js.map"
   },
   "entrypoints": [
     "static/css/main.25a56a89.css",
-    "static/js/main.56836750.js"
+    "static/js/main.bd7a8841.js"
   ]
 }
