@@ -204,3 +204,24 @@
 .navbar.show .hamburger-line:last-child {
   transform: rotate(-45deg) translate(5px, -5px);
 }
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-logo {
+  height: 32px;
+  width: 32px;
+  margin-right: 10px;
+}
+
+/* Make sure logo looks good on mobile */
+@media (max-width: 768px) {
+  .nav-logo {
+    height: 24px;
+    width: 24px;
+  }
+}

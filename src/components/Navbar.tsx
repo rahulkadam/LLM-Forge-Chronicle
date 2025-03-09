@@ -36,7 +36,12 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="navbar">
-      <Link to="/" className="logo">Mastering LLM</Link>
+      <div className="navbar-brand">
+        <Link to="/" className="navbar-logo">
+          <img src="/llm-logo.png" alt="LLM Chronicle Logo" className="nav-logo" />
+          <span>Mastering LLM</span>
+        </Link>
+      </div>
       
       <button 
           className="hamburger"

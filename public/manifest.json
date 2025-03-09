@@ -4,19 +4,14 @@
   "icons": [
     {
       "src": "llm-logo.png",
+      "sizes": "512x512",
       "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "llm-logo.png",
-      "type": "image/png",
-      "sizes": "192x192",
       "purpose": "any maskable"
     },
     {
       "src": "llm-logo.png",
+      "sizes": "192x192",
       "type": "image/png",
-      "sizes": "512x512",
       "purpose": "any maskable"
     },
     {
