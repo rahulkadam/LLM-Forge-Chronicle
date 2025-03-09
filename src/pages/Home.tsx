@@ -7,9 +7,6 @@ import AdSense from '../components/AdSense';
 const Home: React.FC = () => {
   return (
     <div className="page">
-      <header className="page-header">
-        <h1>Welcome to LLM Forge Chronicle</h1>
-      </header>
       <div className="page-content">
         <section className="hero">
           <h1>Mastering LLM</h1>

@@ -1,0 +1,97 @@
+.ai-basics {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.intro-section {
+  margin-bottom: 3rem;
+}
+
+.example-box {
+  background-color: #f5f7fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.concept-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.concept-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.concept-card .example {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background-color: #f0f4f8;
+  border-radius: 4px;
+  font-style: italic;
+}
+
+.impact-areas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.impact-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.steps-container {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.step {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resource-links {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.resource-link {
+  display: block;
+  padding: 1rem;
+  background-color: #f5f7fa;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.resource-link:hover {
+  background-color: #e5e9f0;
+}
+
+@media (max-width: 768px) {
+  .ai-basics {
+    padding: 1rem;
+  }
+
+  .concept-grid,
+  .impact-areas {
+    grid-template-columns: 1fr;
+  }
+} 

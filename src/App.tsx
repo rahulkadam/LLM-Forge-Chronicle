@@ -14,6 +14,8 @@ import Expert from './pages/Expert';
 import Roadmap from './pages/Roadmap';
 import AITools from './pages/AITools';
 import PromptEngineering from './pages/PromptEngineering';
+import AIBasics from './pages/ai-basics';
+import ChatGPTGuide from './pages/ai-basics/chatgpt-guide';
 import './styles/App.css';
 
 function App() {
@@ -37,6 +39,8 @@ function App() {
             <Route path="/roadmap" element={<Roadmap />} />
             <Route path="/ai-tools" element={<AITools />} />
             <Route path="/prompt-engineering" element={<PromptEngineering />} />
+            <Route path="/ai-basics" element={<AIBasics />} />
+            <Route path="/ai-basics/chatgpt-guide" element={<ChatGPTGuide />} />
           </Routes>
         </main>
       </div>

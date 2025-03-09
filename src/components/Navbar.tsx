@@ -6,6 +6,7 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showTutorials, setShowTutorials] = useState(false);
   const [showLLMAgents, setShowLLMAgents] = useState(false);
+  const [showAIBasics, setShowAIBasics] = useState(false);
   const location = useLocation();
 
   const isActive = (path: string) => {
@@ -114,6 +115,31 @@ const Navbar: React.FC = () => {
             </Link>
             <Link to="/ai-tools" className={`nav-link ${isActive('/ai-tools')}`}>
               Tools & Resources
+            </Link>
+          </div>
+        </li>
+        
+        <li className="dropdown">
+          <button 
+            className="dropdown-trigger"
+            onClick={(e) => {
+              e.stopPropagation();
+              setShowAIBasics(!showAIBasics);
+              setShowTutorials(false);
+              setShowLLMAgents(false);
+            }}
+          >
+            AI Basics <span className="arrow">▾</span>
+          </button>
+          <div className={`dropdown-content ${showAIBasics ? 'show' : ''}`}>
+            <Link to="/ai-basics" className={`nav-link ${isActive('/ai-basics')}`}>
+              Introduction
+            </Link>
+            <Link 
+              to="/ai-basics/chatgpt-guide" 
+              className={`nav-link ${isActive('/ai-basics/chatgpt-guide')}`}
+            >
+              ChatGPT Guide
             </Link>
           </div>
         </li>

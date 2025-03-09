@@ -1,0 +1,38 @@
+/* Add these styles to your existing navbar.css */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.dropdown-content .nav-link {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content .nav-link:hover {
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background-color: #f8f9fa;
+  }
+  
+  .dropdown-content .nav-link {
+    padding-left: 2rem;
+  }
+} 
