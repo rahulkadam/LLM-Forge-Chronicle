@@ -1,0 +1,68 @@
+.adsense-container {
+  margin: 20px 0;
+  min-height: 100px; /* Give some space for ad loading */
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #eaeaea;
+  border-radius: 4px;
+}
+
+/* Hide container when ad blockers prevent loading */
+.adsense-container:empty {
+  display: none;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .adsense-container {
+    min-height: 80px;
+  }
+}
+
+/* Different ad sizes/positions */
+.adsense-sidebar {
+  min-height: 600px;
+}
+
+.adsense-footer {
+  margin-top: 40px;
+}
+
+.adsense-header {
+  margin-bottom: 40px;
+}
+
+/* Add a subtle "Advertisement" label above ads */
+.adsense-container::before {
+  content: "Advertisement";
+  display: block;
+  text-align: center;
+  font-size: 10px;
+  color: #888;
+  margin-bottom: 5px;
+}
+/* Placeholder styling for development */
+.adsense-placeholder {
+  background-color: #f8f8f8;
+  border: 1px dashed #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  opacity: 0.6;
+}
+
+.adsense-placeholder .placeholder-content {
+  text-align: center;
+  color: #999;
+  padding: 10px;
+}
+
+.adsense-placeholder .placeholder-details {
+  font-size: 11px;
+}

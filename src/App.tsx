@@ -14,34 +14,30 @@ import Expert from './pages/Expert';
 import Roadmap from './pages/Roadmap';
 import AITools from './pages/AITools';
 import PromptEngineering from './pages/PromptEngineering';
+import Layout from './components/Layout';
 import './styles/App.css';
 
 function App() {
   return (
     <Router>
-      <div className="app">
-        <Navbar />
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/forge-tutorial" element={<Tutorial />} />
-            <Route path="/ai-tutorial" element={<AITutorial />} />
-            <Route path="/llm-agent" element={<LLMAgent />} />
-            <Route path="/llm-agent/building" element={<BuildingLLMAgent />} />
-            <Route path="/BuildingLLMAgent" element={<BuildingLLMAgent />} />
-            <Route path="/about" element={<About />} />
-            {/* New Routes */}
-            <Route path="/foundation" element={<Foundation />} />
-            <Route path="/foundation/python" element={<PythonModule />} />
-            <Route path="/professional" element={<Professional />} />
-            <Route path="/expert" element={<Expert />} />
-            <Route path="/roadmap" element={<Roadmap />} />
-            <Route path="/ai-tutorial" element={<AITutorial />} />
-            <Route path="/ai-tools" element={<AITools />} />
-            <Route path="/prompt-engineering" element={<PromptEngineering />} />
-          </Routes>
-        </main>
-      </div>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/tutorial" element={<Tutorial />} />
+          <Route path="/ai-tutorial" element={<AITutorial />} />
+          <Route path="/foundation" element={<Foundation />} />
+          <Route path="/python-module" element={<PythonModule />} />
+          <Route path="/professional" element={<Professional />} />
+          <Route path="/expert" element={<Expert />} />
+          <Route path="/llm-agent" element={<LLMAgent />} />
+          <Route path="/llm-agent/building" element={<BuildingLLMAgent />} />
+          <Route path="/BuildingLLMAgent" element={<BuildingLLMAgent />} />
+          <Route path="/roadmap" element={<Roadmap />} />
+          <Route path="/ai-tools" element={<AITools />} />
+          <Route path="/prompt-engineering" element={<PromptEngineering />} />
+        </Routes>
+      </Layout>
     </Router>
   );
 }

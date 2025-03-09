@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';import AdSense from '../components/AdSense';
 import '../styles/Home.css';
 
 const Home: React.FC = () => {
@@ -14,7 +14,7 @@ const Home: React.FC = () => {
           <Link to="/llm-agent" className="cta-button primary">Explore LLM Agents</Link>
           <Link to="/ai-tools" className="cta-button secondary">View AI Tools</Link>
         </div>
-      </section>
+      </section>        <AdSense adSlot="1234567890" className="adsense-footer" />
 
       <section className="featured-content">
         <h2>Featured Content</h2>
