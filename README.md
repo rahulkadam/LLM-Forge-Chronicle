@@ -244,3 +244,22 @@ For support, questions, or feedback:
 ---
 
 Built with ❤️ by the LLM Forge Chronicle Team
+
+## 🔄 Site Availability
+
+This project is accessible through two URLs:
+
+1. **Primary Site**: [chronoprompt.com](https://chronoprompt.com)
+2. **Backup Site**: [rahulkadam.github.io/LLM-Forge-Chronicle-Backup](https://rahulkadam.github.io/LLM-Forge-Chronicle-Backup)
+
+The backup site ensures continuous availability even if there are issues with the custom domain.
+
+### Deployment to Both Sites
+
+To deploy to both sites simultaneously, use the provided script:
+
+```bash
+./deploy-both.sh
+```
+
+This script handles the necessary configuration changes for each deployment target and ensures both sites stay synchronized.
