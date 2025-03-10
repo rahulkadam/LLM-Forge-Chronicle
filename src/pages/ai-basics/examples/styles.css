@@ -1,4 +1,4 @@
-.chatgpt-guide {
+.examples {
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
@@ -22,21 +22,7 @@
   margin: 0 auto;
 }
 
-.setup-steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
-}
-
-.step {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.example-cards {
+.example-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
@@ -50,65 +36,39 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.prompt-example {
-  background: #f8fafc;
-  padding: 1rem;
-  border-radius: 6px;
+.example-content {
   margin-top: 1rem;
 }
 
 .prompt {
   font-weight: 500;
   color: #2563eb;
+  margin-bottom: 1rem;
 }
 
-.tip {
-  margin-top: 0.5rem;
-  font-style: italic;
-  color: #4a5568;
+.result {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 6px;
 }
 
-.practices-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
+.result h4 {
+  color: #2d3748;
+  margin-bottom: 0.5rem;
 }
 
-.practice-card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.use-cases-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
-}
-
-.use-case {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.use-case ul {
+.result ul {
   list-style: none;
   padding: 0;
-  margin-top: 1rem;
 }
 
-.use-case li {
+.result li {
   margin: 0.5rem 0;
   padding-left: 1.5rem;
   position: relative;
 }
 
-.use-case li:before {
+.result li:before {
   content: "→";
   position: absolute;
   left: 0;
@@ -137,7 +97,7 @@
 }
 
 @media (max-width: 768px) {
-  .chatgpt-guide {
+  .examples {
     padding: 1rem;
   }
 
@@ -145,10 +105,7 @@
     font-size: 2rem;
   }
 
-  .setup-steps,
-  .example-cards,
-  .practices-grid,
-  .use-cases-grid,
+  .example-grid,
   .next-steps-grid {
     grid-template-columns: 1fr;
   }

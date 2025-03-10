@@ -1,4 +1,4 @@
-.chatgpt-guide {
+.prompt-basics {
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
@@ -22,24 +22,7 @@
   margin: 0 auto;
 }
 
-.setup-steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
-}
-
-.step {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.example-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+.structure-examples {
   margin: 2rem 0;
 }
 
@@ -62,15 +45,63 @@
   color: #2563eb;
 }
 
-.tip {
-  margin-top: 0.5rem;
-  font-style: italic;
-  color: #4a5568;
+.breakdown {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #edf2f7;
+  border-radius: 6px;
 }
 
-.practices-grid {
+.label {
+  font-weight: 500;
+  color: #4a5568;
+  margin-right: 0.5rem;
+}
+
+.template-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.template-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.template {
+  font-family: monospace;
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+.example {
+  color: #4a5568;
+  font-style: italic;
+}
+
+.tips-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.tip-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
   margin: 2rem 0;
 }
@@ -82,36 +113,10 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.use-cases-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
-}
-
-.use-case {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.use-case ul {
-  list-style: none;
-  padding: 0;
+.improved {
   margin-top: 1rem;
-}
-
-.use-case li {
-  margin: 0.5rem 0;
-  padding-left: 1.5rem;
-  position: relative;
-}
-
-.use-case li:before {
-  content: "→";
-  position: absolute;
-  left: 0;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
   color: #2563eb;
 }
 
@@ -137,7 +142,7 @@
 }
 
 @media (max-width: 768px) {
-  .chatgpt-guide {
+  .prompt-basics {
     padding: 1rem;
   }
 
@@ -145,10 +150,9 @@
     font-size: 2rem;
   }
 
-  .setup-steps,
-  .example-cards,
-  .practices-grid,
-  .use-cases-grid,
+  .template-grid,
+  .tips-grid,
+  .practice-grid,
   .next-steps-grid {
     grid-template-columns: 1fr;
   }

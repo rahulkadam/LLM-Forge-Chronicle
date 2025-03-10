@@ -132,14 +132,17 @@ const Navbar: React.FC = () => {
             AI Basics <span className="arrow">▾</span>
           </button>
           <div className={`dropdown-content ${showAIBasics ? 'show' : ''}`}>
-            <Link to="/ai-basics" className={`nav-link ${isActive('/ai-basics')}`}>
+            <Link to="/ai-basics/introduction" className={`nav-link ${isActive('/ai-basics/introduction')}`}>
               Introduction
             </Link>
-            <Link 
-              to="/ai-basics/chatgpt-guide" 
-              className={`nav-link ${isActive('/ai-basics/chatgpt-guide')}`}
-            >
+            <Link to="/ai-basics/chatgpt-guide" className={`nav-link ${isActive('/ai-basics/chatgpt-guide')}`}>
               ChatGPT Guide
+            </Link>
+            <Link to="/ai-basics/prompt-basics" className={`nav-link ${isActive('/ai-basics/prompt-basics')}`}>
+              Prompt Basics
+            </Link>
+            <Link to="/ai-basics/examples" className={`nav-link ${isActive('/ai-basics/examples')}`}>
+              Examples
             </Link>
           </div>
         </li>
