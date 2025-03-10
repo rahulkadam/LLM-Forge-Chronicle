@@ -1,7 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { trackEvent } from '../../../utils/analytics';
 import './styles.css';
 
 const ChatGPTGuide: React.FC = () => {
+  const handleExampleClick = (exampleType: string) => {
+    trackEvent('ChatGPT Guide', 'Example Click', exampleType);
+  };
+
+  const handleNextStepClick = (step: string) => {
+    trackEvent('ChatGPT Guide', 'Next Step Click', step);
+  };
+
   return (
     <div className="chatgpt-guide">
       <h1>Understanding ChatGPT: A Simple Guide</h1>
@@ -211,6 +221,37 @@ const ChatGPTGuide: React.FC = () => {
               from reliable sources.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="basic-examples">
+        <h2>Basic Examples to Try</h2>
+        <div className="example-cards">
+          <div className="example-card" onClick={() => handleExampleClick('writing')}>
+            <h3>📝 Writing Help</h3>
+            <div className="prompt-example">
+              <p className="prompt">"Help me write a professional email to my boss about a project update"</p>
+              <p className="tip">Tip: Be specific about what you need</p>
+            </div>
+          </div>
+
+          {/* ... other example cards ... */}
+        </div>
+      </section>
+
+      <section className="next-steps">
+        <h2>Ready to Learn More?</h2>
+        <div className="next-steps-grid">
+          <Link 
+            to="/ai-basics/prompt-basics" 
+            className="next-step-card"
+            onClick={() => handleNextStepClick('prompt-basics')}
+          >
+            <h3>Learn Prompt Basics</h3>
+            <p>Master the art of writing effective prompts</p>
+          </Link>
+
+          {/* ... other next steps ... */}
         </div>
       </section>
     </div>

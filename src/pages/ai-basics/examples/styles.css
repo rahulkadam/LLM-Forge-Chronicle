@@ -1,0 +1,119 @@
+.examples {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #333;
+}
+
+.guide-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.guide-header h1 {
+  font-size: 2.5rem;
+  color: #1a365d;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #4a5568;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.example-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.example-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.example-card:hover {
+  transform: translateY(-2px);
+}
+
+.example-content {
+  margin-top: 1rem;
+}
+
+.prompt {
+  font-weight: 500;
+  color: #2563eb;
+  margin-bottom: 1rem;
+}
+
+.result {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.result h4 {
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.result ul {
+  list-style: none;
+  padding: 0;
+}
+
+.result li {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.result li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+}
+
+.next-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.next-step-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s;
+}
+
+.next-step-card:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .examples {
+    padding: 1rem;
+  }
+
+  .guide-header h1 {
+    font-size: 2rem;
+  }
+
+  .example-grid,
+  .next-steps-grid {
+    grid-template-columns: 1fr;
+  }
+} 
