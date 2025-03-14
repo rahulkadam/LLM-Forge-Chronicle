@@ -4,19 +4,24 @@ import '../styles/Navbar.css';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [showTutorials, setShowTutorials] = useState(false);
-  const [showLLMAgents, setShowLLMAgents] = useState(false);
-  const [showAIBasics, setShowAIBasics] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
 
   const isActive = (path: string) => {
     return location.pathname === path ? 'active' : '';
   };
 
+  const toggleDropdown = (dropdownId: string) => {
+    if (activeDropdown === dropdownId) {
+      setActiveDropdown(null);
+    } else {
+      setActiveDropdown(dropdownId);
+    }
+  };
+
   useEffect(() => {
     setIsOpen(false);
-    setShowTutorials(false);
-    setShowLLMAgents(false);
+    setActiveDropdown(null);
   }, [location]);
 
   useEffect(() => {
@@ -24,8 +29,7 @@ const Navbar: React.FC = () => {
       const target = event.target as HTMLElement;
       if (!target.closest('.navbar')) {
         setIsOpen(false);
-        setShowTutorials(false);
-        setShowLLMAgents(false);
+        setActiveDropdown(null);
       }
     };
 
@@ -49,8 +53,7 @@ const Navbar: React.FC = () => {
         onClick={(e) => {
           e.stopPropagation();
           setIsOpen(!isOpen);
-          setShowTutorials(false);
-          setShowLLMAgents(false);
+          setActiveDropdown(null);
         }}
       >
         <div className="hamburger-line"></div>
@@ -59,91 +62,89 @@ const Navbar: React.FC = () => {
       </button>
       
       <ul className={`nav-links ${isOpen ? 'show' : ''}`}>
+        {/* Getting Started (Roadmap) - single link */}
         <li>
           <Link to="/roadmap" className={`nav-link ${isActive('/roadmap')}`}>
-            Learning Path
+            Getting Started
           </Link>
         </li>
         
+        {/* Fundamentals dropdown */}
         <li className="dropdown">
           <button 
             className="dropdown-trigger"
             onClick={(e) => {
               e.stopPropagation();
-              setShowTutorials(!showTutorials);
-              setShowLLMAgents(false);
+              toggleDropdown('fundamentals');
             }}
           >
-            Learn <span className="arrow">▾</span>
+            AI Principles <span className="arrow">▾</span>
           </button>
-          <div className={`dropdown-content ${showTutorials ? 'show' : ''}`}>
-            <Link to="/foundation" className={`nav-link ${isActive('/foundation')}`}>
-              Foundations
-            </Link>
-            <Link to="/professional" className={`nav-link ${isActive('/professional')}`}>
-              Professional
-            </Link>
-            <Link to="/expert" className={`nav-link ${isActive('/expert')}`}>
-              Expert
-            </Link>
-            <Link to="/python-module" className={`nav-link ${isActive('/python-module')}`}>
-              Python Essentials
-            </Link>
-          </div>
-        </li>
-        
-        <li className="dropdown">
-          <button 
-            className="dropdown-trigger"
-            onClick={(e) => {
-              e.stopPropagation();
-              setShowLLMAgents(!showLLMAgents);
-              setShowTutorials(false);
-            }}
-          >
-            LLM Development <span className="arrow">▾</span>
-          </button>
-          <div className={`dropdown-content ${showLLMAgents ? 'show' : ''}`}>
-            <Link to="/llm-agent" className={`nav-link ${isActive('/llm-agent')}`}>
-              LLM Basics
-            </Link>
-            <Link to="/BuildingLLMAgent" className={`nav-link ${isActive('/BuildingLLMAgent')}`}>
-              Building Agents
-            </Link>
-            <Link to="/prompt-engineering" className={`nav-link ${isActive('/prompt-engineering')}`}>
-              Prompt Engineering
-            </Link>
-            <Link to="/ai-tools" className={`nav-link ${isActive('/ai-tools')}`}>
-              Tools & Resources
-            </Link>
-          </div>
-        </li>
-        
-        <li className="dropdown">
-          <button 
-            className="dropdown-trigger"
-            onClick={(e) => {
-              e.stopPropagation();
-              setShowAIBasics(!showAIBasics);
-              setShowTutorials(false);
-              setShowLLMAgents(false);
-            }}
-          >
-            AI Basics <span className="arrow">▾</span>
-          </button>
-          <div className={`dropdown-content ${showAIBasics ? 'show' : ''}`}>
+          <div className={`dropdown-content ${activeDropdown === 'fundamentals' ? 'show' : ''}`}>
             <Link to="/ai-basics" className={`nav-link ${isActive('/ai-basics')}`}>
-              Introduction
+              AI Basics
             </Link>
-            <Link 
-              to="/ai-basics/chatgpt-guide" 
-              className={`nav-link ${isActive('/ai-basics/chatgpt-guide')}`}
-            >
+            <Link to="/llm-agent" className={`nav-link ${isActive('/llm-agent')}`}>
+              LLM Introduction
+            </Link>
+            <Link to="/ai-basics/chatgpt-guide" className={`nav-link ${isActive('/ai-basics/chatgpt-guide')}`}>
               ChatGPT Guide
             </Link>
           </div>
         </li>
         
+        {/* LLM Development dropdown */}
+        <li className="dropdown">
+          <button 
+            className="dropdown-trigger"
+            onClick={(e) => {
+              e.stopPropagation();
+              toggleDropdown('llm-dev');
+            }}
+          >
+            Development <span className="arrow">▾</span>
+          </button>
+          <div className={`dropdown-content ${activeDropdown === 'llm-dev' ? 'show' : ''}`}>
+            <Link to="/prompt-engineering" className={`nav-link ${isActive('/prompt-engineering')}`}>
+              Prompt Engineering
+            </Link>
+            <Link to="/BuildingLLMAgent" className={`nav-link ${isActive('/BuildingLLMAgent')}`}>
+              Building LLM Agents
+            </Link>
+            <Link to="/professional" className={`nav-link ${isActive('/professional')}`}>
+              Professional Implementation
+            </Link>
+            <Link to="/expert" className={`nav-link ${isActive('/expert')}`}>
+              Advanced Techniques
+            </Link>
+          </div>
+        </li>
+        
+        {/* Resources dropdown */}
+        <li className="dropdown">
+          <button 
+            className="dropdown-trigger"
+            onClick={(e) => {
+              e.stopPropagation();
+              toggleDropdown('resources');
+            }}
+          >
+            Resources <span className="arrow">▾</span>
+          </button>
+          <div className={`dropdown-content ${activeDropdown === 'resources' ? 'show' : ''}`}>
+            <Link to="/ai-tools" className={`nav-link ${isActive('/ai-tools')}`}>
+              Tools & References
+            </Link>
+            <a href="#" className="nav-link">
+              Community
+            </a>
+            <a href="#" className="nav-link">
+              Additional Materials
+            </a>
+          </div>
+        </li>
+        
+        {/* About - single link */}
         <li>
           <Link to="/about" className={`nav-link ${isActive('/about')}`}>
             About
