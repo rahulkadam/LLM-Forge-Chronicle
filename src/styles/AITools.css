@@ -103,6 +103,36 @@
   color: white;
 }
 
+.tool-header.langchain {
+  background: linear-gradient(135deg, #4338ca 0%, #00bcd4 100%);
+  color: white;
+}
+
+.tool-header.llamaindex {
+  background: linear-gradient(135deg, #047857 0%, #10b981 100%);
+  color: white;
+}
+
+.tool-header.copilot {
+  background: linear-gradient(135deg, #000000 0%, #444444 100%);
+  color: white;
+}
+
+.tool-header.continuem {
+  background: linear-gradient(135deg, #581c87 0%, #9333ea 100%);
+  color: white;
+}
+
+.tool-header.autogpt {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  color: white;
+}
+
+.tool-header.openinterpreter {
+  background: linear-gradient(135deg, #b91c1c 0%, #f87171 100%);
+  color: white;
+}
+
 .tool-logo {
   width: 60px;
   height: 60px;
