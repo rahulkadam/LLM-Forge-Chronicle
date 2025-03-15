@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   color: #333;
+  padding-top: 100px; /* Added to account for fixed navbar */
 }
 
 /* Header Styling */

@@ -1,4 +1,4 @@
-.ai-basics {
+.llm-fundamentals {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
@@ -87,7 +87,7 @@
 }
 
 @media (max-width: 768px) {
-  .ai-basics {
+  .llm-fundamentals {
     padding: 1rem;
     padding-top: 80px; /* Adjusted for mobile navbar height */
   }
@@ -96,4 +96,4 @@
   .impact-areas {
     grid-template-columns: 1fr;
   }
-} 
+}

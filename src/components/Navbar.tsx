@@ -69,7 +69,34 @@ const Navbar: React.FC = () => {
           </Link>
         </li>
         
-        {/* Fundamentals dropdown */}
+        {/* Development dropdown */}
+        <li className="dropdown">
+          <button 
+            className="dropdown-trigger"
+            onClick={(e) => {
+              e.stopPropagation();
+              toggleDropdown('llm-dev');
+            }}
+          >
+            Develop LLMs <span className="arrow">▾</span>
+          </button>
+          <div className={`dropdown-content ${activeDropdown === 'llm-dev' ? 'show' : ''}`}>
+            <Link to="/prompt-engineering" className={`nav-link ${isActive('/prompt-engineering')}`}>
+              Prompt Engineering
+            </Link>
+            <Link to="/BuildingLLMAgent" className={`nav-link ${isActive('/BuildingLLMAgent')}`}>
+              LLM Agent Development
+            </Link>
+            <Link to="/professional-example" className={`nav-link ${isActive('/professional-example')}`}>
+              Professional Implementation
+            </Link>
+            <Link to="/expert" className={`nav-link ${isActive('/expert')}`}>
+              Advanced Techniques
+            </Link>
+          </div>
+        </li>
+        
+        {/* LLM Fundamentals dropdown */}
         <li className="dropdown">
           <button 
             className="dropdown-trigger"
@@ -78,7 +105,7 @@ const Navbar: React.FC = () => {
               toggleDropdown('fundamentals');
             }}
           >
-            AI Principles <span className="arrow">▾</span>
+            LLM Fundamentals <span className="arrow">▾</span>
           </button>
           <div className={`dropdown-content ${activeDropdown === 'fundamentals' ? 'show' : ''}`}>
             <Link to="/ai-basics" className={`nav-link ${isActive('/ai-basics')}`}>
@@ -88,34 +115,7 @@ const Navbar: React.FC = () => {
               LLM Introduction
             </Link>
             <Link to="/ai-basics/chatgpt-guide" className={`nav-link ${isActive('/ai-basics/chatgpt-guide')}`}>
-              ChatGPT Guide
-            </Link>
-          </div>
-        </li>
-        
-        {/* LLM Development dropdown */}
-        <li className="dropdown">
-          <button 
-            className="dropdown-trigger"
-            onClick={(e) => {
-              e.stopPropagation();
-              toggleDropdown('llm-dev');
-            }}
-          >
-            Development <span className="arrow">▾</span>
-          </button>
-          <div className={`dropdown-content ${activeDropdown === 'llm-dev' ? 'show' : ''}`}>
-            <Link to="/prompt-engineering" className={`nav-link ${isActive('/prompt-engineering')}`}>
-              Prompt Engineering
-            </Link>
-            <Link to="/BuildingLLMAgent" className={`nav-link ${isActive('/BuildingLLMAgent')}`}>
-              Building LLM Agents
-            </Link>
-            <Link to="/professional" className={`nav-link ${isActive('/professional')}`}>
-              Professional Implementation
-            </Link>
-            <Link to="/expert" className={`nav-link ${isActive('/expert')}`}>
-              Advanced Techniques
+              ChatGPT & LLM Use Cases
             </Link>
           </div>
         </li>

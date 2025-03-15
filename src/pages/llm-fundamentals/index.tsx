@@ -1,9 +1,9 @@
 import React from 'react';
 import './styles.css';
 
-const AIBasics: React.FC = () => {
+const LLMFundamentals: React.FC = () => {
   return (
-    <div className="ai-basics">
+    <div className="llm-fundamentals">
       <h1>Understanding LLMs: A Beginner's Guide</h1>
       
       <section className="intro-section">
@@ -140,7 +140,7 @@ const AIBasics: React.FC = () => {
       <section className="resources">
         <h2>Next Steps in Your Learning</h2>
         <div className="resource-links">
-          <a href="/ai-basics/chatgpt-guide" className="resource-link">
+          <a href="/llm-fundamentals/chatgpt-guide" className="resource-link">
             ChatGPT Guide for Beginners →
           </a>
           <a href="/prompt-engineering" className="resource-link">
@@ -155,4 +155,4 @@ const AIBasics: React.FC = () => {
   );
 };
 
-export default AIBasics;
+export default LLMFundamentals;

@@ -325,7 +325,15 @@ section h2::after {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 768px) {.highlight-card {
+  border-left: 4px solid #2196F3;
+  background: #f5f9ff;
+}
+
+.highlight-link {
+  color: #2196F3 !important;
+  font-weight: 600;
+}
   .professional-track {
     padding: 1rem;
   }

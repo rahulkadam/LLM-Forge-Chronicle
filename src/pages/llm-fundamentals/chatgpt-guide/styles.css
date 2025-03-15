@@ -2,8 +2,8 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-  color: #333;
   padding-top: 100px; /* Added to account for fixed navbar */
+  color: #333;
 }
 
 .intro-section {
@@ -14,6 +14,13 @@
   font-size: 1.2rem;
   line-height: 1.6;
   color: #555;
+}
+
+.section-intro {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 1.5rem;
 }
 
 .use-cases-grid {
@@ -120,27 +127,47 @@
   margin-bottom: 1rem;
 }
 
-.faq-list {
+.next-steps-grid {
   display: grid;
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
   margin: 2rem 0;
 }
 
-.faq-item {
+.next-step-card {
   background-color: #fff;
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.next-step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.next-step-card h3 {
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+}
+
+.next-step-card p {
+  color: #666;
 }
 
 @media (max-width: 768px) {
   .chatgpt-guide {
     padding: 1rem;
+    padding-top: 80px; /* Adjusted for mobile navbar height */
   }
 
   .use-cases-grid,
   .limitations-grid,
-  .examples-grid {
+  .examples-grid,
+  .next-steps-grid {
     grid-template-columns: 1fr;
   }
-} 
+}

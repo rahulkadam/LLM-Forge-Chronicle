@@ -122,7 +122,24 @@ const Professional: React.FC = () => {
       <section className="industry-projects">
         <h2>Industry Projects</h2>
         <div className="project-grid">
-          <div className="project-card">
+            <div className="project-card highlight-card">
+              <h3>Financial Analysis & Reporting Assistant</h3>
+              <div className="project-content">
+                <p>Build a production-ready LLM application for financial analysis of earnings reports and statements</p>
+                <ul className="project-features">
+                  <li>Document processing & extraction</li>
+                  <li>LLM-based financial analysis</li>
+                  <li>Report generation & visualization</li>
+                  <li>Production-ready implementation</li>
+                </ul>
+                <div className="project-tech">
+                  <span className="tech">LangChain</span>
+                  <span className="tech">FastAPI</span>
+                  <span className="tech">OpenAI</span>
+                </div>
+                <Link to="/professional-example" className="project-link highlight-link">View Complete Implementation →</Link>
+              </div>
+            </div>          <div className="project-card">
             <h3>Large-Scale Recommendation System</h3>
             <div className="project-content">
               <p>Build a production-ready recommendation engine handling millions of users</p>

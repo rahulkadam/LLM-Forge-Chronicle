@@ -1,0 +1,443 @@
+.professional-example {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 100px; /* For navbar */
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Header Section */
+.example-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.example-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.example-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.example-summary {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Overview Section */
+.overview-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 3rem;
+}
+
+.overview-content p {
+  line-height: 1.6;
+}
+
+.overview-benefits {
+  background: #f0f7ff;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.overview-benefits ul {
+  padding-left: 1.5rem;
+}
+
+.overview-benefits li {
+  margin-bottom: 0.8rem;
+}
+
+.example-architecture, .example-implementation,
+.example-prompts, .example-llm-integration,
+.example-deployment, .example-cost-optimization,
+.example-conclusion {
+  margin-bottom: 3rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.example-architecture h3, .example-implementation h3,
+.example-prompts h3, .example-llm-integration h3,
+.example-deployment h3, .example-cost-optimization h3,
+.example-conclusion h3 {
+  color: #1565C0;
+  margin-bottom: 1.5rem;
+  font-size: 1.7rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* Architecture Diagram */
+.architecture-diagram {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.architecture-layer {
+  background: #f5f9ff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #1565C0;
+}
+
+.architecture-layer h4 {
+  margin-bottom: 1rem;
+  color: #1565C0;
+}
+
+.architecture-components {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.component {
+  background: white;
+  padding: 1rem;
+  border-radius: 6px;
+  min-width: 180px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.component-name {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.component-tech {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Implementation Tabs */
+.implementation-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+}
+
+.tab {
+  padding: 0.8rem 1.2rem;
+  background: #f0f0f0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.tab.active {
+  background: #1565C0;
+  color: white;
+}
+
+.tab-content {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.code-explanation {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.explanation ul {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.explanation li {
+  margin-bottom: 0.5rem;
+}
+
+.code-sample {
+  background: #1e1e1e;
+  border-radius: 8px;
+  overflow: auto;
+  max-height: 500px;
+}
+
+.code-sample pre {
+  padding: 1rem;
+  margin: 0;
+}
+
+.code-sample code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  color: #e0e0e0;
+}
+
+.implementation-notes {
+  background: #fffde7;
+  padding: 1.2rem;
+  border-radius: 8px;
+  border-left: 4px solid #FFC107;
+}
+
+.implementation-notes h5 {
+  color: #F57F17;
+  margin-bottom: 0.8rem;
+}
+
+/* Prompt Techniques */
+.prompt-techniques {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.technique {
+  background: #f5f9ff;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.technique h4 {
+  color: #1565C0;
+  margin-bottom: 1rem;
+}
+
+.prompt-example {
+  background: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.prompt-example h5 {
+  background: #2c3e50;
+  color: white;
+  padding: 0.8rem 1rem;
+  margin: 0;
+}
+
+.prompt-example pre {
+  padding: 1rem;
+  margin: 0;
+  max-height: 350px;
+  overflow: auto;
+}
+
+.prompt-example code {
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  color: #e0e0e0;
+}
+
+/* Cost Optimization */
+.optimization-strategies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.strategy {
+  background: #f5f9ff;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.strategy h4 {
+  color: #1565C0;
+  margin-bottom: 1rem;
+}
+
+.strategy ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.strategy li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.strategy li:before {
+  content: "•";
+  color: #1565C0;
+  font-size: 1.2em;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+.cost-comparison {
+  margin-top: 2rem;
+}
+
+.cost-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.cost-table th, .cost-table td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.cost-table th {
+  background: #f5f9ff;
+  color: #1565C0;
+}
+
+.cost-table tr:hover {
+  background: #f5f5f5;
+}
+
+/* Best Practices */
+.best-practices {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.practice {
+  background: #f5f9ff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.practice h4 {
+  color: #1565C0;
+  margin-bottom: 1rem;
+}
+
+.practice ul {
+  padding-left: 1.5rem;
+}
+
+.practice li {
+  margin-bottom: 0.8rem;
+}
+
+/* CTA Section */
+.next-steps-cta {
+  background: #e3f2fd;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.next-steps-cta h4 {
+  color: #1565C0;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.cta-button.primary {
+  background: #1565C0;
+  color: white;
+}
+
+.cta-button.primary:hover {
+  background: #0D47A1;
+  transform: translateY(-2px);
+}
+
+.cta-button.secondary {
+  background: white;
+  color: #1565C0;
+  border: 1px solid #1565C0;
+}
+
+.cta-button.secondary:hover {
+  background: #f0f7ff;
+  transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .overview-container {
+    grid-template-columns: 1fr;
+  }
+
+  .code-explanation {
+    grid-template-columns: 1fr;
+  }
+
+  .prompt-techniques {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .professional-example {
+    padding: 1rem;
+    padding-top: 80px;
+  }
+
+  .example-header {
+    padding: 2rem 1rem;
+  }
+
+  .example-header h1 {
+    font-size: 2rem;
+  }
+
+  .example-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .implementation-tabs {
+    flex-direction: column;
+  }
+
+  .optimization-strategies, .best-practices {
+    grid-template-columns: 1fr;
+  }
+
+  .architecture-components {
+    flex-direction: column;
+  }
+
+  .component {
+    width: 100%;
+  }
+}

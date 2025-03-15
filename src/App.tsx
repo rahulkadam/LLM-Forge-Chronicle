@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { initGA } from './utils/analytics';
 import usePageTracking from './hooks/usePageTracking';
 import Navbar from './components/Navbar';
@@ -16,10 +16,15 @@ import Expert from './pages/Expert';
 import Roadmap from './pages/Roadmap';
 import AITools from './pages/AITools';
 import PromptEngineering from './pages/PromptEngineering';
+// Import renamed components
+import LLMFundamentals from './pages/llm-fundamentals';
+import ChatGPTGuide from './pages/llm-fundamentals/chatgpt-guide';
+// Original components for redirection
 import AIBasics from './pages/ai-basics';
-import ChatGPTGuide from './pages/ai-basics/chatgpt-guide';
+import OldChatGPTGuide from './pages/ai-basics/chatgpt-guide';
 import PromptBasics from './pages/ai-basics/prompt-basics';
 import Examples from './pages/ai-basics/examples';
+import ProfessionalExample from './pages/ProfessionalExample';
 import './App.css';
 
 // Initialize Google Analytics if measurement ID is available
@@ -51,8 +56,20 @@ const AppContent: React.FC = () => {
           <Route path="/roadmap" element={<Roadmap />} />
           <Route path="/ai-tools" element={<AITools />} />
           <Route path="/prompt-engineering" element={<PromptEngineering />} />
-          <Route path="/ai-basics" element={<AIBasics />} />
-          <Route path="/ai-basics/chatgpt-guide" element={<ChatGPTGuide />} />
+          
+          {/* New routes */}
+          <Route path="/llm-fundamentals" element={<LLMFundamentals />} />
+          <Route path="/llm-fundamentals/chatgpt-guide" element={<ChatGPTGuide />} />
+          <Route path="/professional-example" element={<ProfessionalExample />} />
+          <Route path="/professional/example" element={<ProfessionalExample />} />
+          
+          {/* Redirects from old routes to new routes */}
+          <Route path="/ai-basics" element={<Navigate to="/llm-fundamentals" replace />} />
+          <Route path="/ai-basics/chatgpt-guide" element={<Navigate to="/llm-fundamentals/chatgpt-guide" replace />} />
+          
+          {/* Keep old routes temporarily for backward compatibility */}
+          <Route path="/ai-basics/old" element={<AIBasics />} />
+          <Route path="/ai-basics/chatgpt-guide/old" element={<OldChatGPTGuide />} />
           <Route path="/ai-basics/prompt-basics" element={<PromptBasics />} />
           <Route path="/ai-basics/examples" element={<Examples />} />
         </Routes>
