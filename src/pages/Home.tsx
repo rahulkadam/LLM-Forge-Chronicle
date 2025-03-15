@@ -7,7 +7,7 @@ import AdSense from '../components/AdSense';
 const Home: React.FC = () => {
   return (
     <div className="page">
-      <div className="page-content">
+      <div className="page-content home-content">
         <section className="hero">
           <h1>Mastering LLM</h1>
           <p className="subtitle">

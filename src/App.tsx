@@ -9,6 +9,7 @@ import Tutorial from './pages/Tutorial';
 import AITutorial from './pages/AITutorial';
 import LLMAgent from './pages/LLMAgent';
 import BuildingLLMAgent from './pages/BuildingLLMAgent';
+import BasicLLMAgent from './pages/BasicLLMAgent';
 import Foundation from './pages/foundation';
 import PythonModule from './pages/python-module';
 import Professional from './pages/Professional';
@@ -16,6 +17,7 @@ import Expert from './pages/Expert';
 import Roadmap from './pages/Roadmap';
 import AITools from './pages/AITools';
 import PromptEngineering from './pages/PromptEngineering';
+import Resources from './pages/Resources';
 // Import renamed components
 import LLMFundamentals from './pages/llm-fundamentals';
 import ChatGPTGuide from './pages/llm-fundamentals/chatgpt-guide';
@@ -25,6 +27,8 @@ import OldChatGPTGuide from './pages/ai-basics/chatgpt-guide';
 import PromptBasics from './pages/ai-basics/prompt-basics';
 import Examples from './pages/ai-basics/examples';
 import ProfessionalExample from './pages/ProfessionalExample';
+import Community from './pages/Community';
+
 import './App.css';
 
 // Initialize Google Analytics if measurement ID is available
@@ -52,9 +56,11 @@ const AppContent: React.FC = () => {
           <Route path="/expert" element={<Expert />} />
           <Route path="/llm-agent" element={<LLMAgent />} />
           <Route path="/llm-agent/building" element={<BuildingLLMAgent />} />
+          <Route path="/llm-agent/basic" element={<BasicLLMAgent />} />
           <Route path="/BuildingLLMAgent" element={<BuildingLLMAgent />} />
           <Route path="/roadmap" element={<Roadmap />} />
           <Route path="/ai-tools" element={<AITools />} />
+          <Route path="/resources" element={<Resources />} />
           <Route path="/prompt-engineering" element={<PromptEngineering />} />
           
           {/* New routes */}
@@ -62,6 +68,7 @@ const AppContent: React.FC = () => {
           <Route path="/llm-fundamentals/chatgpt-guide" element={<ChatGPTGuide />} />
           <Route path="/professional-example" element={<ProfessionalExample />} />
           <Route path="/professional/example" element={<ProfessionalExample />} />
+          <Route path="/community" element={<Community />} />
           
           {/* Redirects from old routes to new routes */}
           <Route path="/ai-basics" element={<Navigate to="/llm-fundamentals" replace />} />

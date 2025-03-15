@@ -84,14 +84,14 @@ const Navbar: React.FC = () => {
             <Link to="/prompt-engineering" className={`nav-link ${isActive('/prompt-engineering')}`}>
               Prompt Engineering
             </Link>
+            <Link to="/llm-agent/basic" className={`nav-link ${isActive('/llm-agent/basic')}`}>
+              Basic LLM Agent
+            </Link>
             <Link to="/BuildingLLMAgent" className={`nav-link ${isActive('/BuildingLLMAgent')}`}>
-              LLM Agent Development
+                File System Agent Example
             </Link>
             <Link to="/professional-example" className={`nav-link ${isActive('/professional-example')}`}>
-              Professional Implementation
-            </Link>
-            <Link to="/expert" className={`nav-link ${isActive('/expert')}`}>
-              Advanced Techniques
+              Building a Financial Analysis Assistant
             </Link>
           </div>
         </li>
@@ -135,12 +135,12 @@ const Navbar: React.FC = () => {
             <Link to="/ai-tools" className={`nav-link ${isActive('/ai-tools')}`}>
               Tools & References
             </Link>
-            <a href="#" className="nav-link">
+            <Link to="/community" className={`nav-link ${isActive('/community')}`}>
               Community
-            </a>
-            <a href="#" className="nav-link">
-              Additional Materials
-            </a>
+            </Link>
+            <Link to="/resources" className={`nav-link ${isActive('/resources')}`}>
+              Resources
+            </Link>
           </div>
         </li>
         
