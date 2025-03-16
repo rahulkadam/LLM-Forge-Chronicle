@@ -40,6 +40,18 @@ const Home: React.FC = () => {
           </div>
         </section>
 
+        <section className="tech-deep-dive">
+          <h2>Tech Deep Dive</h2>
+          <div className="deep-dive-content">
+            <div className="deep-dive-card">
+              <div className="deep-dive-icon">⚡</div>
+              <h3>LLM Internals</h3>
+              <p>Explore the technical architecture, training process, and infrastructure behind Large Language Models.</p>
+              <Link to="/llm-technical" className="deep-dive-link">Explore LLM Internals →</Link>
+            </div>
+          </div>
+        </section>
+
         <section className="learning-paths">
           <h2>Learning Paths</h2>
           <div className="paths">

@@ -1,0 +1,264 @@
+.technical-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 100px;
+  color: #2d3748;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.tech-hero {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #1a365d 0%, #2a4365 100%);
+  border-radius: 12px;
+  color: white;
+}
+
+.tech-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.tech-hero .subtitle {
+  font-size: 1.4rem;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+/* Common Section Styles */
+section {
+  margin-bottom: 6rem;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  color: #1a365d;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+section h3 {
+  font-size: 1.8rem;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+}
+
+/* Evolution Section */
+.evolution-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.evolution-text {
+  font-size: 1.2rem;
+  color: #4a5568;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.milestone {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 3rem;
+}
+
+.milestone h3 {
+  color: #1a365d;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.milestone p {
+  color: #4a5568;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Example Boxes */
+.example-box {
+  background: #f7fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #4299e1;
+  margin: 1.5rem 0;
+}
+
+.example-box h4 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.example-box p {
+  color: #4a5568;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.example-box .explanation {
+  font-size: 0.95rem;
+  color: #718096;
+  font-style: italic;
+}
+
+/* Technical Deep Dive */
+.concept {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 3rem;
+}
+
+.concept > p {
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin-bottom: 2rem;
+}
+
+.training-step {
+  background: #f7fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.training-step p {
+  margin-bottom: 0.5rem;
+}
+
+.training-step .input {
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.training-step .prediction {
+  color: #e53e3e;
+}
+
+.training-step .correction {
+  color: #38a169;
+}
+
+.training-step .learning {
+  color: #718096;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+/* Matrix Example */
+.matrix-example {
+  background: #1a202c;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.matrix-example pre {
+  color: #a0aec0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+.matrix-example p {
+  color: #e2e8f0;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+/* Code Example */
+.code-example {
+  background: #1a202c;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.code-example h4 {
+  color: #e2e8f0;
+  margin-bottom: 1rem;
+}
+
+.code-example pre {
+  color: #a0aec0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+/* Future Outlook */
+.future-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.future-content > p {
+  font-size: 1.2rem;
+  color: #4a5568;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.challenge {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.challenge p {
+  color: #4a5568;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .technical-page {
+    padding: 1rem;
+    padding-top: 80px;
+  }
+
+  .tech-hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .tech-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .tech-hero .subtitle {
+    font-size: 1.2rem;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+  section h3 {
+    font-size: 1.5rem;
+  }
+
+  .milestone,
+  .concept {
+    padding: 1.5rem;
+  }
+
+  .example-box,
+  .matrix-example,
+  .code-example {
+    padding: 1rem;
+  }
+} 

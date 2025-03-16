@@ -18,6 +18,7 @@ import Roadmap from './pages/Roadmap';
 import AITools from './pages/AITools';
 import PromptEngineering from './pages/PromptEngineering';
 import Resources from './pages/Resources';
+import LLMTechnical from './pages/LLMTechnical';
 // Import renamed components
 import LLMFundamentals from './pages/llm-fundamentals';
 import ChatGPTGuide from './pages/llm-fundamentals/chatgpt-guide';
@@ -57,6 +58,7 @@ const AppContent: React.FC = () => {
           <Route path="/llm-agent" element={<LLMAgent />} />
           <Route path="/llm-agent/building" element={<BuildingLLMAgent />} />
           <Route path="/llm-agent/basic" element={<BasicLLMAgent />} />
+          <Route path="/llm-technical" element={<LLMTechnical />} />
           <Route path="/BuildingLLMAgent" element={<BuildingLLMAgent />} />
           <Route path="/roadmap" element={<Roadmap />} />
           <Route path="/ai-tools" element={<AITools />} />

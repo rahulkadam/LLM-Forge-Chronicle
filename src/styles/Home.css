@@ -225,3 +225,63 @@
     height: 80px;
   }
 }
+
+/* Tech Deep Dive Section */
+.tech-deep-dive {
+  margin: 60px 0;
+}
+
+.tech-deep-dive h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #1a365d;
+}
+
+.deep-dive-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.deep-dive-card {
+  background: linear-gradient(135deg, #1a365d 0%, #2a4365 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.deep-dive-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.deep-dive-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.deep-dive-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #e2e8f0;
+}
+
+.deep-dive-card p {
+  color: #e2e8f0;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.deep-dive-link {
+  display: inline-block;
+  color: #e2e8f0;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.deep-dive-link:hover {
+  color: #4299e1;
+}
