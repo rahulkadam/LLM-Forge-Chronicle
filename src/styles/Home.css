@@ -11,74 +11,157 @@
   padding: 20px;
 }
 
-/* Hero Section */
+/* Hero Section - Completely redesigned for better visibility and more compact size */
 .hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 40px 20px; /* Dramatically reduced from original 80px */
   background: linear-gradient(135deg, #1a365d 0%, #2a4365 100%);
   color: white;
   border-radius: 12px;
-  margin: 30px 0;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin: 20px 0; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .hero h1 {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
-  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  font-size: 2.8rem; 
+  margin-bottom: 16px;
+  color: #ffffff; /* Pure white for maximum contrast */
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 .subtitle {
-  font-size: 1.5rem;
-  max-width: 700px;
-  margin: 0 auto 40px;
-  color: #e2e8f0;
-  line-height: 1.6;
-  letter-spacing: 0.5px;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
+  max-width: 600px; /* Reduced from 700px */
+  margin: 0 auto 24px; /* Reduced from 30px */
+  color: #ffffff; /* Pure white for maximum contrast */
+  line-height: 1.5;
 }
 
 .cta-buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
+  gap: 16px;
+  margin-top: 16px; /* Reduced from 24px */
 }
 
 .cta-button {
   display: inline-block;
-  padding: 15px 30px;
-  border-radius: 30px;
+  padding: 10px 20px; /* Reduced from 12px 24px */
+  border-radius: 6px; /* Changed from heavily rounded to slightly rounded */
   font-weight: 600;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
+  font-size: 1rem;
+  transition: all 0.2s ease;
   text-decoration: none;
 }
 
 .cta-button.primary {
-  background-color: #4299e1;
+  background-color: #38a169; /* Green for better contrast against dark blue */
   color: white;
   border: none;
 }
 
 .cta-button.primary:hover {
-  background-color: #3182ce;
+  background-color: #2f855a;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.5);
+  box-shadow: 0 4px 8px rgba(56, 161, 105, 0.3);
 }
 
 .cta-button.secondary {
-  background-color: transparent;
-  border: 2px solid #e2e8f0;
-  color: #e2e8f0;
+  background-color: white;
+  color: #2d3748; /* Dark text on white background for maximum contrast */
+  border: none;
 }
 
 .cta-button.secondary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #f7fafc;
   transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Journey Overview Section */
+.journey-overview {
+  margin: 60px 0;
+  padding: 40px;
+  background-color: #f8fafc;
+  border-radius: 12px;
+}
+
+.journey-overview h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #1a365d;
+}
+
+.journey-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.journey-step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.journey-step:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4299e1;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-content h3 {
+  margin: 0 0 8px 0;
+  color: #1a365d;
+}
+
+.step-content p {
+  margin: 0 0 15px 0;
+  color: #4a5568;
+}
+
+.step-link {
+  color: #4299e1;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.step-link:hover {
+  text-decoration: underline;
+}
+
+.journey-cta {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.journey-cta p {
+  margin-bottom: 15px;
+  color: #4a5568;
 }
 
 /* Features Section */
@@ -89,6 +172,14 @@
   margin: 60px auto;
   max-width: 1200px;
   padding: 0 20px;
+}
+
+.features h2 {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #1a365d;
 }
 
 .feature {
@@ -113,7 +204,7 @@
   color: #4299e1;
 }
 
-.feature h2 {
+.feature h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
   color: #1a365d;
@@ -139,93 +230,6 @@
   color: #3182ce;
 }
 
-/* Learning Paths */
-.learning-paths {
-  margin: 60px 0;
-}
-
-.learning-paths h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: #1a365d;
-}
-
-.paths {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
-.path {
-  background: linear-gradient(135deg, #f0f9ff 0%, #e6f6ff 100%);
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-  border-left: 4px solid #4299e1;
-}
-
-.path:hover {
-  transform: translateY(-5px);
-}
-
-.path h3 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  color: #1a365d;
-}
-
-.path p {
-  margin-bottom: 20px;
-  color: #4a5568;
-}
-
-.path-link {
-  display: inline-block;
-  color: #4299e1;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.path-link:hover {
-  color: #3182ce;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-  
-  .subtitle {
-    font-size: 1.2rem;
-  }
-  
-  .cta-buttons {
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .features,
-  .paths {
-    grid-template-columns: 1fr;
-  }
-}
-
-.hero-logo {
-  width: 120px;
-  height: 120px;
-  margin-bottom: 2rem;
-}
-
-@media (max-width: 768px) {
-  .hero-logo {
-    width: 80px;
-    height: 80px;
-  }
-}
-
 /* Tech Deep Dive Section */
 .tech-deep-dive {
   margin: 60px 0;
@@ -239,7 +243,10 @@
 }
 
 .deep-dive-content {
-  max-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -284,4 +291,178 @@
 
 .deep-dive-link:hover {
   color: #4299e1;
+}
+
+/* Latest Blogs Section */
+.latest-blogs {
+  margin: 60px 0;
+  padding: 40px;
+  background-color: #f8fafc;
+  border-radius: 12px;
+}
+
+.latest-blogs h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #1a365d;
+}
+
+.blog-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #4a5568;
+}
+
+.blog-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.blog-preview-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.blog-preview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.blog-preview-image {
+  height: 180px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+}
+
+.placeholder-image {
+  background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+}
+
+.blog-preview-card:nth-child(1) .placeholder-image::before {
+  content: "OpenAI API Guide";
+  font-size: 1.3rem;
+}
+
+.blog-preview-card:nth-child(2) .placeholder-image::before {
+  content: "OpenRouter Integration";
+  font-size: 1.3rem;
+}
+
+.blog-preview-card:nth-child(3) .placeholder-image::before {
+  content: "RAG System Tutorial";
+  font-size: 1.3rem;
+}
+
+.blog-preview-card h3 {
+  padding: 20px 20px 10px;
+  font-size: 1.3rem;
+  color: #1a365d;
+}
+
+.blog-preview-card p {
+  padding: 0 20px 20px;
+  color: #4a5568;
+}
+
+.blog-link {
+  display: block;
+  text-align: right;
+  padding: 0 20px 20px;
+  color: #4299e1;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.blog-link:hover {
+  color: #3182ce;
+}
+
+.blog-cta {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.blog-cta .cta-button.secondary {
+  border: 2px solid #4299e1;
+  color: #4299e1;
+  background-color: transparent;
+}
+
+.blog-cta .cta-button.secondary:hover {
+  background-color: rgba(66, 153, 225, 0.1);
+}
+
+/* Responsive adjustments - Further enhanced for mobile */
+@media (max-width: 768px) {
+  .hero {
+    padding: 30px 16px; /* Even smaller on mobile */
+    margin: 12px 0;
+  }
+  
+  .hero h1 {
+    font-size: 2rem; /* Further reduced for mobile */
+  }
+  
+  .subtitle {
+    font-size: 1rem; /* Smaller text on mobile */
+    margin-bottom: 16px; /* Less spacing */
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    gap: 10px; 
+    margin-top: 16px;
+  }
+  
+  .cta-button {
+    width: 100%; /* Full width buttons */
+    padding: 10px 16px;
+  }
+  
+  .features,
+  .paths,
+  .deep-dive-content,
+  .blog-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-step {
+    flex-direction: column;
+  }
+
+  .step-number {
+    margin-bottom: 15px;
+  }
+  
+  /* Reduced padding for various sections on mobile */
+  .journey-overview,
+  .latest-blogs {
+    padding: 25px 15px;
+  }
+}
+
+.hero-logo {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero-logo {
+    width: 80px;
+    height: 80px;
+  }
 }

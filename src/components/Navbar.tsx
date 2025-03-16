@@ -120,6 +120,13 @@ const Navbar: React.FC = () => {
           </div>
         </li>
         
+        {/* Blogs - single link */}
+        <li>
+          <Link to="/blogs" className={`nav-link ${isActive('/blogs')}`}>
+            Blogs
+          </Link>
+        </li>
+        
         {/* Resources dropdown */}
         <li className="dropdown">
           <button 

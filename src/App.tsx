@@ -19,16 +19,20 @@ import AITools from './pages/AITools';
 import PromptEngineering from './pages/PromptEngineering';
 import Resources from './pages/Resources';
 import LLMTechnical from './pages/LLMTechnical';
+import ProfessionalExample from './pages/ProfessionalExample';
+import Community from './pages/Community';
+import Blogs from './pages/Blogs';
+import OpenAIConnectionGuide from './pages/blogs/openai-connection-guide';
+
 // Import renamed components
 import LLMFundamentals from './pages/llm-fundamentals';
 import ChatGPTGuide from './pages/llm-fundamentals/chatgpt-guide';
+
 // Original components for redirection
 import AIBasics from './pages/ai-basics';
 import OldChatGPTGuide from './pages/ai-basics/chatgpt-guide';
 import PromptBasics from './pages/ai-basics/prompt-basics';
 import Examples from './pages/ai-basics/examples';
-import ProfessionalExample from './pages/ProfessionalExample';
-import Community from './pages/Community';
 
 import './App.css';
 
@@ -71,6 +75,10 @@ const AppContent: React.FC = () => {
           <Route path="/professional-example" element={<ProfessionalExample />} />
           <Route path="/professional/example" element={<ProfessionalExample />} />
           <Route path="/community" element={<Community />} />
+          
+          {/* Blog routes */}
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/openai-connection-guide" element={<OpenAIConnectionGuide />} />
           
           {/* Redirects from old routes to new routes */}
           <Route path="/ai-basics" element={<Navigate to="/llm-fundamentals" replace />} />

@@ -11,30 +11,73 @@ const Home: React.FC = () => {
         <section className="hero">
           <h1>Mastering LLM</h1>
           <p className="subtitle">
-            Your guide to AI tools, prompt engineering, and LLM applications
+            Build AI-powered applications with practical LLM guides
           </p>
           <div className="cta-buttons">
-            <Link to="/roadmap" className="cta-button primary">Start Learning</Link>
-            <Link to="/about" className="cta-button secondary">Learn More</Link>
+            <Link to="/roadmap" className="cta-button primary">Get Started</Link>
+            <Link to="/blogs" className="cta-button secondary">View Tutorials</Link>
+          </div>
+        </section>
+
+        <section className="journey-overview">
+          <h2>Your Learning Pathway</h2>
+          <div className="journey-steps">
+            <div className="journey-step">
+              <div className="step-number">1</div>
+              <div className="step-content">
+                <h3>Learn Fundamentals</h3>
+                <p>Understand AI basics, how LLMs work, and their capabilities</p>
+                <Link to="/ai-basics" className="step-link">Start with AI Basics →</Link>
+              </div>
+            </div>
+            <div className="journey-step">
+              <div className="step-number">2</div>
+              <div className="step-content">
+                <h3>Master Prompting</h3>
+                <p>Learn the art of creating effective prompts for optimal results</p>
+                <Link to="/prompt-engineering" className="step-link">Explore Prompt Engineering →</Link>
+              </div>
+            </div>
+            <div className="journey-step">
+              <div className="step-number">3</div>
+              <div className="step-content">
+                <h3>Build Applications</h3>
+                <p>Create practical, real-world solutions using LLM technology</p>
+                <Link to="/BuildingLLMAgent" className="step-link">Build Your First Agent →</Link>
+              </div>
+            </div>
+            <div className="journey-step">
+              <div className="step-number">4</div>
+              <div className="step-content">
+                <h3>Go Advanced</h3>
+                <p>Implement sophisticated LLM applications for specific domains</p>
+                <Link to="/professional" className="step-link">Professional Implementations →</Link>
+              </div>
+            </div>
+          </div>
+          <div className="journey-cta">
+            <p>Need a structured learning plan? Check out our detailed roadmap:</p>
+            <Link to="/roadmap" className="feature-link">View Complete Learning Roadmap →</Link>
           </div>
         </section>
 
         <section className="features">
+          <h2>Key Learning Areas</h2>
           <div className="feature">
             <div className="feature-icon">🧠</div>
-            <h2>AI Development</h2>
+            <h3>AI Development</h3>
             <p>Learn how to build intelligent applications that leverage the power of modern AI models.</p>
             <Link to="/ai-tools" className="feature-link">Explore AI Tools →</Link>
           </div>
           <div className="feature">
             <div className="feature-icon">💬</div>
-            <h2>Prompt Engineering</h2>
+            <h3>Prompt Engineering</h3>
             <p>Master the art and science of crafting effective prompts for large language models.</p>
             <Link to="/prompt-engineering" className="feature-link">Learn Prompt Engineering →</Link>
           </div>
           <div className="feature">
             <div className="feature-icon">🤖</div>
-            <h2>LLM Agents</h2>
+            <h3>LLM Agents</h3>
             <p>Build powerful AI agents that can perform complex tasks through natural language.</p>
             <Link to="/llm-agent" className="feature-link">Explore LLM Agents →</Link>
           </div>
@@ -49,27 +92,40 @@ const Home: React.FC = () => {
               <p>Explore the technical architecture, training process, and infrastructure behind Large Language Models.</p>
               <Link to="/llm-technical" className="deep-dive-link">Explore LLM Internals →</Link>
             </div>
+            <div className="deep-dive-card">
+              <div className="deep-dive-icon">📊</div>
+              <h3>Latest Innovations</h3>
+              <p>Stay updated with cutting-edge advancements and latest trends in AI and LLM technology.</p>
+              <Link to="/blogs" className="deep-dive-link">Read Our Latest Blogs →</Link>
+            </div>
           </div>
         </section>
-
-        <section className="learning-paths">
-          <h2>Learning Paths</h2>
-          <div className="paths">
-            <div className="path">
-              <h3>Foundations</h3>
-              <p>Core concepts and fundamentals for beginners</p>
-              <Link to="/foundation" className="path-link">Start Here →</Link>
+        
+        <section className="latest-blogs">
+          <h2>Latest From Our Blog</h2>
+          <p className="blog-intro">Discover tutorials, guides, and insights about LLM technology and implementations</p>
+          <div className="blog-preview-grid">
+            <div className="blog-preview-card">
+              <div className="blog-preview-image placeholder-image"></div>
+              <h3>Connecting to OpenAI API: A Complete Guide</h3>
+              <p>Learn how to set up and use the OpenAI API for your applications with practical examples.</p>
+              <Link to="/blogs/openai-connection-guide" className="blog-link">Read Article →</Link>
             </div>
-            <div className="path">
-              <h3>Practical Applications</h3>
-              <p>Real-world implementations and case studies</p>
-              <Link to="/professional" className="path-link">Build Projects →</Link>
+            <div className="blog-preview-card">
+              <div className="blog-preview-image placeholder-image"></div>
+              <h3>What is OpenRouter and Why Use It?</h3>
+              <p>Explore how OpenRouter can give you access to multiple LLMs through a single, unified API.</p>
+              <Link to="/blogs/openrouter-introduction" className="blog-link">Read Article →</Link>
             </div>
-            <div className="path">
-              <h3>Advanced Techniques</h3>
-              <p>Cutting-edge methods for experienced developers</p>
-              <Link to="/expert" className="path-link">Go Advanced →</Link>
+            <div className="blog-preview-card">
+              <div className="blog-preview-image placeholder-image"></div>
+              <h3>Building Your First RAG System</h3>
+              <p>Step-by-step tutorial on implementing Retrieval Augmented Generation for your LLM applications.</p>
+              <Link to="/blogs/rag-tutorial" className="blog-link">Read Article →</Link>
             </div>
+          </div>
+          <div className="blog-cta">
+            <Link to="/blogs" className="cta-button secondary">Browse All Articles</Link>
           </div>
         </section>
         
