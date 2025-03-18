@@ -92,6 +92,16 @@
   padding: 20px;
 }
 
+.llm-terminology-image {
+  background: linear-gradient(135deg, #2D3748 0%, #1A365D 100%);
+}
+
+.llm-terminology-image::before {
+  content: "LLM Terminology Guide";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 .openai-image {
   background: linear-gradient(135deg, #10a37f 0%, #0A8C6E 100%);
 }

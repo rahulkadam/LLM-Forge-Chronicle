@@ -336,34 +336,47 @@
 }
 
 .blog-preview-image {
-  height: 180px;
-  position: relative;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-weight: bold;
-  padding: 20px;
   text-align: center;
+  padding: 20px;
+  border-radius: 8px 8px 0 0;
 }
 
-.placeholder-image {
-  background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+.llm-terminology-image {
+  background: linear-gradient(135deg, #2D3748 0%, #1A365D 100%);
 }
 
-.blog-preview-card:nth-child(1) .placeholder-image::before {
-  content: "OpenAI API Guide";
-  font-size: 1.3rem;
+.llm-terminology-image::before {
+  content: "LLM Terminology Guide";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.blog-preview-card:nth-child(2) .placeholder-image::before {
+.openai-image {
+  background: linear-gradient(135deg, #10a37f 0%, #0A8C6E 100%);
+}
+
+.openai-image::before {
+  content: "OpenAI API Connection Guide";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.openrouter-image {
+  background: linear-gradient(135deg, #7952B3 0%, #5C3B97 100%);
+}
+
+.openrouter-image::before {
   content: "OpenRouter Integration";
-  font-size: 1.3rem;
-}
-
-.blog-preview-card:nth-child(3) .placeholder-image::before {
-  content: "RAG System Tutorial";
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .blog-preview-card h3 {

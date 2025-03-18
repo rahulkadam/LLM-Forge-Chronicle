@@ -21,22 +21,22 @@ const Blogs: React.FC = () => {
       </div>
 
       <div className="blogs-grid">
-        {/* OpenAI Connection Blog */}
+        {/* LLM Terminology Blog */}
         <div className="blog-card">
-          <div className="blog-card-image openai-image"></div>
+          <div className="blog-card-image llm-terminology-image"></div>
           <div className="blog-card-content">
-            <div className="blog-tag">Tutorial</div>
-            <h2 className="blog-title">Connecting to OpenAI API: A Complete Guide</h2>
+            <div className="blog-tag">Technical</div>
+            <h2 className="blog-title">Understanding LLM Terminology: A Comprehensive Guide</h2>
             <p className="blog-excerpt">
-              A step-by-step tutorial to set up and use OpenAI's API for your applications, 
-              including authentication, handling requests, and managing API limits.
+              A detailed guide to essential terms and concepts in Large Language Models, 
+              from tokens to fine-tuning, helping you navigate the world of AI language processing.
             </p>
             <div className="blog-footer">
               <div className="blog-meta">
                 <span className="reading-time">8 min read</span>
-                <span className="publish-date">June 15, 2023</span>
+                <span className="publish-date">March 21, 2024</span>
               </div>
-              <Link to="/blogs/openai-connection-guide" className="read-more-link">
+              <Link to="/blogs/llm-terminology" className="read-more-link">
                 Read Article →
               </Link>
             </div>
@@ -59,6 +59,28 @@ const Blogs: React.FC = () => {
                 <span className="publish-date">July 3, 2023</span>
               </div>
               <Link to="/blogs/openrouter-introduction" className="read-more-link">
+                Read Article →
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* OpenAI Connection Blog */}
+        <div className="blog-card">
+          <div className="blog-card-image openai-image"></div>
+          <div className="blog-card-content">
+            <div className="blog-tag">Tutorial</div>
+            <h2 className="blog-title">Connecting to OpenAI API: A Complete Guide</h2>
+            <p className="blog-excerpt">
+              A step-by-step tutorial to set up and use OpenAI's API for your applications, 
+              including authentication, handling requests, and managing API limits.
+            </p>
+            <div className="blog-footer">
+              <div className="blog-meta">
+                <span className="reading-time">8 min read</span>
+                <span className="publish-date">June 15, 2023</span>
+              </div>
+              <Link to="/blogs/openai-connection-guide" className="read-more-link">
                 Read Article →
               </Link>
             </div>
