@@ -15,8 +15,9 @@ const OpenAIConnectionGuide: React.FC = () => {
           <span className="publish-date">Published on June 15, 2023</span>
           <span className="reading-time">8 min read</span>
         </div>
-        <div className="blog-banner openai-banner"></div>
       </div>
+      
+      <div className="blog-banner openai-banner"></div>
       
       <div className="blog-content">
         <div className="table-of-contents">

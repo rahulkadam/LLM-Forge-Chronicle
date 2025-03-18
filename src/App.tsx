@@ -25,6 +25,7 @@ import Blogs from './pages/Blogs';
 import OpenAIConnectionGuide from './pages/blogs/openai-connection-guide';
 import OpenRouterIntroduction from "./pages/blogs/openrouter-introduction";
 import LLMTerminology from "./pages/blogs/llm-terminology";
+import LLMAgentSimplified from './pages/blogs/llm-agent-simplified';
 
 // Import renamed components
 import LLMFundamentals from './pages/llm-fundamentals';
@@ -83,6 +84,7 @@ const AppContent: React.FC = () => {
           <Route path="/blogs/openai-connection-guide" element={<OpenAIConnectionGuide />} />
           <Route path="/blogs/openrouter-introduction" element={<OpenRouterIntroduction />} />
           <Route path="/blogs/llm-terminology" element={<LLMTerminology />} />
+          <Route path="/blogs/llm-agent-simplified" element={<LLMAgentSimplified />} />
           
           {/* Redirects from old routes to new routes */}
           <Route path="/ai-basics" element={<Navigate to="/llm-fundamentals" replace />} />

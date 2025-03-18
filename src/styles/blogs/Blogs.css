@@ -162,6 +162,16 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.llm-agent-image {
+  background: linear-gradient(135deg, #2D3748 0%, #1A365D 100%);
+}
+
+.llm-agent-image::before {
+  content: "LLM Agent";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 .blog-card-content {
   padding: 25px;
   flex-grow: 1;

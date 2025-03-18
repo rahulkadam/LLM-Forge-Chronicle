@@ -43,6 +43,27 @@ const Blogs: React.FC = () => {
           </div>
         </div>
 
+        {/* LLM Agent Blog */}
+        <div className="blog-card">
+          <div className="blog-card-image llm-agent-image"></div>
+          <div className="blog-card-content">
+            <div className="blog-tag">Technical</div>
+            <h2 className="blog-title">LLM Agents: Just Functions with a Fancy Name</h2>
+            <p className="blog-excerpt">
+              Demystifying LLM Agents - they're just functions that use language models to do specific tasks.
+            </p>
+            <div className="blog-footer">
+              <div className="blog-meta">
+                <span className="reading-time">5 min read</span>
+                <span className="publish-date">March 22, 2024</span>
+              </div>
+              <Link to="/blogs/llm-agent-simplified" className="read-more-link">
+                Read Article →
+              </Link>
+            </div>
+          </div>
+        </div>
+
         {/* OpenRouter Blog */}
         <div className="blog-card">
           <div className="blog-card-image openrouter-image"></div>

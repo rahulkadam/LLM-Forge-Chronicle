@@ -16,6 +16,7 @@ const LLMTerminology: React.FC = () => {
           <span className="reading-time">8 min read</span>
         </div>
       </div>
+
       <div className="blog-banner llm-banner"></div>
 
       <div className="blog-content">
