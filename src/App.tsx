@@ -35,6 +35,7 @@ import PromptBasics from './pages/ai-basics/prompt-basics';
 import Examples from './pages/ai-basics/examples';
 
 import './App.css';
+import OpenRouterIntroduction from "./pages/blogs/openrouter-introduction";
 
 // Initialize Google Analytics if measurement ID is available
 const GA_MEASUREMENT_ID = process.env.REACT_APP_GA_MEASUREMENT_ID;
@@ -79,6 +80,7 @@ const AppContent: React.FC = () => {
           {/* Blog routes */}
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blogs/openai-connection-guide" element={<OpenAIConnectionGuide />} />
+          <Route path="/blogs/openrouter-introduction" element={<OpenRouterIntroduction />} />
           
           {/* Redirects from old routes to new routes */}
           <Route path="/ai-basics" element={<Navigate to="/llm-fundamentals" replace />} />

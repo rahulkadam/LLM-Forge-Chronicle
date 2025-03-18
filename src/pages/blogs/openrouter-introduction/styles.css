@@ -1,0 +1,604 @@
+.blog-post {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 100px;
+  color: #2d3748;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+.blog-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.back-to-blogs {
+  color: #4299e1;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.back-to-blogs:hover {
+  color: #2b6cb0;
+}
+
+.blog-tag {
+  background: #ebf8ff;
+  color: #2b6cb0;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.blog-title {
+  font-size: 3rem;
+  color: #1a365d;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.blog-meta {
+  color: #718096;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.blog-meta span {
+  margin: 0 1rem;
+}
+
+.blog-banner {
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(135deg, #1a365d 0%, #2a4365 100%);
+  border-radius: 12px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.openrouter-banner::before {
+  content: "OpenRouter";
+  position: absolute;
+  font-size: 4rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.1);
+  transform: rotate(-15deg);
+  white-space: nowrap;
+}
+
+.openrouter-banner::after {
+  content: "Unified Access to Multiple LLM Models";
+  position: absolute;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  max-width: 600px;
+  padding: 0 2rem;
+  z-index: 1;
+}
+
+/* Section Styles */
+section {
+  margin-bottom: 4rem;
+}
+
+section h2 {
+  font-size: 2.2rem;
+  color: #1a365d;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+section h3 {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+}
+
+/* Feature Grid */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card h3 {
+  color: #1a365d;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: #4a5568;
+  font-size: 1.1rem;
+}
+
+/* Code Examples */
+.code-example {
+  background: #1a202c;
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  overflow-x: auto;
+}
+
+.code-example h3 {
+  color: #e2e8f0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.code-example pre {
+  color: #a0aec0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  padding: 1rem;
+  background: #2d3748;
+  border-radius: 8px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Implementation Notes */
+.implementation-notes {
+  background: #f7fafc;
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.implementation-notes h3 {
+  color: #1a365d;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.implementation-notes ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.implementation-notes li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #bcc5d5;
+}
+
+.implementation-notes li:before {
+  content: "•";
+  color: #4299e1;
+  position: absolute;
+  left: 0;
+}
+
+.implementation-notes h4 {
+  color: #2d3748;
+  font-size: 1.2rem;
+  margin: 1.5rem 0 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.implementation-notes p {
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.implementation-notes pre {
+  color: #ebf8ff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  overflow-x: auto;
+  border: 1px solid #4a5568;
+}
+
+.implementation-notes pre code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  color: #a0aec0;
+  line-height: 1.5;
+}
+
+.security-notes {
+  background: #f7fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  border: 1px solid #e2e8f0;
+}
+
+.security-notes h4 {
+  color: #2d3748;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.security-notes ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.security-notes li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #4a5568;
+}
+
+.security-notes li:before {
+  content: "🔒";
+  position: absolute;
+  left: 0;
+  font-size: 1rem;
+}
+
+/* Available Models */
+.available-models .feature-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.available-models .feature-card li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #4a5568;
+}
+
+.available-models .feature-card li:before {
+  content: "→";
+  color: #4299e1;
+  position: absolute;
+  left: 0;
+}
+
+/* API Key Management */
+.api-key-management .implementation-notes {
+  margin-bottom: 2rem;
+}
+
+.api-key-management pre {
+  background: #2d3748;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+.api-key-management code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  color: #a0aec0;
+}
+
+/* Advanced Implementation */
+.advanced-implementation .code-example {
+  margin-bottom: 2rem;
+}
+
+.advanced-implementation pre {
+  background: #2d3748;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+.advanced-implementation code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  color: #a0aec0;
+}
+
+/* Use Cases */
+.use-case-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.use-case-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.use-case-card h3 {
+  color: #1a365d;
+  margin-bottom: 1rem;
+}
+
+.use-case-card p {
+  color: #4a5568;
+  font-size: 1.1rem;
+}
+
+/* Best Practices */
+.practice-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.practice-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.practice-item h3 {
+  color: #1a365d;
+  margin-bottom: 1rem;
+}
+
+.practice-item p {
+  color: #4a5568;
+  font-size: 1.1rem;
+}
+
+/* Getting Started Steps */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.step {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.step h3 {
+  color: #1a365d;
+  margin-bottom: 1rem;
+}
+
+.step p {
+  color: #4a5568;
+  font-size: 1.1rem;
+}
+
+/* Related Content */
+.related-content {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 2px solid #e2e8f0;
+}
+
+.related-links {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.related-link {
+  color: #4299e1;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.related-link:hover {
+  color: #2b6cb0;
+}
+
+/* Content Layout */
+.blog-content {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 4rem;
+  align-items: start;
+}
+
+.blog-content section {
+  margin-bottom: 4rem;
+}
+
+/* Table of Contents */
+.table-of-contents {
+  position: sticky;
+  top: 100px;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+}
+
+.table-of-contents h3 {
+  color: #1a365d;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.table-of-contents ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.table-of-contents li {
+  margin-bottom: 0.8rem;
+}
+
+.table-of-contents a {
+  color: #4a5568;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.table-of-contents a:hover {
+  color: #4299e1;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .blog-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .table-of-contents {
+    position: static;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-post {
+    padding: 1rem;
+    padding-top: 80px;
+  }
+
+  .blog-title {
+    font-size: 2.2rem;
+  }
+
+  .blog-banner {
+    height: 200px;
+  }
+
+  .openrouter-banner::before {
+    font-size: 3rem;
+  }
+
+  .openrouter-banner::after {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+
+  section h3 {
+    font-size: 1.3rem;
+  }
+
+  .feature-grid,
+  .use-case-grid,
+  .practice-list,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .code-example,
+  .implementation-notes,
+  .api-key-management pre,
+  .advanced-implementation pre {
+    padding: 1rem;
+  }
+
+  .code-example pre,
+  .implementation-notes pre,
+  .api-key-management pre,
+  .advanced-implementation pre {
+    font-size: 0.8rem;
+  }
+
+  .related-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .implementation-notes pre {
+    padding: 1rem;
+  }
+
+  .implementation-notes pre code {
+    font-size: 0.8rem;
+  }
+
+  .security-notes {
+    padding: 1rem;
+  }
+}
+
+/* Resource Links */
+.resource-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.resource-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  background: #ebf8ff;
+  color: #2b6cb0;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid #bee3f8;
+}
+
+.resource-link:hover {
+  background: #bee3f8;
+  color: #2c5282;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.15);
+}
+
+@media (max-width: 768px) {
+  .resource-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .resource-link {
+    width: 100%;
+    justify-content: center;
+  }
+} 
