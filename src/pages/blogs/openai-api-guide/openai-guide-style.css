@@ -1,8 +1,9 @@
 .blog-post {
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
-  overflow-x: hidden;
+  padding: 60px 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .blog-header {
@@ -11,6 +12,7 @@
   position: relative;
   z-index: 2;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .blog-category {
@@ -21,6 +23,7 @@
   background: none;
   padding: 0;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .blog-header h1 {
@@ -30,6 +33,7 @@
   line-height: 1.2;
   width: 100%;
   word-wrap: break-word;
+  box-sizing: border-box;
 }
 
 .blog-meta {
@@ -40,14 +44,17 @@
   gap: 16px;
   flex-wrap: wrap;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .blog-banner {
   height: 300px;
   position: relative;
-  margin: -20px -20px 40px -20px;
+  margin: 0 0 40px 0;
   overflow: hidden;
-  width: calc(100% + 40px);
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
 }
 
 .openai-banner {
@@ -85,7 +92,7 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .table-of-contents {
@@ -108,11 +115,13 @@
   padding: 0;
   margin: 0;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .table-of-contents li {
   margin-bottom: 8px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .table-of-contents a {
@@ -122,6 +131,7 @@
   display: block;
   width: 100%;
   word-wrap: break-word;
+  box-sizing: border-box;
 }
 
 .table-of-contents a:hover {
@@ -131,7 +141,7 @@
 section {
   margin-bottom: 40px;
   width: 100%;
-  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 section h2 {
@@ -147,6 +157,7 @@ section p {
   margin-bottom: 16px;
   width: 100%;
   word-wrap: break-word;
+  box-sizing: border-box;
 }
 
 section ul, section ol {
@@ -167,7 +178,6 @@ section li {
   padding: 20px;
   border-radius: 8px;
   margin: 20px 0;
-  overflow-x: auto;
   width: 100%;
   box-sizing: border-box;
 }
@@ -175,6 +185,7 @@ section li {
 .code-example pre {
   margin: 0;
   width: 100%;
+  box-sizing: border-box;
   overflow-x: auto;
 }
 
@@ -185,6 +196,8 @@ section li {
   line-height: 1.5;
   white-space: pre-wrap;
   word-wrap: break-word;
+  width: 100%;
+  display: block;
 }
 
 .blog-footer {
@@ -192,6 +205,7 @@ section li {
   padding-top: 40px;
   border-top: 1px solid #e2e8f0;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .back-to-blogs {
@@ -208,44 +222,31 @@ section li {
 
 @media (max-width: 768px) {
   .blog-post {
-    padding: 1rem;
-    padding-top: 80px;
-    width: 100%;
-    box-sizing: border-box;
+    padding: 80px 16px 24px 16px;
   }
 
   .blog-header {
-    margin-bottom: 2rem;
-    width: 100%;
+    margin-bottom: 32px;
   }
 
   .blog-category {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-    background: none;
-    padding: 0;
-    width: 100%;
+    margin-bottom: 12px;
   }
 
   .blog-header h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    width: 100%;
+    font-size: 1.75rem;
+    margin-bottom: 12px;
   }
 
   .blog-meta {
-    font-size: 0.9rem;
-    gap: 0.5rem;
-    width: 100%;
+    font-size: 0.8rem;
+    gap: 8px;
   }
 
   .blog-banner {
     height: 200px;
-    margin: -1rem -1rem 2rem -1rem;
-    border-radius: 0;
-    width: calc(100% + 2rem);
+    margin-bottom: 32px;
+    border-radius: 8px;
   }
 
   .openai-banner::before {
@@ -253,47 +254,66 @@ section li {
   }
 
   .openai-banner::after {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    top: 65%;
     max-width: 90%;
-    padding: 0 1rem;
-  }
-
-  .blog-content {
-    padding: 0;
-    width: 100%;
-  }
-
-  .table-of-contents {
-    padding: 1rem;
-    margin-bottom: 2rem;
-    width: 100%;
+    padding: 0 16px;
   }
 
   section {
-    margin-bottom: 2rem;
-    width: 100%;
+    margin-bottom: 32px;
   }
 
   section h2 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
-    width: 100%;
+    margin-bottom: 16px;
   }
 
   .code-example {
-    padding: 1rem;
-    margin: 1rem 0;
-    width: 100%;
+    padding: 16px;
+    margin: 16px 0;
   }
 
   .code-example code {
     font-size: 0.8rem;
-    width: 100%;
   }
 
   .blog-footer {
-    margin-top: 2rem;
-    padding-top: 1rem;
-    width: 100%;
+    margin-top: 40px;
+    padding-top: 24px;
   }
-} 
+}
+
+@media (max-width: 480px) {
+  .blog-post {
+    padding: 70px 12px 16px 12px;
+  }
+
+  .blog-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .blog-banner {
+    height: 150px;
+  }
+
+  .openai-banner::before {
+    font-size: 2rem;
+  }
+
+  .openai-banner::after {
+    font-size: 0.9rem;
+  }
+
+  section h2 {
+    font-size: 1.3rem;
+  }
+
+  .code-example {
+    padding: 12px;
+  }
+
+  .code-example code {
+    font-size: 0.75rem;
+  }
+}

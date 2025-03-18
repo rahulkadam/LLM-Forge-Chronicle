@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../mobile-viewport-fix.css';
 import './openai-guide-style.css';
 
 const OpenAIConnectionGuide: React.FC = () => {

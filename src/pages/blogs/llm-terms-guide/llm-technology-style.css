@@ -1,8 +1,7 @@
 .blog-post {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
-  padding-top: 100px;
+  padding: 60px 20px;
   color: #2d3748;
   line-height: 1.6;
   width: 100%;
@@ -29,6 +28,7 @@
   margin-bottom: 2rem;
   position: relative;
   z-index: 2;
+  width: 100%;
 }
 
 .back-to-blogs {
@@ -79,6 +79,7 @@
   border-radius: 12px;
   margin-top: 2rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .llm-banner {
@@ -89,6 +90,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .llm-banner::before {
@@ -140,6 +142,8 @@ section h3 {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .feature-card {
@@ -148,6 +152,8 @@ section h3 {
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .feature-card:hover {
@@ -171,6 +177,7 @@ section h3 {
   border-radius: 8px;
   margin-top: 1rem;
   border: 1px solid #e2e8f0;
+  box-sizing: border-box;
 }
 
 .example-box h4 {
@@ -191,6 +198,8 @@ section h3 {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .term-card {
@@ -198,6 +207,8 @@ section h3 {
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .term-card h4 {
@@ -218,12 +229,16 @@ section h3 {
   border-radius: 6px;
   overflow-x: auto;
   margin: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .term-card pre code {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.9rem;
   color: #a0aec0;
+  white-space: pre-wrap;
+  width: 100%;
 }
 
 /* Implementation Notes */
@@ -232,6 +247,8 @@ section h3 {
   padding: 2rem;
   border-radius: 12px;
   margin: 2rem 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .implementation-notes h3 {
@@ -245,12 +262,17 @@ section h3 {
   margin-top: 4rem;
   padding-top: 2rem;
   border-top: 2px solid #e2e8f0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .related-links {
   display: flex;
   gap: 2rem;
   margin-top: 1.5rem;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .related-link {
@@ -270,6 +292,11 @@ section h3 {
   grid-template-columns: 1fr 300px;
   gap: 4rem;
   align-items: start;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main-content {
   width: 100%;
   box-sizing: border-box;
 }
@@ -328,30 +355,25 @@ section h3 {
   .table-of-contents {
     position: static;
     margin-bottom: 2rem;
+    order: -1;
+  }
+  
+  .main-content {
+    order: 0;
   }
 }
 
 @media (max-width: 768px) {
   .blog-post {
-    padding: 1rem;
-    padding-top: 80px;
-    width: 100%;
-    box-sizing: border-box;
+    padding: 80px 16px 24px 16px;
   }
 
   .blog-header {
     margin-bottom: 2rem;
-    width: 100%;
-    box-sizing: border-box;
   }
 
   .blog-category {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-bottom: 1rem;
-    background: none;
-    padding: 0;
   }
 
   .blog-header h1 {
@@ -362,12 +384,17 @@ section h3 {
   .blog-meta {
     font-size: 0.9rem;
     gap: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   .blog-banner {
     height: 200px;
-    margin: -1rem -1rem 2rem -1rem;
-    border-radius: 0;
+    margin-top: 1rem;
+    border-radius: 8px;
+  }
+
+  .llm-banner {
+    height: 200px;
   }
 
   .llm-banner::before {
@@ -380,40 +407,34 @@ section h3 {
     padding: 0 1rem;
   }
 
-  .blog-content {
-    padding: 0 1rem;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .table-of-contents {
-    padding: 1rem;
-    margin-bottom: 2rem;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
   section {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     scroll-margin-top: 80px;
-    width: 100%;
-    box-sizing: border-box;
   }
 
   section h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  section h3 {
+    font-size: 1.3rem;
     margin-bottom: 1rem;
   }
 
   .feature-grid,
   .term-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
   }
 
-  .feature-card,
+  .feature-card {
+    padding: 1.5rem;
+  }
+
   .term-card {
-    padding: 1rem;
+    padding: 1.2rem;
   }
 
   .term-card pre {
@@ -424,8 +445,64 @@ section h3 {
     font-size: 0.8rem;
   }
 
+  .implementation-notes {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
   .related-links {
     flex-direction: column;
     gap: 1rem;
   }
-} 
+  
+  .table-of-contents {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-post {
+    padding: 70px 12px 16px 12px;
+  }
+  
+  .blog-header h1 {
+    font-size: 1.6rem;
+  }
+  
+  .blog-banner {
+    height: 150px;
+  }
+  
+  .llm-banner {
+    height: 150px;
+  }
+  
+  .llm-banner::before {
+    font-size: 2rem;
+  }
+  
+  .llm-banner::after {
+    font-size: 0.9rem;
+  }
+  
+  section h2 {
+    font-size: 1.5rem;
+  }
+  
+  section h3 {
+    font-size: 1.2rem;
+  }
+  
+  .feature-card, 
+  .term-card {
+    padding: 1rem;
+  }
+  
+  .implementation-notes {
+    padding: 1rem;
+  }
+  
+  .table-of-contents {
+    padding: 1rem;
+  }
+}

@@ -1,10 +1,11 @@
 .blog-post {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
-  padding-top: 100px;
+  padding: 60px 20px;
   color: #2d3748;
   line-height: 1.6;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Header Styles */
@@ -14,6 +15,10 @@
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .blog-category {
@@ -21,6 +26,8 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .back-to-blogs {
@@ -30,6 +37,8 @@
   display: flex;
   align-items: center;
   transition: color 0.2s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .back-to-blogs:hover {
@@ -50,16 +59,17 @@
   color: #1a365d;
   margin-bottom: 1.5rem;
   line-height: 1.2;
+  word-wrap: break-word;
 }
 
 .blog-meta {
   color: #718096;
   font-size: 1.1rem;
   margin-bottom: 2rem;
-}
-
-.blog-meta span {
-  margin: 0 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .blog-banner {
@@ -74,6 +84,7 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .openrouter-banner::before {
@@ -100,6 +111,8 @@
 /* Section Styles */
 section {
   margin-bottom: 4rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 section h2 {
@@ -108,12 +121,14 @@ section h2 {
   margin-bottom: 2rem;
   border-bottom: 2px solid #e2e8f0;
   padding-bottom: 0.5rem;
+  word-wrap: break-word;
 }
 
 section h3 {
   font-size: 1.5rem;
   color: #2d3748;
   margin-bottom: 1.5rem;
+  word-wrap: break-word;
 }
 
 /* Feature Grid */
@@ -122,6 +137,8 @@ section h3 {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .feature-card {
@@ -130,6 +147,8 @@ section h3 {
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .feature-card:hover {
@@ -152,7 +171,8 @@ section h3 {
   padding: 2rem;
   border-radius: 12px;
   margin: 2rem 0;
-  overflow-x: auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .code-example h3 {
@@ -172,6 +192,8 @@ section h3 {
   overflow-x: auto;
   white-space: pre-wrap;
   word-wrap: break-word;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Implementation Notes */
@@ -180,6 +202,8 @@ section h3 {
   padding: 2rem;
   border-radius: 12px;
   margin: 2rem 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .implementation-notes h3 {
@@ -192,13 +216,16 @@ section h3 {
   list-style-type: none;
   padding: 0;
   margin: 1rem 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .implementation-notes li {
   margin-bottom: 0.8rem;
   padding-left: 1.5rem;
   position: relative;
-  color: #bcc5d5;
+  color: #4a5568;
+  word-wrap: break-word;
 }
 
 .implementation-notes li:before {
@@ -220,6 +247,7 @@ section h3 {
   color: #4a5568;
   margin-bottom: 1.5rem;
   line-height: 1.6;
+  word-wrap: break-word;
 }
 
 .implementation-notes pre {
@@ -229,6 +257,8 @@ section h3 {
   margin: 1rem 0;
   overflow-x: auto;
   border: 1px solid #4a5568;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .implementation-notes pre code {
@@ -236,6 +266,7 @@ section h3 {
   font-size: 0.9rem;
   color: #a0aec0;
   line-height: 1.5;
+  width: 100%;
 }
 
 .security-notes {
@@ -244,6 +275,8 @@ section h3 {
   border-radius: 8px;
   margin-top: 2rem;
   border: 1px solid #e2e8f0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .security-notes h4 {
@@ -256,6 +289,8 @@ section h3 {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .security-notes li {
@@ -263,6 +298,7 @@ section h3 {
   padding-left: 1.5rem;
   position: relative;
   color: #4a5568;
+  word-wrap: break-word;
 }
 
 .security-notes li:before {
@@ -277,6 +313,8 @@ section h3 {
   list-style: none;
   padding: 0;
   margin: 1rem 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .available-models .feature-card li {
@@ -284,6 +322,7 @@ section h3 {
   padding-left: 1.5rem;
   position: relative;
   color: #4a5568;
+  word-wrap: break-word;
 }
 
 .available-models .feature-card li:before {
@@ -304,12 +343,15 @@ section h3 {
   border-radius: 8px;
   margin: 1rem 0;
   overflow-x: auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .api-key-management code {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.9rem;
   color: #a0aec0;
+  width: 100%;
 }
 
 /* Advanced Implementation */
@@ -323,12 +365,15 @@ section h3 {
   border-radius: 8px;
   margin: 1rem 0;
   overflow-x: auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .advanced-implementation code {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.9rem;
   color: #a0aec0;
+  width: 100%;
 }
 
 /* Use Cases */
@@ -337,6 +382,8 @@ section h3 {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .use-case-card {
@@ -344,6 +391,8 @@ section h3 {
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .use-case-card h3 {
@@ -362,6 +411,8 @@ section h3 {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .practice-item {
@@ -369,6 +420,8 @@ section h3 {
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .practice-item h3 {
@@ -387,6 +440,8 @@ section h3 {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .step {
@@ -394,6 +449,8 @@ section h3 {
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .step h3 {
@@ -411,12 +468,17 @@ section h3 {
   margin-top: 4rem;
   padding-top: 2rem;
   border-top: 2px solid #e2e8f0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .related-links {
   display: flex;
   gap: 2rem;
   margin-top: 1.5rem;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .related-link {
@@ -436,10 +498,19 @@ section h3 {
   grid-template-columns: 1fr 300px;
   gap: 4rem;
   align-items: start;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main-content {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .blog-content section {
   margin-bottom: 4rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Table of Contents */
@@ -451,6 +522,12 @@ section h3 {
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   height: fit-content;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  width: 100%;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 #f7fafc;
 }
 
 .table-of-contents h3 {
@@ -463,10 +540,14 @@ section h3 {
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .table-of-contents li {
   margin-bottom: 0.8rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .table-of-contents a {
@@ -474,93 +555,13 @@ section h3 {
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.2s ease;
+  display: block;
+  width: 100%;
+  word-wrap: break-word;
 }
 
 .table-of-contents a:hover {
   color: #4299e1;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .blog-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .table-of-contents {
-    position: static;
-    margin-bottom: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .blog-post {
-    padding: 1rem;
-    padding-top: 80px;
-  }
-
-  .blog-title {
-    font-size: 2.2rem;
-  }
-
-  .blog-banner {
-    height: 200px;
-  }
-
-  .openrouter-banner::before {
-    font-size: 3rem;
-  }
-
-  .openrouter-banner::after {
-    font-size: 1.2rem;
-    padding: 0 1rem;
-  }
-
-  section h2 {
-    font-size: 1.8rem;
-  }
-
-  section h3 {
-    font-size: 1.3rem;
-  }
-
-  .feature-grid,
-  .use-case-grid,
-  .practice-list,
-  .steps {
-    grid-template-columns: 1fr;
-  }
-
-  .code-example,
-  .implementation-notes,
-  .api-key-management pre,
-  .advanced-implementation pre {
-    padding: 1rem;
-  }
-
-  .code-example pre,
-  .implementation-notes pre,
-  .api-key-management pre,
-  .advanced-implementation pre {
-    font-size: 0.8rem;
-  }
-
-  .related-links {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .implementation-notes pre {
-    padding: 1rem;
-  }
-
-  .implementation-notes pre code {
-    font-size: 0.8rem;
-  }
-
-  .security-notes {
-    padding: 1rem;
-  }
 }
 
 /* Resource Links */
@@ -569,6 +570,8 @@ section h3 {
   gap: 1.5rem;
   margin-top: 2rem;
   flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .resource-link {
@@ -591,7 +594,120 @@ section h3 {
   box-shadow: 0 4px 12px rgba(66, 153, 225, 0.15);
 }
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .blog-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .table-of-contents {
+    position: static;
+    margin-bottom: 2rem;
+    order: -1;
+  }
+  
+  .main-content {
+    order: 0;
+  }
+}
+
 @media (max-width: 768px) {
+  .blog-post {
+    padding: 80px 16px 24px 16px;
+  }
+
+  .blog-header {
+    margin-bottom: 2rem;
+  }
+
+  .blog-category {
+    margin-bottom: 1rem;
+  }
+
+  .blog-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .blog-meta {
+    font-size: 0.9rem;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .blog-banner {
+    height: 200px;
+    margin-top: 1rem;
+    border-radius: 8px;
+  }
+
+  .openrouter-banner::before {
+    font-size: 2.5rem;
+  }
+
+  .openrouter-banner::after {
+    font-size: 1.1rem;
+    max-width: 90%;
+    padding: 0 1rem;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-grid,
+  .use-case-grid,
+  .practice-list,
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .feature-card,
+  .use-case-card,
+  .practice-item,
+  .step {
+    padding: 1.5rem;
+  }
+
+  .code-example,
+  .implementation-notes {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .code-example pre,
+  .implementation-notes pre,
+  .api-key-management pre,
+  .advanced-implementation pre {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .related-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .security-notes {
+    padding: 1rem;
+  }
+  
+  .table-of-contents {
+    padding: 1.5rem;
+  }
+  
   .resource-links {
     flex-direction: column;
     gap: 1rem;
@@ -601,4 +717,50 @@ section h3 {
     width: 100%;
     justify-content: center;
   }
-} 
+}
+
+@media (max-width: 480px) {
+  .blog-post {
+    padding: 70px 12px 16px 12px;
+  }
+  
+  .blog-title {
+    font-size: 1.6rem;
+  }
+  
+  .blog-banner {
+    height: 150px;
+  }
+  
+  .openrouter-banner::before {
+    font-size: 2rem;
+  }
+  
+  .openrouter-banner::after {
+    font-size: 0.9rem;
+  }
+  
+  section h2 {
+    font-size: 1.5rem;
+  }
+  
+  section h3 {
+    font-size: 1.2rem;
+  }
+  
+  .feature-card, 
+  .use-case-card,
+  .practice-item,
+  .step {
+    padding: 1rem;
+  }
+  
+  .code-example,
+  .implementation-notes {
+    padding: 1rem;
+  }
+  
+  .table-of-contents {
+    padding: 1rem;
+  }
+}
