@@ -22,10 +22,10 @@ import LLMTechnical from './pages/LLMTechnical';
 import ProfessionalExample from './pages/ProfessionalExample';
 import Community from './pages/Community';
 import Blogs from './pages/Blogs';
-import OpenAIConnectionGuide from './pages/blogs/openai-connection-guide';
-import OpenRouterIntroduction from "./pages/blogs/openrouter-introduction";
-import LLMTerminology from "./pages/blogs/llm-terminology";
-import LLMAgentSimplified from './pages/blogs/llm-agent-simplified';
+import OpenAIApiGuide from './pages/blogs/openai-api-guide/openai-api-guide';
+import OpenRouterPlatformGuide from "./pages/blogs/openrouter-platform-guide/openrouter-platform-guide";
+import LLMTechnologyGuide from "./pages/blogs/llm-terms-guide/llm-technology-guide";
+import LLMAgentGuide from './pages/blogs/llm-agent-guide/llm-agent-guide';
 
 // Import renamed components
 import LLMFundamentals from './pages/llm-fundamentals';
@@ -81,10 +81,10 @@ const AppContent: React.FC = () => {
           
           {/* Blog routes */}
           <Route path="/blogs" element={<Blogs />} />
-          <Route path="/blogs/openai-connection-guide" element={<OpenAIConnectionGuide />} />
-          <Route path="/blogs/openrouter-introduction" element={<OpenRouterIntroduction />} />
-          <Route path="/blogs/llm-terminology" element={<LLMTerminology />} />
-          <Route path="/blogs/llm-agent-simplified" element={<LLMAgentSimplified />} />
+          <Route path="/blogs/openai-api-guide" element={<OpenAIApiGuide />} />
+          <Route path="/blogs/openrouter-platform-guide" element={<OpenRouterPlatformGuide />} />
+          <Route path="/blogs/llm-technology-guide" element={<LLMTechnologyGuide />} />
+          <Route path="/blogs/llm-agent-guide" element={<LLMAgentGuide />} />
           
           {/* Redirects from old routes to new routes */}
           <Route path="/ai-basics" element={<Navigate to="/llm-fundamentals" replace />} />

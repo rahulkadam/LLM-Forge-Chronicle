@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './styles.css';
+import './openrouter-style.css';
 
 const OpenRouterIntroduction: React.FC = () => {
   return (
@@ -399,7 +399,7 @@ console.log(usage.credits_used);`}
           <section className="related-content">
             <h2>Related Articles</h2>
             <div className="related-links">
-              <Link to="/blogs/openai-connection-guide" className="related-link">
+              <Link to="/blogs/openai-api-guide" className="related-link">
                 OpenAI Connection Guide →
               </Link>
               <Link to="/blogs/llm-technical" className="related-link">

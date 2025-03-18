@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './styles.css';
+import './llm-technology-style.css';
 
 const LLMTerminology: React.FC = () => {
   return (
@@ -345,7 +345,7 @@ Tokens: ["Hello", ",", "world", "!"]`}
           <section className="related-content">
             <h2>Related Articles</h2>
             <div className="related-links">
-              <Link to="/blogs/openrouter-introduction" className="related-link">
+              <Link to="/blogs/openrouter-platform-guide" className="related-link">
                 OpenRouter: Your Gateway to Multiple LLM Models →
               </Link>
               <Link to="/blogs/llm-technical" className="related-link">

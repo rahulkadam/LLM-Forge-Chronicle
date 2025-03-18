@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/blogs/Blogs.css';
+import '../styles/blogs/blog-list-style.css';
 
 const Blogs: React.FC = () => {
   return (
@@ -36,7 +36,7 @@ const Blogs: React.FC = () => {
                 <span className="reading-time">8 min read</span>
                 <span className="publish-date">March 21, 2024</span>
               </div>
-              <Link to="/blogs/llm-terminology" className="read-more-link">
+              <Link to="/blogs/llm-technology-guide" className="read-more-link">
                 Read Article →
               </Link>
             </div>
@@ -57,7 +57,7 @@ const Blogs: React.FC = () => {
                 <span className="reading-time">5 min read</span>
                 <span className="publish-date">March 22, 2024</span>
               </div>
-              <Link to="/blogs/llm-agent-simplified" className="read-more-link">
+              <Link to="/blogs/llm-agent-guide" className="read-more-link">
                 Read Article →
               </Link>
             </div>
@@ -79,7 +79,7 @@ const Blogs: React.FC = () => {
                 <span className="reading-time">6 min read</span>
                 <span className="publish-date">July 3, 2023</span>
               </div>
-              <Link to="/blogs/openrouter-introduction" className="read-more-link">
+              <Link to="/blogs/openrouter-platform-guide" className="read-more-link">
                 Read Article →
               </Link>
             </div>
@@ -101,7 +101,7 @@ const Blogs: React.FC = () => {
                 <span className="reading-time">8 min read</span>
                 <span className="publish-date">June 15, 2023</span>
               </div>
-              <Link to="/blogs/openai-connection-guide" className="read-more-link">
+              <Link to="/blogs/openai-api-guide" className="read-more-link">
                 Read Article →
               </Link>
             </div>

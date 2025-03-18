@@ -109,19 +109,19 @@ const Home: React.FC = () => {
               <div className="blog-preview-image llm-terminology-image"></div>
               <h3>Understanding LLM Terminology: A Comprehensive Guide</h3>
               <p>A detailed guide to essential terms and concepts in Large Language Models, from tokens to fine-tuning.</p>
-              <Link to="/blogs/llm-terminology" className="blog-link">Read Article →</Link>
+              <Link to="/blogs/llm-technology-guide" className="blog-link">Read Article →</Link>
             </div>
             <div className="blog-preview-card">
               <div className="blog-preview-image openai-image"></div>
               <h3>Connecting to OpenAI API: A Complete Guide</h3>
               <p>Learn how to set up and use the OpenAI API for your applications with practical examples.</p>
-              <Link to="/blogs/openai-connection-guide" className="blog-link">Read Article →</Link>
+              <Link to="/blogs/openai-api-guide" className="blog-link">Read Article →</Link>
             </div>
             <div className="blog-preview-card">
               <div className="blog-preview-image openrouter-image"></div>
               <h3>What is OpenRouter and Why Use It?</h3>
               <p>Explore how OpenRouter can give you access to multiple LLMs through a single, unified API.</p>
-              <Link to="/blogs/openrouter-introduction" className="blog-link">Read Article →</Link>
+              <Link to="/blogs/openrouter-platform-guide" className="blog-link">Read Article →</Link>
             </div>
           </div>
           <div className="blog-cta">

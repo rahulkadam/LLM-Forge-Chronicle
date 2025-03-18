@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../../styles/blogs/BlogPost.css';
+import './openai-guide-style.css';
 
 const OpenAIConnectionGuide: React.FC = () => {
   return (
@@ -360,7 +360,7 @@ except Exception as e:
           <div className="related-articles-grid">
             <div className="related-article-card">
               <h4>What is OpenRouter and Why Use It?</h4>
-              <Link to="/blogs/openrouter-introduction" className="related-link">Read Article →</Link>
+              <Link to="/blogs/openrouter-platform-guide" className="related-link">Read Article →</Link>
             </div>
             <div className="related-article-card">
               <h4>Advanced Prompt Engineering Patterns</h4>
