@@ -634,6 +634,75 @@ section p {
   padding: 1rem 1.5rem;
 }
 
+/* Level Navigator */
+.level-navigator {
+  background: #f5f7ff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.level-navigator p {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.level-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.level-button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  background: white;
+  color: #1a237e;
+  border: 1px solid #d0d0d0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.level-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-color: #1a237e;
+}
+
+.level-button.active {
+  background: #1a237e;
+  color: white;
+  border-color: #1a237e;
+}
+
+/* CTA Container */
+.cta-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cta-button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  background: #1a237e;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(26, 35, 126, 0.3);
+  background: #0d1757;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
   .page-header h1 {

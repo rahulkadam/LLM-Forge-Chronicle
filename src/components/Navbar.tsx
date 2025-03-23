@@ -81,9 +81,18 @@ const Navbar: React.FC = () => {
             Develop LLMs <span className="arrow">▾</span>
           </button>
           <div className={`dropdown-content ${activeDropdown === 'llm-dev' ? 'show' : ''}`}>
+            <div className="dropdown-header">Prompt Engineering:</div>
             <Link to="/prompt-engineering" className={`nav-link ${isActive('/prompt-engineering')}`}>
-              Prompt Engineering
+              Basics
             </Link>
+            <Link to="/prompt-engineering/intermediate" className={`nav-link ${isActive('/prompt-engineering/intermediate')}`}>
+              Intermediate
+            </Link>
+            <Link to="/prompt-engineering/advanced" className={`nav-link ${isActive('/prompt-engineering/advanced')}`}>
+              Advanced
+            </Link>
+            <div className="dropdown-divider"></div>
+            <div className="dropdown-header">LLM Agents:</div>
             <Link to="/llm-agent/basic" className={`nav-link ${isActive('/llm-agent/basic')}`}>
               Basic LLM Agent
             </Link>

@@ -33,6 +33,22 @@ const BasicLLMAgent: React.FC = () => {
         </div>
       </section>
 
+      <section className="github-example">
+        <h2>GitHub Example Repository</h2>
+        <p>
+          You can find a complete implementation of this agent and more advanced examples in the following GitHub repository:
+        </p>
+        <div className="github-link-container">
+          <a href="https://github.com/rahulkadam/llm-agents-examples" target="_blank" rel="noopener noreferrer" className="github-link">
+            <span className="github-icon">📂</span> github.com/rahulkadam/llm-agents-examples
+          </a>
+        </div>
+        <p>
+          This repository contains additional examples and variations of LLM agents with different capabilities
+          and integration patterns. Feel free to clone, fork, and experiment with the code!
+        </p>
+      </section>
+
       <section className="prerequisites1">
         <h2>Prerequisites</h2>
         <div className="prereq-list">
@@ -400,4 +416,4 @@ if __name__ == "__main__":
   );
 };
 
-export default BasicLLMAgent; 
+export default BasicLLMAgent;

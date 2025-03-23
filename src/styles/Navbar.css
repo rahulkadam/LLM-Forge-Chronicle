@@ -138,6 +138,21 @@
   transition: all 0.3s ease;
 }
 
+/* Dropdown headers and dividers */
+.dropdown-header {
+  padding: 0.6rem 1rem;
+  color: #7F7F7F;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.dropdown-divider {
+  height: 1px;
+  margin: 0.5rem 0;
+  background-color: #e0e0e0;
+}
 /* Mobile responsive design */
 @media (max-width: 768px) {
   .navbar {
@@ -201,5 +216,9 @@
 
   .dropdown-content .nav-link:hover {
     border-left: 3px solid #2196F3;
+  }
+  
+  .dropdown-header {
+    padding-left: 1.5rem;
   }
 }

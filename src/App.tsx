@@ -16,7 +16,9 @@ import Professional from './pages/Professional';
 import Expert from './pages/Expert';
 import GettingStarted from './pages/GettingStarted';
 import AITools from './pages/AITools';
-import PromptEngineering from './pages/PromptEngineering';
+import PromptEngineeringBasics from './pages/PromptEngineeringBasics';
+import PromptEngineeringIntermediate from './pages/PromptEngineeringIntermediate';
+import PromptEngineeringAdvanced from './pages/PromptEngineeringAdvanced';
 import Resources from './pages/Resources';
 import LLMTechnical from './pages/LLMTechnical';
 import ProfessionalExample from './pages/ProfessionalExample';
@@ -68,9 +70,12 @@ const AppContent: React.FC = () => {
           <Route path="/llm-technical" element={<LLMTechnical />} />
           <Route path="/BuildingLLMAgent" element={<BuildingLLMAgent />} />
           <Route path="/getting-started" element={<GettingStarted />} />
+          <Route path="/roadmap" element={<Navigate to="/getting-started" replace />} />
           <Route path="/ai-tools" element={<AITools />} />
           <Route path="/resources" element={<Resources />} />
-          <Route path="/prompt-engineering" element={<PromptEngineering />} />
+          <Route path="/prompt-engineering" element={<PromptEngineeringBasics />} />
+          <Route path="/prompt-engineering/intermediate" element={<PromptEngineeringIntermediate />} />
+          <Route path="/prompt-engineering/advanced" element={<PromptEngineeringAdvanced />} />
           
           {/* New routes */}
           <Route path="/llm-fundamentals" element={<LLMFundamentals />} />
