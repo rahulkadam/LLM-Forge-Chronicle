@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem 1rem;
   color: #333;
+  padding-top: 100px; /* Added to account for fixed navbar */
 }
 
 /* Hero section */
@@ -113,8 +114,9 @@
 }
 
 .platform-icon img {
-  width: 70px;
-  height: 70px;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
 }
 
 .platform-card h3 {

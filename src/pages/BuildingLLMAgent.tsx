@@ -136,7 +136,7 @@ const BuildingLLMAgent: React.FC = () => {
       <section className="implementation-guide">
         <h2>Step-by-Step Implementation</h2>
         
-        <div className="step">
+        <div>
           <h3>1. Project Setup</h3>
           <div className="code-block">
             <pre>
@@ -161,7 +161,7 @@ OPENAI_API_KEY=your_api_key_here`}
           </div>
         </div>
 
-        <div className="step">
+        <div>
           <h3>2. Creating Custom Tools</h3>
           <div className="code-block">
             <pre>
@@ -230,7 +230,7 @@ class FileSystemTool(BaseTool):
           </div>
         </div>
 
-        <div className="step">
+        <div>
           <h3>3. Implementing the Agent</h3>
           <div className="code-block">
             <pre>
@@ -322,7 +322,7 @@ class FileSystemAgent:
           </div>
         </div>
 
-        <div className="step">
+        <div>
           <h3>4. Creating the Main Interface</h3>
           <div className="code-block">
             <pre>
@@ -365,7 +365,7 @@ if __name__ == "__main__":
           </div>
         </div>
 
-        <div className="step">
+        <div>
           <h3>5. Using the Agent</h3>
           <div className="usage-example">
             <h4>Running the Agent</h4>
@@ -547,7 +547,7 @@ def read_file(path_str, base_dir="."):
         </div>
       </section>
 
-      <section className="best-practices">
+      <section>
         <h2>Best Practices and Tips</h2>
         <div className="tips-grid">
           <div className="tip-card">

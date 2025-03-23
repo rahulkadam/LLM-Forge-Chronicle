@@ -6,7 +6,7 @@ const LLMFundamentals: React.FC = () => {
     <div className="llm-fundamentals">
       <h1>Understanding LLMs: A Beginner's Guide</h1>
       
-      <section className="intro-section">
+      <section className="intro-section1">
         <h2>What are Large Language Models?</h2>
         <p>
           Large Language Models (LLMs) are advanced AI systems trained on vast amounts of text data
@@ -111,7 +111,7 @@ const LLMFundamentals: React.FC = () => {
       <section className="getting-started">
         <h2>Getting Started with LLMs</h2>
         <div className="steps-container">
-          <div className="step">
+          <div>
             <h3>1. Choose the Right Model</h3>
             <p>
               Different LLMs have different strengths. ChatGPT is well-rounded, Claude excels at longer contexts,
@@ -119,7 +119,7 @@ const LLMFundamentals: React.FC = () => {
             </p>
           </div>
 
-          <div className="step">
+          <div >
             <h3>2. Learn Basic Prompting</h3>
             <p>
               The way you phrase your requests dramatically affects results. Be clear, specific, and structured in your prompts.
@@ -127,7 +127,7 @@ const LLMFundamentals: React.FC = () => {
             </p>
           </div>
 
-          <div className="step">
+          <div >
             <h3>3. Understand Limitations</h3>
             <p>
               LLMs aren't perfect - they can make mistakes, "hallucinate" incorrect facts, and have knowledge cut-offs.

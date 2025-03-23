@@ -238,7 +238,7 @@ Answer: Beijing`}
         </div>
       </section>
 
-      <section className="best-practices">
+      <section className="best-practices1">
         <h2>Best Practices for Prompt Engineering</h2>
         
         <div className="practices-grid">

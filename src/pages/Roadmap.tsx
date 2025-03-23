@@ -6,8 +6,8 @@ const Roadmap: React.FC = () => {
   return (
     <div className="roadmap">
       <header className="roadmap-header">
-        <h1>Getting Started with LLMs</h1>
-        <p className="subtitle">Your practical guide to understanding and mastering Large Language Models</p>
+        <h1>Your LLM Learning Journey</h1>
+        <p className="subtitle">A comprehensive guide to mastering Large Language Models</p>
       </header>
 
       <section className="intro-section">
@@ -80,7 +80,6 @@ const Roadmap: React.FC = () => {
         <section className="roadmap-stage">
           <div className="stage-header foundation">
             <h2>1. LLM Fundamentals</h2>
-            <span className="stage-estimate">2-4 Hours</span>
           </div>
           <div className="stage-content">
             <div className="milestone">
@@ -91,10 +90,11 @@ const Roadmap: React.FC = () => {
               </p>
               <ul>
                 <li>What are Large Language Models?</li>
+                <li>Understanding the transformer architecture</li>
+                <li>Key LLM models (GPT, Claude, Gemini, LLaMA)</li>
                 <li>How LLMs are trained and how they work</li>
-                <li>Major LLM models (GPT, BERT, LLaMA)</li>
               </ul>
-              <Link to="/ai-basics" className="stage-link">Start with AI Basics →</Link>
+              <Link to="/llm-fundamentals" className="stage-link">Explore LLM Fundamentals →</Link>
             </div>
             <div className="milestone">
               <h3>LLM Capabilities & Limitations</h3>
@@ -102,11 +102,12 @@ const Roadmap: React.FC = () => {
                 Understand what LLMs can and cannot do, and how to set realistic expectations.
               </p>
               <ul>
-                <li>Text generation and understanding</li>
+                <li>Text generation and understanding capabilities</li>
                 <li>Common misconceptions about AI</li>
-                <li>Ethical considerations and biases</li>
+                <li>Understanding hallucinations and biases</li>
+                <li>Knowledge cutoffs and limitations</li>
               </ul>
-              <Link to="/llm-agent" className="stage-link">Explore LLM Basics →</Link>
+              <Link to="/llm-agent" className="stage-link">Learn About LLM Capabilities →</Link>
             </div>
           </div>
         </section>
@@ -115,7 +116,6 @@ const Roadmap: React.FC = () => {
         <section className="roadmap-stage">
           <div className="stage-header intermediate">
             <h2>2. Working With LLMs</h2>
-            <span className="stage-estimate">4-8 Hours</span>
           </div>
           <div className="stage-content">
             <div className="milestone">
@@ -126,7 +126,8 @@ const Roadmap: React.FC = () => {
               <ul>
                 <li>Principles of effective prompting</li>
                 <li>Context and instructions techniques</li>
-                <li>Few-shot and chain-of-thought prompting</li>
+                <li>Few-shot learning and examples</li>
+                <li>Chain-of-thought and structured prompting</li>
               </ul>
               <Link to="/prompt-engineering" className="stage-link">Learn Prompt Engineering →</Link>
             </div>
@@ -139,6 +140,7 @@ const Roadmap: React.FC = () => {
                 <li>Content creation and enhancement</li>
                 <li>Data analysis and summarization</li>
                 <li>Conversational interfaces</li>
+                <li>Domain-specific applications</li>
               </ul>
               <Link to="/BuildingLLMAgent" className="stage-link">Build Your First LLM App →</Link>
             </div>
@@ -149,7 +151,6 @@ const Roadmap: React.FC = () => {
         <section className="roadmap-stage">
           <div className="stage-header advanced">
             <h2>3. Advanced Implementation</h2>
-            <span className="stage-estimate">8-12 Hours</span>
           </div>
           <div className="stage-content">
             <div className="milestone">
@@ -159,10 +160,11 @@ const Roadmap: React.FC = () => {
               </p>
               <ul>
                 <li>API integration patterns</li>
-                <li>Handling rate limits and costs</li>
-                <li>Optimizing response quality</li>
+                <li>Working with OpenAI and other providers</li>
+                <li>Managing rate limits and costs</li>
+                <li>Handling context windows efficiently</li>
               </ul>
-              <Link to="/professional" className="stage-link">Professional Implementation →</Link>
+              <Link to="/blogs/openai-api-guide" className="stage-link">OpenAI Integration Guide →</Link>
             </div>
             <div className="milestone">
               <h3>Building LLM Agents</h3>
@@ -173,6 +175,7 @@ const Roadmap: React.FC = () => {
                 <li>Agent architecture design</li>
                 <li>Tool use and function calling</li>
                 <li>Memory and context management</li>
+                <li>ReAct patterns and planning strategies</li>
               </ul>
               <Link to="/BuildingLLMAgent" className="stage-link">Build Advanced Agents →</Link>
             </div>
@@ -183,20 +186,20 @@ const Roadmap: React.FC = () => {
         <section className="roadmap-stage">
           <div className="stage-header expert">
             <h2>4. Expert Techniques</h2>
-            <span className="stage-estimate">10-15 Hours</span>
           </div>
           <div className="stage-content">
             <div className="milestone">
-              <h3>Fine-tuning & Customization</h3>
+              <h3>LLM Technical Deep Dive</h3>
               <p className="milestone-desc">
-                Customize LLMs for specific use cases and domains to improve performance and efficiency.
+                Explore the technical underpinnings of LLMs and how they work at a deeper level.
               </p>
               <ul>
-                <li>When and how to fine-tune models</li>
-                <li>Creating custom datasets</li>
-                <li>Evaluation and improvement</li>
+                <li>Understanding transformer architectures</li>
+                <li>Attention mechanisms and positional encoding</li>
+                <li>Training and inference processes</li>
+                <li>Model optimization and deployment techniques</li>
               </ul>
-              <Link to="/expert" className="stage-link">Advanced Techniques →</Link>
+              <Link to="/llm-technical" className="stage-link">Technical Deep Dive →</Link>
             </div>
             <div className="milestone">
               <h3>Enterprise Applications</h3>
@@ -204,11 +207,12 @@ const Roadmap: React.FC = () => {
                 Deploy LLMs at scale in business environments with security, compliance, and efficiency.
               </p>
               <ul>
-                <li>Security and data privacy</li>
+                <li>Security best practices and data privacy</li>
                 <li>Cost optimization strategies</li>
-                <li>LLM deployment architectures</li>
+                <li>Multi-model architecture with OpenRouter</li>
+                <li>Enterprise-grade deployment patterns</li>
               </ul>
-              <Link to="/DSGuidance" className="stage-link">Enterprise Implementation →</Link>
+              <Link to="/blogs/openrouter-platform-guide" className="stage-link">Multi-Model Implementation →</Link>
             </div>
           </div>
         </section>
@@ -219,18 +223,54 @@ const Roadmap: React.FC = () => {
           <h2>Ready to Start Your LLM Journey?</h2>
           <p>Choose where you want to begin based on your current knowledge and goals.</p>
           <div className="cta-buttons">
-            <Link to="/ai-basics" className="cta-button primary">Start with Basics</Link>
+            <Link to="/llm-fundamentals" className="cta-button primary">Start with Fundamentals</Link>
             <Link to="/prompt-engineering" className="cta-button secondary">Jump to Prompt Engineering</Link>
-            <Link to="/professional" className="cta-button outline">Advanced Implementation</Link>
+            <Link to="/blogs" className="cta-button outline">Explore Tutorials</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="learning-paths">
+        <h2>Specialized Learning Paths</h2>
+        <div className="paths-grid">
+          <div className="path-card">
+            <h3>🧑‍💻 Developer Path</h3>
+            <p>For software engineers and developers looking to integrate LLMs into applications</p>
+            <ol className="path-steps">
+              <li>Learn API integration with <Link to="/blogs/openai-api-guide">OpenAI API</Link></li>
+              <li>Understand <Link to="/blogs/openrouter-platform-guide">OpenRouter</Link> for multi-model access</li>
+              <li>Master <Link to="/python-module">Python integration</Link> techniques</li>
+              <li>Build full <Link to="/BuildingLLMAgent">LLM agents</Link> with tools</li>
+            </ol>
+          </div>
+          <div className="path-card">
+            <h3>📊 Data Professional Path</h3>
+            <p>For data scientists and analysts wanting to leverage LLMs for data tasks</p>
+            <ol className="path-steps">
+              <li>Start with <Link to="/llm-fundamentals">LLM fundamentals</Link></li>
+              <li>Learn data-focused <Link to="/prompt-engineering">prompt engineering</Link></li>
+              <li>Explore <Link to="/blogs/llm-terms-guide">LLM terminology</Link></li>
+              <li>Implement <Link to="/blogs/llm-agent-guide">LLM agents for analytics</Link></li>
+            </ol>
+          </div>
+          <div className="path-card">
+            <h3>✍️ Content Creator Path</h3>
+            <p>For writers, marketers, and content professionals leveraging LLMs in their workflow</p>
+            <ol className="path-steps">
+              <li>Begin with <Link to="/llm-fundamentals/chatgpt-guide">ChatGPT fundamentals</Link></li>
+              <li>Master <Link to="/prompt-engineering">creative prompting techniques</Link></li>
+              <li>Learn <Link to="/blogs/llm-agent-guide">agent-based workflows</Link></li>
+              <li>Explore <Link to="/ai-tools">specialized content tools</Link></li>
+            </ol>
           </div>
         </div>
       </section>
 
       <section className="resources-section">
-        <h2>Learning Resources</h2>
+        <h2>Additional Resources</h2>
         <div className="resources-grid">
           <div className="resource-card">
-            <h3>📚 Documentation</h3>
+            <h3>📚 Official Documentation</h3>
             <p>Access comprehensive API documentation and technical references for major LLM providers.</p>
             <a href="https://platform.openai.com/docs" target="_blank" rel="noreferrer" className="resource-link">OpenAI Docs →</a>
           </div>
@@ -242,12 +282,12 @@ const Roadmap: React.FC = () => {
           <div className="resource-card">
             <h3>👥 Community</h3>
             <p>Join discussions, ask questions, and learn from others in the LLM development community.</p>
-            <a href="https://huggingface.co/spaces" target="_blank" rel="noreferrer" className="resource-link">HuggingFace Community →</a>
+            <Link to="/community" className="resource-link">Join Our Community →</Link>
           </div>
           <div className="resource-card">
-            <h3>📝 Latest Research</h3>
-            <p>Stay up-to-date with cutting-edge research and advancements in LLM technology.</p>
-            <a href="https://arxiv.org/list/cs.CL/recent" target="_blank" rel="noreferrer" className="resource-link">ArXiv Papers →</a>
+            <h3>📝 Latest Tutorials</h3>
+            <p>Stay up-to-date with our latest guides, tutorials and insights on LLM implementations.</p>
+            <Link to="/blogs" className="resource-link">Browse All Tutorials →</Link>
           </div>
         </div>
       </section>

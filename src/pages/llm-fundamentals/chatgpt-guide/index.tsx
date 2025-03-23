@@ -16,7 +16,7 @@ const ChatGPTGuide: React.FC = () => {
     <div className="chatgpt-guide">
       <h1>Using ChatGPT: A Practical LLM Guide</h1>
       
-      <section className="intro-section">
+      <section className="intro-section1">
         <h2>ChatGPT as Your Introduction to LLMs</h2>
         <p>
           ChatGPT is one of the most popular implementations of a Large Language Model, making it
@@ -135,22 +135,22 @@ const ChatGPTGuide: React.FC = () => {
 
       <section className="getting-started">
         <h2>Getting Started with ChatGPT</h2>
-        <div className="steps">
-          <div className="step">
+        <div>
+          <div>
             <h3>Step 1: Access ChatGPT</h3>
             <p>
               Visit <a href="https://chat.openai.com" target="_blank" rel="noreferrer">chat.openai.com</a> and create a free account to start using ChatGPT.
             </p>
           </div>
 
-          <div className="step">
+          <div>
             <h3>Step 2: Experiment with Prompts</h3>
             <p>
               Try different prompting techniques to see how they affect the responses you receive.
             </p>
           </div>
 
-          <div className="step">
+          <div>
             <h3>Step 3: Refine Your Approach</h3>
             <p>
               Learn from your interactions and continuously improve your prompting skills for better results.

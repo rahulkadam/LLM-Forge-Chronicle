@@ -33,7 +33,7 @@ const BasicLLMAgent: React.FC = () => {
         </div>
       </section>
 
-      <section className="prerequisites">
+      <section className="prerequisites1">
         <h2>Prerequisites</h2>
         <div className="prereq-list">
           <div className="prereq-item">
@@ -51,10 +51,10 @@ const BasicLLMAgent: React.FC = () => {
         </div>
       </section>
 
-      <section className="implementation">
+      <section className="implementation1">
         <h2>Step-by-Step Implementation</h2>
         
-        <div className="step">
+        <div>
           <h3>1. Project Setup</h3>
           <div className="code-block">
             <pre>
@@ -72,7 +72,7 @@ pip install openai python-dotenv`}
           </div>
         </div>
 
-        <div className="step">
+        <div>
           <h3>2. Environment Setup</h3>
           <p>Create a .env file in your project root:</p>
           <div className="code-block">
@@ -83,7 +83,7 @@ OPENAI_API_KEY=your_api_key_here`}
           </div>
         </div>
 
-        <div className="step">
+        <div>
           <h3>3. Creating the Basic Agent</h3>
           <p>Create a new file called <code>agent.py</code>:</p>
           <div className="code-block">
@@ -186,7 +186,7 @@ class WritingAssistant:
           </div>
         </div>
 
-        <div className="step">
+        <div>
           <h3>4. Creating the Command Line Interface</h3>
           <p>Create a new file called <code>main.py</code>:</p>
           <div className="code-block">
@@ -241,7 +241,7 @@ if __name__ == "__main__":
           </div>
         </div>
 
-        <div className="step">
+        <div>
           <h3>5. Using the Agent</h3>
           <div className="usage-example">
             <h4>Running the Agent</h4>
@@ -343,7 +343,7 @@ if __name__ == "__main__":
         </div>
       </section>
 
-      <section className="best-practices">
+      <section>
         <h2>Best Practices</h2>
         <div className="practices-grid">
           <div className="practice-card">
