@@ -145,9 +145,9 @@ const response = await client.chat.completions.create({
         <div className="implementation-notes">
           <h3>Key Storage Best Practices</h3>
           <p>Here are the recommended approaches for storing and managing your OpenRouter API keys:</p>
-          
+
           <h4>1. Environment Variables</h4>
-          <pre>
+          <pre className="code-example">
             {`# .env file
 OPENROUTER_API_KEY=your_api_key_here
 OPENROUTER_DEV_API_KEY=your_dev_key_here
@@ -158,7 +158,7 @@ const apiKey = process.env.OPENROUTER_API_KEY;`}
           </pre>
 
           <h4>2. Secure Key Management Service</h4>
-          <pre>
+          <pre className="code-example">
             {`// Using AWS Secrets Manager
 const AWS = require('aws-sdk');
 const secretsManager = new AWS.SecretsManager();
@@ -176,7 +176,7 @@ const apiKey = await vault.read('secret/openrouter/api-key');`}
           </pre>
 
           <h4>3. Key Rotation Implementation</h4>
-          <pre>
+          <pre className="code-example">
             {`class ApiKeyManager {
   constructor() {
     this.keys = {
@@ -201,7 +201,7 @@ const apiKey = await vault.read('secret/openrouter/api-key');`}
           </pre>
 
           <h4>4. Error Handling and Fallback</h4>
-          <pre>
+          <pre className="code-example">
             {`async function getCompletion(prompt) {
   const keyManager = new ApiKeyManager();
   
@@ -292,7 +292,7 @@ console.log(usage.credits_used);`}
 
         <div className="implementation-notes">
           <h3>Rate Limiting and Retries</h3>
-          <pre>
+          <pre className="code-example">
             {`const client = new OpenRouter({
   apiKey: 'your-api-key',
   maxRetries: 3,
