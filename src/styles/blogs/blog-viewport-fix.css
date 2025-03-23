@@ -1,0 +1,107 @@
+/* Mobile viewport stability fixes */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  min-height: 100vh;
+  -webkit-overflow-scrolling: touch;
+}
+
+#root {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Apply to all blog posts */
+.blog-post * {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Fix for blog banners */
+.blog-banner {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  transform: translateZ(0); /* Force hardware acceleration */
+}
+
+/* Fix code examples overflow */
+.code-example, 
+.code-example pre, 
+.code-example code {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Fix tables of contents */
+.table-of-contents {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Fix all banners */
+.llm-banner::before,
+.llm-agent-banner::before,
+.openai-banner::before,
+.openrouter-banner::before {
+  overflow: hidden;
+  word-break: break-word;
+}
+
+/* Prevent overflow on main content */
+.blog-content,
+.main-content {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Fix for grid systems */
+.feature-grid,
+.term-grid,
+.use-case-grid,
+.practice-list,
+.steps {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Fix for mobile media queries */
+@media (max-width: 768px) {
+  .blog-post {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+  
+  .blog-banner {
+    margin: 0 0 2rem 0;
+    width: 100%;
+  }
+  
+  section {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+/* Prevent text from being too close to screen edge */
+@media (max-width: 480px) {
+  .blog-post {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

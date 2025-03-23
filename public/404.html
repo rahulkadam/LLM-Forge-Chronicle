@@ -10,12 +10,23 @@
       var pathSegmentsToKeep = 1;
 
       var l = window.location;
+      
+      // Extract the path and only replace & with ~and~ if it doesn't already contain ~and~
+      var path = l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/');
+      if (!path.includes('~and~')) {
+        path = path.replace(/&/g, '~and~');
+      }
+
+      // Handle search params similarly
+      var search = l.search;
+      if (search && !search.includes('~and~')) {
+        search = search.replace(/&/g, '~and~');
+      }
+
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
         l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
+        path + (search ? '&' + search.slice(1) : '') + l.hash
       );
     </script>
   </head>

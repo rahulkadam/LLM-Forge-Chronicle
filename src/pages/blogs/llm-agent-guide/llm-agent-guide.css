@@ -1,0 +1,32 @@
+/* Specific styles for LLM Agent Guide page */
+.llm-agent-guide .use-case-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.llm-agent-guide .use-case {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.llm-agent-guide .use-case h3 {
+  color: #2196F3;
+  margin-bottom: 1rem;
+}
+
+/* Responsive design to keep the same sequence for mobile */
+@media (max-width: 768px) {
+  .llm-agent-guide .use-case-grid {
+    flex-direction: column;
+  }
+  
+  .llm-agent-guide .use-case {
+    width: 100%;
+  }
+}

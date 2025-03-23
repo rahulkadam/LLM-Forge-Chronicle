@@ -1,0 +1,80 @@
+/* New layout with table of contents at the top */
+
+/* Hide the old sidebar table of contents */
+.table-of-contents {
+  display: none;
+}
+
+/* Style for the new table of contents at the top */
+.table-of-contents-top {
+  width: 100%;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #f8f9fb;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.table-of-contents-top h2 {
+  font-size: 1.5rem;
+  color: #1a365d;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.toc-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.toc-list li {
+  margin: 0;
+}
+
+.toc-list a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: #4299e1;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.toc-list a:hover {
+  background-color: #4299e1;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Full-width blog content */
+.blog-content-full {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .table-of-contents-top {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .toc-list {
+    gap: 0.5rem;
+  }
+  
+  .toc-list a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
