@@ -4,6 +4,14 @@
   padding: 40px 20px;
 }
 
+.blog-title-page {
+  font-size: 2rem;
+  color: #1a365d;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+
 /* Header styles */
 .blogs-header {
   text-align: center;
@@ -80,7 +88,7 @@
 }
 
 .blog-card-image {
-  height: 200px;
+  height: 120px;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -89,7 +97,7 @@
   color: white;
   font-weight: bold;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .llm-terminology-image {
@@ -204,7 +212,7 @@
   flex-grow: 1;
 }
 
-.blog-footer {
+.blog-footer-page {
   display: flex;
   justify-content: space-between;
   align-items: center;
