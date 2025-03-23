@@ -14,7 +14,7 @@ import Foundation from './pages/foundation';
 import PythonModule from './pages/python-module';
 import Professional from './pages/Professional';
 import Expert from './pages/Expert';
-import Roadmap from './pages/Roadmap';
+import GettingStarted from './pages/GettingStarted';
 import AITools from './pages/AITools';
 import PromptEngineering from './pages/PromptEngineering';
 import Resources from './pages/Resources';
@@ -67,7 +67,7 @@ const AppContent: React.FC = () => {
           <Route path="/llm-agent/basic" element={<BasicLLMAgent />} />
           <Route path="/llm-technical" element={<LLMTechnical />} />
           <Route path="/BuildingLLMAgent" element={<BuildingLLMAgent />} />
-          <Route path="/roadmap" element={<Roadmap />} />
+          <Route path="/getting-started" element={<GettingStarted />} />
           <Route path="/ai-tools" element={<AITools />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/prompt-engineering" element={<PromptEngineering />} />

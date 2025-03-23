@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/Roadmap.css';
+import '../styles/GettingStarted.css';
 
-const Roadmap: React.FC = () => {
+const GettingStarted: React.FC = () => {
   return (
-    <div className="roadmap">
-      <header className="roadmap-header">
+    <div className="getting-started">
+      <header className="getting-started-header">
         <h1>Your LLM Learning Journey</h1>
         <p className="subtitle">A comprehensive guide to mastering Large Language Models</p>
       </header>
@@ -169,7 +169,7 @@ const Roadmap: React.FC = () => {
             <div className="milestone">
               <h3>Building LLM Agents</h3>
               <p className="milestone-desc">
-                Create autonomous AI agents that can perform complex tasks using LLMs as their reasoning engine.
+                Create autonomous AI systems that can reason, plan and execute complex tasks.
               </p>
               <ul>
                 <li>Agent architecture design</li>
@@ -295,4 +295,4 @@ const Roadmap: React.FC = () => {
   );
 };
 
-export default Roadmap;
+export default GettingStarted;

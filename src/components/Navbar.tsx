@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
       <ul className={`nav-links ${isOpen ? 'show' : ''}`}>
         {/* Getting Started (Roadmap) - single link */}
         <li>
-          <Link to="/roadmap" className={`nav-link ${isActive('/roadmap')}`}>
+          <Link to="/getting-started" className={`nav-link ${isActive('/getting-started')}`}>
             Getting Started
           </Link>
         </li>
