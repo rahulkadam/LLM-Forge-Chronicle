@@ -95,6 +95,9 @@ const AppContent: React.FC = () => {
           <Route path="/ai-basics/chatgpt-guide/old" element={<OldChatGPTGuide />} />
           <Route path="/ai-basics/prompt-basics" element={<PromptBasics />} />
           <Route path="/ai-basics/examples" element={<Examples />} />
+          
+          {/* Catch all route for 404 pages - keep at bottom */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
     </div>
