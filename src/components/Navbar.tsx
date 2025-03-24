@@ -92,12 +92,13 @@ const Navbar: React.FC = () => {
               Advanced
             </Link>
             <div className="dropdown-divider"></div>
-            <div className="dropdown-header">LLM Agents:</div>
+            <div className="dropdown-header">LLM Applications:</div>
+            {/* 'Build an Agent' link removed as requested */}
             <Link to="/llm-agent/basic" className={`nav-link ${isActive('/llm-agent/basic')}`}>
               Basic LLM Agent
             </Link>
             <Link to="/BuildingLLMAgent" className={`nav-link ${isActive('/BuildingLLMAgent')}`}>
-                File System Agent Example
+              File System Agent Example
             </Link>
           </div>
         </li>
@@ -122,6 +123,9 @@ const Navbar: React.FC = () => {
             </Link>
             <Link to="/ai-basics/chatgpt-guide" className={`nav-link ${isActive('/ai-basics/chatgpt-guide')}`}>
               ChatGPT & LLM Use Cases
+            </Link>
+            <Link to="/llm-fundamentals/developer-quick-start" className={`nav-link ${isActive('/llm-fundamentals/developer-quick-start')}`}>
+              Developer Quick Start
             </Link>
           </div>
         </li>

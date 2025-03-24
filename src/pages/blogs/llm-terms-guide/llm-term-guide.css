@@ -1,0 +1,9 @@
+/* Implementation Notes */
+.implementation-notes-term {
+  background: #171b1e;
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  width: 100%;
+  box-sizing: border-box;
+}

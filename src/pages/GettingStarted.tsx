@@ -25,7 +25,7 @@ const GettingStarted: React.FC = () => {
           </p>
         </div>
         <div className="intro-image">
-          <img src="/llm-logo2.png" alt="LLM Illustration" />
+          <img src="llm/LLM-title3.png" alt="LLM Illustration" />
         </div>
       </section>
 

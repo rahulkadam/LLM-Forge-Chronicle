@@ -9,8 +9,7 @@ const Home: React.FC = () => {
     <div className="page">
       <div className="page-content home-content">
         <section className="hero">
-          <img src="/llm-logo2.png" alt="LLM Forge Logo" className="hero-logo" />
-          <h1>LLM Forge Chronicle</h1>
+          <h1>Mastering LLM</h1>
           <p className="home-subtitle">
             Your Expert Guide to Building AI-Powered Applications with LLMs
           </p>
@@ -35,9 +34,11 @@ const Home: React.FC = () => {
               <div className="quick-link-icon">🤖</div>
               <h3>LLM Agents</h3>
             </Link>
+            {/* 'Build an Agent' link removed as requested */}
+            {/* Cricket Match Agent link removed from homepage as requested */}
           </div>
         </section>
-        
+
         <section className="latest-blogs">
           <h2>Latest Tutorials & Guides</h2>
           <div className="blog-preview-grid">
@@ -64,7 +65,7 @@ const Home: React.FC = () => {
             <Link to="/blogs" className="cta-button secondary">Browse All Tutorials</Link>
           </div>
         </section>
-        
+
         <section className="join-community">
           <div className="community-content">
             <h2>Join Our Community</h2>
@@ -72,8 +73,8 @@ const Home: React.FC = () => {
             <Link to="/community" className="community-button">Join the Community</Link>
           </div>
         </section>
-        
-        <AdSense adSlot="1234567890" className="adsense-footer" />
+
+        <AdSense adSlot="1234567890" className="adsense-footer"/>
       </div>
     </div>
   );

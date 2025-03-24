@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { initGA } from './utils/analytics';
 import usePageTracking from './hooks/usePageTracking';
@@ -28,8 +28,10 @@ import OpenAIApiGuide from './pages/blogs/openai-api-guide/openai-api-guide';
 import OpenRouterPlatformGuide from "./pages/blogs/openrouter-platform-guide/openrouter-platform-guide";
 import LLMTechnologyGuide from "./pages/blogs/llm-terms-guide/llm-technology-guide";
 import LLMAgentGuide from './pages/blogs/llm-agent-guide/llm-agent-guide';
+// Removed SimpleChatApp and SimpleAgentDemo imports as requested
+// CricketMatchAgent import removed as requested
 
-// Import renamed components
+import DeveloperQuickStart from './pages/llm-fundamentals/developer-quick-start';
 import LLMFundamentals from './pages/llm-fundamentals';
 import ChatGPTGuide from './pages/llm-fundamentals/chatgpt-guide';
 
@@ -55,6 +57,7 @@ const AppContent: React.FC = () => {
     <div className="App">
       <Navbar />
       <main>
+        <Suspense fallback={<div className="loading">Loading...</div>}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -68,6 +71,9 @@ const AppContent: React.FC = () => {
           <Route path="/llm-agent/building" element={<BuildingLLMAgent />} />
           <Route path="/llm-agent/basic" element={<BasicLLMAgent />} />
           <Route path="/llm-technical" element={<LLMTechnical />} />
+          {/* Removed the simple-chat-app route as requested */}
+          {/* Removed simple-agent-demo route as requested */}
+          {/* CricketMatchAgent route removed as requested */}
           <Route path="/BuildingLLMAgent" element={<BuildingLLMAgent />} />
           <Route path="/getting-started" element={<GettingStarted />} />
           <Route path="/roadmap" element={<Navigate to="/getting-started" replace />} />
@@ -80,6 +86,7 @@ const AppContent: React.FC = () => {
           {/* New routes */}
           <Route path="/llm-fundamentals" element={<LLMFundamentals />} />
           <Route path="/llm-fundamentals/chatgpt-guide" element={<ChatGPTGuide />} />
+          <Route path="/llm-fundamentals/developer-quick-start" element={<DeveloperQuickStart />} />
           <Route path="/professional-example" element={<ProfessionalExample />} />
           <Route path="/professional/example" element={<ProfessionalExample />} />
           <Route path="/community" element={<Community />} />
@@ -104,6 +111,7 @@ const AppContent: React.FC = () => {
           {/* Catch all route for 404 pages - keep at bottom */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
+        </Suspense>
       </main>
     </div>
   );

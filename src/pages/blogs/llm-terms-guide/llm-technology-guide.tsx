@@ -4,6 +4,7 @@ import BlogTemplate from '../../../components/blogs/BlogTemplate';
 import { BlogSection, Card } from '../../../components/blogs/BlogComponents';
 import useBlogBehavior from '../../../hooks/useBlogBehavior';
 import '../mobile-viewport-fix.css'; // Import the layout with horizontal TOC
+import './llm-term-guide.css'; // Import the custom styles for this blog
 
 const LLMTerminology: React.FC = () => {
   // Use the blog behavior hook
@@ -79,7 +80,7 @@ const LLMTerminology: React.FC = () => {
       </BlogSection>
 
       <BlogSection id="technical-terms" title="Technical Terms">
-        <div className="implementation-notes">
+        <div className="Implementation-notes-term">
           <h3>Input/Output Processing</h3>
           <div className="term-grid">
             <div className="term-card">
@@ -135,7 +136,7 @@ Tokens: ["Hello", ",", "world", "!"]`}
       </BlogSection>
 
       <BlogSection id="advanced-concepts" title="Advanced Concepts">
-        <div className="implementation-notes">
+        <div className="Implementation-notes-term">
           <h3>Fine-tuning and Training</h3>
           <div className="term-grid">
             <div className="term-card">
@@ -191,7 +192,7 @@ Tokens: ["Hello", ",", "world", "!"]`}
       </BlogSection>
 
       <BlogSection id="rag-concepts" title="RAG & Search Concepts">
-        <div className="implementation-notes">
+        <div className="Implementation-notes-term">
           <h3>Retrieval Augmented Generation</h3>
           <div className="term-grid">
             <div className="term-card">
@@ -243,7 +244,7 @@ Tokens: ["Hello", ",", "world", "!"]`}
       </BlogSection>
 
       <BlogSection id="learning-techniques" title="Learning & Training Techniques">
-        <div className="implementation-notes">
+        <div className="Implementation-notes-term">
           <h3>Advanced Learning Methods</h3>
           <div className="term-grid">
             <div className="term-card">
