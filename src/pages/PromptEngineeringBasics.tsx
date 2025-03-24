@@ -15,8 +15,9 @@ const PromptEngineeringBasics: React.FC = () => {
       <section className="introduction">
         <h2>What is Prompt Engineering?</h2>
         <p>
-          Prompt engineering is the practice of designing, optimizing, and refining inputs to large language models (LLMs) to 
-          generate desired outputs. It's a critical skill that bridges human intent with AI capabilities, allowing 
+          Prompt engineering is the practice of designing, optimizing, and refining inputs to large language models
+          (LLMs) to
+          generate desired outputs. It's a critical skill that bridges human intent with AI capabilities, allowing
           you to effectively "program" language models through carefully crafted instructions.
         </p>
         <div className="key-points">
@@ -32,6 +33,10 @@ const PromptEngineeringBasics: React.FC = () => {
           </div>
         </div>
 
+        <div className="parameter-image-container">
+          <img src="/llm/promp-engineering.png" alt="LLM Agent overview" className="full-width-image"/>
+        </div>
+
         <div className="level-navigator">
           <p>This is part 1 of our 3-part prompt engineering guide:</p>
           <div className="level-buttons">
@@ -44,7 +49,7 @@ const PromptEngineeringBasics: React.FC = () => {
 
       <section className="core-techniques">
         <h2>Core Prompt Engineering Techniques</h2>
-        
+
         <div className="technique-grid">
           <div className="technique-card">
             <h3>Zero-Shot Prompting</h3>
@@ -134,30 +139,37 @@ Let's solve this step by step:
         <p>
           Well-structured prompts typically contain several key components that work together to elicit optimal responses.
         </p>
-        
+
         <div className="component-diagram">
+          <div className="parameter-image-container">
+            <img src="/llm/Prompt-engineering-example.png" alt="LLM Agent overview" className="full-width-image"/>
+          </div>
           <div className="component-row">
             <div className="component">
               <h3>Role/Context</h3>
               <p>Define who the model should act as and provide relevant background information.</p>
-              <div className="example"><em>"You are an expert data scientist with expertise in anomaly detection algorithms..."</em></div>
+              <div className="example"><em>"You are an expert data scientist with expertise in anomaly detection
+                algorithms..."</em></div>
             </div>
             <div className="component">
               <h3>Task Instructions</h3>
               <p>Clear, specific directions about what the model should do.</p>
-              <div className="example"><em>"Analyze the following dataset and identify patterns that could indicate fraudulent transactions..."</em></div>
+              <div className="example"><em>"Analyze the following dataset and identify patterns that could indicate
+                fraudulent transactions..."</em></div>
             </div>
           </div>
           <div className="component-row">
             <div className="component">
               <h3>Format Specifications</h3>
               <p>Guidelines on how the response should be structured.</p>
-              <div className="example"><em>"Present your findings in a bulleted list, with each point containing the pattern identified and its significance..."</em></div>
+              <div className="example"><em>"Present your findings in a bulleted list, with each point containing the
+                pattern identified and its significance..."</em></div>
             </div>
             <div className="component">
               <h3>Constraints</h3>
               <p>Limitations or requirements the model should adhere to.</p>
-              <div className="example"><em>"Limit your analysis to statistical patterns that can be verified; do not make assumptions about user intent..."</em></div>
+              <div className="example"><em>"Limit your analysis to statistical patterns that can be verified; do not
+                make assumptions about user intent..."</em></div>
             </div>
           </div>
           <div className="component-row">
@@ -169,7 +181,8 @@ Let's solve this step by step:
             <div className="component">
               <h3>Output Indicators</h3>
               <p>Signals for how extensive or detailed the response should be.</p>
-              <div className="example"><em>"Provide a comprehensive analysis with at least 5 distinct patterns..."</em></div>
+              <div className="example"><em>"Provide a comprehensive analysis with at least 5 distinct patterns..."</em>
+              </div>
             </div>
           </div>
         </div>
@@ -177,9 +190,9 @@ Let's solve this step by step:
 
       <section className="best-practices1">
         <h2>Best Practices for Prompt Engineering</h2>
-        
+
         <div className="practices-grid">
-          <div className="practice-card">
+        <div className="practice-card">
             <h3>Be Specific and Clear</h3>
             <div className="practice-content">
               <p>Precision in your instructions leads to precision in results. Avoid ambiguity and provide explicit directions.</p>
