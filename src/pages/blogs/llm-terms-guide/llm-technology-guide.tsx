@@ -27,316 +27,320 @@ const LLMTerminology: React.FC = () => {
   ];
 
   return (
-    <BlogTemplate
-      title="Understanding LLM Terminology: A Comprehensive Guide"
-      date="March 21, 2024"
-      readTime="8 min"
-      category="Technical"
-      bannerClassName="llm-terms-banner"
-      tableOfContents={tableOfContents}
-      className="llm-terms-guide" // Add class for specific styles if needed
-    >
-      <BlogSection id="introduction" title="What are Large Language Models (LLMs)?">
-        <p>
-          Large Language Models (LLMs) are advanced artificial intelligence systems trained on vast amounts of text data 
-          to understand and generate human-like language. This guide will help you understand the key terminology used 
-          in the world of LLMs and AI language processing.
-        </p>
-      </BlogSection>
+      <BlogTemplate
+          title="Understanding LLM Terminology: A Comprehensive Guide"
+          date="March 21, 2024"
+          readTime="8 min"
+          category="Technical"
+          bannerClassName="llm-terms-banner"
+          tableOfContents={tableOfContents}
+          className="llm-terms-guide" // Add class for specific styles if needed
+      >
+        <BlogSection id="introduction" title="What are Large Language Models (LLMs)?">
+          <p>
+            Large Language Models (LLMs) are advanced artificial intelligence systems trained on vast amounts of text
+            data
+            to understand and generate human-like language. This guide will help you understand the key terminology used
+            in the world of LLMs and AI language processing.
+          </p>
+          <div className="parameter-image-container">
+            <img src="/llm/LLM-Parameter.png" alt="LLM Parameter" className="full-width-image"/>
+          </div>
+        </BlogSection>
 
-      <BlogSection id="key-concepts" title="Core Concepts">
-        <div className="feature-grid">
-          <Card title="Tokens">
-            <p>
-              The basic units of text that LLMs process. A token can be a word, part of a word, or even a character, 
-              depending on the tokenization method used.
-            </p>
-            <div className="example-box">
-              <h4>Example:</h4>
-              <p>"Hello world" might be tokenized as: ["Hello", "world"]</p>
-            </div>
-          </Card>
-          <Card title="Context Window">
-            <p>
-              The maximum number of tokens that a model can process in a single input. This determines how much 
-              text you can send to the model at once.
-            </p>
-            <div className="example-box">
-              <h4>Example:</h4>
-              <p>GPT-4 has a context window of 128K tokens</p>
-            </div>
-          </Card>
-          <Card title="Temperature">
-            <p>
-              A parameter that controls the randomness of the model's outputs. Higher values make the output more 
-              creative, while lower values make it more deterministic.
-            </p>
-            <div className="example-box">
-              <h4>Range:</h4>
-              <p>0.0 (deterministic) to 1.0 (creative)</p>
-            </div>
-          </Card>
-        </div>
-      </BlogSection>
+        <BlogSection id="key-concepts" title="Core Concepts">
+          <div className="feature-grid">
+            <Card title="Tokens">
+              <p>
+                The basic units of text that LLMs process. A token can be a word, part of a word, or even a character,
+                depending on the tokenization method used.
+              </p>
+              <div className="example-box">
+                <h4>Example:</h4>
+                <p>"Hello world" might be tokenized as: ["Hello", "world"]</p>
+              </div>
+            </Card>
+            <Card title="Context Window">
+              <p>
+                The maximum number of tokens that a model can process in a single input. This determines how much
+                text you can send to the model at once.
+              </p>
+              <div className="example-box">
+                <h4>Example:</h4>
+                <p>GPT-4 has a context window of 128K tokens</p>
+              </div>
+            </Card>
+            <Card title="Temperature">
+              <p>
+                A parameter that controls the randomness of the model's outputs. Higher values make the output more
+                creative, while lower values make it more deterministic.
+              </p>
+              <div className="example-box">
+                <h4>Range:</h4>
+                <p>0.0 (deterministic) to 1.0 (creative)</p>
+              </div>
+            </Card>
+          </div>
+        </BlogSection>
 
-      <BlogSection id="technical-terms" title="Technical Terms">
-        <div className="Implementation-notes-term">
-          <h3>Input/Output Processing</h3>
-          <div className="term-grid">
-            <div className="term-card">
-              <h4>Prompt</h4>
-              <p>The input text or instructions given to the LLM</p>
-              <pre>
+        <BlogSection id="technical-terms" title="Technical Terms">
+          <div className="implementation-notes-term">
+            <h3>Input/Output Processing</h3>
+            <div className="term-grid">
+              <div className="term-card">
+                <h4>Prompt</h4>
+                <p>The input text or instructions given to the LLM</p>
+                <pre>
                 {`// Example prompt
 "Write a function to calculate fibonacci numbers"`}
               </pre>
-            </div>
-            <div className="term-card">
-              <h4>Completion</h4>
-              <p>The text generated by the LLM in response to a prompt</p>
-              <pre>
+              </div>
+              <div className="term-card">
+                <h4>Completion</h4>
+                <p>The text generated by the LLM in response to a prompt</p>
+                <pre>
                 {`// Example completion
 "Here's a function to calculate fibonacci numbers..."`}
               </pre>
-            </div>
-            <div className="term-card">
-              <h4>Tokenization</h4>
-              <p>The process of breaking text into tokens</p>
-              <pre>
+              </div>
+              <div className="term-card">
+                <h4>Tokenization</h4>
+                <p>The process of breaking text into tokens</p>
+                <pre>
                 {`// Example tokenization
 Input: "Hello, world!"
 Tokens: ["Hello", ",", "world", "!"]`}
               </pre>
+              </div>
             </div>
           </div>
-        </div>
-      </BlogSection>
+        </BlogSection>
 
-      <BlogSection id="model-parameters" title="Model Parameters">
-        <div className="feature-grid">
-          <Card title="Top-k Sampling">
-            <p>
-              A technique that limits the model's next token selection to the k most likely tokens, 
-              helping to maintain coherence while allowing some randomness.
-            </p>
-          </Card>
-          <Card title="Top-p Sampling">
-            <p>
-              Also known as nucleus sampling, this method selects the smallest set of tokens whose 
-              cumulative probability exceeds p, providing more dynamic token selection.
-            </p>
-          </Card>
-          <Card title="Frequency Penalty">
-            <p>
-              A parameter that reduces the likelihood of the model repeating the same line of text, 
-              helping to maintain diversity in the output.
-            </p>
-          </Card>
-        </div>
-      </BlogSection>
+        <BlogSection id="model-parameters" title="Model Parameters">
+          <div className="feature-grid">
+            <Card title="Top-k Sampling">
+              <p>
+                A technique that limits the model's next token selection to the k most likely tokens,
+                helping to maintain coherence while allowing some randomness.
+              </p>
+            </Card>
+            <Card title="Top-p Sampling">
+              <p>
+                Also known as nucleus sampling, this method selects the smallest set of tokens whose
+                cumulative probability exceeds p, providing more dynamic token selection.
+              </p>
+            </Card>
+            <Card title="Frequency Penalty">
+              <p>
+                A parameter that reduces the likelihood of the model repeating the same line of text,
+                helping to maintain diversity in the output.
+              </p>
+            </Card>
+          </div>
+        </BlogSection>
 
-      <BlogSection id="advanced-concepts" title="Advanced Concepts">
-        <div className="Implementation-notes-term">
-          <h3>Fine-tuning and Training</h3>
-          <div className="term-grid">
-            <div className="term-card">
-              <h4>Fine-tuning</h4>
-              <p>
-                The process of further training a pre-trained model on specific data to adapt it 
-                for particular tasks or domains.
-              </p>
-            </div>
-            <div className="term-card">
-              <h4>Transfer Learning</h4>
-              <p>
-                A technique where a model trained on one task is adapted for another related task, 
-                leveraging previously learned knowledge.
-              </p>
-            </div>
-            <div className="term-card">
-              <h4>Prompt Engineering</h4>
-              <p>
-                The art of crafting effective prompts to get desired outputs from LLMs, including 
-                techniques like few-shot learning and chain-of-thought prompting.
-              </p>
+        <BlogSection id="advanced-concepts" title="Advanced Concepts">
+          <div className="implementation-notes-term">
+            <h3>Fine-tuning and Training</h3>
+            <div className="term-grid">
+              <div className="term-card">
+                <h4>Fine-tuning</h4>
+                <p>
+                  The process of further training a pre-trained model on specific data to adapt it
+                  for particular tasks or domains.
+                </p>
+              </div>
+              <div className="term-card">
+                <h4>Transfer Learning</h4>
+                <p>
+                  A technique where a model trained on one task is adapted for another related task,
+                  leveraging previously learned knowledge.
+                </p>
+              </div>
+              <div className="term-card">
+                <h4>Prompt Engineering</h4>
+                <p>
+                  The art of crafting effective prompts to get desired outputs from LLMs, including
+                  techniques like few-shot learning and chain-of-thought prompting.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </BlogSection>
+        </BlogSection>
 
-      <BlogSection id="model-architecture" title="Model Architecture & Components">
-        <div className="feature-grid">
-          <Card title="Attention Mechanism">
-            <p>
-              A key component of transformer models that allows them to focus on relevant parts of 
-              the input when generating output, enabling better understanding of context.
-            </p>
-            <div className="example-box">
-              <h4>Example:</h4>
-              <p>Self-attention helps models understand relationships between words in a sentence</p>
-            </div>
-          </Card>
-          <Card title="Transformers">
-            <p>
-              A neural network architecture that revolutionized NLP by using self-attention mechanisms 
-              to process sequential data in parallel.
-            </p>
-          </Card>
-          <Card title="MAMBA">
-            <p>
-              A new state-space model architecture that offers improved efficiency and performance 
-              compared to traditional transformer models.
-            </p>
-          </Card>
-        </div>
-      </BlogSection>
+        <BlogSection id="model-architecture" title="Model Architecture & Components">
+          <div className="feature-grid">
+            <Card title="Attention Mechanism">
+              <p>
+                A key component of transformer models that allows them to focus on relevant parts of
+                the input when generating output, enabling better understanding of context.
+              </p>
+              <div className="example-box">
+                <h4>Example:</h4>
+                <p>Self-attention helps models understand relationships between words in a sentence</p>
+              </div>
+            </Card>
+            <Card title="Transformers">
+              <p>
+                A neural network architecture that revolutionized NLP by using self-attention mechanisms
+                to process sequential data in parallel.
+              </p>
+            </Card>
+            <Card title="MAMBA">
+              <p>
+                A new state-space model architecture that offers improved efficiency and performance
+                compared to traditional transformer models.
+              </p>
+            </Card>
+          </div>
+        </BlogSection>
 
-      <BlogSection id="rag-concepts" title="RAG & Search Concepts">
-        <div className="Implementation-notes-term">
-          <h3>Retrieval Augmented Generation</h3>
-          <div className="term-grid">
-            <div className="term-card">
-              <h4>RAG (Retrieval Augmented Generation)</h4>
-              <p>
-                A technique that combines retrieval of relevant information with language model 
-                generation to produce more accurate and grounded responses.
-              </p>
-            </div>
-            <div className="term-card">
-              <h4>Agentic RAG</h4>
-              <p>
-                An advanced form of RAG where the system can autonomously explore and retrieve 
-                information to solve complex tasks.
-              </p>
-            </div>
-            <div className="term-card">
-              <h4>Hybrid Search</h4>
-              <p>
-                A search approach that combines traditional keyword-based search with semantic 
-                search for better results.
-              </p>
+        <BlogSection id="rag-concepts" title="RAG & Search Concepts">
+          <div className="implementation-notes-term">
+            <h3>Retrieval Augmented Generation</h3>
+            <div className="term-grid">
+              <div className="term-card">
+                <h4>RAG (Retrieval Augmented Generation)</h4>
+                <p>
+                  A technique that combines retrieval of relevant information with language model
+                  generation to produce more accurate and grounded responses.
+                </p>
+              </div>
+              <div className="term-card">
+                <h4>Agentic RAG</h4>
+                <p>
+                  An advanced form of RAG where the system can autonomously explore and retrieve
+                  information to solve complex tasks.
+                </p>
+              </div>
+              <div className="term-card">
+                <h4>Hybrid Search</h4>
+                <p>
+                  A search approach that combines traditional keyword-based search with semantic
+                  search for better results.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </BlogSection>
+        </BlogSection>
 
-      <BlogSection id="search-ranking" title="Search & Ranking Techniques">
-        <div className="feature-grid">
-          <Card title="Max Marginal Relevance">
-            <p>
-              A ranking algorithm that balances relevance and diversity in search results, 
-              ensuring both accuracy and variety in retrieved information.
-            </p>
-          </Card>
-          <Card title="Reranking">
-            <p>
-              The process of refining search results using more sophisticated ranking models 
-              after initial retrieval.
-            </p>
-          </Card>
-          <Card title="Vector Store">
-            <p>
-              A specialized database designed to store and retrieve vector embeddings efficiently, 
-              crucial for semantic search applications.
-            </p>
-          </Card>
-        </div>
-      </BlogSection>
+        <BlogSection id="search-ranking" title="Search & Ranking Techniques">
+          <div className="feature-grid">
+            <Card title="Max Marginal Relevance">
+              <p>
+                A ranking algorithm that balances relevance and diversity in search results,
+                ensuring both accuracy and variety in retrieved information.
+              </p>
+            </Card>
+            <Card title="Reranking">
+              <p>
+                The process of refining search results using more sophisticated ranking models
+                after initial retrieval.
+              </p>
+            </Card>
+            <Card title="Vector Store">
+              <p>
+                A specialized database designed to store and retrieve vector embeddings efficiently,
+                crucial for semantic search applications.
+              </p>
+            </Card>
+          </div>
+        </BlogSection>
 
-      <BlogSection id="learning-techniques" title="Learning & Training Techniques">
-        <div className="Implementation-notes-term">
-          <h3>Advanced Learning Methods</h3>
-          <div className="term-grid">
-            <div className="term-card">
-              <h4>Few-Shot Learning</h4>
-              <p>
-                A technique where models learn to perform new tasks with just a few examples, 
-                demonstrating remarkable adaptability.
-              </p>
-            </div>
-            <div className="term-card">
-              <h4>HHEM (Hard Example Mining)</h4>
-              <p>
-                A training technique that focuses on difficult examples to improve model 
-                performance on challenging cases.
-              </p>
-            </div>
-            <div className="term-card">
-              <h4>Chunking</h4>
-              <p>
-                The process of breaking down large texts into smaller, manageable pieces for 
-                processing and analysis.
-              </p>
+        <BlogSection id="learning-techniques" title="Learning & Training Techniques">
+          <div className="implementation-notes-term">
+            <h3>Advanced Learning Methods</h3>
+            <div className="term-grid">
+              <div className="term-card">
+                <h4>Few-Shot Learning</h4>
+                <p>
+                  A technique where models learn to perform new tasks with just a few examples,
+                  demonstrating remarkable adaptability.
+                </p>
+              </div>
+              <div className="term-card">
+                <h4>HHEM (Hard Example Mining)</h4>
+                <p>
+                  A training technique that focuses on difficult examples to improve model
+                  performance on challenging cases.
+                </p>
+              </div>
+              <div className="term-card">
+                <h4>Chunking</h4>
+                <p>
+                  The process of breaking down large texts into smaller, manageable pieces for
+                  processing and analysis.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </BlogSection>
+        </BlogSection>
 
-      <BlogSection id="model-types" title="Types of Language Models">
-        <div className="feature-grid">
-          <Card title="Open Source LLMs">
-            <p>
-              Language models whose code and weights are publicly available, allowing for 
-              customization and community contributions.
-            </p>
-          </Card>
-          <Card title="GPTs (Custom GPTs)">
-            <p>
-              Specialized versions of GPT models fine-tuned for specific tasks or domains, 
-              available through platforms like ChatGPT.
-            </p>
-          </Card>
-          <Card title="Embeddings">
-            <p>
-              Vector representations of text that capture semantic meaning, enabling similarity 
-              comparisons and semantic search.
-            </p>
-          </Card>
-        </div>
-      </BlogSection>
+        <BlogSection id="model-types" title="Types of Language Models">
+          <div className="feature-grid">
+            <Card title="Open Source LLMs">
+              <p>
+                Language models whose code and weights are publicly available, allowing for
+                customization and community contributions.
+              </p>
+            </Card>
+            <Card title="GPTs (Custom GPTs)">
+              <p>
+                Specialized versions of GPT models fine-tuned for specific tasks or domains,
+                available through platforms like ChatGPT.
+              </p>
+            </Card>
+            <Card title="Embeddings">
+              <p>
+                Vector representations of text that capture semantic meaning, enabling similarity
+                comparisons and semantic search.
+              </p>
+            </Card>
+          </div>
+        </BlogSection>
 
-      <BlogSection id="common-metrics" title="Common Metrics">
-        <div className="feature-grid">
-          <Card title="Perplexity">
-            <p>
-              A measure of how well a model predicts a sample. Lower perplexity indicates better 
-              prediction accuracy.
-            </p>
-          </Card>
-          <Card title="BLEU Score">
-            <p>
-              A metric for evaluating the quality of machine-generated text by comparing it to 
-              human-written reference text.
-            </p>
-          </Card>
-          <Card title="ROUGE Score">
-            <p>
-              A set of metrics for evaluating automatic summarization of texts, measuring overlap 
-              between generated and reference summaries.
-            </p>
-          </Card>
-        </div>
-      </BlogSection>
+        <BlogSection id="common-metrics" title="Common Metrics">
+          <div className="feature-grid">
+            <Card title="Perplexity">
+              <p>
+                A measure of how well a model predicts a sample. Lower perplexity indicates better
+                prediction accuracy.
+              </p>
+            </Card>
+            <Card title="BLEU Score">
+              <p>
+                A metric for evaluating the quality of machine-generated text by comparing it to
+                human-written reference text.
+              </p>
+            </Card>
+            <Card title="ROUGE Score">
+              <p>
+                A set of metrics for evaluating automatic summarization of texts, measuring overlap
+                between generated and reference summaries.
+              </p>
+            </Card>
+          </div>
+        </BlogSection>
 
-      <BlogSection id="conclusion" title="Conclusion">
-        <p>
-          Understanding these terms is crucial for working effectively with LLMs. Whether you're 
-          developing applications, conducting research, or simply using AI tools, this terminology 
-          provides the foundation for deeper understanding and effective communication in the field 
-          of artificial intelligence.
-        </p>
-        
-        <h2>Related Articles</h2>
-        <div className="related-links">
-          <Link to="/blogs/openrouter-platform-guide" className="related-link">
-            OpenRouter: Your Gateway to Multiple LLM Models →
-          </Link>
-          <Link to="/blogs/llm-agent-guide" className="related-link">
-            LLM Agents: Just Functions with a Fancy Name →
-          </Link>
-        </div>
-      </BlogSection>
-    </BlogTemplate>
+        <BlogSection id="conclusion" title="Conclusion">
+          <p>
+            Understanding these terms is crucial for working effectively with LLMs. Whether you're
+            developing applications, conducting research, or simply using AI tools, this terminology
+            provides the foundation for deeper understanding and effective communication in the field
+            of artificial intelligence.
+          </p>
+
+          <h2>Related Articles</h2>
+          <div className="related-links">
+            <Link to="/blogs/openrouter-platform-guide" className="related-link">
+              OpenRouter: Your Gateway to Multiple LLM Models →
+            </Link>
+            <Link to="/blogs/llm-agent-guide" className="related-link">
+              LLM Agents: Just Functions with a Fancy Name →
+            </Link>
+          </div>
+        </BlogSection>
+      </BlogTemplate>
   );
 };
 

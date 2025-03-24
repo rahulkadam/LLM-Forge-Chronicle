@@ -18,7 +18,8 @@ const DeveloperQuickStart: React.FC = () => {
       <section className="introduction">
         <h2>What Are LLMs? (The 60-Second Version)</h2>
         <p>
-          Large Language Models (LLMs) are AI systems trained on massive text datasets that can understand and generate human-like text. 
+          Large Language Models (LLMs) are AI systems trained on massive text datasets that can understand and generate
+          human-like text.
           As a developer, you can think of them as sophisticated text prediction engines that can be accessed via APIs.
         </p>
         <div className="key-points">
@@ -26,18 +27,26 @@ const DeveloperQuickStart: React.FC = () => {
             <h3>The Developer's Perspective</h3>
             <ul>
               <li>LLMs are accessible through <strong>API endpoints</strong> (OpenAI, Anthropic, etc.)</li>
-              <li>You send <strong>prompts</strong> (text instructions) and receive <strong>completions</strong> (generated responses)</li>
-              <li>They're trained on data up to a <strong>knowledge cutoff date</strong> (they don't know about events after that date)</li>
-              <li>They consume and generate content measured in <strong>tokens</strong> (roughly 4 characters per token)</li>
+              <li>You send <strong>prompts</strong> (text instructions) and
+                receive <strong>completions</strong> (generated responses)
+              </li>
+              <li>They're trained on data up to a <strong>knowledge cutoff date</strong> (they don't know about events
+                after that date)
+              </li>
+              <li>They consume and generate content measured in <strong>tokens</strong> (roughly 4 characters per token)
+              </li>
               <li>Different models have different <strong>capabilities, limitations, and costs</strong></li>
             </ul>
           </div>
+        </div>
+        <div className="parameter-image-container">
+          <img src="/llm/LLM-high-level-example.png" alt="LLM Agent overview" className="full-width-image"/>
         </div>
       </section>
 
       <section className="why-use-section">
         <h2>Why Should Developers Care About LLMs?</h2>
-        
+
         <div className="use-cases-grid">
           <div className="use-case-card">
             <h3>Code Generation & Assistance</h3>
