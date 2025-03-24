@@ -30,6 +30,7 @@ import LLMTechnologyGuide from "./pages/blogs/llm-terms-guide/llm-technology-gui
 import LLMAgentGuide from './pages/blogs/llm-agent-guide/llm-agent-guide';
 import LLMGettingStartedGuide from './pages/blogs/llm-getting-started-guide/llm-getting-started-guide';
 import RAGTutorial from './pages/blogs/rag-tutorial/rag-tutorial';
+import LangchainIntroduction from './pages/blogs/langchain-introduction/langchain-introduction';
 
 import DeveloperQuickStart from './pages/llm-fundamentals/developer-quick-start';
 import LLMFundamentals from './pages/llm-fundamentals';
@@ -99,6 +100,7 @@ const AppContent: React.FC = () => {
           <Route path="/blogs/llm-agent-guide" element={<LLMAgentGuide />} />
           <Route path="/blogs/llm-getting-started-guide" element={<LLMGettingStartedGuide />} />
           <Route path="/blogs/rag-tutorial" element={<RAGTutorial />} />
+          <Route path="/blogs/langchain-introduction" element={<LangchainIntroduction />} />
           
           {/* Redirects from old routes to new routes */}
           <Route path="/ai-basics" element={<Navigate to="/llm-fundamentals" replace />} />
