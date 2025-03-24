@@ -11,7 +11,7 @@ const Home: React.FC = () => {
         <section className="hero">
           <img src="/llm-logo2.png" alt="LLM Forge Logo" className="hero-logo" />
           <h1>LLM Forge Chronicle</h1>
-          <p className="subtitle">
+          <p className="home-subtitle">
             Your Expert Guide to Building AI-Powered Applications with LLMs
           </p>
           <div className="cta-buttons">

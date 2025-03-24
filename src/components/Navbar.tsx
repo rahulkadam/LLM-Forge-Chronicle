@@ -115,10 +115,10 @@ const Navbar: React.FC = () => {
           </button>
           <div className={`dropdown-content ${activeDropdown === 'fundamentals' ? 'show' : ''}`}>
             <Link to="/ai-basics" className={`nav-link ${isActive('/ai-basics')}`}>
-              AI Basics
+              LLM Introduction
             </Link>
             <Link to="/llm-agent" className={`nav-link ${isActive('/llm-agent')}`}>
-              LLM Introduction
+              LLM Capabilities
             </Link>
             <Link to="/ai-basics/chatgpt-guide" className={`nav-link ${isActive('/ai-basics/chatgpt-guide')}`}>
               ChatGPT & LLM Use Cases

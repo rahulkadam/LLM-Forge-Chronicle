@@ -30,11 +30,11 @@
   letter-spacing: 0.5px;
 }
 
-.subtitle {
+.home-subtitle {
   font-size: 1.2rem;
   max-width: 600px; /* Reduced from 700px */
   margin: 0 auto 24px; /* Reduced from 30px */
-  color: #ffffff; /* Pure white for maximum contrast */
+  color: #dadbe8; /* Pure white for maximum contrast */
   line-height: 1.5;
 }
 

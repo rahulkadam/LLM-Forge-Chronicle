@@ -59,6 +59,22 @@ const BuildingLLMAgent: React.FC = () => {
         </div>
       </section>
 
+      <section className="github-example">
+        <h2>GitHub Example Repository</h2>
+        <p>
+          You can find a complete implementation of this file system agent and more advanced LLM agent examples in the following GitHub repository:
+        </p>
+        <div className="github-link-container">
+          <a href="https://github.com/rahulkadam/llm-agents-examples" target="_blank" rel="noopener noreferrer" className="github-link">
+            <span className="github-icon">📂</span> github.com/rahulkadam/llm-agents-examples
+          </a>
+        </div>
+        <p>
+          This repository contains ready-to-use implementations of several LLM agents, including this file system agent.
+          You'll find comprehensive examples, test cases, and additional documentation to help you get started quickly.
+        </p>
+      </section>
+
       <section className="architecture-overview">
         <h2>Agent Architecture</h2>
         <div className="architecture-diagram">
@@ -133,6 +149,59 @@ const BuildingLLMAgent: React.FC = () => {
         </div>
       </section>
 
+      <section className="dependencies-info">
+        <h2>Dependencies and Compatibility</h2>
+        <div className="dependencies-grid">
+          <div className="dependency-card">
+            <h3>Required Packages</h3>
+            <table className="version-table">
+              <thead>
+                <tr>
+                  <th>Package</th>
+                  <th>Version</th>
+                  <th>Purpose</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>langchain</td>
+                  <td>0.0.267+</td>
+                  <td>Core agent functionality and tools framework</td>
+                </tr>
+                <tr>
+                  <td>openai</td>
+                  <td>0.28.0+</td>
+                  <td>Interface to OpenAI's language models</td>
+                </tr>
+                <tr>
+                  <td>python-dotenv</td>
+                  <td>1.0.0+</td>
+                  <td>Environment variable management</td>
+                </tr>
+                <tr>
+                  <td>colorama</td>
+                  <td>0.4.6+</td>
+                  <td>Terminal text formatting</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="dependency-card">
+            <h3>System Requirements</h3>
+            <ul>
+              <li><strong>Python Version:</strong> 3.8+</li>
+              <li><strong>OS Compatibility:</strong> Windows, macOS, Linux</li>
+              <li><strong>RAM:</strong> 4GB+ recommended</li>
+              <li><strong>Network:</strong> Internet connection for API calls</li>
+            </ul>
+          </div>
+        </div>
+        <div className="note-box">
+          <p><strong>Note:</strong> This agent uses the OpenAI API which requires an API key and has associated costs. 
+          Ensure you have a valid API key and understand <a href="https://openai.com/pricing" target="_blank" rel="noopener noreferrer">OpenAI's pricing structure</a> before proceeding.</p>
+        </div>
+      </section>
+
       <section className="implementation-guide">
         <h2>Step-by-Step Implementation</h2>
         
@@ -149,7 +218,7 @@ python -m venv venv
 source venv/bin/activate  # On Windows: venv\\Scripts\\activate
 
 # Install required packages
-pip install langchain openai python-dotenv pathlib typing colorama`}
+pip install langchain==0.0.267 openai==0.28.0 python-dotenv==1.0.0 pathlib typing colorama==0.4.6`}
             </pre>
           </div>
           <p>Create a .env file in your project root:</p>
@@ -468,6 +537,98 @@ src/
         </div>
       </section>
 
+      <section className="workflow-example">
+        <h2>Practical Workflow Example</h2>
+        <div className="workflow-container">
+          <h3>Managing a Software Project</h3>
+          <p>Here's how you might use this agent in a real development workflow:</p>
+          
+          <div className="workflow-timeline">
+            <div className="workflow-step">
+              <div className="workflow-step-marker">1</div>
+              <div className="workflow-step-content">
+                <h4>Project Setup</h4>
+                <div className="workflow-dialogue">
+                  <div className="user-msg">Create a project structure for a Python web application with directories for src, tests, docs, and config</div>
+                  <div className="agent-msg">I'll create a standard Python web application structure for you. Creating directories:
+                  - src
+                  - tests
+                  - docs
+                  - config
+                  
+                  Structure created successfully. Would you like me to initialize any specific files in these directories?</div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="workflow-step">
+              <div className="workflow-step-marker">2</div>
+              <div className="workflow-step-content">
+                <h4>File Creation</h4>
+                <div className="workflow-dialogue">
+                  <div className="user-msg">Yes, create a basic README.md with project title "File System Agent" and a short description</div>
+                  <div className="agent-msg">I've created a README.md file with the title "File System Agent" and a short description. Here's what I wrote:
+
+# File System Agent
+
+A natural language interface for file system operations, powered by LLMs.
+
+## Features
+- Create, read, update and delete files using natural language
+- Search for files and directories
+- Organize project structures
+- Process file content
+
+Would you like me to add anything else to the README?</div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="workflow-step">
+              <div className="workflow-step-marker">3</div>
+              <div className="workflow-step-content">
+                <h4>Code Generation</h4>
+                <div className="workflow-dialogue">
+                  <div className="user-msg">Create a basic Python file in src called app.py that prints "Hello, File System Agent"</div>
+                  <div className="agent-msg">I've created the file src/app.py with the following content:
+
+```python
+def main():
+    print("Hello, File System Agent")
+
+if __name__ == "__main__":
+    main()
+```
+
+You can run this file with `python src/app.py` and it will print "Hello, File System Agent".</div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="workflow-step">
+              <div className="workflow-step-marker">4</div>
+              <div className="workflow-step-content">
+                <h4>Project Management</h4>
+                <div className="workflow-dialogue">
+                  <div className="user-msg">Find all .py files in the project and tell me their line count</div>
+                  <div className="agent-msg">I'll search for all Python files and count their lines.
+
+Found Python files:
+1. src/app.py: 5 lines
+2. tools.py: 52 lines
+3. agent.py: 68 lines
+4. main.py: 27 lines
+5. tests/test_utils.py: 15 lines
+6. tests/test_file_operations.py: 23 lines
+
+Total: 6 Python files with 190 lines of code.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="common-pitfalls">
         <h2>Common Pitfalls and How to Avoid Them</h2>
         <div className="pitfalls-grid">
@@ -637,7 +798,7 @@ def read_file(path_str, base_dir="."):
             <p>
               Full source code and additional examples for this file system agent.
             </p>
-            <a href="https://github.com/example/file-system-agent" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/rahulkadam/llm-agents-examples" target="_blank" rel="noopener noreferrer">
               View on GitHub →
             </a>
           </div>
