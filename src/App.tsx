@@ -28,8 +28,8 @@ import OpenAIApiGuide from './pages/blogs/openai-api-guide/openai-api-guide';
 import OpenRouterPlatformGuide from "./pages/blogs/openrouter-platform-guide/openrouter-platform-guide";
 import LLMTechnologyGuide from "./pages/blogs/llm-terms-guide/llm-technology-guide";
 import LLMAgentGuide from './pages/blogs/llm-agent-guide/llm-agent-guide';
-// Removed SimpleChatApp and SimpleAgentDemo imports as requested
-// CricketMatchAgent import removed as requested
+import LLMGettingStartedGuide from './pages/blogs/llm-getting-started-guide/llm-getting-started-guide';
+import RAGTutorial from './pages/blogs/rag-tutorial/rag-tutorial';
 
 import DeveloperQuickStart from './pages/llm-fundamentals/developer-quick-start';
 import LLMFundamentals from './pages/llm-fundamentals';
@@ -97,6 +97,8 @@ const AppContent: React.FC = () => {
           <Route path="/blogs/openrouter-platform-guide" element={<OpenRouterPlatformGuide />} />
           <Route path="/blogs/llm-technology-guide" element={<LLMTechnologyGuide />} />
           <Route path="/blogs/llm-agent-guide" element={<LLMAgentGuide />} />
+          <Route path="/blogs/llm-getting-started-guide" element={<LLMGettingStartedGuide />} />
+          <Route path="/blogs/rag-tutorial" element={<RAGTutorial />} />
           
           {/* Redirects from old routes to new routes */}
           <Route path="/ai-basics" element={<Navigate to="/llm-fundamentals" replace />} />

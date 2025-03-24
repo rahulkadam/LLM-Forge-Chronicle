@@ -1,0 +1,139 @@
+/* Specific styles for LLM Getting Started Guide page */
+.llm-getting-started-guide .qa-container {
+  margin-bottom: 2rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border-left: 4px solid #2196F3;
+}
+
+.llm-getting-started-guide .question {
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.llm-getting-started-guide .question::before {
+  content: "Q:";
+  color: #2196F3;
+  font-weight: 700;
+  margin-right: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.llm-getting-started-guide .answer {
+  color: #4a4a4a;
+  line-height: 1.6;
+  padding-left: 1.8rem;
+}
+
+.llm-getting-started-guide .answer p {
+  margin-bottom: 1rem;
+}
+
+.llm-getting-started-guide .answer p:last-child {
+  margin-bottom: 0;
+}
+
+.llm-getting-started-guide .tip-box {
+  background-color: #e3f2fd;
+  border-left: 4px solid #2196F3;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+}
+
+.llm-getting-started-guide .step-list {
+  list-style-type: none;
+  padding-left: 0;
+  counter-reset: step-counter;
+}
+
+.llm-getting-started-guide .step-list li {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+  counter-increment: step-counter;
+}
+
+.llm-getting-started-guide .step-list li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 2px;
+  background-color: #2196F3;
+  color: white;
+  font-weight: bold;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.llm-getting-started-guide .resource-box {
+  background-color: #f0f9ff;
+  border: 1px solid #d1e5f6;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.llm-getting-started-guide .resource-box h4 {
+  color: #0c66a4;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.llm-getting-started-guide .resource-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.llm-getting-started-guide .resource-item {
+  background-color: white;
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.llm-getting-started-guide .resource-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.llm-getting-started-guide .resource-item h5 {
+  color: #2196F3;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.llm-getting-started-guide .resource-item p {
+  color: #4a4a4a;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .llm-getting-started-guide .resource-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .llm-getting-started-guide .question {
+    font-size: 1.1rem;
+  }
+  
+  .llm-getting-started-guide .answer {
+    padding-left: 1.5rem;
+  }
+}

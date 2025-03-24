@@ -1,0 +1,211 @@
+/* Specific styles for RAG Tutorial page */
+.rag-tutorial .architecture-diagram {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.rag-tutorial .diagram-image {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rag-tutorial .component {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #3182ce;
+}
+
+.rag-tutorial .component h3 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: #2c5282;
+}
+
+.rag-tutorial .component-icon {
+  background: #ebf8ff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  color: #2c5282;
+  flex-shrink: 0;
+}
+
+.rag-tutorial .step {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.rag-tutorial .step:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.rag-tutorial .step-number {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 36px;
+  height: 36px;
+  background: #3182ce;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.rag-tutorial .best-practices {
+  background: #f0f9ff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.rag-tutorial .best-practices h3 {
+  color: #2c5282;
+  margin-bottom: 1rem;
+}
+
+.rag-tutorial .best-practices ul {
+  columns: 2;
+  column-gap: 2rem;
+}
+
+.rag-tutorial .best-practices li {
+  margin-bottom: 1rem;
+  break-inside: avoid;
+}
+
+.rag-tutorial .code-explanation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.rag-tutorial .code-block {
+  grid-column: 1;
+  background: #1a202c;
+  color: #e2e8f0;
+  padding: 1.25rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+}
+
+.rag-tutorial .explanation {
+  grid-column: 2;
+  background: #f8f9fa;
+  padding: 1.25rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rag-tutorial .explanation p {
+  margin: 0 0 0.75rem;
+}
+
+.rag-tutorial .explanation p:last-child {
+  margin-bottom: 0;
+}
+
+.rag-tutorial .result-box {
+  background: #f0fff4;
+  border-left: 4px solid #38a169;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.rag-tutorial .result-box h4 {
+  color: #276749;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.rag-tutorial .comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.rag-tutorial .comparison-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.rag-tutorial .naive-approach {
+  background: #fff5f5;
+  border-left: 4px solid #f56565;
+}
+
+.rag-tutorial .rag-approach {
+  background: #f0fff4;
+  border-left: 4px solid #48bb78;
+}
+
+.rag-tutorial .tip-box {
+  background: #ebf8ff;
+  border-left: 4px solid #4299e1;
+  padding: 1.25rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.rag-tutorial .tip-box h4 {
+  color: #2b6cb0;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.rag-tutorial .tip-box h4 svg {
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .rag-tutorial .code-explanation {
+    grid-template-columns: 1fr;
+  }
+  
+  .rag-tutorial .code-block {
+    grid-column: auto;
+  }
+  
+  .rag-tutorial .explanation {
+    grid-column: auto;
+  }
+  
+  .rag-tutorial .best-practices ul {
+    columns: 1;
+  }
+  
+  .rag-tutorial .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+}

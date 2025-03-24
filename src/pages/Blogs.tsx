@@ -42,6 +42,26 @@ const Blogs: React.FC = () => {
             </div>
           </div>
         </div>
+        {/* Getting Started with LLMs Blog */}
+        <div className="blog-card">
+          <div className="blog-card-image getting-started-image"></div>
+          <div className="blog-card-content">
+            <div className="blog-tag">Beginner</div>
+            <h2 className="blog-title-page">Getting Started with LLMs: A Beginner's Q&A Guide</h2>
+            <p className="blog-excerpt">
+              A friendly question-answer guide to help beginners understand and start using Large Language Models effectively without feeling overwhelmed.
+            </p>
+            <div className="blog-footer-page">
+              <div className="blog-meta">
+                <span className="reading-time">7 min read</span>
+                <span className="publish-date">March 25, 2024</span>
+              </div>
+              <Link to="/blogs/llm-getting-started-guide" className="read-more-link">
+                Read Article →
+              </Link>
+            </div>
+          </div>
+        </div>
 
         {/* LLM Agent Blog */}
         <div className="blog-card">

@@ -131,6 +131,64 @@
   max-width: 600px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+/* LLM Getting Started Banner */
+.llm-getting-started-banner {
+  background: linear-gradient(135deg, #3182CE 0%, #2B6CB0 100%);
+}
+
+.llm-getting-started-banner::before {
+  content: "Getting Started";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.llm-getting-started-banner::after {
+  content: "Your Journey into the World of LLMs";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  max-width: 600px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+/* RAG Banner */
+.rag-banner {
+  background: linear-gradient(135deg, #4299E1 0%, #2B6CB0 100%);
+}
+
+.rag-banner::before {
+  content: "RAG System";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.rag-banner::after {
+  content: "Retrieval Augmented Generation";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  max-width: 600px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 
 /* Responsive styles */
 @media (max-width: 768px) {

@@ -180,6 +180,16 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.getting-started-image {
+  background: linear-gradient(135deg, #3182CE 0%, #2B6CB0 100%);
+}
+
+.getting-started-image::before {
+  content: "Getting Started with LLMs";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 .blog-card-content {
   padding: 25px;
   flex-grow: 1;
