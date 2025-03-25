@@ -189,6 +189,16 @@
   font-size: 1.4rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+.cursor-workflows-image {
+  background: linear-gradient(135deg, #7D57C2 0%, #5E35B1 100%);
+}
+
+.cursor-workflows-image::before {
+  content: "Cursor Custom Workflows";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 
 .blog-card-content {
   padding: 25px;

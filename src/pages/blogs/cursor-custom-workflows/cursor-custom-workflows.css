@@ -1,0 +1,220 @@
+/* Specific styles for Cursor Custom Workflows page */
+.cursor-custom-workflows-guide .qa-container {
+  margin-bottom: 2rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border-left: 4px solid #7d57c2; /* Purple theme for Cursor */
+}
+
+.cursor-custom-workflows-guide .question {
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.cursor-custom-workflows-guide .question::before {
+  content: "Q:";
+  color: #7d57c2; /* Purple theme for Cursor */
+  font-weight: 700;
+  margin-right: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.cursor-custom-workflows-guide .answer {
+  color: #4a4a4a;
+  line-height: 1.6;
+  padding-left: 1.8rem;
+}
+
+.cursor-custom-workflows-guide .answer p {
+  margin-bottom: 1rem;
+}
+
+.cursor-custom-workflows-guide .answer p:last-child {
+  margin-bottom: 0;
+}
+
+.cursor-custom-workflows-guide .tip-box {
+  background-color: #f3e5f5; /* Light purple background */
+  border-left: 4px solid #7d57c2;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+}
+
+.cursor-custom-workflows-guide .warning-box {
+  background-color: #fff3e0; /* Light orange background */
+  border-left: 4px solid #ff9800;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+}
+
+.cursor-custom-workflows-guide .step-list {
+  list-style-type: none;
+  padding-left: 0;
+  counter-reset: step-counter;
+}
+
+.cursor-custom-workflows-guide .step-list li {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+  counter-increment: step-counter;
+}
+
+.cursor-custom-workflows-guide .step-list li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 2px;
+  background-color: #7d57c2;
+  color: white;
+  font-weight: bold;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.cursor-custom-workflows-guide .resource-box {
+  background-color: #f3f1f7;
+  border: 1px solid #e1dae8;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.cursor-custom-workflows-guide .resource-box h4 {
+  color: #5e35b1;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.cursor-custom-workflows-guide .resource-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.cursor-custom-workflows-guide .resource-item {
+  background-color: white;
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cursor-custom-workflows-guide .resource-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cursor-custom-workflows-guide .resource-item h5 {
+  color: #7d57c2;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.cursor-custom-workflows-guide .resource-item p {
+  color: #4a4a4a;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.cursor-custom-workflows-guide .code-example {
+  background-color: #282c34;
+  color: #e5e5e5;
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+.cursor-custom-workflows-guide .code-example pre {
+  margin: 0;
+}
+
+.cursor-custom-workflows-guide .code-example code {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.cursor-custom-workflows-guide .code-tabs {
+  margin: 1.5rem 0;
+}
+
+.cursor-custom-workflows-guide .code-tab-header {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.cursor-custom-workflows-guide .code-tab-button {
+  padding: 0.5rem 1rem;
+  background: #f1f1f1;
+  border: none;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.cursor-custom-workflows-guide .code-tab-button.active {
+  background: #7d57c2;
+  color: white;
+}
+
+.cursor-custom-workflows-guide .workflow-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.cursor-custom-workflows-guide .workflow-card h4 {
+  color: #5e35b1;
+  margin-top: 0;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.cursor-custom-workflows-guide .workflow-card h4:before {
+  content: "⚡";
+  margin-right: 8px;
+}
+
+.cursor-custom-workflows-guide .screenshot {
+  max-width: 100%;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin: 1.5rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cursor-custom-workflows-guide .resource-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .cursor-custom-workflows-guide .question {
+    font-size: 1.1rem;
+  }
+  
+  .cursor-custom-workflows-guide .answer {
+    padding-left: 1.5rem;
+  }
+}

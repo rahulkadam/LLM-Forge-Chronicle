@@ -160,6 +160,36 @@
   max-width: 600px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+/* Cursor Workflows Banner */
+.cursor-workflows-banner {
+  background: linear-gradient(135deg, #7D57C2 0%, #5E35B1 100%);
+}
+
+.cursor-workflows-banner::before {
+  content: "Cursor Workflows";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.cursor-workflows-banner::after {
+  content: "Automate Your Coding Tasks";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  max-width: 600px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 /* RAG Banner */
 /* LangChain Banner */
 .langchain-banner {

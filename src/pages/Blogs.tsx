@@ -42,6 +42,7 @@ const Blogs: React.FC = () => {
             </div>
           </div>
         </div>
+        
         {/* Getting Started with LLMs Blog */}
         <div className="blog-card">
           <div className="blog-card-image getting-started-image"></div>
@@ -100,6 +101,27 @@ const Blogs: React.FC = () => {
                 <span className="publish-date">July 3, 2023</span>
               </div>
               <Link to="/blogs/openrouter-platform-guide" className="read-more-link">
+                Read Article →
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Cursor Custom Workflows Blog */}
+        <div className="blog-card">
+          <div className="blog-card-image cursor-workflows-image"></div>
+          <div className="blog-card-content">
+            <div className="blog-tag">Developer Tools</div>
+            <h2 className="blog-title-page">Mastering Cursor Custom Workflows: Automate Your Coding Tasks</h2>
+            <p className="blog-excerpt">
+              Learn how to create and optimize custom workflows in Cursor to automate coding tasks, improve productivity, and streamline your development process.
+            </p>
+            <div className="blog-footer-page">
+              <div className="blog-meta">
+                <span className="reading-time">8 min read</span>
+                <span className="publish-date">March 25, 2024</span>
+              </div>
+              <Link to="/blogs/cursor-custom-workflows" className="read-more-link">
                 Read Article →
               </Link>
             </div>
