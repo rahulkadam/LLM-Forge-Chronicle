@@ -218,8 +218,8 @@ const GettingStarted: React.FC = () => {
         </section>
       </div>
 
-      <section className="ready-to-start">
-        <div className="cta-container">
+      <section className="ready-to-start1">
+        <div className="cta-container1">
           <h2>Ready to Start Your LLM Journey?</h2>
           <p>Choose where you want to begin based on your current knowledge and goals.</p>
           <div className="cta-buttons">
