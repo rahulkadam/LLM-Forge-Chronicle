@@ -32,6 +32,7 @@ import LLMGettingStartedGuide from './pages/blogs/llm-getting-started-guide/llm-
 import RAGTutorial from './pages/blogs/rag-tutorial/rag-tutorial';
 import LangchainIntroduction from './pages/blogs/langchain-introduction/langchain-introduction';
 import CursorCustomWorkflows from './pages/blogs/cursor-custom-workflows/cursor-custom-workflows';
+import ModelContextServer from './pages/blogs/model-context-server/model-context-server';
 
 import DeveloperQuickStart from './pages/llm-fundamentals/developer-quick-start';
 import LLMFundamentals from './pages/llm-fundamentals';
@@ -103,6 +104,7 @@ const AppContent: React.FC = () => {
           <Route path="/blogs/rag-tutorial" element={<RAGTutorial />} />
           <Route path="/blogs/langchain-introduction" element={<LangchainIntroduction />} />
           <Route path="/blogs/cursor-custom-workflows" element={<CursorCustomWorkflows />} />
+          <Route path="/blogs/model-context-server" element={<ModelContextServer />} />
           
           {/* Redirects from old routes to new routes */}
           <Route path="/ai-basics" element={<Navigate to="/llm-fundamentals" replace />} />

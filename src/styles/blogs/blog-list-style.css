@@ -52,7 +52,7 @@
   transition: all 0.3s ease;
 }
 
-.category-button:hover {
+.category-button:hover:not(.active) {
   background-color: #edf2f7;
 }
 
@@ -199,6 +199,16 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+
+.mcp-image {
+  background: linear-gradient(135deg, #2196F3 0%, #0D47A1 100%);
+}
+
+.mcp-image::before {
+  content: "Model Context Server";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 
 .blog-card-content {
   padding: 25px;
@@ -349,10 +359,53 @@
   border-color: #cbd5e0;
 }
 
+/* No results message */
+.no-results {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f7fafc;
+  border-radius: 10px;
+  margin-bottom: 60px;
+}
+
+.no-results h2 {
+  color: #2d3748;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.no-results p {
+  color: #4a5568;
+  margin-bottom: 20px;
+}
+
+/* Pagination enhancements */
+.pagination-button.prev,
 .pagination-button.next {
   width: auto;
   padding: 0 20px;
   border-radius: 20px;
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Tag interactions */
+.blog-tag {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.blog-tag:hover {
+  background-color: #bee3f8;
+}
+
+.blog-tag:focus {
+  outline: 2px solid #4299e1;
+  outline-offset: 2px;
 }
 
 /* Responsive adjustments */
