@@ -24,7 +24,7 @@ const ModelContextServer: React.FC = () => {
   return (
     <BlogTemplate
       title="Model Context Server (MCP): Efficient Context Management for LLMs"
-      date="March 30, 2024"
+      date="March 30, 2025"
       readTime="8 min"
       category="Technical"
       bannerClassName="mcp-banner"

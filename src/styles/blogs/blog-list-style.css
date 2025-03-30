@@ -100,6 +100,27 @@
   padding: 10px;
 }
 
+/* New blog card images for AI Tools and Resources */
+.ai-tools-image {
+  background: linear-gradient(135deg, #FF6B6B 0%, #D32F2F 100%);
+}
+
+.ai-tools-image::before {
+  content: "AI-Powered Developer Tools";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.resources-image {
+  background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+}
+
+.resources-image::before {
+  content: "LLM Resources & References";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 .llm-terminology-image {
   background: linear-gradient(135deg, #2D3748 0%, #1A365D 100%);
 }

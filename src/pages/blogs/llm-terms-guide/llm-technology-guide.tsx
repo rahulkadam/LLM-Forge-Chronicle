@@ -29,9 +29,9 @@ const LLMTerminology: React.FC = () => {
   return (
       <BlogTemplate
           title="Understanding LLM Terminology: A Comprehensive Guide"
-          date="March 21, 2024"
+          date="March 21, 2025"
           readTime="8 min"
-          category="Technical"
+          category="Fundamentals"
           bannerClassName="llm-terms-banner"
           tableOfContents={tableOfContents}
           className="llm-terms-guide" // Add class for specific styles if needed

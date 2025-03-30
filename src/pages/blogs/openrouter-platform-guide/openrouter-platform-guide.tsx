@@ -23,7 +23,7 @@ const OpenRouterIntroduction: React.FC = () => {
   return (
     <BlogTemplate
       title="OpenRouter: Your Gateway to Multiple LLM Models"
-      date="March 20, 2024"
+      date="March 20, 2025"
       readTime="10 min"
       category="Platform"
       bannerClassName="openrouter-banner"

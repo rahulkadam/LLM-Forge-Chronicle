@@ -137,30 +137,6 @@ const Navbar: React.FC = () => {
           </Link>
         </li>
         
-        {/* Resources dropdown */}
-        <li className="dropdown">
-          <button 
-            className="dropdown-trigger"
-            onClick={(e) => {
-              e.stopPropagation();
-              toggleDropdown('resources');
-            }}
-          >
-            Resources <span className="arrow">▾</span>
-          </button>
-          <div className={`dropdown-content ${activeDropdown === 'resources' ? 'show' : ''}`}>
-            <Link to="/ai-tools" className={`nav-link ${isActive('/ai-tools')}`}>
-              Tools & References
-            </Link>
-            <Link to="/community" className={`nav-link ${isActive('/community')}`}>
-              Community
-            </Link>
-            <Link to="/resources" className={`nav-link ${isActive('/resources')}`}>
-              Resources
-            </Link>
-          </div>
-        </li>
-        
         {/* About - single link */}
         <li>
           <Link to="/about" className={`nav-link ${isActive('/about')}`}>

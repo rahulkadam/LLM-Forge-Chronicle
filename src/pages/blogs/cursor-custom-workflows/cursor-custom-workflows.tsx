@@ -25,7 +25,7 @@ const CursorCustomWorkflows: React.FC = () => {
   return (
     <BlogTemplate
       title="Mastering Cursor Custom Workflows: Automate Your Coding Tasks"
-      date="March 25, 2024"
+      date="March 25, 2025"
       readTime="8 min"
       category="Developer Tools"
       bannerClassName="cursor-workflows-banner"

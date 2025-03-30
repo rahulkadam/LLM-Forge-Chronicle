@@ -27,7 +27,7 @@ const Blogs: React.FC = () => {
   // State for the active category/tag filter and current page
   const [activeCategory, setActiveCategory] = useState<string>(getInitialTag());
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const ITEMS_PER_PAGE = 6;
+  const ITEMS_PER_PAGE = 10;
 
   // Update URL when active category changes
   useEffect(() => {
@@ -41,13 +41,33 @@ const Blogs: React.FC = () => {
   // Complete list of blog posts
   const allBlogPosts: BlogPost[] = [
     {
+      id: 'ai-tools',
+      title: 'AI-Powered Developer & Agent Tools',
+      excerpt: 'Discover powerful tools for agent development and AI-assisted coding to supercharge your workflow. From code generation to intelligent assistance, find the right tools for your needs.',
+      imageClass: 'ai-tools-image',
+      tag: 'Resources',
+      readingTime: '15 min read',
+      publishDate: 'March 31, 2025',
+      link: '/ai-tools'
+    },
+    {
+      id: 'llm-resources',
+      title: 'LLM Resources & References',
+      excerpt: 'A curated collection of tools, services, and learning materials for LLM development. Find the best resources for building and deploying language model applications.',
+      imageClass: 'resources-image',
+      tag: 'Resources',
+      readingTime: '10 min read', 
+      publishDate: 'March 29, 2025',
+      link: '/resources'
+    },
+    {
       id: 'model-context-server',
       title: 'Model Context Server (MCP): Efficient Context Management for LLMs',
       excerpt: 'Explore how Model Context Servers solve context window limitations in LLMs by efficiently managing, storing, and retrieving context to enable more coherent AI experiences.',
       imageClass: 'mcp-image',
       tag: 'Architecture',
       readingTime: '8 min read',
-      publishDate: 'March 30, 2024',
+      publishDate: 'March 30, 2025',
       link: '/blogs/model-context-server'
     },
     {
@@ -55,9 +75,9 @@ const Blogs: React.FC = () => {
       title: 'Understanding LLM Terminology: A Comprehensive Guide',
       excerpt: 'A detailed guide to essential terms and concepts in Large Language Models, from tokens to fine-tuning, helping you navigate the world of AI language processing.',
       imageClass: 'llm-terminology-image',
-      tag: 'Technical',
+      tag: 'Fundamentals',
       readingTime: '8 min read',
-      publishDate: 'March 21, 2024',
+      publishDate: 'March 21, 2025',
       link: '/blogs/llm-technology-guide'
     },
     {
@@ -65,9 +85,9 @@ const Blogs: React.FC = () => {
       title: 'Getting Started with LLMs: A Beginner\'s Q&A Guide',
       excerpt: 'A friendly question-answer guide to help beginners understand and start using Large Language Models effectively without feeling overwhelmed.',
       imageClass: 'getting-started-image',
-      tag: 'Beginner',
+      tag: 'Tutorials & Guides',
       readingTime: '7 min read',
-      publishDate: 'March 25, 2024',
+      publishDate: 'March 25, 2025',
       link: '/blogs/llm-getting-started-guide'
     },
     {
@@ -75,9 +95,9 @@ const Blogs: React.FC = () => {
       title: 'LLM Agents: Just Functions with a Fancy Name',
       excerpt: 'Demystifying LLM Agents - they\'re just functions that use language models to do specific tasks.',
       imageClass: 'llm-agent-image',
-      tag: 'Technical',
+      tag: 'Fundamentals',
       readingTime: '5 min read',
-      publishDate: 'March 22, 2024',
+      publishDate: 'March 22, 2025',
       link: '/blogs/llm-agent-guide'
     },
     {
@@ -85,9 +105,9 @@ const Blogs: React.FC = () => {
       title: 'What is OpenRouter and Why Use It?',
       excerpt: 'Explore how OpenRouter can give you access to multiple LLMs through a unified API, simplifying your multi-model workflow and reducing integration complexity.',
       imageClass: 'openrouter-image',
-      tag: 'Platform',
+      tag: 'Platforms & Services',
       readingTime: '6 min read',
-      publishDate: 'July 3, 2023',
+      publishDate: 'January 15, 2025',
       link: '/blogs/openrouter-platform-guide'
     },
     {
@@ -95,9 +115,9 @@ const Blogs: React.FC = () => {
       title: 'Mastering Cursor Custom Workflows: Automate Your Coding Tasks',
       excerpt: 'Learn how to create and optimize custom workflows in Cursor to automate coding tasks, improve productivity, and streamline your development process.',
       imageClass: 'cursor-workflows-image',
-      tag: 'Developer Tools',
+      tag: 'Tools & Frameworks',
       readingTime: '8 min read',
-      publishDate: 'March 25, 2024',
+      publishDate: 'March 12, 2025',
       link: '/blogs/cursor-custom-workflows'
     },
     {
@@ -105,9 +125,9 @@ const Blogs: React.FC = () => {
       title: 'Connecting to OpenAI API: A Complete Guide',
       excerpt: 'A step-by-step tutorial to set up and use OpenAI\'s API for your applications, including authentication, handling requests, and managing API limits.',
       imageClass: 'openai-image',
-      tag: 'Tutorial',
+      tag: 'Tutorials & Guides',
       readingTime: '8 min read',
-      publishDate: 'June 15, 2023',
+      publishDate: 'January 20, 2025',
       link: '/blogs/openai-api-guide'
     },
     {
@@ -115,9 +135,9 @@ const Blogs: React.FC = () => {
       title: 'Building Your First RAG System',
       excerpt: 'A comprehensive tutorial on implementing Retrieval Augmented Generation (RAG) to enhance your LLMs with external data sources and improve response accuracy.',
       imageClass: 'rag-image',
-      tag: 'Advanced',
+      tag: 'Advanced Techniques',
       readingTime: '12 min read',
-      publishDate: 'July 18, 2023',
+      publishDate: 'February 18, 2025',
       link: '/blogs/rag-tutorial'
     },
     {
@@ -125,9 +145,9 @@ const Blogs: React.FC = () => {
       title: 'Advanced Prompt Engineering Patterns',
       excerpt: 'Learn advanced prompting strategies like chain-of-thought, few-shot learning, and structured outputs to maximize the capabilities of LLMs.',
       imageClass: 'prompt-image',
-      tag: 'Technique',
+      tag: 'Advanced Techniques',
       readingTime: '10 min read',
-      publishDate: 'August 5, 2023',
+      publishDate: 'February 5, 2025',
       link: '/blogs/advanced-prompt-engineering'
     },
     {
@@ -135,9 +155,9 @@ const Blogs: React.FC = () => {
       title: 'Mastering Function Calling with LLMs',
       excerpt: 'How to use function calling capabilities in modern LLMs to create powerful applications that can interact with external tools and APIs.',
       imageClass: 'functions-image',
-      tag: 'Development',
+      tag: 'Advanced Techniques',
       readingTime: '9 min read',
-      publishDate: 'August 22, 2023',
+      publishDate: 'February 22, 2025',
       link: '/blogs/function-calling-guide'
     },
     {
@@ -145,9 +165,9 @@ const Blogs: React.FC = () => {
       title: 'Getting Started with LangChain',
       excerpt: 'An introduction to LangChain, a popular framework for developing applications powered by language models, with practical examples.',
       imageClass: 'langchain-image',
-      tag: 'Framework',
+      tag: 'Tools & Frameworks',
       readingTime: '11 min read',
-      publishDate: 'September 10, 2023',
+      publishDate: 'January 10, 2025',
       link: '/blogs/langchain-introduction'
     }
   ];

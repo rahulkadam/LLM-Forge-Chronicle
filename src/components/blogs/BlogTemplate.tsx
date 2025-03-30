@@ -19,7 +19,7 @@ const BlogTemplate: React.FC<BlogPostProps> = ({
   title,
   date,
   readTime,
-  category = 'Technical',
+  category = 'Fundamentals',
   bannerClassName,
   tableOfContents,
   children,

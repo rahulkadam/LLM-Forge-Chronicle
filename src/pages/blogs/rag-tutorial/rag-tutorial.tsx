@@ -102,7 +102,7 @@ const RAGTutorial: React.FC = () => {
   return (
     <BlogTemplate
       title="Building Your First RAG System"
-      date="March 26, 2024"
+      date="March 26, 2025"
       readTime="12 min"
       category="Advanced"
       bannerClassName="rag-banner"

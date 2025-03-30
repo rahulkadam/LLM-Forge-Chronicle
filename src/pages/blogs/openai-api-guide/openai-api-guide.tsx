@@ -21,7 +21,7 @@ const OpenAIConnectionGuide: React.FC = () => {
   return (
     <BlogTemplate
       title="Connecting to OpenAI API: A Complete Guide"
-      date="June 15, 2023"
+      date="June 15, 2025"
       readTime="8 min"
       category="Tutorial"
       bannerClassName="openai-banner"

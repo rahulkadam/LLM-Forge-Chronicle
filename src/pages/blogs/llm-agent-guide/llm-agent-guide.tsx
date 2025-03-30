@@ -23,7 +23,7 @@ const LLMAgentSimplified: React.FC = () => {
   return (
     <BlogTemplate
       title="LLM Agents: Just Functions with a Fancy Name"
-      date="March 22, 2024"
+      date="March 22, 2025"
       readTime="5 min"
       category="Technical"
       bannerClassName="llm-agent-banner"

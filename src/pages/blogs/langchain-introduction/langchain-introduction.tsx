@@ -24,7 +24,7 @@ const LangchainIntroduction: React.FC = () => {
   return (
     <BlogTemplate
       title="Getting Started with LangChain"
-      date="March 25, 2024"
+      date="March 25, 2025"
       readTime="7 min"
       category="Framework"
       bannerClassName="langchain-banner"

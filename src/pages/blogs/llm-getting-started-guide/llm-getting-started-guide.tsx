@@ -42,7 +42,7 @@ const LLMGettingStartedGuide: React.FC = () => {
   return (
     <BlogTemplate
       title="Getting Started with LLMs: A Beginner's Q&A Guide"
-      date="March 25, 2024"
+      date="March 25, 2025"
       readTime="7 min"
       category="Beginner"
       bannerClassName="llm-getting-started-banner"
