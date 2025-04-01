@@ -11,10 +11,10 @@ const Resources: React.FC = () => {
         </p>
       </section>
 
-      <section className="resource-section">
+      <section className="resource-section1">
         <h2>Popular LLM Services</h2>
-        <div className="resource-grid">
-          <div className="resource-card">
+        <div className="resource-grid1">
+          <div className="resource-card1">
             <h3>OpenAI GPT-4</h3>
             <p>State-of-the-art language model with advanced reasoning capabilities.</p>
             <div className="resource-links">
@@ -23,7 +23,7 @@ const Resources: React.FC = () => {
             </div>
           </div>
 
-          <div className="resource-card">
+          <div className="resource-card1">
             <h3>Anthropic Claude</h3>
             <p>Advanced AI model known for safety, honesty, and long-context understanding.</p>
             <div className="resource-links">
@@ -32,7 +32,7 @@ const Resources: React.FC = () => {
             </div>
           </div>
 
-          <div className="resource-card">
+          <div className="resource-card1">
             <h3>OpenRouter</h3>
             <p>Single API endpoint for multiple language models, including Claude, GPT-4, and more.</p>
             <div className="resource-links">
@@ -45,8 +45,8 @@ const Resources: React.FC = () => {
 
       <section className="resource-section">
         <h2>Cloud Provider LLM Services</h2>
-        <div className="resource-grid">
-          <div className="resource-card">
+        <div className="resource-grid1">
+          <div className="resource-card1">
             <h3>Amazon Bedrock</h3>
             <p>Fully managed service for foundation models from leading AI companies.</p>
             <div className="resource-links">
@@ -55,7 +55,7 @@ const Resources: React.FC = () => {
             </div>
           </div>
 
-          <div className="resource-card">
+          <div className="resource-card1">
             <h3>Google Vertex AI</h3>
             <p>Access to PaLM 2 and other Google AI models with enterprise features.</p>
             <div className="resource-links">
@@ -64,7 +64,7 @@ const Resources: React.FC = () => {
             </div>
           </div>
 
-          <div className="resource-card">
+          <div className="resource-card1">
             <h3>Azure OpenAI Service</h3>
             <p>Enterprise-ready OpenAI models with Azure security and compliance.</p>
             <div className="resource-links">
@@ -77,8 +77,8 @@ const Resources: React.FC = () => {
 
       <section className="resource-section">
         <h2>Notable Agent Projects</h2>
-        <div className="resource-grid">
-          <div className="resource-card">
+        <div className="resource-grid1">
+          <div className="resource-card1">
             <h3>BabyAGI</h3>
             <p>Task-driven autonomous agent that breaks down and executes complex goals.</p>
             <div className="resource-links">
@@ -86,7 +86,7 @@ const Resources: React.FC = () => {
             </div>
           </div>
 
-          <div className="resource-card">
+          <div className="resource-card1">
             <h3>GPT Engineer</h3>
             <p>Agent that can understand requirements and generate entire codebases.</p>
             <div className="resource-links">
@@ -94,7 +94,7 @@ const Resources: React.FC = () => {
             </div>
           </div>
 
-          <div className="resource-card">
+          <div className="resource-card1">
             <h3>MetaGPT</h3>
             <p>Multi-agent framework for complex software development tasks.</p>
             <div className="resource-links">
@@ -106,8 +106,8 @@ const Resources: React.FC = () => {
 
       <section className="resource-section">
         <h2>Development Tools & Frameworks</h2>
-        <div className="resource-grid">
-          <div className="resource-card">
+        <div className="resource-grid1">
+          <div className="resource-card1">
             <h3>LangServe</h3>
             <p>Deploy LangChain applications as REST APIs with monitoring.</p>
             <div className="resource-links">
@@ -116,7 +116,7 @@ const Resources: React.FC = () => {
             </div>
           </div>
 
-          <div className="resource-card">
+          <div className="resource-card1">
             <h3>Semantic Kernel</h3>
             <p>Microsoft's SDK for integrating LLMs into applications.</p>
             <div className="resource-links">
@@ -125,7 +125,7 @@ const Resources: React.FC = () => {
             </div>
           </div>
 
-          <div className="resource-card">
+          <div className="resource-card1">
             <h3>Haystack</h3>
             <p>End-to-end framework for building NLP applications.</p>
             <div className="resource-links">
@@ -138,8 +138,8 @@ const Resources: React.FC = () => {
 
       <section className="resource-section">
         <h2>Learning Resources</h2>
-        <div className="resource-grid">
-          <div className="resource-card">
+        <div className="resource-grid1">
+          <div className="resource-card1">
             <h3>Papers & Research</h3>
             <ul className="resource-list">
               <li><a href="https://arxiv.org/abs/2303.08774" target="_blank" rel="noopener noreferrer">GPT-4 Technical Report</a></li>
@@ -148,7 +148,7 @@ const Resources: React.FC = () => {
             </ul>
           </div>
 
-          <div className="resource-card">
+          <div className="resource-card1">
             <h3>Blogs & Newsletters</h3>
             <ul className="resource-list">
               <li><a href="https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/" target="_blank" rel="noopener noreferrer">Wolfram on ChatGPT</a></li>
@@ -157,7 +157,7 @@ const Resources: React.FC = () => {
             </ul>
           </div>
 
-          <div className="resource-card">
+          <div className="resource-card1">
             <h3>Communities</h3>
             <ul className="resource-list">
               <li><a href="https://huggingface.co/spaces" target="_blank" rel="noopener noreferrer">Hugging Face Spaces</a></li>

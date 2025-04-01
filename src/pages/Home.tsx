@@ -14,7 +14,7 @@ const Home: React.FC = () => {
             Fast-track your journey from LLM basics to production-ready applications
           </p>
           <div className="cta-buttons">
-            <Link to="/llm-fundamentals" className="cta-button primary">Get Started</Link>
+            <Link to="/getting-started" className="cta-button primary">Get Started</Link>
             <Link to="/blogs" className="cta-button secondary">View Tutorials</Link>
           </div>
         </section>

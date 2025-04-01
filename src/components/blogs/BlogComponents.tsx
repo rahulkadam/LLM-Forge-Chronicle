@@ -77,3 +77,37 @@ export const InfoBox: React.FC<InfoBoxProps> = ({ type, children }) => {
     </div>
   );
 };
+
+// New Reference Links Component
+interface ReferenceLink {
+  title: string;
+  url: string;
+  description?: string;
+}
+
+interface ReferenceLinksProps {
+  title?: string;
+  references: ReferenceLink[];
+}
+
+export const ReferenceLinks: React.FC<ReferenceLinksProps> = ({ 
+  title = "Additional References", 
+  references 
+}) => {
+  return (
+    <div className="reference-links-section">
+      <h3>{title}</h3>
+      <div className="reference-links-grid">
+        {references.map((reference, index) => (
+          <div key={index} className="reference-link-card">
+            <h4>{reference.title}</h4>
+            {reference.description && <p>{reference.description}</p>}
+            <a href={reference.url} target="_blank" rel="noopener noreferrer" className="reference-link">
+              View Resource →
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
