@@ -9,32 +9,26 @@ const About: React.FC = () => {
       <section className="about-section">
         <h2>Our Mission</h2>
         <p>
-          ChronoPrompt is a comprehensive platform dedicated to empowering developers 
-          with the knowledge and tools they need to master Large Language Model (LLM) 
-          applications. Our mission is to bridge the gap between theoretical AI concepts 
-          and practical implementation, making advanced LLM technologies accessible to 
-          developers at all skill levels.
+          ChronoPrompt empowers developers with the knowledge and tools to master Large Language Model (LLM) applications. 
+          We bridge the gap between theoretical AI concepts and practical implementation, making advanced LLM technologies 
+          accessible to developers at all skill levels.
         </p>
       </section>
 
       <section className="about-section">
         <h2>Why We Started ChronoPrompt</h2>
         <p>
-          ChronoPrompt was born from a simple observation: while LLMs were rapidly transforming 
-          the tech landscape, there was a significant gap in practical, developer-focused resources. 
-          Many existing tutorials either oversimplified complex concepts or presented advanced 
-          techniques without proper foundations.
+          We noticed a gap in practical, developer-focused resources for LLMs. Existing tutorials either oversimplified 
+          complex concepts or presented advanced techniques without proper foundations.
         </p>
         <p>
-          As developers ourselves, we experienced the frustration of piecing together knowledge 
-          from scattered resources. We envisioned a centralized platform that would provide a 
-          structured learning path — from fundamentals to advanced techniques — all designed 
-          specifically for developers who want to integrate LLMs into real-world applications.
+          As developers, we experienced the frustration of piecing together knowledge from scattered resources. We envisioned 
+          a centralized platform providing a structured learning path — from fundamentals to advanced techniques — designed 
+          for developers integrating LLMs into real-world applications.
         </p>
         <p>
-          Our goal is to democratize LLM expertise, enabling more developers to build 
-          innovative, responsible, and effective AI-powered applications that solve 
-          meaningful problems.
+          Our goal is to democratize LLM expertise, enabling more developers to build innovative, responsible, and effective 
+          AI-powered applications that solve meaningful problems.
         </p>
       </section>
 
@@ -43,11 +37,11 @@ const About: React.FC = () => {
         <div className="features-grid">
           <div className="feature-card">
             <h3>📚 Progressive Learning Path</h3>
-            <p>Structured tutorials that build from foundational concepts to advanced implementation techniques.</p>
+            <p>Structured tutorials from foundational concepts to advanced implementation techniques.</p>
           </div>
           <div className="feature-card">
             <h3>🛠️ Code-First Approach</h3>
-            <p>Practical, executable examples that demonstrate real-world LLM integration patterns.</p>
+            <p>Practical, executable examples demonstrating real-world LLM integration patterns.</p>
           </div>
           <div className="feature-card">
             <h3>🔍 Best Practices</h3>
@@ -62,7 +56,7 @@ const About: React.FC = () => {
 
       <section className="about-section">
         <h2>Our Technology Focus</h2>
-        <p>As a developer-centric platform, we leverage and teach modern technologies:</p>
+        <p>We leverage and teach modern technologies:</p>
         <div className="tech-stack">
           <ul>
             <li>🤖 LLM Integration Techniques - OpenAI, Claude, open-source models</li>
@@ -85,15 +79,13 @@ const About: React.FC = () => {
             <h3>Rahul Kadam</h3>
             <p className="founder-title">Software Engineering Leader & AI Enthusiast</p>
             <p>
-              Rahul is a seasoned software engineering leader with a passion for bridging the gap 
-              between cutting-edge AI technologies and practical software development. With extensive 
-              experience in building scalable applications and leading engineering teams, Rahul 
-              recognized the need for more developer-focused LLM resources and founded ChronoPrompt 
-              to address this gap.
+              Rahul is a seasoned software engineering leader passionate about bridging the gap between cutting-edge AI 
+              technologies and practical software development. With extensive experience in building scalable applications 
+              and leading engineering teams, Rahul founded ChronoPrompt to address the need for more developer-focused LLM resources.
             </p>
             <p>
-              His approach combines technical depth with practical implementation strategies, 
-              helping developers navigate the rapidly evolving landscape of AI tools and frameworks.
+              His approach combines technical depth with practical implementation strategies, helping developers navigate 
+              the rapidly evolving landscape of AI tools and frameworks.
             </p>
             <div className="founder-links">
               <a href="https://www.linkedin.com/in/rahul-kadam-19211022/" target="_blank" rel="noopener noreferrer" className="social-link linkedin">
@@ -110,8 +102,8 @@ const About: React.FC = () => {
       <section className="about-section">
         <h2>Our Vision for the Future</h2>
         <p>
-          As LLM technology continues to evolve at a rapid pace, we're committed to growing 
-          ChronoPrompt into the most comprehensive and practical resource for developers. Our roadmap includes:
+          As LLM technology evolves rapidly, we're committed to growing ChronoPrompt into the most comprehensive and practical 
+          resource for developers. Our roadmap includes:
         </p>
         <ul className="vision-list">
           <li>Expanding our tutorial library to cover emerging LLM techniques and use cases</li>
@@ -126,9 +118,8 @@ const About: React.FC = () => {
       <section className="about-section community-section">
         <h2>Join Our Community</h2>
         <p>
-          We're building a vibrant community of forward-thinking developers who are passionate 
-          about creating the next generation of intelligent applications. Whether you're just 
-          beginning your LLM journey or you're already building sophisticated AI systems, 
+          We're building a vibrant community of forward-thinking developers passionate about creating the next generation 
+          of intelligent applications. Whether you're just beginning your LLM journey or already building sophisticated AI systems, 
           we welcome your participation and insights.
         </p>
         
@@ -140,8 +131,7 @@ const About: React.FC = () => {
               </div>
               <h3>Discord Community</h3>
               <p>
-                Join our Discord server to connect with fellow developers, share insights, 
-                troubleshoot challenges, and collaborate on projects.
+                Join our Discord server to connect with fellow developers, share insights, troubleshoot challenges, and collaborate on projects.
               </p>
               <a href="https://discord.gg/yuqWWdCc" className="platform-button" target="_blank" rel="noopener noreferrer">Join Discord</a>
             </div>
@@ -152,8 +142,7 @@ const About: React.FC = () => {
               </div>
               <h3>GitHub Repository</h3>
               <p>
-                Contribute to our open-source codebase, suggest improvements, or use our 
-                example projects as starting points for your own applications.
+                Contribute to our open-source codebase, suggest improvements, or use our example projects as starting points for your own applications.
               </p>
               <a href="https://github.com/rahulkadam/LLM-Forge-Chronicle" className="platform-button" target="_blank" rel="noopener noreferrer">View GitHub</a>
             </div>
@@ -164,8 +153,7 @@ const About: React.FC = () => {
               </div>
               <h3>Contact Directly</h3>
               <p>
-                Have questions, partnership inquiries, or content suggestions? 
-                Reach out to Rahul directly via email.
+                Have questions, partnership inquiries, or content suggestions? Reach out to Rahul directly via email.
               </p>
               <a href="mailto:kadamrahul581@gmail.com" className="platform-button">Email Us</a>
             </div>
