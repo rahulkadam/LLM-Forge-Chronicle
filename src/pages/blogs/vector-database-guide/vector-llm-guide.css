@@ -1,0 +1,86 @@
+.vector-db-banner {
+  background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.vector-database-guide .feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.vector-database-guide .term-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.vector-database-guide .term-card {
+  background: #f5f5f5;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vector-database-guide .term-card h4 {
+  color: #1a237e;
+  margin-bottom: 0.5rem;
+}
+
+.vector-database-guide .implementation-notes {
+  background: #e3f2fd;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.vector-database-guide .implementation-notes h3 {
+  color: #0d47a1;
+  margin-bottom: 1rem;
+}
+
+.vector-database-guide .implementation-notes ol {
+  padding-left: 1.5rem;
+}
+
+.vector-database-guide .implementation-notes li {
+  margin-bottom: 0.5rem;
+}
+
+.vector-database-guide .related-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.vector-database-guide .related-link {
+  color: #1a237e;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 1rem;
+  background: #e3f2fd;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.vector-database-guide .related-link:hover {
+  background: #bbdefb;
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .vector-database-guide .feature-grid,
+  .vector-database-guide .term-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .vector-database-guide .term-card {
+    padding: 1rem;
+  }
+}

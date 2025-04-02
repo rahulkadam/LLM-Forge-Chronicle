@@ -40,35 +40,16 @@ const Blogs: React.FC = () => {
 
   // Complete list of blog posts
   const allBlogPosts: BlogPost[] = [
+    // Getting Started & Fundamentals
     {
-      id: 'ai-tools',
-      title: 'AI-Powered Developer & Agent Tools',
-      excerpt: 'Discover powerful tools for agent development and AI-assisted coding to supercharge your workflow. From code generation to intelligent assistance, find the right tools for your needs.',
-      imageClass: 'ai-tools-image',
-      tag: 'Resources',
-      readingTime: '15 min read',
-      publishDate: 'March 31, 2025',
-      link: '/ai-tools'
-    },
-    {
-      id: 'llm-resources',
-      title: 'LLM Resources & References',
-      excerpt: 'A curated collection of tools, services, and learning materials for LLM development. Find the best resources for building and deploying language model applications.',
-      imageClass: 'resources-image',
-      tag: 'Resources',
-      readingTime: '10 min read', 
-      publishDate: 'March 29, 2025',
-      link: '/resources'
-    },
-    {
-      id: 'model-context-server',
-      title: 'Model Context Server (MCP): Efficient Context Management for LLMs',
-      excerpt: 'Explore how Model Context Servers solve context window limitations in LLMs by efficiently managing, storing, and retrieving context to enable more coherent AI experiences.',
-      imageClass: 'mcp-image',
-      tag: 'Architecture',
-      readingTime: '8 min read',
-      publishDate: 'March 30, 2025',
-      link: '/blogs/model-context-server'
+      id: 'llm-getting-started',
+      title: "Getting Started with LLMs: A Beginner's Q&A Guide",
+      excerpt: 'A friendly question-answer guide to help beginners understand and start using Large Language Models effectively without feeling overwhelmed.',
+      imageClass: 'getting-started-image',
+      tag: 'Tutorials & Guides',
+      readingTime: '7 min read',
+      publishDate: 'March 25, 2025',
+      link: '/blogs/llm-getting-started-guide'
     },
     {
       id: 'llm-terminology',
@@ -81,54 +62,25 @@ const Blogs: React.FC = () => {
       link: '/blogs/llm-technology-guide'
     },
     {
-      id: 'llm-getting-started',
-      title: 'Getting Started with LLMs: A Beginner\'s Q&A Guide',
-      excerpt: 'A friendly question-answer guide to help beginners understand and start using Large Language Models effectively without feeling overwhelmed.',
-      imageClass: 'getting-started-image',
-      tag: 'Tutorials & Guides',
-      readingTime: '7 min read',
-      publishDate: 'March 25, 2025',
-      link: '/blogs/llm-getting-started-guide'
-    },
-    {
-      id: 'llm-agent',
-      title: 'LLM Agents: Just Functions with a Fancy Name',
-      excerpt: 'Demystifying LLM Agents - they\'re just functions that use language models to do specific tasks.',
-      imageClass: 'llm-agent-image',
-      tag: 'Fundamentals',
-      readingTime: '5 min read',
-      publishDate: 'March 22, 2025',
-      link: '/blogs/llm-agent-guide'
-    },
-    {
-      id: 'openrouter',
-      title: 'What is OpenRouter and Why Use It?',
-      excerpt: 'Explore how OpenRouter can give you access to multiple LLMs through a unified API, simplifying your multi-model workflow and reducing integration complexity.',
-      imageClass: 'openrouter-image',
-      tag: 'Platforms & Services',
-      readingTime: '6 min read',
-      publishDate: 'January 15, 2025',
-      link: '/blogs/openrouter-platform-guide'
-    },
-    {
-      id: 'cursor-workflows',
-      title: 'Mastering Cursor Custom Workflows: Automate Your Coding Tasks',
-      excerpt: 'Learn how to create and optimize custom workflows in Cursor to automate coding tasks, improve productivity, and streamline your development process.',
-      imageClass: 'cursor-workflows-image',
-      tag: 'Tools & Frameworks',
-      readingTime: '8 min read',
-      publishDate: 'March 12, 2025',
-      link: '/blogs/cursor-custom-workflows'
-    },
-    {
       id: 'openai-api',
       title: 'Connecting to OpenAI API: A Complete Guide',
-      excerpt: 'A step-by-step tutorial to set up and use OpenAI\'s API for your applications, including authentication, handling requests, and managing API limits.',
+      excerpt: "A step-by-step tutorial to set up and use OpenAI's API for your applications, including authentication, handling requests, and managing API limits.",
       imageClass: 'openai-image',
       tag: 'Tutorials & Guides',
       readingTime: '8 min read',
       publishDate: 'January 20, 2025',
       link: '/blogs/openai-api-guide'
+    },
+    // Advanced Techniques & Architecture
+    {
+      id: 'vector-database-guide',
+      title: 'Vector Databases: The Backbone of Modern LLM Applications',
+      excerpt: 'Learn how vector databases power modern AI applications, from fundamentals to implementation. Discover best practices for integrating vector search with LLMs.',
+      imageClass: 'vector-db-image',
+      tag: 'Advanced Techniques',
+      readingTime: '10 min read',
+      publishDate: 'April 3, 2025',
+      link: '/blogs/vector-database-guide/vector-llm-guide'
     },
     {
       id: 'rag-tutorial',
@@ -140,6 +92,17 @@ const Blogs: React.FC = () => {
       publishDate: 'February 18, 2025',
       link: '/blogs/rag-tutorial'
     },
+    {
+      id: 'model-context-server',
+      title: 'Model Context Server (MCP): Efficient Context Management for LLMs',
+      excerpt: 'Explore how Model Context Servers solve context window limitations in LLMs by efficiently managing, storing, and retrieving context to enable more coherent AI experiences.',
+      imageClass: 'mcp-image',
+      tag: 'Architecture',
+      readingTime: '8 min read',
+      publishDate: 'March 30, 2025',
+      link: '/blogs/model-context-server'
+    },
+    // Prompt Engineering & Development
     {
       id: 'prompt-engineering',
       title: 'Advanced Prompt Engineering Patterns',
@@ -161,6 +124,17 @@ const Blogs: React.FC = () => {
       link: '/blogs/function-calling-guide'
     },
     {
+      id: 'llm-agent',
+      title: 'LLM Agents: Just Functions with a Fancy Name',
+      excerpt: "Demystifying LLM Agents - they're just functions that use language models to do specific tasks.",
+      imageClass: 'llm-agent-image',
+      tag: 'Fundamentals',
+      readingTime: '5 min read',
+      publishDate: 'March 22, 2025',
+      link: '/blogs/llm-agent-guide'
+    },
+    // Tools & Frameworks
+    {
       id: 'langchain',
       title: 'Getting Started with LangChain',
       excerpt: 'An introduction to LangChain, a popular framework for developing applications powered by language models, with practical examples.',
@@ -169,6 +143,47 @@ const Blogs: React.FC = () => {
       readingTime: '11 min read',
       publishDate: 'January 10, 2025',
       link: '/blogs/langchain-introduction'
+    },
+    {
+      id: 'cursor-workflows',
+      title: 'Mastering Cursor Custom Workflows: Automate Your Coding Tasks',
+      excerpt: 'Learn how to create and optimize custom workflows in Cursor to automate coding tasks, improve productivity, and streamline your development process.',
+      imageClass: 'cursor-workflows-image',
+      tag: 'Tools & Frameworks',
+      readingTime: '8 min read',
+      publishDate: 'March 12, 2025',
+      link: '/blogs/cursor-custom-workflows'
+    },
+    {
+      id: 'openrouter',
+      title: 'What is OpenRouter and Why Use It?',
+      excerpt: 'Explore how OpenRouter can give you access to multiple LLMs through a unified API, simplifying your multi-model workflow and reducing integration complexity.',
+      imageClass: 'openrouter-image',
+      tag: 'Platforms & Services',
+      readingTime: '6 min read',
+      publishDate: 'January 15, 2025',
+      link: '/blogs/openrouter-platform-guide'
+    },
+    // Resources & Tools
+    {
+      id: 'ai-tools',
+      title: 'AI-Powered Developer & Agent Tools',
+      excerpt: 'Discover powerful tools for agent development and AI-assisted coding to supercharge your workflow. From code generation to intelligent assistance, find the right tools for your needs.',
+      imageClass: 'ai-tools-image',
+      tag: 'Resources',
+      readingTime: '15 min read',
+      publishDate: 'March 31, 2025',
+      link: '/ai-tools'
+    },
+    {
+      id: 'llm-resources',
+      title: 'LLM Resources & References',
+      excerpt: 'A curated collection of tools, services, and learning materials for LLM development. Find the best resources for building and deploying language model applications.',
+      imageClass: 'resources-image',
+      tag: 'Resources',
+      readingTime: '10 min read', 
+      publishDate: 'March 29, 2025',
+      link: '/resources'
     }
   ];
 
@@ -217,7 +232,7 @@ const Blogs: React.FC = () => {
   }, [totalPages]);
 
   // Generate pagination buttons
-  const renderPaginationButtons = () => {
+  const renderPaginationButtons = useCallback(() => {
     if (totalPages <= 1) return null;
 
     const buttons = [];
@@ -272,7 +287,7 @@ const Blogs: React.FC = () => {
     );
     
     return buttons;
-  };
+  }, [currentPage, totalPages, goToPage]);
 
   return (
     <div className="blogs-page">
@@ -355,7 +370,7 @@ const Blogs: React.FC = () => {
           <h2>Stay Updated</h2>
           <p>
             Subscribe to our newsletter to receive notifications about new articles, 
-            tutorials, and resources about LLMs and AI development.
+            tutorials, and resources about LLM development.
           </p>
           <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
             <input type="email" placeholder="Your email address" aria-label="Email address" />

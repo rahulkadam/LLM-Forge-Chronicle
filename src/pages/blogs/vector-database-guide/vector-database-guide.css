@@ -1,0 +1,294 @@
+/* Specific styles for Vector Database Guide page */
+.vector-database-guide .qa-container {
+  margin-bottom: 2rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border-left: 4px solid #0077cc; /* Blue theme for vector databases */
+}
+
+.vector-database-guide .question {
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.vector-database-guide .question::before {
+  content: "Q:";
+  color: #0077cc; /* Blue theme for vector databases */
+  font-weight: 700;
+  margin-right: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.vector-database-guide .answer {
+  color: #4a4a4a;
+  line-height: 1.6;
+  padding-left: 1.8rem;
+}
+
+.vector-database-guide .answer p {
+  margin-bottom: 1rem;
+}
+
+.vector-database-guide .answer p:last-child {
+  margin-bottom: 0;
+}
+
+.vector-database-guide .tip-box {
+  background-color: #e6f7ff; /* Light blue background */
+  border-left: 4px solid #0077cc;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+}
+
+.vector-database-guide .warning-box {
+  background-color: #fff3e0; /* Light orange background */
+  border-left: 4px solid #ff9800;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+}
+
+.vector-database-guide .step-list {
+  list-style-type: none;
+  padding-left: 0;
+  counter-reset: step-counter;
+}
+
+.vector-database-guide .step-list li {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+  counter-increment: step-counter;
+}
+
+.vector-database-guide .step-list li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 2px;
+  background-color: #0077cc;
+  color: white;
+  font-weight: bold;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.vector-database-guide .resource-box {
+  background-color: #f2f8fd;
+  border: 1px solid #d0e8ff;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.vector-database-guide .resource-box h4 {
+  color: #0066b3;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.vector-database-guide .resource-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.vector-database-guide .resource-item {
+  background-color: white;
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vector-database-guide .resource-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.vector-database-guide .resource-item h5 {
+  color: #0077cc;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.vector-database-guide .resource-item p {
+  color: #4a4a4a;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.vector-database-guide .code-example {
+  background-color: #282c34;
+  color: #e5e5e5;
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+.vector-database-guide .code-example pre {
+  margin: 0;
+}
+
+.vector-database-guide .code-example code {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.vector-database-guide .code-tabs {
+  margin: 1.5rem 0;
+}
+
+.vector-database-guide .code-tab-header {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.vector-database-guide .code-tab-button {
+  padding: 0.5rem 1rem;
+  background: #f1f1f1;
+  border: none;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.vector-database-guide .code-tab-button.active {
+  background: #0077cc;
+  color: white;
+}
+
+.vector-database-guide .db-comparison {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.9rem;
+}
+
+.vector-database-guide .db-comparison th {
+  background-color: #0077cc;
+  color: white;
+  text-align: left;
+  padding: 0.75rem 1rem;
+}
+
+.vector-database-guide .db-comparison td {
+  border: 1px solid #ddd;
+  padding: 0.75rem 1rem;
+}
+
+.vector-database-guide .db-comparison tr:nth-child(even) {
+  background-color: #f2f8fd;
+}
+
+.vector-database-guide .workflow-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.vector-database-guide .workflow-card h4 {
+  color: #0066b3;
+  margin-top: 0;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.vector-database-guide .workflow-card h4:before {
+  content: "🔍";
+  margin-right: 8px;
+}
+
+.vector-database-guide .screenshot {
+  max-width: 100%;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin: 1.5rem 0;
+}
+
+.vector-database-guide .db-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+.vector-database-guide .db-card h4 {
+  color: #0077cc;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.vector-database-guide .db-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.vector-database-guide .db-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+  object-fit: contain;
+}
+
+.vector-database-guide .db-features {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.vector-database-guide .db-features li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.vector-database-guide .db-features li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #0077cc;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .vector-database-guide .resource-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .vector-database-guide .question {
+    font-size: 1.1rem;
+  }
+  
+  .vector-database-guide .answer {
+    padding-left: 1.5rem;
+  }
+}

@@ -231,6 +231,16 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.vector-db-image {
+  background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+}
+
+.vector-db-image::before {
+  content: "Vector Databases & LLMs";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 .blog-card-content {
   padding: 25px;
   flex-grow: 1;

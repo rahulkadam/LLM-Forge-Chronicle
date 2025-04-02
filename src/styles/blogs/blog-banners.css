@@ -191,6 +191,36 @@
 }
 
 /* RAG Banner */
+/* Vector Databases Banner */
+.vector-databases-banner {
+  background: linear-gradient(135deg, #2196F3 0%, #0D47A1 100%);
+}
+
+.vector-databases-banner::before {
+  content: "Vector Databases";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.vector-databases-banner::after {
+  content: "Powering Semantic Search and Similarity Matching";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  max-width: 600px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 /* LangChain Banner */
 .langchain-banner {
   background: linear-gradient(135deg, #667EEA 0%, #5A67D8 100%);
@@ -290,6 +320,7 @@
   .llm-terms-banner::before,
   .openai-api-banner::before,
   .openrouter-banner::before,
+  .vector-databases-banner::before,
   .mcp-banner::before {
     font-size: 2.5rem;
   }
@@ -298,6 +329,7 @@
   .llm-terms-banner::after,
   .openai-api-banner::after,
   .openrouter-banner::after,
+  .vector-databases-banner::after,
   .mcp-banner::after {
     font-size: 1rem;
     top: 65%;
@@ -315,6 +347,7 @@
   .llm-terms-banner::before,
   .openai-api-banner::before,
   .openrouter-banner::before,
+  .vector-databases-banner::before,
   .mcp-banner::before {
     font-size: 2rem;
   }
@@ -323,6 +356,7 @@
   .llm-terms-banner::after,
   .openai-api-banner::after,
   .openrouter-banner::after,
+  .vector-databases-banner::after,
   .mcp-banner::after {
     font-size: 0.9rem;
   }

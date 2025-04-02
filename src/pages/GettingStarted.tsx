@@ -171,7 +171,7 @@ const GettingStarted: React.FC = () => {
             
             <div className="directory-card">
               <h3>Specialized Content</h3>
-              <p>Focused learning for specific use cases</p>
+]              <p>Focused learning for specific use cases</p>
               <div className="link-list">
                 <Link to="/ProfessionalExample" className="directory-link">Professional Example</Link>
                 <Link to="/blogs" className="directory-link">All Blog Posts</Link>
