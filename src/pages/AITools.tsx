@@ -49,7 +49,7 @@ const AITools: React.FC = () => {
               <img src="https://forge.anthropic.com/images/forge-logo-dark.svg" alt="Anthropic Forge Logo" />
             </div>
             <div className="tool-name">
-              <h3>Anthropic Forge</h3>
+              <h3>Antinomyhq Forge</h3>
               <div className="tool-tags">
                 <span className="tag">Agent Development</span>
                 <span className="tag">Claude Integration</span>
@@ -62,7 +62,7 @@ const AITools: React.FC = () => {
             <div className="tool-description">
               <h4>Build Powerful Claude-Powered Agents</h4>
               <p>
-                Anthropic Forge enables developers to create, test, and deploy Claude-powered applications 
+                Antinomyhq Forge enables developers to create, test, and deploy Claude-powered applications
                 and agents. It provides a streamlined environment for building AI systems that can access
                 tools, files, and external services.
               </p>
@@ -575,7 +575,7 @@ const AITools: React.FC = () => {
             </thead>
             <tbody>
               <tr>
-                <td>Anthropic Forge</td>
+                <td>Antinomyhq Forge</td>
                 <td>Building Claude-powered agents</td>
                 <td>Tool use, system prompts, web access</td>
                 <td>Medium</td>
@@ -635,7 +635,7 @@ const AITools: React.FC = () => {
         </div>
       </section>
 
-      <section className="best-practices">
+      <section className="best-practices1">
         <h2>Best Practices for Agent Development</h2>
         <div className="practices-grid">
           <div className="practice-card">

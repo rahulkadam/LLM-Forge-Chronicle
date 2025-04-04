@@ -241,6 +241,126 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.deployment-image {
+  background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
+}
+
+.deployment-image::before {
+  content: "LLM Deployment Guide";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cost-opt-image {
+  background: linear-gradient(135deg, #00695C 0%, #004D40 100%);
+}
+
+.cost-opt-image::before {
+  content: "Cost Optimization";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.security-image {
+  background: linear-gradient(135deg, #C62828 0%, #B71C1C 100%);
+}
+
+.security-image::before {
+  content: "Security & Safety";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.fine-tuning-image {
+  background: linear-gradient(135deg, #6A1B9A 0%, #4A148C 100%);
+}
+
+.fine-tuning-image::before {
+  content: "Fine-tuning LLMs";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.evaluation-image {
+  background: linear-gradient(135deg, #283593 0%, #1A237E 100%);
+}
+
+.evaluation-image::before {
+  content: "Model Evaluation";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.multi-modal-image {
+  background: linear-gradient(135deg, #0277BD 0%, #01579B 100%);
+}
+
+.multi-modal-image::before {
+  content: "Multi-Modal LLMs";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.quantization-image {
+  background: linear-gradient(135deg, #3949AB 0%, #283593 100%);
+}
+
+.quantization-image::before {
+  content: "LLM Optimization";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.local-llm-image {
+  background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
+}
+
+.local-llm-image::before {
+  content: "Local LLM Deployment";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.testing-image {
+  background: linear-gradient(135deg, #00796B 0%, #00695C 100%);
+}
+
+.testing-image::before {
+  content: "LLM Testing";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.governance-image {
+  background: linear-gradient(135deg, #455A64 0%, #37474F 100%);
+}
+
+.governance-image::before {
+  content: "AI Governance";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.ethics-image {
+  background: linear-gradient(135deg, #5E35B1 0%, #4527A0 100%);
+}
+
+.ethics-image::before {
+  content: "AI Ethics";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.comparison-image {
+  background: linear-gradient(135deg, #00ACC1 0%, #0097A7 100%);
+}
+
+.comparison-image::before {
+  content: "LLM Model Comparison";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 .blog-card-content {
   padding: 25px;
   flex-grow: 1;

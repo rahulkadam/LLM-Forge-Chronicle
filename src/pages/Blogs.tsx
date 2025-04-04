@@ -62,6 +62,16 @@ const Blogs: React.FC = () => {
       link: '/blogs/llm-technology-guide'
     },
     {
+      id: 'model-comparison',
+      title: 'Comparing LLM Families: GPT vs Claude vs Llama vs Mistral',
+      excerpt: 'In-depth comparison of major LLM families, their strengths, weaknesses, and ideal use cases. Help choose the right model for your needs.',
+      imageClass: 'comparison-image',
+      tag: 'Fundamentals',
+      readingTime: '18 min read',
+      publishDate: 'March 31, 2025',
+      link: '/blogs/llm-model-comparison'
+    },
+    {
       id: 'openai-api',
       title: 'Connecting to OpenAI API: A Complete Guide',
       excerpt: "A step-by-step tutorial to set up and use OpenAI's API for your applications, including authentication, handling requests, and managing API limits.",
@@ -71,6 +81,7 @@ const Blogs: React.FC = () => {
       publishDate: 'January 20, 2025',
       link: '/blogs/openai-api-guide'
     },
+
     // Advanced Techniques & Architecture
     {
       id: 'vector-database-guide',
@@ -102,6 +113,47 @@ const Blogs: React.FC = () => {
       publishDate: 'March 30, 2025',
       link: '/blogs/model-context-server'
     },
+    {
+      id: 'model-quantization',
+      title: 'LLM Quantization & Optimization Guide',
+      excerpt: 'Learn how to optimize and compress LLMs for efficient deployment. Covers techniques like quantization, pruning, and model distillation.',
+      imageClass: 'quantization-image',
+      tag: 'Advanced Techniques',
+      readingTime: '15 min read',
+      publishDate: 'April 5, 2025',
+      link: '/blogs/llm-quantization-guide'
+    },
+    {
+      id: 'local-llm',
+      title: 'Running LLMs Locally: A Complete Guide',
+      excerpt: 'Step-by-step guide to running LLMs on your own hardware. From model selection to optimization techniques for resource-constrained environments.',
+      imageClass: 'local-llm-image',
+      tag: 'Advanced Techniques',
+      readingTime: '20 min read',
+      publishDate: 'April 4, 2025',
+      link: '/blogs/local-llm-guide'
+    },
+    {
+      id: 'fine-tuning',
+      title: 'Fine-tuning LLMs: From Theory to Practice',
+      excerpt: 'Master the art of fine-tuning language models. Learn about dataset preparation, training strategies, evaluation metrics, and best practices.',
+      imageClass: 'fine-tuning-image',
+      tag: 'Advanced Techniques',
+      readingTime: '18 min read',
+      publishDate: 'March 28, 2025',
+      link: '/blogs/llm-fine-tuning-guide'
+    },
+    {
+      id: 'multi-modal',
+      title: 'Multi-Modal LLMs: Beyond Text',
+      excerpt: 'Explore the world of multi-modal LLMs that can handle text, images, audio, and video. Learn about GPT-4V, Claude 3, and other multi-modal models.',
+      imageClass: 'multi-modal-image',
+      tag: 'Advanced Techniques',
+      readingTime: '16 min read',
+      publishDate: 'March 26, 2025',
+      link: '/blogs/multi-modal-llms'
+    },
+
     // Prompt Engineering & Development
     {
       id: 'prompt-engineering',
@@ -133,6 +185,81 @@ const Blogs: React.FC = () => {
       publishDate: 'March 22, 2025',
       link: '/blogs/llm-agent-guide'
     },
+
+    // Production & Deployment
+    {
+      id: 'llm-deployment',
+      title: 'Deploying LLMs in Production: A Complete Guide',
+      excerpt: 'Learn how to effectively deploy LLM applications in production, including scaling, monitoring, and maintaining reliability. Best practices for production-ready AI systems.',
+      imageClass: 'deployment-image',
+      tag: 'Production',
+      readingTime: '15 min read',
+      publishDate: 'April 4, 2025',
+      link: '/blogs/llm-deployment-guide'
+    },
+    {
+      id: 'cost-optimization',
+      title: 'LLM Cost Optimization Strategies',
+      excerpt: 'Practical strategies for optimizing costs when working with LLMs. Learn about caching, batching, model selection, and other techniques to reduce API costs.',
+      imageClass: 'cost-opt-image',
+      tag: 'Production',
+      readingTime: '12 min read',
+      publishDate: 'April 2, 2025',
+      link: '/blogs/llm-cost-optimization'
+    },
+    {
+      id: 'llm-testing',
+      title: 'Comprehensive LLM Testing Strategies',
+      excerpt: 'Learn how to effectively test LLM applications, including unit testing, integration testing, and automated evaluation frameworks.',
+      imageClass: 'testing-image',
+      tag: 'Production',
+      readingTime: '14 min read',
+      publishDate: 'April 3, 2025',
+      link: '/blogs/llm-testing-guide'
+    },
+    {
+      id: 'model-evaluation',
+      title: 'Evaluating LLM Performance: Metrics & Methods',
+      excerpt: 'Comprehensive guide to evaluating LLM performance. Learn about evaluation metrics, testing strategies, and how to ensure model quality.',
+      imageClass: 'evaluation-image',
+      tag: 'Advanced Techniques',
+      readingTime: '13 min read',
+      publishDate: 'March 27, 2025',
+      link: '/blogs/llm-evaluation-guide'
+    },
+
+    // Security & Ethics
+    {
+      id: 'llm-security',
+      title: 'Security Best Practices for LLM Applications',
+      excerpt: 'Comprehensive guide to securing your LLM applications. Learn about prompt injection, data privacy, authentication, and other security considerations.',
+      imageClass: 'security-image',
+      tag: 'Security & Safety',
+      readingTime: '14 min read',
+      publishDate: 'April 1, 2025',
+      link: '/blogs/llm-security-guide'
+    },
+    {
+      id: 'ai-governance',
+      title: 'AI Governance & Compliance Guide',
+      excerpt: 'Navigate the complex landscape of AI governance, compliance, and ethical considerations when deploying LLM applications.',
+      imageClass: 'governance-image',
+      tag: 'Security & Safety',
+      readingTime: '16 min read',
+      publishDate: 'April 2, 2025',
+      link: '/blogs/ai-governance-guide'
+    },
+    {
+      id: 'llm-ethics',
+      title: 'Ethical Considerations in LLM Development',
+      excerpt: 'Explore ethical challenges and best practices in LLM development, including bias mitigation, transparency, and responsible AI principles.',
+      imageClass: 'ethics-image',
+      tag: 'Security & Safety',
+      readingTime: '12 min read',
+      publishDate: 'April 1, 2025',
+      link: '/blogs/llm-ethics-guide'
+    },
+
     // Tools & Frameworks
     {
       id: 'langchain',
@@ -164,6 +291,7 @@ const Blogs: React.FC = () => {
       publishDate: 'January 15, 2025',
       link: '/blogs/openrouter-platform-guide'
     },
+
     // Resources & Tools
     {
       id: 'ai-tools',
