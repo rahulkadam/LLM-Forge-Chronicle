@@ -6,7 +6,7 @@ const AITools: React.FC = () => {
     <div className="ai-tools">
       <section className="tools-hero">
         <h1>AI-Powered Developer & Agent Tools</h1>
-        <p className="subtitle">
+        <p className="subtitle1">
           Discover powerful tools for agent development and AI-assisted coding to supercharge your workflow
         </p>
       </section>

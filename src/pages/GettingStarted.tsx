@@ -64,7 +64,7 @@ const GettingStarted: React.FC = () => {
               <div className="link-list">
                 <Link to="/llm-fundamentals/developer-quick-start" className="directory-link">Developer Quick Start</Link>
                 <Link to="/blogs/llm-getting-started-guide" className="directory-link">LLM Getting Started Guide</Link>
-                <Link to="/blogs/llm-terms-guide" className="directory-link">LLM Terminology Guide</Link>
+                <Link to="/blogs/llm-technology-guide" className="directory-link">LLM Terminology Guide</Link>
               </div>
             </div>
           </div>
@@ -83,7 +83,6 @@ const GettingStarted: React.FC = () => {
               <p>Essential techniques for effective prompting</p>
               <div className="link-list">
                 <Link to="/prompt-engineering" className="directory-link">Prompt Engineering Overview</Link>
-                <Link to="/prompt-engineering-basics" className="directory-link">Prompt Engineering Basics</Link>
                 <Link to="/ai-basics/prompt-basics" className="directory-link">Prompt Basics</Link>
               </div>
             </div>
@@ -123,7 +122,7 @@ const GettingStarted: React.FC = () => {
               <p>Build autonomous AI assistants and agents</p>
               <div className="link-list">
                 <Link to="/BuildingLLMAgent" className="directory-link">Building LLM Agents</Link>
-                <Link to="/BasicLLMAgent" className="directory-link">Basic LLM Agent</Link>
+                <Link to="/llm-agent/basic" className="directory-link">Basic LLM Agent</Link>
                 <Link to="/blogs/model-context-server" className="directory-link">Model Context Server</Link>
                 <Link to="/blogs/llm-agent-guide" className="directory-link">LLM Agents Guide</Link>
               </div>
@@ -135,8 +134,6 @@ const GettingStarted: React.FC = () => {
               <div className="link-list">
                 <Link to="/blogs/rag-tutorial" className="directory-link">RAG (Retrieval Augmented Generation) Tutorial</Link>
                 <Link to="/blogs/langchain-introduction" className="directory-link">LangChain Introduction</Link>
-                <Link to="/professional" className="directory-link">Professional Techniques</Link>
-                <Link to="/expert" className="directory-link">Expert Implementation</Link>
               </div>
             </div>
           </div>

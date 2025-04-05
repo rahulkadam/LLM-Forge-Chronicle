@@ -8,7 +8,7 @@
 .tools-hero {
   text-align: center;
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+  background: linear-gradient(135deg, #e2e2ea 0%, #5585d2 100%);
   color: white;
   border-radius: 1rem;
   margin-bottom: 3rem;
@@ -58,7 +58,7 @@
 }
 
 .benefit-card h3 {
-  color: #1a237e;
+  color: #8f96e5;
   margin-bottom: 1rem;
 }
 
@@ -89,7 +89,7 @@
 }
 
 .tool-header.forge {
-  background: linear-gradient(135deg, #5c258d 0%, #4389a2 100%);
+  background: linear-gradient(135deg, #b887e5 0%, #5b717a 100%);
   color: white;
 }
 
@@ -109,27 +109,27 @@
 }
 
 .tool-header.llamaindex {
-  background: linear-gradient(135deg, #047857 0%, #10b981 100%);
+  background: linear-gradient(135deg, #acd0c3 0%, #8cc7b2 100%);
   color: white;
 }
 
 .tool-header.copilot {
-  background: linear-gradient(135deg, #000000 0%, #444444 100%);
+  background: linear-gradient(135deg, #878798 0%, #d5dbe3 100%);
   color: white;
 }
 
 .tool-header.continuem {
-  background: linear-gradient(135deg, #581c87 0%, #9333ea 100%);
+  background: linear-gradient(135deg, #dedae1 0%, #d3ccde 100%);
   color: white;
 }
 
 .tool-header.autogpt {
-  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #cbcbda 0%, #3b82f6 100%);
   color: white;
 }
 
 .tool-header.openinterpreter {
-  background: linear-gradient(135deg, #b91c1c 0%, #f87171 100%);
+  background: linear-gradient(135deg, #d5c6c6 0%, #f87171 100%);
   color: white;
 }
 
