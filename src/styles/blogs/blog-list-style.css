@@ -361,6 +361,26 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.model-comparison-banner {
+  background: linear-gradient(135deg, #00ACC1 0%, #0097A7 100%);
+}
+
+.model-comparison-banner::before {
+  content: "LLM Model Comparison";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.gemini-image {
+  background: linear-gradient(135deg, #4285f4 0%, #0F9D58 100%);
+}
+
+.gemini-image::before {
+  content: "Google Gemini";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 .blog-card-content {
   padding: 25px;
   flex-grow: 1;

@@ -33,6 +33,7 @@ import RAGTutorial from './pages/blogs/rag-tutorial/rag-tutorial';
 import LangchainIntroduction from './pages/blogs/langchain-introduction/langchain-introduction';
 import CursorCustomWorkflows from './pages/blogs/cursor-custom-workflows/cursor-custom-workflows';
 import ModelContextServer from './pages/blogs/model-context-server/model-context-server';
+import LLMModelComparison from './pages/blogs/llm-model-comparison/llm-model-comparison';
 import VectorDatabaseGuide from './pages/blogs/vector-database-guide/vector-llm-guide';
 
 import DeveloperQuickStart from './pages/llm-fundamentals/developer-quick-start';
@@ -106,6 +107,7 @@ const AppContent: React.FC = () => {
           <Route path="/blogs/langchain-introduction" element={<LangchainIntroduction />} />
           <Route path="/blogs/cursor-custom-workflows" element={<CursorCustomWorkflows />} />
           <Route path="/blogs/model-context-server" element={<ModelContextServer />} />
+          <Route path="/blogs/llm-model-comparison" element={<LLMModelComparison />} />
           <Route path="/blogs/vector-database-guide/vector-llm-guide" element={<VectorDatabaseGuide />} />
           
           {/* Redirects from old routes to new routes */}
