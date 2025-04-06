@@ -334,6 +334,109 @@ Analyze the player considering the previous context and current query.\`;
         </div>
       </section>
 
+      <section className="theory-section">
+        <h2>Model Context Protocol (MCP) Server</h2>
+        
+        <div className="theory-grid">
+          <div className="theory-card">
+            <h3>What is MCP Server?</h3>
+            <p>
+              A Model Context Protocol server manages stateful interactions with language models
+              by maintaining conversation context and handling model interactions through a
+              standardized protocol. It acts as an intermediate layer between your application
+              and the LLM API.
+            </p>
+          </div>
+
+          <div className="theory-card">
+            <h3>Key Features</h3>
+            <div className="key-points">
+              <ul>
+                <li>Maintains conversation state between requests</li>
+                <li>Handles context management automatically</li>
+                <li>Provides consistent API interface</li>
+                <li>Optimizes model interactions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="mcp-workflow">
+          <h3>How MCP Server Works</h3>
+          <div className="workflow-steps">
+            <div className="workflow-step">
+              <h4>1. Request Processing</h4>
+              <p>
+                - Receives client request
+                - Retrieves relevant context
+                - Prepares model inputs
+              </p>
+            </div>
+            <div className="workflow-step">
+              <h4>2. Model Interaction</h4>
+              <p>
+                - Sends formatted request to LLM
+                - Handles API communication
+                - Processes model response
+              </p>
+            </div>
+            <div className="workflow-step">
+              <h4>3. Context Management</h4>
+              <p>
+                - Updates conversation state
+                - Maintains context history
+                - Handles memory cleanup
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+        <div className="mcp-workflow">
+          <h3>MCP Workflow in AthleteInsightAI</h3>
+          <div className="workflow-steps1">
+            <div className="workflow-step1">
+              <h4>1. Context Initialization</h4>
+              <p>
+                When a new analysis session starts, MCP initializes a context store with:
+                - Player performance data
+                - Historical analysis patterns
+                - Sport-specific metrics
+              </p>
+            </div>
+            <div className="workflow-step1">
+              <h4>2. Query Processing</h4>
+              <p>
+                Each user query triggers:
+                - Context retrieval
+                - Relevant data selection
+                - Query enhancement with context
+              </p>
+            </div>
+            <div className="workflow-step1">
+              <h4>3. Response Generation</h4>
+              <p>
+                The LLM generates responses by:
+                - Analyzing context and query
+                - Applying sports domain knowledge
+                - Formatting structured insights
+              </p>
+            </div>
+            <div className="workflow-step1">
+              <h4>4. Context Update</h4>
+              <p>
+                After each interaction:
+                - New insights are stored
+                - Context is pruned if needed
+                - Relevance scores are updated
+              </p>
+            </div>
+          </div>
+        </div>
+
+
       <section className="implementation-section">
         <h2>MCP Implementation</h2>
         

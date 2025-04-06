@@ -338,6 +338,157 @@
 }
 
 /* Responsive Design */
+/* Theory Section */
+.theory-section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+.theory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.theory-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.theory-card h3 {
+  color: #1a2a6c;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.theory-card p {
+  color: #516478;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.key-points {
+  background: #f0f7ff;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.key-points h4 {
+  color: #1a2a6c;
+  margin-bottom: 1rem;
+}
+
+.key-points ul {
+  list-style: none;
+  padding: 0;
+}
+
+.key-points li {
+  padding: 0.5rem 0;
+  color: #516478;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.key-points li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #1a2a6c;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.benefit-item {
+  background: #f0f7ff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.benefit-item strong {
+  color: #1a2a6c;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.benefit-item p {
+  color: #516478;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.mcp-workflow {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+.workflow-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.workflow-step {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.workflow-step h4 {
+  color: #1a2a6c;
+  margin-bottom: 1rem;
+}
+
+.workflow-step p {
+  color: #516478;
+  line-height: 1.6;
+}
+
+.advanced-concepts {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.concepts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.concept-card {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.concept-card h4 {
+  color: #1a2a6c;
+  margin-bottom: 1rem;
+}
+
+.concept-card p {
+  color: #516478;
+  line-height: 1.6;
+  margin: 0;
+}
+
 @media (max-width: 768px) {
   .tutorial-header {
     padding: 1.5rem;
