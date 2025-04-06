@@ -38,6 +38,7 @@ import VectorDatabaseGuide from './pages/blogs/vector-database-guide/vector-llm-
 import BookBuddy from './pages/agent/BookBuddy';
 
 import AthleteInsightAI from './pages/agent/AthleteInsightAI';
+import MarketMindAI from './pages/agent/MarketMindAI';
 import DeveloperQuickStart from './pages/llm-fundamentals/developer-quick-start';
 import LLMFundamentals from './pages/llm-fundamentals';
 import ChatGPTGuide from './pages/llm-fundamentals/chatgpt-guide';
@@ -122,6 +123,7 @@ const AppContent: React.FC = () => {
           <Route path="/ai-basics/prompt-basics" element={<PromptBasics />} />
           <Route path="/ai-basics/examples" element={<Examples />} />
 
+          <Route path="/agent/marketmind" element={<MarketMindAI />} />
           <Route path="/agent/athlete-insight" element={<AthleteInsightAI />} />
           <Route path="/agent/bookbuddy" element={<BookBuddy />} />
   {/* Catch all route for 404 pages - keep at bottom */}
