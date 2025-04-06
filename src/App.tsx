@@ -35,6 +35,7 @@ import CursorCustomWorkflows from './pages/blogs/cursor-custom-workflows/cursor-
 import ModelContextServer from './pages/blogs/model-context-server/model-context-server';
 import LLMModelComparison from './pages/blogs/llm-model-comparison/llm-model-comparison';
 import VectorDatabaseGuide from './pages/blogs/vector-database-guide/vector-llm-guide';
+import BookBuddy from './pages/agent/BookBuddy';
 
 import DeveloperQuickStart from './pages/llm-fundamentals/developer-quick-start';
 import LLMFundamentals from './pages/llm-fundamentals';
@@ -120,7 +121,8 @@ const AppContent: React.FC = () => {
           <Route path="/ai-basics/prompt-basics" element={<PromptBasics />} />
           <Route path="/ai-basics/examples" element={<Examples />} />
           
-          {/* Catch all route for 404 pages - keep at bottom */}
+                  <Route path="/agent/bookbuddy" element={<BookBuddy />} />
+  {/* Catch all route for 404 pages - keep at bottom */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         </Suspense>

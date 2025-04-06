@@ -128,6 +128,9 @@ const Navbar: React.FC = () => {
             <Link to="/BuildingLLMAgent" className={`nav-link ${isActive('/BuildingLLMAgent')}`}>
               File System Agent Example
             </Link>
+            <Link to="/agent/bookbuddy" className={`nav-link ${isActive('/agent/bookbuddy')}`}>
+              BookBuddy Agent
+            </Link>
           </div>
         </li>
         

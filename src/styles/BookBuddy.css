@@ -1,0 +1,348 @@
+.agent-tutorial-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.tutorial-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tutorial-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.tutorial-description {
+  font-size: 1.2rem;
+  color: #516478;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.tutorial-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tutorial-section h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e6f0ff;
+}
+
+.tutorial-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.tutorial-section li {
+  padding: 0.8rem 0;
+  padding-left: 1.8rem;
+  position: relative;
+  color: #516478;
+}
+
+.tutorial-section li:before {
+  content: "→";
+  color: #4a90e2;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.demo-section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.demo-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.input-form textarea {
+  padding: 1.2rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  resize: vertical;
+  min-height: 120px;
+  transition: border-color 0.3s ease;
+}
+
+.input-form textarea:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.input-form button {
+  padding: 1rem 2rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.input-form button:hover:not(:disabled) {
+  background-color: #357abd;
+  transform: translateY(-1px);
+}
+
+.input-form button:disabled {
+  background-color: #cbd5e0;
+  cursor: not-allowed;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #516478;
+  font-size: 1.1rem;
+}
+
+.loading p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.error-message {
+  color: #e74c3c;
+  background-color: #fdf0ed;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.recommendations {
+  margin-top: 2rem;
+}
+
+.recommendations h3 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.recommendation-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.recommendation-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.recommendation-card h4 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.recommendation-card .author {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.recommendation-card .description {
+  color: #516478;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.recommendation-card .genre {
+  color: #4a90e2;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.recommendation-card .reason {
+  color: #38a169;
+  font-size: 0.95rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.implementation-section {
+  margin: 3rem 0;
+}
+
+.subsection {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.subsection h3 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.subsection pre {
+  background-color: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  border: 1px solid #e2e8f0;
+}
+
+.best-practices-section {
+  margin: 3rem 0;
+}
+
+.practices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.practice-card {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.practice-card h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.practice-card ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.practice-card li {
+  padding: 0.5rem 0;
+  color: #516478;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.practice-card li:before {
+  content: "•";
+  color: #4a90e2;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.further-learning-section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.further-learning-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.further-learning-section li {
+  padding: 0.8rem 0;
+  padding-left: 1.8rem;
+  position: relative;
+  color: #516478;
+}
+
+.further-learning-section li:before {
+  content: "→";
+  color: #4a90e2;
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .agent-tutorial-container {
+    padding: 1rem;
+  }
+
+  .tutorial-header {
+    padding: 1.5rem;
+  }
+
+  .tutorial-header h1 {
+    font-size: 2rem;
+  }
+
+  .practices-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recommendations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subsection {
+    padding: 1rem;
+  }
+
+  .subsection pre {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .recommendation-card {
+    padding: 1rem;
+  }
+}

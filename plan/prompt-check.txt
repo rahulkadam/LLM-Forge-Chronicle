@@ -1,0 +1,15 @@
+1. SportSphere
+Description: SportSphere is an LLM agent that provides detailed information about sports players, teams, and leagues.
+Example Conversation:
+User: "Sachin Tendulkar"
+SportSphere: "Sachin Tendulkar is a former Indian cricketer. Here are some key stats:
+
+- Born: April 24, 1973
+- Batting style: Right-handed
+- Bowling style: Right-arm leg break
+- Test debut: November 15, 1989
+- ODI debut: November 10, 1989
+- Career highlights:
+    - Highest Test score: 248*
+    - Highest ODI score: 200*
+    - Awards: Bharat Ratna, Padma Vibhushan, Padma Shri"
