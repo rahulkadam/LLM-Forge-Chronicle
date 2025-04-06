@@ -128,11 +128,11 @@ const Navbar: React.FC = () => {
             <Link to="/BuildingLLMAgent" className={`nav-link ${isActive('/BuildingLLMAgent')}`}>
               File System Agent Example
             </Link>
+            <Link to="/agent/athlete-insight" className={`nav-link ${isActive('/agent/athlete-insight')}`}>
+              AthleteInsight AI
+            </Link>
             <Link to="/agent/bookbuddy" className={`nav-link ${isActive('/agent/bookbuddy')}`}>
               BookBuddy Agent
-            </Link>
-            <Link to="/agent/sportplayer" className={`nav-link ${isActive('/agent/sportplayer')}`}>
-              SportPlayer Agent
             </Link>
           </div>
         </li>

@@ -92,19 +92,35 @@
   cursor: not-allowed;
 }
 
-/* Player Cards */
+/* Recommendations */
+.recommendations {
+  margin-top: 2rem;
+}
+
+.recommendations h3 {
+  color: #1a2a6c;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
 .player-card {
   background: white;
   border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  border: 1px solid #e2e8f0;
 }
 
 .player-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .player-card h4 {
@@ -132,26 +148,26 @@
 .achievements h5 {
   color: #1a2a6c;
   margin-bottom: 0.5rem;
-  font-size: 1.1rem;
 }
 
 .achievements ul {
-  list-style-type: none;
+  list-style: none;
   padding-left: 0;
 }
 
 .achievements li {
   padding: 0.5rem 0;
   color: #516478;
-  position: relative;
   padding-left: 1.5rem;
+  position: relative;
 }
 
 .achievements li:before {
   content: "🏆";
   position: absolute;
   left: 0;
-  font-size: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .stats {
@@ -160,8 +176,7 @@
 
 .stats h5 {
   color: #1a2a6c;
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  margin-bottom: 1rem;
 }
 
 .stats-grid {
@@ -171,21 +186,20 @@
 }
 
 .stat-item {
-  padding: 0.5rem;
   background: #f8fafc;
-  border-radius: 6px;
+  padding: 0.8rem;
+  border-radius: 8px;
   text-align: center;
 }
 
 .stat-label {
-  display: block;
   color: #516478;
   font-size: 0.9rem;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.3rem;
+  display: block;
 }
 
 .stat-value {
-  display: block;
   color: #1a2a6c;
   font-weight: 600;
   font-size: 1.1rem;
@@ -194,25 +208,26 @@
 .match-style {
   margin: 1rem 0;
   color: #2c3e50;
+  line-height: 1.4;
 }
 
 .recommendation {
-  color: #b21f1f;
-  font-weight: 500;
   margin: 1rem 0;
   padding: 1rem;
   background: #fff5f5;
-  border-radius: 6px;
+  border-radius: 8px;
+  color: #b21f1f;
+  font-weight: 500;
 }
 
 .confidence {
   text-align: center;
-  color: #1a2a6c;
-  font-weight: 600;
-  margin-top: 1rem;
   padding: 0.5rem;
   background: #ebf4ff;
   border-radius: 6px;
+  color: #1a2a6c;
+  font-weight: 600;
+  margin-top: 1rem;
 }
 
 /* Implementation Section */
@@ -230,28 +245,21 @@
   margin-bottom: 2rem;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 1rem;
-  background: #f8fafc;
-  border-radius: 12px;
 }
 
 .nav-button {
   padding: 1rem 1.5rem;
-  background-color: white;
+  background: white;
   border: 2px solid #e2e8f0;
   border-radius: 8px;
   color: #516478;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-weight: 500;
   min-width: 180px;
-  text-align: center;
 }
 
 .nav-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-color: #1a2a6c;
   color: #1a2a6c;
 }
@@ -267,7 +275,6 @@
   padding: 2rem;
   background: #f8fafc;
   border-radius: 12px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .code-example {
@@ -275,7 +282,7 @@
   font-size: 0.9rem;
   line-height: 1.5;
   padding: 1.5rem;
-  background: #ffffff;
+  background: #171b1e;
   border-radius: 8px;
   border: 1px solid #e2e8f0;
   overflow-x: auto;
@@ -284,23 +291,20 @@
 /* Best Practices Section */
 .best-practices-section {
   margin: 3rem 0;
-  padding: 2rem;
 }
 
 .practices-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  margin-top: 2rem;
 }
 
 .practice-card {
-  padding: 2rem;
   background: white;
+  padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  border: 1px solid #e2e8f0;
 }
 
 .practice-card:hover {
@@ -308,22 +312,39 @@
 }
 
 .practice-card h3 {
-  color: #1a2a6c;
+  color: #edf0f3;
   margin-bottom: 1.5rem;
-  font-size: 1.3rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid #e2e8f0;
 }
 
-/* Mobile Responsiveness */
+.practice-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.practice-card li {
+  padding: 0.5rem 0;
+  color: #516478;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.practice-card li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #1a2a6c;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .agent-tutorial-container {
-    padding: 1rem;
+  .tutorial-header {
+    padding: 1.5rem;
   }
 
-  .implementation-nav {
-    flex-direction: column;
-    gap: 0.5rem;
+  .tutorial-header h1 {
+    font-size: 2rem;
   }
 
   .nav-button {
@@ -331,11 +352,11 @@
     min-width: unset;
   }
 
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .recommendations-grid {
+    grid-template-columns: 1fr;
   }
 
-  .player-card {
-    padding: 1rem;
+  .practices-grid {
+    grid-template-columns: 1fr;
   }
 }
