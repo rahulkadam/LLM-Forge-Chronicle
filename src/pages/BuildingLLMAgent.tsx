@@ -774,7 +774,7 @@ def read_file(path_str, base_dir="."):
       
       <section className="resources">
         <h2>Additional Resources</h2>
-        <div className="resources-grid">
+        <div className="resources-grid1">
           <div className="resource-card">
             <h3>LangChain Documentation</h3>
             <p>

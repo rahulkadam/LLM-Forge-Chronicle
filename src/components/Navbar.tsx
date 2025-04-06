@@ -69,40 +69,6 @@ const Navbar: React.FC = () => {
           </Link>
         </li>
         
-        {/* Development dropdown */}
-        <li className="dropdown">
-          <button 
-            className="dropdown-trigger"
-            onClick={(e) => {
-              e.stopPropagation();
-              toggleDropdown('llm-dev');
-            }}
-          >
-            Develop LLMs <span className="arrow">▾</span>
-          </button>
-          <div className={`dropdown-content ${activeDropdown === 'llm-dev' ? 'show' : ''}`}>
-            <div className="dropdown-header">Prompt Engineering:</div>
-            <Link to="/prompt-engineering" className={`nav-link ${isActive('/prompt-engineering')}`}>
-              Basics
-            </Link>
-            <Link to="/prompt-engineering/intermediate" className={`nav-link ${isActive('/prompt-engineering/intermediate')}`}>
-              Intermediate
-            </Link>
-            <Link to="/prompt-engineering/advanced" className={`nav-link ${isActive('/prompt-engineering/advanced')}`}>
-              Advanced
-            </Link>
-            <div className="dropdown-divider"></div>
-            <div className="dropdown-header">LLM Applications:</div>
-            {/* 'Build an Agent' link removed as requested */}
-            <Link to="/llm-agent/basic" className={`nav-link ${isActive('/llm-agent/basic')}`}>
-              Basic LLM Agent
-            </Link>
-            <Link to="/BuildingLLMAgent" className={`nav-link ${isActive('/BuildingLLMAgent')}`}>
-              File System Agent Example
-            </Link>
-          </div>
-        </li>
-        
         {/* LLM Fundamentals dropdown */}
         <li className="dropdown">
           <button 
@@ -115,6 +81,7 @@ const Navbar: React.FC = () => {
             LLM Fundamentals <span className="arrow">▾</span>
           </button>
           <div className={`dropdown-content ${activeDropdown === 'fundamentals' ? 'show' : ''}`}>
+            <div className="dropdown-header">Core Concepts:</div>
             <Link to="/ai-basics" className={`nav-link ${isActive('/ai-basics')}`}>
               LLM Introduction
             </Link>
@@ -127,7 +94,48 @@ const Navbar: React.FC = () => {
             <Link to="/llm-fundamentals/developer-quick-start" className={`nav-link ${isActive('/llm-fundamentals/developer-quick-start')}`}>
               Developer Quick Start
             </Link>
+            
+            <div className="dropdown-divider"></div>
+            <div className="dropdown-header">Prompt Engineering:</div>
+            <Link to="/prompt-engineering" className={`nav-link ${isActive('/prompt-engineering')}`}>
+              Basics
+            </Link>
+            <Link to="/prompt-engineering/intermediate" className={`nav-link ${isActive('/prompt-engineering/intermediate')}`}>
+              Intermediate
+            </Link>
+            <Link to="/prompt-engineering/advanced" className={`nav-link ${isActive('/prompt-engineering/advanced')}`}>
+              Advanced
+            </Link>
           </div>
+        </li>
+
+        {/* Agents dropdown */}
+        <li className="dropdown">
+          <button 
+            className="dropdown-trigger"
+            onClick={(e) => {
+              e.stopPropagation();
+              toggleDropdown('agents');
+            }}
+          >
+            Agents <span className="arrow">▾</span>
+          </button>
+          <div className={`dropdown-content ${activeDropdown === 'agents' ? 'show' : ''}`}>
+            <div className="dropdown-header">Agent Development:</div>
+            <Link to="/llm-agent/basic" className={`nav-link ${isActive('/llm-agent/basic')}`}>
+              Basic LLM Agent
+            </Link>
+            <Link to="/BuildingLLMAgent" className={`nav-link ${isActive('/BuildingLLMAgent')}`}>
+              File System Agent Example
+            </Link>
+          </div>
+        </li>
+        
+        {/* Resources - single link */}
+        <li>
+          <Link to="/resources" className={`nav-link ${isActive('/resources')}`}>
+            Resources
+          </Link>
         </li>
         
         {/* Blogs - single link */}
