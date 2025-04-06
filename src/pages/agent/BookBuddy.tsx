@@ -1,53 +1,43 @@
 import React, { useState } from 'react';
 import '../../styles/BookBuddy.css';
 
-// Mock API response type
 interface Book {
   title: string;
   author: string;
   description: string;
   genre?: string;
   reason: string;
+  topics?: string[];
+  keyIdeas?: string[];
+  confidence?: number;
 }
+
+// Define the valid code example types
+type CodeExampleType = 'openai' | 'rag' | 'combined' | 'prompts';
 
 const BookBuddy: React.FC = () => {
   const [userInput, setUserInput] = useState('');
   const [recommendations, setRecommendations] = useState<Book[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [showCode, setShowCode] = useState<CodeExampleType | null>(null);
 
-  // Mock data to simulate LLM responses
+  // Mock database for demonstration
   const mockBookDatabase: { [key: string]: Book[] } = {
-    'fiction': [
+    'psychology': [
       {
-        title: "Project Hail Mary",
-        author: "Andy Weir",
-        description: "A lone astronaut must save humanity from extinction",
-        genre: "Science Fiction",
-        reason: "Perfect for readers who enjoy hard science fiction with problem-solving"
-      },
-      {
-        title: "The Midnight Library",
-        author: "Matt Haig",
-        description: "A library between life and death contains books of alternate lives",
-        genre: "Literary Fiction",
-        reason: "Great for exploring philosophical questions about life choices"
-      }
-    ],
-    'business': [
-      {
-        title: "The Psychology of Money",
-        author: "Morgan Housel",
-        description: "Timeless lessons on wealth, greed, and happiness",
-        genre: "Finance",
-        reason: "Excellent for understanding behavioral aspects of finance"
-      },
-      {
-        title: "Zero to One",
-        author: "Peter Thiel",
-        description: "Notes on startups, or how to build the future",
-        genre: "Business",
-        reason: "Essential reading for understanding innovation and startup thinking"
+        title: "Thinking, Fast and Slow",
+        author: "Daniel Kahneman",
+        description: "Explores the two systems that drive the way we think",
+        genre: "Psychology",
+        reason: "Perfect for understanding decision-making and cognitive biases",
+        topics: ["decision making", "cognitive psychology", "behavioral economics"],
+        keyIdeas: [
+          "Two systems of thinking: fast and slow",
+          "Common cognitive biases and their effects",
+          "How to make better decisions"
+        ],
+        confidence: 0.95
       }
     ],
     'productivity': [
@@ -56,74 +46,122 @@ const BookBuddy: React.FC = () => {
         author: "Cal Newport",
         description: "Rules for focused success in a distracted world",
         genre: "Productivity",
-        reason: "Helps develop concentrated work habits in a distracted world"
-      },
-      {
-        title: "Atomic Habits",
-        author: "James Clear",
-        description: "An easy & proven way to build good habits & break bad ones",
-        genre: "Self-Help",
-        reason: "Perfect for developing better habits and personal systems"
-      }
-    ],
-    'psychology': [
-      {
-        title: "Thinking, Fast and Slow",
-        author: "Daniel Kahneman",
-        description: "Understanding how we think and make decisions",
-        genre: "Psychology",
-        reason: "Comprehensive look at decision-making and cognitive biases"
-      },
-      {
-        title: "The Body Keeps the Score",
-        author: "Bessel van der Kolk",
-        description: "Brain, mind, and body in the healing of trauma",
-        genre: "Psychology",
-        reason: "Essential reading for understanding trauma and healing"
+        reason: "Helps develop concentrated work habits in a distracted world",
+        topics: ["focus", "productivity", "attention management"],
+        keyIdeas: [
+          "Deep work is increasingly rare and valuable",
+          "Structure your day for focused work",
+          "Eliminate distractions systematically"
+        ],
+        confidence: 0.9
       }
     ]
   };
 
-  const analyzeUserInput = (input: string): string[] => {
-    const lowercaseInput = input.toLowerCase();
-    const categories = [];
-    
-    if (lowercaseInput.includes('fiction') || lowercaseInput.includes('novel') || lowercaseInput.includes('story')) {
-      categories.push('fiction');
-    }
-    if (lowercaseInput.includes('business') || lowercaseInput.includes('startup') || lowercaseInput.includes('finance')) {
-      categories.push('business');
-    }
-    if (lowercaseInput.includes('productive') || lowercaseInput.includes('habit') || lowercaseInput.includes('focus')) {
-      categories.push('productivity');
-    }
-    if (lowercaseInput.includes('psychology') || lowercaseInput.includes('mind') || lowercaseInput.includes('thinking')) {
-      categories.push('psychology');
-    }
+  // Define code examples with proper typing
+  const codeExamples: Record<CodeExampleType, string> = {
+    openai: [
+      '// OpenAI Integration Example',
+      'async function getRecommendations(query: string, books: Book[]) {',
+      '  const systemPrompt = "You are an expert librarian and book recommendation agent. " +',
+      '    "Your task is to recommend books based on the user\'s query and retrieved information. " +',
+      '    "Consider:\\n" +',
+      '    "1. User\'s interests and preferences\\n" +',
+      '    "2. RAG system relevance scores\\n" +',
+      '    "3. Book\'s key ideas and topics\\n" +',
+      '    "4. User\'s implied reading level";',
+      '',
+      '  const response = await openai.chat.completions.create({',
+      '    model: "gpt-4",',
+      '    messages: [',
+      '      { role: "system", content: systemPrompt },',
+      '      { role: "user", content: createUserPrompt(query, books) }',
+      '    ],',
+      '    temperature: 0.7,',
+      '    response_format: { type: "json_object" }',
+      '  });',
+      '',
+      '  return processResponse(response);',
+      '}'
+    ].join('\n'),
 
-    // If no specific category is found, include books from all categories
-    if (categories.length === 0) {
-      return ['fiction', 'business', 'productivity', 'psychology'];
-    }
+    rag: [
+      '// RAG Implementation Example',
+      'function retrieveRelevantBooks(query: string, books: Book[]) {',
+      '  const searchTerms = query.toLowerCase().split(" ");',
+      '  ',
+      '  return books.map(book => ({',
+      '    ...book,',
+      '    relevanceScore: calculateRelevanceScore(searchTerms, book)',
+      '  }))',
+      '  .sort((a, b) => b.relevanceScore - a.relevanceScore)',
+      '  .slice(0, 3);',
+      '}',
+      '',
+      'function calculateRelevanceScore(terms: string[], book: Book): number {',
+      '  let score = 0;',
+      '  ',
+      '  // Match topics',
+      '  terms.forEach(term => {',
+      '    if (book.topics?.some(t => t.includes(term))) score += 2;',
+      '    if (book.keyIdeas?.some(i => i.toLowerCase().includes(term))) score += 1;',
+      '  });',
+      '  ',
+      '  return score;',
+      '}'
+    ].join('\n'),
 
-    return categories;
-  };
+    combined: [
+      '// Combined RAG + LLM Implementation',
+      'async function getBookRecommendations(query: string) {',
+      '  // 1. Retrieve relevant books using RAG',
+      '  const relevantBooks = retrieveRelevantBooks(query, bookDatabase);',
+      '',
+      '  // 2. Generate LLM prompt with retrieved context',
+      '  const prompt = createPromptWithContext(query, relevantBooks);',
+      '',
+      '  // 3. Get enhanced recommendations from LLM',
+      '  const llmResponse = await getRecommendations(prompt);',
+      '',
+      '  // 4. Process and format the final recommendations',
+      '  return processRecommendations(llmResponse, relevantBooks);',
+      '}'
+    ].join('\n'),
 
-  const getBookRecommendations = (input: string): Book[] => {
-    const categories = analyzeUserInput(input);
-    const recommendations: Book[] = [];
-
-    // Get books from each relevant category
-    categories.forEach(category => {
-      if (mockBookDatabase[category]) {
-        recommendations.push(...mockBookDatabase[category]);
-      }
-    });
-
-    // Shuffle and return top 3 recommendations
-    return recommendations
-      .sort(() => Math.random() - 0.5)
-      .slice(0, 3);
+    prompts: [
+      '// Prompt Engineering Example',
+      'const systemPrompt = `You are an expert librarian.',
+      'Recommend books based on:',
+      '1. User\'s query',
+      '2. Retrieved book information',
+      '3. Relevance scores',
+      '',
+      'Format response as JSON:',
+      '{',
+      '  "recommendations": [',
+      '    {',
+      '      "title": string,',
+      '      "author": string,',
+      '      "reason": string,',
+      '      "confidence": number',
+      '    }',
+      '  ]',
+      '}`;',
+      '',
+      'function createUserPrompt(query: string, books: Book[]) {',
+      '  return `Query: ${JSON.stringify(query)}',
+      '',
+      'Available Books:',
+      '${books.map(b => `',
+      '- ${b.title} by ${b.author}',
+      '  Topics: ${b.topics?.join(", ")}',
+      '  Key Ideas: ${b.keyIdeas?.join("; ")}',
+      '  Relevance: ${b.relevanceScore}',
+      '`).join("\\n")}',
+      '',
+      'Provide recommendations based on query and book information.`;',
+      '}'
+    ].join('\n')
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -132,9 +170,11 @@ const BookBuddy: React.FC = () => {
     setError(null);
 
     try {
-      // Simulate API call delay
       setTimeout(() => {
-        const results = getBookRecommendations(userInput);
+        const results = Object.values(mockBookDatabase)
+          .flat()
+          .sort(() => Math.random() - 0.5)
+          .slice(0, 3);
         setRecommendations(results);
         setIsLoading(false);
       }, 1500);
@@ -144,41 +184,30 @@ const BookBuddy: React.FC = () => {
     }
   };
 
+  // Helper function to get code example content
+  const getCodeExample = (codeType: CodeExampleType | null): string | null => {
+    if (!codeType) return null;
+    return codeExamples[codeType];
+  };
+
   return (
     <div className="agent-tutorial-container">
-      {/* Tutorial Header Section */}
       <section className="tutorial-header">
-        <h1>📚 BookBuddy - LLM-Powered Book Recommendations</h1>
+        <h1>BookBuddy - RAG + LLM Book Recommendations</h1>
         <p className="tutorial-description">
-          An intelligent book recommendation system that demonstrates LLM integration,
-          natural language processing, and response generation.
+          A comprehensive example combining RAG (Retrieval Augmented Generation) with
+          OpenAI's GPT models for intelligent book recommendations.
         </p>
       </section>
 
-      {/* Overview Section */}
-      <section className="tutorial-section">
-        <h2>How It Works</h2>
-        <p>
-          BookBuddy uses natural language processing to understand your reading preferences
-          and provides personalized book recommendations. Try it out with queries like:
-        </p>
-        <ul>
-          <li>"I want to learn about psychology and decision making"</li>
-          <li>"Looking for science fiction books with complex plots"</li>
-          <li>"Need books about business and startups"</li>
-          <li>"Interested in productivity and habit formation"</li>
-        </ul>
-      </section>
-
-      {/* Interactive Demo Section */}
       <section className="demo-section">
-        <h2>Try It Out</h2>
+        <h2>Try the Demo</h2>
         <div className="demo-container">
           <form onSubmit={handleSubmit} className="input-form">
             <textarea
               value={userInput}
               onChange={(e) => setUserInput(e.target.value)}
-              placeholder="Describe what kind of books you're interested in..."
+              placeholder="Describe what kind of books you're interested in... (e.g., 'I want to learn about psychology and decision making')"
               rows={4}
             />
             <button type="submit" disabled={isLoading || !userInput.trim()}>
@@ -188,7 +217,7 @@ const BookBuddy: React.FC = () => {
 
           {isLoading && (
             <div className="loading">
-              <p>BookBuddy is analyzing your preferences... 📚</p>
+              <p>BookBuddy is analyzing your preferences...</p>
             </div>
           )}
 
@@ -209,6 +238,9 @@ const BookBuddy: React.FC = () => {
                     <p className="description">{book.description}</p>
                     {book.genre && <p className="genre">Genre: {book.genre}</p>}
                     <p className="reason">{book.reason}</p>
+                    {book.confidence && (
+                      <p className="confidence">Confidence: {(book.confidence * 100).toFixed(0)}%</p>
+                    )}
                   </div>
                 ))}
               </div>
@@ -217,124 +249,111 @@ const BookBuddy: React.FC = () => {
         </div>
       </section>
 
-      {/* Implementation Guide */}
-      <section className="implementation-section">
+      <section className="implementation-section1">
         <h2>Implementation Guide</h2>
         
-        <div className="subsection">
-          <h3>1. Setting Up the LLM Integration</h3>
-          <pre>{`
-# Python implementation using OpenAI's API
-from openai import AsyncOpenAI
-
-class BookBuddyAgent:
-    def __init__(self, api_key: str):
-        self.client = AsyncOpenAI(api_key=api_key)
-    
-    async def get_recommendations(self, user_input: str):
-        response = await self.client.chat.completions.create(
-            model="gpt-4",
-            messages=[
-                {"role": "system", "content": "You are an expert librarian..."},
-                {"role": "user", "content": user_input}
-            ],
-            temperature=0.7
-        )
-        return self._process_response(response)
-          `}</pre>
+        <div className="implementation-nav">
+          <button 
+            className={`nav-button ${showCode === 'rag' ? 'active' : ''}`}
+            onClick={() => setShowCode('rag')}
+          >
+            RAG Implementation
+          </button>
+          <button 
+            className={`nav-button ${showCode === 'openai' ? 'active' : ''}`}
+            onClick={() => setShowCode('openai')}
+          >
+            OpenAI Integration
+          </button>
+          <button 
+            className={`nav-button ${showCode === 'combined' ? 'active' : ''}`}
+            onClick={() => setShowCode('combined')}
+          >
+            Combined Flow
+          </button>
+          <button 
+            className={`nav-button ${showCode === 'prompts' ? 'active' : ''}`}
+            onClick={() => setShowCode('prompts')}
+          >
+            Prompt Engineering
+          </button>
         </div>
 
-        <div className="subsection">
-          <h3>2. Prompt Engineering</h3>
-          <pre>{`
-const systemPrompt = \`As an expert librarian, recommend books that:
-1. Match the user's interests and preferences
-2. Consider reading level and complexity
-3. Include a mix of popular and lesser-known titles
-4. Provide clear reasoning for each recommendation
-
-Format your response as a structured JSON object.\`
-          `}</pre>
+        <div className="code-section">
+          {showCode ? (
+            <pre className="code-example">
+              {getCodeExample(showCode)}
+            </pre>
+          ) : (
+            <p className="code-prompt">Select a section above to view the implementation details.</p>
+          )}
         </div>
 
-        <div className="subsection">
-          <h3>3. Response Processing</h3>
-          <pre>{`
-def _process_response(self, response: str) -> List[Book]:
-    """Process and validate LLM response"""
-    try:
-        recommendations = json.loads(response)
-        return [
-            {
-                'title': book['title'],
-                'author': book['author'],
-                'description': book['description'],
-                'reason': book['reason']
-            }
-            for book in recommendations['books']
-        ]
-    except Exception as e:
-        raise ValueError(f"Error processing response: {e}")
-          `}</pre>
+        <div className="implementation-notes">
+          <h3>Key Concepts</h3>
+          <ul>
+            <li><strong>RAG System:</strong> Uses vector similarity to find relevant books</li>
+            <li><strong>LLM Integration:</strong> Enhances recommendations with GPT-4</li>
+            <li><strong>Prompt Engineering:</strong> Structured prompts for consistent outputs</li>
+            <li><strong>Error Handling:</strong> Robust error handling and retries</li>
+          </ul>
         </div>
       </section>
 
-      {/* Best Practices */}
-      <section className="best-practices-section">
+      <section className="best-practices-section1">
         <h2>Best Practices</h2>
-        <div className="practices-grid">
+        <div className="practices-grid1">
           <div className="practice-card">
-            <h3>🎯 Prompt Design</h3>
+            <h3>RAG Best Practices</h3>
             <ul>
-              <li>Be specific in role definition</li>
-              <li>Request structured outputs</li>
-              <li>Include format examples</li>
-              <li>Set clear constraints</li>
+              <li>Maintain structured knowledge base</li>
+              <li>Implement semantic search</li>
+              <li>Use vector embeddings</li>
+              <li>Cache search results</li>
             </ul>
           </div>
 
           <div className="practice-card">
-            <h3>🔄 Error Handling</h3>
+            <h3>LLM Integration</h3>
             <ul>
-              <li>Validate API responses</li>
-              <li>Implement retries</li>
-              <li>Handle timeouts</li>
-              <li>Provide clear error messages</li>
+              <li>Use clear system prompts</li>
+              <li>Structure user prompts</li>
+              <li>Validate LLM responses</li>
+              <li>Handle API errors</li>
             </ul>
           </div>
 
           <div className="practice-card">
-            <h3>📊 Response Processing</h3>
+            <h3>Response Handling</h3>
             <ul>
-              <li>Validate data structure</li>
-              <li>Transform to typed objects</li>
-              <li>Handle missing fields</li>
-              <li>Format consistently</li>
+              <li>Validate JSON responses</li>
+              <li>Include confidence scores</li>
+              <li>Provide clear explanations</li>
+              <li>Handle edge cases</li>
             </ul>
           </div>
 
           <div className="practice-card">
-            <h3>🚀 Performance</h3>
+            <h3>Performance</h3>
             <ul>
-              <li>Use async/await</li>
               <li>Implement caching</li>
-              <li>Optimize token usage</li>
-              <li>Monitor response times</li>
+              <li>Use batch processing</li>
+              <li>Monitor API usage</li>
+              <li>Optimize embeddings</li>
             </ul>
           </div>
         </div>
       </section>
 
-      {/* Future Improvements */}
       <section className="further-learning-section">
-        <h2>Future Improvements</h2>
+        <h2>Next Steps</h2>
         <ul>
-          <li>Integration with book databases (Google Books, OpenLibrary)</li>
-          <li>User preference history and personalization</li>
-          <li>Advanced natural language understanding</li>
-          <li>Collaborative filtering for recommendations</li>
-          <li>Book availability and purchase links</li>
-          <li>Reading level analysis and matching</li>
+          <li>Integrate with real book databases (Google Books, OpenLibrary)</li>
+          <li>Implement vector database for better semantic search</li>
+          <li>Add user feedback and rating system</li>
+          <li>Include collaborative filtering</li>
+          <li>Support multiple languages</li>
+          <li>Add book previews and purchase links</li>
         </ul>
       </section>
     </div>
