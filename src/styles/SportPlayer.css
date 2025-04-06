@@ -1,0 +1,341 @@
+.agent-tutorial-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
+}
+
+.tutorial-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+  border-radius: 12px;
+  color: white;
+}
+
+.tutorial-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(120deg, #ffffff, #e0e0e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tutorial-description {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Demo Section */
+.demo-section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.demo-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.input-form textarea {
+  padding: 1.2rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  resize: vertical;
+  min-height: 120px;
+  transition: all 0.3s ease;
+  background: white;
+  color: #2c3e50;
+}
+
+.input-form textarea:focus {
+  border-color: #1a2a6c;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(26, 42, 108, 0.1);
+}
+
+.input-form button {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.input-form button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(26, 42, 108, 0.3);
+}
+
+.input-form button:disabled {
+  background: #cbd5e0;
+  cursor: not-allowed;
+}
+
+/* Player Cards */
+.player-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.player-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.player-card h4 {
+  color: #1a2a6c;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.player-card .position {
+  color: #b21f1f;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.player-card .description {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.achievements {
+  margin: 1.5rem 0;
+}
+
+.achievements h5 {
+  color: #1a2a6c;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.achievements ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.achievements li {
+  padding: 0.5rem 0;
+  color: #516478;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.achievements li:before {
+  content: "🏆";
+  position: absolute;
+  left: 0;
+  font-size: 0.9rem;
+}
+
+.stats {
+  margin: 1.5rem 0;
+}
+
+.stats h5 {
+  color: #1a2a6c;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.stat-item {
+  padding: 0.5rem;
+  background: #f8fafc;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  color: #516478;
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.stat-value {
+  display: block;
+  color: #1a2a6c;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.match-style {
+  margin: 1rem 0;
+  color: #2c3e50;
+}
+
+.recommendation {
+  color: #b21f1f;
+  font-weight: 500;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #fff5f5;
+  border-radius: 6px;
+}
+
+.confidence {
+  text-align: center;
+  color: #1a2a6c;
+  font-weight: 600;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: #ebf4ff;
+  border-radius: 6px;
+}
+
+/* Implementation Section */
+.implementation-section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.implementation-nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+.nav-button {
+  padding: 1rem 1.5rem;
+  background-color: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  color: #516478;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  min-width: 180px;
+  text-align: center;
+}
+
+.nav-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-color: #1a2a6c;
+  color: #1a2a6c;
+}
+
+.nav-button.active {
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+  color: white;
+  border: none;
+}
+
+.code-section {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.code-example {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  overflow-x: auto;
+}
+
+/* Best Practices Section */
+.best-practices-section {
+  margin: 3rem 0;
+  padding: 2rem;
+}
+
+.practices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.practice-card {
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.practice-card:hover {
+  transform: translateY(-5px);
+}
+
+.practice-card h3 {
+  color: #1a2a6c;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .agent-tutorial-container {
+    padding: 1rem;
+  }
+
+  .implementation-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav-button {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .player-card {
+    padding: 1rem;
+  }
+}

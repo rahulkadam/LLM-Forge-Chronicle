@@ -131,6 +131,9 @@ const Navbar: React.FC = () => {
             <Link to="/agent/bookbuddy" className={`nav-link ${isActive('/agent/bookbuddy')}`}>
               BookBuddy Agent
             </Link>
+            <Link to="/agent/sportplayer" className={`nav-link ${isActive('/agent/sportplayer')}`}>
+              SportPlayer Agent
+            </Link>
           </div>
         </li>
         

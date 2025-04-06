@@ -13,3 +13,8 @@ SportSphere: "Sachin Tendulkar is a former Indian cricketer. Here are some key s
     - Highest Test score: 248*
     - Highest ODI score: 200*
     - Awards: Bharat Ratna, Padma Vibhushan, Padma Shri"
+
+
+add MCP server also as example, check if we can add it somwwhere
+
+use case, ask use to enter player name, fetch all info about user

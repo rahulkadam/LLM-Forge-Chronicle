@@ -37,6 +37,7 @@ import LLMModelComparison from './pages/blogs/llm-model-comparison/llm-model-com
 import VectorDatabaseGuide from './pages/blogs/vector-database-guide/vector-llm-guide';
 import BookBuddy from './pages/agent/BookBuddy';
 
+import SportPlayer from './pages/agent/SportPlayer';
 import DeveloperQuickStart from './pages/llm-fundamentals/developer-quick-start';
 import LLMFundamentals from './pages/llm-fundamentals';
 import ChatGPTGuide from './pages/llm-fundamentals/chatgpt-guide';
@@ -121,7 +122,8 @@ const AppContent: React.FC = () => {
           <Route path="/ai-basics/prompt-basics" element={<PromptBasics />} />
           <Route path="/ai-basics/examples" element={<Examples />} />
           
-                  <Route path="/agent/bookbuddy" element={<BookBuddy />} />
+                  <Route path="/agent/sportplayer" element={<SportPlayer />} />
+          <Route path="/agent/bookbuddy" element={<BookBuddy />} />
   {/* Catch all route for 404 pages - keep at bottom */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
