@@ -28,6 +28,71 @@
   font-weight: bold;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+/* AI-Driven IT Banners */
+.ai-transformation-banner {
+  background: linear-gradient(135deg, #00C6FF 0%, #0072FF 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.ai-transformation-banner::before {
+  content: "AI-Driven IT Evolution";
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.enterprise-tools-banner {
+  background: linear-gradient(135deg, #6B46C1 0%, #4C1D95 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.enterprise-tools-banner::before {
+  content: "Enterprise Tools Integration";
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.code-migration-banner {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.code-migration-banner::before {
+  content: "LLM-Powered Code Migration";
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 /* Additional LLM Models */
 .deepseek-model-image {
   background: linear-gradient(135deg, #2c3e50 0%, #1a242f 100%);

@@ -26,7 +26,7 @@ const AIItTransformation: React.FC = () => {
       date="April 7, 2025"
       readTime="12 min"
       category="AI-Driven IT"
-      bannerClassName="ai-it-banner"
+      bannerClassName="ai-transformation-banner"
       tableOfContents={tableOfContents}
     >
       <BlogSection id="introduction" title="Introduction">

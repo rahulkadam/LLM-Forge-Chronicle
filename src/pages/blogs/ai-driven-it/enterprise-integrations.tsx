@@ -26,7 +26,7 @@ const EnterpriseIntegrations: React.FC = () => {
       date="April 7, 2025"
       readTime="15 min"
       category="AI-Driven IT"
-      bannerClassName="ai-it-banner"
+      bannerClassName="enterprise-tools-banner"
       tableOfContents={tableOfContents}
     >
       <BlogSection id="introduction" title="Introduction">

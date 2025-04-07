@@ -26,7 +26,7 @@ const CodeMigrationLLM: React.FC = () => {
       date="April 7, 2025"
       readTime="15 min"
       category="AI-Driven IT"
-      bannerClassName="ai-it-banner"
+      bannerClassName="code-migration-banner"
       tableOfContents={tableOfContents}
     >
       <BlogSection id="introduction" title="Introduction">

@@ -639,3 +639,27 @@
     flex-shrink: 0;
   }
 }
+/* AI-Driven IT card images */
+.ai-transformation-image {
+  background: linear-gradient(135deg, #00C6FF 0%, #0072FF 100%);
+}
+
+.ai-transformation-image::before {
+  content: "AI-Driven IT Evolution";
+}
+
+.enterprise-tools-image {
+  background: linear-gradient(135deg, #6B46C1 0%, #4C1D95 100%);
+}
+
+.enterprise-tools-image::before {
+  content: "Enterprise Tools Integration";
+}
+
+.code-migration-image {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+.code-migration-image::before {
+  content: "LLM-Powered Migration";
+}

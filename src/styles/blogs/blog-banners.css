@@ -1,3 +1,165 @@
+
+/* AI-Driven IT Category Banners */
+.ai-transformation-banner {
+  background: linear-gradient(135deg, #00C6FF 0%, #0072FF 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.ai-transformation-banner::before {
+  content: "AI-Driven IT Evolution";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.ai-transformation-banner::after {
+  content: "Transforming Modern Software Development";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  max-width: 600px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.enterprise-tools-banner {
+  background: linear-gradient(135deg, #6B46C1 0%, #4C1D95 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.enterprise-tools-banner::before {
+  content: "Enterprise Tools Integration";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.enterprise-tools-banner::after {
+  content: "Enhancing Development Workflows";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  max-width: 600px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.code-migration-banner {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.code-migration-banner::before {
+  content: "LLM-Powered Code Migration";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.code-migration-banner::after {
+  content: "Legacy to Modern Framework Migration";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  max-width: 600px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styles for AI-Driven IT banners */
+@media (max-width: 768px) {
+  .ai-transformation-banner,
+  .enterprise-tools-banner,
+  .code-migration-banner {
+    min-height: 200px;
+  }
+
+  .ai-transformation-banner::before,
+  .enterprise-tools-banner::before,
+  .code-migration-banner::before {
+    font-size: 2.5rem;
+  }
+
+  .ai-transformation-banner::after,
+  .enterprise-tools-banner::after,
+  .code-migration-banner::after {
+    font-size: 1rem;
+    top: 65%;
+    max-width: 90%;
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-transformation-banner,
+  .enterprise-tools-banner,
+  .code-migration-banner {
+    min-height: 150px;
+  }
+
+  .ai-transformation-banner::before,
+  .enterprise-tools-banner::before,
+  .code-migration-banner::before {
+    font-size: 2rem;
+  }
+
+  .ai-transformation-banner::after,
+  .enterprise-tools-banner::after,
+  .code-migration-banner::after {
+    font-size: 0.9rem;
+  }
+}
 /* Blog Banner Styles */
 
 /* Generic banner style */
