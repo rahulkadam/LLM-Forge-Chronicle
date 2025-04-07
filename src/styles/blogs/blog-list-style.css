@@ -663,3 +663,13 @@
 .code-migration-image::before {
   content: "LLM-Powered Migration";
 }
+
+.developer-efficiency-image {
+  background: linear-gradient(135deg, #FF6B6B 0%, #EE5253 100%);
+}
+
+.developer-efficiency-image::before {
+  content: "Developer Productivity Guide";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

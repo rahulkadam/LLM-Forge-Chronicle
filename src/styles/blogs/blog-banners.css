@@ -160,6 +160,63 @@
     font-size: 0.9rem;
   }
 }
+
+/* Developer Efficiency Banner */
+.developer-efficiency-banner {
+  background: linear-gradient(135deg, #FF6B6B 0%, #EE5253 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.developer-efficiency-banner::before {
+  content: "Developer Productivity";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.developer-efficiency-banner::after {
+  content: "Maximizing Efficiency with LLMs";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  max-width: 600px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .developer-efficiency-banner {
+    min-height: 200px;
+  }
+
+  .developer-efficiency-banner::before {
+    font-size: 2.5rem;
+  }
+
+  .developer-efficiency-banner::after {
+    font-size: 1rem;
+    top: 65%;
+    max-width: 90%;
+    padding: 0 16px;
+  }
+}
 /* Blog Banner Styles */
 
 /* Generic banner style */

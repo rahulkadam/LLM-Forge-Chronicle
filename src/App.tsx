@@ -1,3 +1,4 @@
+import DeveloperEfficiency from './pages/blogs/ai-driven-it/developer-efficiency';
 import CodeMigrationLLM from './pages/blogs/ai-driven-it/code-migration';
 import EnterpriseIntegrations from './pages/blogs/ai-driven-it/enterprise-integrations';
 import GrokModelGuide from './pages/blogs/llm-models/grok';
@@ -130,6 +131,7 @@ const AppContent: React.FC = () => {
           <Route path="/blogs/llm-models/chatgpt" element={<ChatGPTModelGuide />} />
           <Route path="/blogs/llm-models/claude" element={<ClaudeModelGuide />} />
           <Route path="/blogs/llm-models/gemini" element={<GeminiModelGuide />} />
+          <Route path="/blogs/ai-driven-it/developer-efficiency" element={<DeveloperEfficiency />} />
           <Route path="/blogs/ai-driven-it/code-migration" element={<CodeMigrationLLM />} />
           <Route path="/blogs/ai-driven-it/enterprise-integrations" element={<EnterpriseIntegrations />} />
           <Route path="/blogs/ai-driven-it/ai-transformation" element={<AIItTransformation />} />

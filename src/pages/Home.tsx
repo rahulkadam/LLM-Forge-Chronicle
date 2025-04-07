@@ -49,6 +49,14 @@ const Home: React.FC = () => {
         <section className="latest-tutorials">
           <h2>Latest Developer Tutorials</h2>
           <div className="tutorial-grid">
+            <Link to="/blogs/ai-driven-it/developer-efficiency" className="tutorial-card">
+              <h3>LLM-Powered Developer: A Productivity Guide</h3>
+              <div className="tutorial-tags">
+                <span className="tag">AI-Driven IT</span>
+                <span className="tag">Productivity</span>
+              </div>
+              <p>Learn how to integrate LLMs into your daily development workflow to boost productivity and code quality.</p>
+            </Link>
             <Link to="/blogs/llm-getting-started-guide" className="tutorial-card">
               <h3>Getting Started with LLMs: A Beginner's Guide</h3>
               <div className="tutorial-tags">
@@ -72,14 +80,6 @@ const Home: React.FC = () => {
                 <span className="tag">Architecture</span>
               </div>
               <p>Learn how to efficiently manage and enhance LLM context windows using Model Context Servers.</p>
-            </Link>
-            <Link to="/blogs/openai-api-guide" className="tutorial-card">
-              <h3>OpenAI API Integration Guide</h3>
-              <div className="tutorial-tags">
-                <span className="tag">Integration</span>
-                <span className="tag">API</span>
-              </div>
-              <p>Step-by-step guide to integrate and optimize OpenAI's API in your applications.</p>
             </Link>
           </div>
           <div className="see-more">
