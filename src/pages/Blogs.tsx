@@ -40,6 +40,37 @@ const Blogs: React.FC = () => {
 
   // Complete list of blog posts
   const allBlogPosts: BlogPost[] = [
+    // LLM Models Deep Dives
+    {
+      id: 'chatgpt-model',
+      title: "ChatGPT: A Comprehensive Guide to OpenAI's Revolutionary LLM",
+      excerpt: "Deep dive into ChatGPT's architecture, capabilities, and impact. Understanding how OpenAI's breakthrough model works and how to leverage it effectively.",
+      imageClass: 'chatgpt-model-image',
+      tag: 'LLM Models',
+      readingTime: '10 min read',
+      publishDate: 'April 7, 2025',
+      link: '/blogs/llm-models/chatgpt'
+    },
+    {
+      id: 'claude-model',
+      title: "Claude: Anthropic's Advanced AI Assistant",
+      excerpt: "Explore Claude's unique approach to AI safety, its constitutional AI framework, and how it differs from other leading language models.",
+      imageClass: 'claude-model-image',
+      tag: 'LLM Models',
+      readingTime: '10 min read',
+      publishDate: 'April 7, 2025',
+      link: '/blogs/llm-models/claude'
+    },
+    {
+      id: 'gemini-model',
+      title: "Google's Gemini: The Next Generation AI Model",
+      excerpt: "Understanding Gemini's multimodal capabilities, its position in the AI landscape, and how it compares to other leading language models.",
+      imageClass: 'gemini-model-image',
+      tag: 'LLM Models',
+      readingTime: '10 min read',
+      publishDate: 'April 7, 2025',
+      link: '/blogs/llm-models/gemini'
+    },
     // Getting Started & Fundamentals
     {
       id: 'llm-getting-started',

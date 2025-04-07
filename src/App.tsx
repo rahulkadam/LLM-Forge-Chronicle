@@ -1,3 +1,7 @@
+import ChatGPTModelGuide from './pages/blogs/llm-models/chatgpt';
+import ClaudeModelGuide from './pages/blogs/llm-models/claude';
+import GeminiModelGuide from './pages/blogs/llm-models/gemini';
+
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { initGA } from './utils/analytics';
@@ -112,6 +116,12 @@ const AppContent: React.FC = () => {
           <Route path="/blogs/model-context-server" element={<ModelContextServer />} />
           <Route path="/blogs/llm-model-comparison" element={<LLMModelComparison />} />
           <Route path="/blogs/vector-database-guide/vector-llm-guide" element={<VectorDatabaseGuide />} />
+          
+          {/* LLM Model Guides */}
+          <Route path="/blogs/llm-models/chatgpt" element={<ChatGPTModelGuide />} />
+          <Route path="/blogs/llm-models/claude" element={<ClaudeModelGuide />} />
+          <Route path="/blogs/llm-models/gemini" element={<GeminiModelGuide />} />
+          
           
           {/* Redirects from old routes to new routes */}
           <Route path="/ai-basics" element={<Navigate to="/llm-fundamentals" replace />} />

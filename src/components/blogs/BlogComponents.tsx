@@ -40,7 +40,7 @@ interface CardGridProps {
   className?: string;
 }
 
-export const CardGrid: React.FC<CardGridProps> = ({ children, className = 'use-case-grid' }) => {
+export const CardGrid = ({ children, className = 'use-case-grid' }: CardGridProps) => {
   return (
     <div className={className}>
       {children}
@@ -55,7 +55,7 @@ interface CardProps {
   className?: string;
 }
 
-export const Card: React.FC<CardProps> = ({ title, children, className = 'use-case' }) => {
+export const Card = ({ title, children, className = 'use-case' }: CardProps) => {
   return (
     <div className={className}>
       <h3>{title}</h3>
@@ -67,16 +67,16 @@ export const Card: React.FC<CardProps> = ({ title, children, className = 'use-ca
 // Info Box Component
 interface InfoBoxProps {
   type: 'tip' | 'warning';
+  title?: string;
   children: ReactNode;
 }
 
-export const InfoBox: React.FC<InfoBoxProps> = ({ type, children }) => {
-  return (
-    <div className={`${type}-box`}>
-      {children}
-    </div>
-  );
-};
+export const InfoBox = ({ type, title, children }: InfoBoxProps) => (
+  <div className={`${type}-box`}>
+    {title && <h4>{title}</h4>}
+    {children}
+  </div>
+);
 
 // New Reference Links Component
 interface ReferenceLink {
@@ -90,10 +90,10 @@ interface ReferenceLinksProps {
   references: ReferenceLink[];
 }
 
-export const ReferenceLinks: React.FC<ReferenceLinksProps> = ({ 
+export const ReferenceLinks = ({ 
   title = "Additional References", 
   references 
-}) => {
+}: ReferenceLinksProps) => {
   return (
     <div className="reference-links-section">
       <h3>{title}</h3>

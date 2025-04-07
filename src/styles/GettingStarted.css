@@ -98,19 +98,19 @@
 }
 
 .section-header.foundation {
-  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  background: linear-gradient(135deg, #d6e3d8, #2E7D32);
 }
 
 .section-header.intermediate {
-  background: linear-gradient(135deg, #2196F3, #1565C0);
+  background: linear-gradient(135deg, #2196F3, #cad9e3);
 }
 
 .section-header.advanced {
-  background: linear-gradient(135deg, #9C27B0, #6A1B9A);
+  background: linear-gradient(135deg, #9C27B0, #dddde5);
 }
 
 .section-header.resources {
-  background: linear-gradient(135deg, #FF9800, #E65100);
+  background: linear-gradient(135deg, #FF9800, #e3dcd8);
 }
 
 .directory-grid {
