@@ -49,29 +49,37 @@ const Home: React.FC = () => {
         <section className="latest-tutorials">
           <h2>Latest Developer Tutorials</h2>
           <div className="tutorial-grid">
+            <Link to="/blogs/llm-getting-started-guide" className="tutorial-card">
+              <h3>Getting Started with LLMs: A Beginner's Guide</h3>
+              <div className="tutorial-tags">
+                <span className="tag">Fundamentals</span>
+                <span className="tag">Basics</span>
+              </div>
+              <p>A comprehensive guide to help beginners understand and start using Large Language Models effectively.</p>
+            </Link>
+            <Link to="/blogs/llm-models/grok" className="tutorial-card">
+              <h3>Grok: X.AI's Latest LLM Model</h3>
+              <div className="tutorial-tags">
+                <span className="tag">LLM Models</span>
+                <span className="tag">New Release</span>
+              </div>
+              <p>Explore Grok's innovative features, real-time data integration, and how it's changing the LLM landscape.</p>
+            </Link>
+            <Link to="/blogs/model-context-server" className="tutorial-card">
+              <h3>Model Context Server (MCP): A Deep Dive</h3>
+              <div className="tutorial-tags">
+                <span className="tag">Advanced</span>
+                <span className="tag">Architecture</span>
+              </div>
+              <p>Learn how to efficiently manage and enhance LLM context windows using Model Context Servers.</p>
+            </Link>
             <Link to="/blogs/openai-api-guide" className="tutorial-card">
-              <h3>Connecting to OpenAI API</h3>
+              <h3>OpenAI API Integration Guide</h3>
               <div className="tutorial-tags">
-                <span className="tag">API</span>
                 <span className="tag">Integration</span>
-              </div>
-              <p>Set up and use the OpenAI API in your applications with authentication, rate limiting, and error handling.</p>
-            </Link>
-            <Link to="/blogs/openrouter-platform-guide" className="tutorial-card">
-              <h3>OpenRouter Integration Guide</h3>
-              <div className="tutorial-tags">
-                <span className="tag">Multi-model</span>
                 <span className="tag">API</span>
               </div>
-              <p>Access multiple LLM models through a single, unified API with complete code examples.</p>
-            </Link>
-            <Link to="/blogs/rag-tutorial" className="tutorial-card">
-              <h3>Building RAG Applications</h3>
-              <div className="tutorial-tags">
-                <span className="tag">RAG</span>
-                <span className="tag">Vector DB</span>
-              </div>
-              <p>Implement retrieval-augmented generation for domain-specific applications.</p>
+              <p>Step-by-step guide to integrate and optimize OpenAI's API in your applications.</p>
             </Link>
           </div>
           <div className="see-more">

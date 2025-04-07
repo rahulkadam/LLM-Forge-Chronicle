@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
+import Comments from '../Comments';
 import '../../styles/blogs/blog-base-style.css';
 import '../../styles/blogs/blog-viewport-fix.css';
 import '../../styles/blogs/blog-banners.css';
@@ -58,8 +59,15 @@ const BlogTemplate: React.FC<BlogPostProps> = ({
         {children}
       </div>
 
+      {/* Blog footer with comments */}
       <div className="blog-footer">
         <Link to="/blogs" className="back-to-blogs">← Back to All Blogs</Link>
+      </div>
+
+      {/* Comments section */}
+      <div className="blog-comments">
+        <h2>Comments</h2>
+        <Comments />
       </div>
     </div>
   );

@@ -637,3 +637,20 @@ section p {
     box-sizing: border-box;
   }
 }
+/* Comments Section */
+.blog-comments {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.blog-comments h2 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: #2d3748;
+}
+
+.giscus-frame {
+  width: 100%;
+  margin-top: 1rem;
+}

@@ -1,20 +1,16 @@
-1. SportSphere
-Description: SportSphere is an LLM agent that provides detailed information about sports players, teams, and leagues.
-Example Conversation:
-User: "Sachin Tendulkar"
-SportSphere: "Sachin Tendulkar is a former Indian cricketer. Here are some key stats:
-
-- Born: April 24, 1973
-- Batting style: Right-handed
-- Bowling style: Right-arm leg break
-- Test debut: November 15, 1989
-- ODI debut: November 10, 1989
-- Career highlights:
-    - Highest Test score: 248*
-    - Highest ODI score: 200*
-    - Awards: Bharat Ratna, Padma Vibhushan, Padma Shri"
-
-
-add MCP server also as example, check if we can add it somwwhere
-
-use case, ask use to enter player name, fetch all info about user
+<script src="https://giscus.app/client.js"
+        data-repo="rahulkadam/LLM-Forge-Chronicle"
+        data-repo-id="R_kgDOOCsStA"
+        data-category="General"
+        data-category-id="DIC_kwDOOCsStM4Co3E9"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
