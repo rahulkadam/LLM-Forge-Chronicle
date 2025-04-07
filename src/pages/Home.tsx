@@ -22,14 +22,14 @@ const Home: React.FC = () => {
         <section className="dev-resources">
           <h2>Developer Resources</h2>
           <div className="resources-grid">
-            <Link to="/llm-fundamentals" className="resource-card">
+            <Link to="/blogs?tag=Fundamentals" className="resource-card">
               <div className="resource-icon">📘</div>
               <div className="resource-content">
                 <h3>LLM Fundamentals</h3>
                 <p>Core concepts, API integration, and basic implementation patterns</p>
               </div>
             </Link>
-            <Link to="/prompt-engineering" className="resource-card">
+            <Link to="/blogs?tag=Prompt%20Engineering" className="resource-card">
               <div className="resource-icon">⚙️</div>
               <div className="resource-content">
                 <h3>Prompt Engineering</h3>

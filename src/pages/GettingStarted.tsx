@@ -43,7 +43,7 @@ const GettingStarted: React.FC = () => {
               <p>Core concepts and introduction to Large Language Models</p>
               <div className="link-list">
                 <Link to="/llm-fundamentals" className="directory-link">LLM Fundamentals</Link>
-                <Link to="/ai-basics" className="directory-link">AI Basics</Link>
+                <Link to="/blogs?tag=LLM%20Models" className="directory-link">LLM Models</Link>
                 <Link to="/llm-technical" className="directory-link">LLM Technical Deep Dive</Link>
               </div>
             </div>
@@ -113,7 +113,7 @@ const GettingStarted: React.FC = () => {
               <div className="link-list">
                 <Link to="/blogs/openai-api-guide" className="directory-link">OpenAI API Guide</Link>
                 <Link to="/blogs/openrouter-platform-guide" className="directory-link">OpenRouter Platform Guide</Link>
-                <Link to="/python-module" className="directory-link">Python Integration</Link>
+                <Link to="/blogs?tag=AI-Driven%20IT" className="directory-link">AI Powered Enterprise/Startup</Link>
               </div>
             </div>
             

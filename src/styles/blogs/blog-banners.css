@@ -217,6 +217,147 @@
     padding: 0 16px;
   }
 }
+
+/* Prompt Engineering Banners */
+.prompt-basic-banner {
+  background: linear-gradient(135deg, #38B2AC 0%, #319795 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.prompt-basic-banner::before {
+  content: "Prompt Engineering Basics";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.prompt-basic-banner::after {
+  content: "Foundation of Effective LLM Communication";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  max-width: 600px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.prompt-intermediate-banner {
+  background: linear-gradient(135deg, #ED8936 0%, #DD6B20 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.prompt-intermediate-banner::before {
+  content: "Advanced Prompt Patterns";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.prompt-intermediate-banner::after {
+  content: "Building Complex LLM Interactions";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  max-width: 600px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.prompt-advanced-banner {
+  background: linear-gradient(135deg, #9F7AEA 0%, #805AD5 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.prompt-advanced-banner::before {
+  content: "Expert Prompt Engineering";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.prompt-advanced-banner::after {
+  content: "Mastering Chain-of-Thought & System Design";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  max-width: 600px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .prompt-basic-banner,
+  .prompt-intermediate-banner,
+  .prompt-advanced-banner {
+    min-height: 200px;
+  }
+
+  .prompt-basic-banner::before,
+  .prompt-intermediate-banner::before,
+  .prompt-advanced-banner::before {
+    font-size: 2.5rem;
+  }
+
+  .prompt-basic-banner::after,
+  .prompt-intermediate-banner::after,
+  .prompt-advanced-banner::after {
+    font-size: 1rem;
+    top: 65%;
+    max-width: 90%;
+    padding: 0 16px;
+  }
+}
 /* Blog Banner Styles */
 
 /* Generic banner style */

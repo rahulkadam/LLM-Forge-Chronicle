@@ -673,3 +673,34 @@
   font-size: 1.4rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+/* Prompt Engineering card images */
+.prompt-basic-image {
+  background: linear-gradient(135deg, #38B2AC 0%, #319795 100%);
+}
+
+.prompt-basic-image::before {
+  content: "Prompt Engineering Basics";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.prompt-intermediate-image {
+  background: linear-gradient(135deg, #ED8936 0%, #DD6B20 100%);
+}
+
+.prompt-intermediate-image::before {
+  content: "Advanced Prompt Patterns";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.prompt-advanced-image {
+  background: linear-gradient(135deg, #9F7AEA 0%, #805AD5 100%);
+}
+
+.prompt-advanced-image::before {
+  content: "Expert Prompt Engineering";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

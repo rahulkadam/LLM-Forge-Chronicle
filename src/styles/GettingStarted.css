@@ -22,7 +22,7 @@
 
 .getting-started-header .subtitle {
   font-size: 1.2rem;
-  color: #666;
+  color: #0f1113 !important;
 }
 
 /* Introduction section */
@@ -95,6 +95,7 @@
   margin: 0;
   opacity: 0.9;
   font-size: 1rem;
+  color: #0d1757;
 }
 
 .section-header.foundation {
@@ -102,15 +103,15 @@
 }
 
 .section-header.intermediate {
-  background: linear-gradient(135deg, #2196F3, #cad9e3);
+  background: linear-gradient(135deg, #e0dada, #306186);
 }
 
 .section-header.advanced {
-  background: linear-gradient(135deg, #9C27B0, #dddde5);
+  background: linear-gradient(135deg, #dfd6e1, #8a0c66);
 }
 
 .section-header.resources {
-  background: linear-gradient(135deg, #FF9800, #e3dcd8);
+  background: linear-gradient(135deg, #e3dfdc, #9b5934);
 }
 
 .directory-grid {

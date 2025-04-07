@@ -246,18 +246,6 @@ const Blogs: React.FC = () => {
       publishDate: 'April 7, 2025',
       link: '/blogs/llm-models/gemini'
     },
-
-    // Prompt Engineering & Development
-    {
-      id: 'prompt-engineering',
-      title: 'Advanced Prompt Engineering Patterns',
-      excerpt: 'Learn advanced prompting strategies like chain-of-thought, few-shot learning, and structured outputs to maximize the capabilities of LLMs.',
-      imageClass: 'prompt-image',
-      tag: 'Advanced Techniques',
-      readingTime: '10 min read',
-      publishDate: 'February 5, 2025',
-      link: '/prompt-engineering/advanced'
-    },
       /*
     {
       id: 'function-calling',
@@ -386,6 +374,37 @@ const Blogs: React.FC = () => {
       readingTime: '15 min read',
       publishDate: 'April 7, 2025',
       link: '/blogs/ai-driven-it/developer-efficiency'
+    },
+    // Prompt Engineering Series
+    {
+      id: 'prompt-engineering-basics',
+      title: 'Prompt Engineering Basics: Foundation for LLM Communication',
+      excerpt: 'Learn the fundamentals of prompt engineering, from basic syntax to best practices. Perfect for beginners starting with LLMs.',
+      imageClass: 'prompt-basic-image',
+      tag: 'Prompt Engineering',
+      readingTime: '8 min read',
+      publishDate: 'April 7, 2025',
+      link: '/prompt-engineering'
+    },
+    {
+      id: 'prompt-engineering-intermediate',
+      title: 'Advanced Prompt Patterns & Techniques',
+      excerpt: 'Master intermediate prompt engineering concepts including context windows, few-shot learning, and chain-of-thought prompting.',
+      imageClass: 'prompt-intermediate-image',
+      tag: 'Prompt Engineering',
+      readingTime: '12 min read',
+      publishDate: 'April 7, 2025',
+      link: '/prompt-engineering/intermediate'
+    },
+    {
+      id: 'prompt-engineering-advanced',
+      title: 'Expert Prompt Engineering: System Design & Optimization',
+      excerpt: 'Advanced techniques for prompt system design, including recursive prompting, multi-agent systems, and performance optimization.',
+      imageClass: 'prompt-advanced-image',
+      tag: 'Prompt Engineering',
+      readingTime: '15 min read',
+      publishDate: 'April 7, 2025',
+      link: '/prompt-engineering/advanced'
     },
     // Tools & Frameworks
     {
