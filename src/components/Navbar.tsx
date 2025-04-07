@@ -162,6 +162,9 @@ const Navbar: React.FC = () => {
             <Link to="/blogs?tag=LLM%20Models" className={`nav-link ${isActive('/blogs?tag=LLM%20Models')}`}>
               LLM Models
             </Link>
+            <Link to="/blogs?tag=AI-Driven%20IT" className={`nav-link ${isActive('/blogs?tag=AI-Driven%20IT')}`}>
+              AI Driven IT
+            </Link>
             
             <div className="dropdown-divider"></div>
             <div className="dropdown-header">Featured:</div>
