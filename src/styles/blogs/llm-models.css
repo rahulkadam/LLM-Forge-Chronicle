@@ -1,3 +1,33 @@
+
+/* Grok Model Styles */
+.grok-model-image {
+  background: linear-gradient(135deg, #1d9bf0 0%, #16181c 100%);
+}
+
+.grok-model-image::before {
+  content: "X.AI's Grok Model";
+}
+
+.grok-banner {
+  background: linear-gradient(135deg, #1d9bf0 0%, #16181c 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.grok-banner::before {
+  content: "Grok: X.AI's Innovative LLM";
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 /* Additional LLM Models */
 .deepseek-model-image {
   background: linear-gradient(135deg, #2c3e50 0%, #1a242f 100%);

@@ -40,77 +40,6 @@ const Blogs: React.FC = () => {
 
   // Complete list of blog posts
   const allBlogPosts: BlogPost[] = [
-    // LLM Models Deep Dives
-    {
-      id: 'deepseek-model',
-      title: "DeepSeek: Next-Gen Open Source LLM",
-      excerpt: "Explore DeepSeek's innovative approach to language modeling, its open-source nature, and how it's pushing the boundaries of AI accessibility.",
-      imageClass: 'deepseek-model-image',
-      tag: 'LLM Models',
-      readingTime: '10 min read',
-      publishDate: 'April 7, 2025',
-      link: '/blogs/llm-models/deepseek'
-    },
-    {
-      id: 'mistral-model',
-      title: "Mistral AI: French Innovation in Language Models",
-      excerpt: "Deep dive into Mistral AI's unique architecture, its European roots, and how it's challenging the status quo in the LLM landscape.",
-      imageClass: 'mistral-model-image',
-      tag: 'LLM Models',
-      readingTime: '10 min read',
-      publishDate: 'April 7, 2025',
-      link: '/blogs/llm-models/mistral'
-    },
-    {
-      id: 'llama-model',
-      title: "Meta's Llama: Open Innovation in AI",
-      excerpt: "Understanding Meta's Llama family of models, their impact on open-source AI, and how they're democratizing access to powerful language models.",
-      imageClass: 'llama-model-image',
-      tag: 'LLM Models',
-      readingTime: '10 min read',
-      publishDate: 'April 7, 2025',
-      link: '/blogs/llm-models/llama'
-    },
-    {
-      id: 'manus-model',
-      title: "Manus AI: Specialized Task Automation",
-      excerpt: "Discover how Manus AI is revolutionizing task automation with its specialized language models and unique approach to AI problem-solving.",
-      imageClass: 'manus-model-image',
-      tag: 'LLM Models',
-      readingTime: '10 min read',
-      publishDate: 'April 7, 2025',
-      link: '/blogs/llm-models/manus'
-    },
-    {
-      id: 'chatgpt-model',
-      title: "ChatGPT: A Comprehensive Guide to OpenAI's Revolutionary LLM",
-      excerpt: "Deep dive into ChatGPT's architecture, capabilities, and impact. Understanding how OpenAI's breakthrough model works and how to leverage it effectively.",
-      imageClass: 'chatgpt-model-image',
-      tag: 'LLM Models',
-      readingTime: '10 min read',
-      publishDate: 'April 7, 2025',
-      link: '/blogs/llm-models/chatgpt'
-    },
-    {
-      id: 'claude-model',
-      title: "Claude: Anthropic's Advanced AI Assistant",
-      excerpt: "Explore Claude's unique approach to AI safety, its constitutional AI framework, and how it differs from other leading language models.",
-      imageClass: 'claude-model-image',
-      tag: 'LLM Models',
-      readingTime: '10 min read',
-      publishDate: 'April 7, 2025',
-      link: '/blogs/llm-models/claude'
-    },
-    {
-      id: 'gemini-model',
-      title: "Google's Gemini: The Next Generation AI Model",
-      excerpt: "Understanding Gemini's multimodal capabilities, its position in the AI landscape, and how it compares to other leading language models.",
-      imageClass: 'gemini-model-image',
-      tag: 'LLM Models',
-      readingTime: '10 min read',
-      publishDate: 'April 7, 2025',
-      link: '/blogs/llm-models/gemini'
-    },
     // Getting Started & Fundamentals
     {
       id: 'llm-getting-started',
@@ -184,6 +113,7 @@ const Blogs: React.FC = () => {
       publishDate: 'March 30, 2025',
       link: '/blogs/model-context-server'
     },
+      /*
     {
       id: 'model-quantization',
       title: 'LLM Quantization & Optimization Guide',
@@ -224,6 +154,98 @@ const Blogs: React.FC = () => {
       publishDate: 'March 26, 2025',
       link: '/blogs/multi-modal-llms'
     },
+      {
+      id: 'model-evaluation',
+      title: 'Evaluating LLM Performance: Metrics & Methods',
+      excerpt: 'Comprehensive guide to evaluating LLM performance. Learn about evaluation metrics, testing strategies, and how to ensure model quality.',
+      imageClass: 'evaluation-image',
+      tag: 'Advanced Techniques',
+      readingTime: '13 min read',
+      publishDate: 'March 27, 2025',
+      link: '/blogs/llm-evaluation-guide'
+    },
+      */
+    {
+      id: 'grok-model',
+      title: "Grok: X.AI's Innovative LLM Model",
+      excerpt: "Explore Grok, the latest addition to X.AI's lineup, combining real-time data access with advanced language processing capabilities.",
+      imageClass: 'grok-model-image',
+      tag: 'LLM Models',
+      readingTime: '10 min read',
+      publishDate: 'April 7, 2025',
+      link: '/blogs/llm-models/grok'
+    },
+    // LLM Models Deep Dives
+    {
+      id: 'deepseek-model',
+      title: "DeepSeek: Next-Gen Open Source LLM",
+      excerpt: "Explore DeepSeek's innovative approach to language modeling, its open-source nature, and how it's pushing the boundaries of AI accessibility.",
+      imageClass: 'deepseek-model-image',
+      tag: 'LLM Models',
+      readingTime: '10 min read',
+      publishDate: 'April 7, 2025',
+      link: '/blogs/llm-models/deepseek'
+    },
+    {
+      id: 'mistral-model',
+      title: "Mistral AI: French Innovation in Language Models",
+      excerpt: "Deep dive into Mistral AI's unique architecture, its European roots, and how it's challenging the status quo in the LLM landscape.",
+      imageClass: 'mistral-model-image',
+      tag: 'LLM Models',
+      readingTime: '10 min read',
+      publishDate: 'April 7, 2025',
+      link: '/blogs/llm-models/mistral'
+    },
+    {
+      id: 'llama-model',
+      title: "Meta's Llama: Open Innovation in AI",
+      excerpt: "Understanding Meta's Llama family of models, their impact on open-source AI, and how they're democratizing access to powerful language models.",
+      imageClass: 'llama-model-image',
+      tag: 'LLM Models',
+      readingTime: '10 min read',
+      publishDate: 'April 7, 2025',
+      link: '/blogs/llm-models/llama'
+    },
+    {
+      id: 'manus-model',
+      title: "Manus AI: Specialized Task Automation",
+      excerpt: "Discover how Manus AI is revolutionizing task automation with its specialized language models and unique approach to AI problem-solving.",
+      imageClass: 'manus-model-image',
+      tag: 'LLM Models',
+      readingTime: '10 min read',
+      publishDate: 'April 7, 2025',
+      link: '/blogs/llm-models/manus'
+    },
+    {
+      id: 'chatgpt-model',
+      title: "ChatGPT: A Comprehensive Guide to OpenAI's Revolutionary LLM",
+      excerpt: "Deep dive into ChatGPT's architecture, capabilities, and impact. Understanding how OpenAI's breakthrough model works and how to leverage it effectively.",
+      imageClass: 'chatgpt-model-image',
+      tag: 'LLM Models',
+      readingTime: '10 min read',
+      publishDate: 'April 7, 2025',
+      link: '/blogs/llm-models/chatgpt'
+    },
+    {
+      id: 'claude-model',
+      title: "Claude: Anthropic's Advanced AI Assistant",
+      excerpt: "Explore Claude's unique approach to AI safety, its constitutional AI framework, and how it differs from other leading language models.",
+      imageClass: 'claude-model-image',
+      tag: 'LLM Models',
+      readingTime: '10 min read',
+      publishDate: 'April 7, 2025',
+      link: '/blogs/llm-models/claude'
+    },
+    {
+      id: 'gemini-model',
+      title: "Google's Gemini: The Next Generation AI Model",
+      excerpt: "Understanding Gemini's multimodal capabilities, its position in the AI landscape, and how it compares to other leading language models.",
+      imageClass: 'gemini-model-image',
+      tag: 'LLM Models',
+      readingTime: '10 min read',
+      publishDate: 'April 7, 2025',
+      link: '/blogs/llm-models/gemini'
+    },
 
     // Prompt Engineering & Development
     {
@@ -234,8 +256,9 @@ const Blogs: React.FC = () => {
       tag: 'Advanced Techniques',
       readingTime: '10 min read',
       publishDate: 'February 5, 2025',
-      link: '/blogs/advanced-prompt-engineering'
+      link: '/prompt-engineering/advanced'
     },
+      /*
     {
       id: 'function-calling',
       title: 'Mastering Function Calling with LLMs',
@@ -245,7 +268,7 @@ const Blogs: React.FC = () => {
       readingTime: '9 min read',
       publishDate: 'February 22, 2025',
       link: '/blogs/function-calling-guide'
-    },
+    }, */
     {
       id: 'llm-agent',
       title: 'LLM Agents: Just Functions with a Fancy Name',
@@ -258,6 +281,7 @@ const Blogs: React.FC = () => {
     },
 
     // Production & Deployment
+      /*
     {
       id: 'llm-deployment',
       title: 'Deploying LLMs in Production: A Complete Guide',
@@ -288,18 +312,10 @@ const Blogs: React.FC = () => {
       publishDate: 'April 3, 2025',
       link: '/blogs/llm-testing-guide'
     },
-    {
-      id: 'model-evaluation',
-      title: 'Evaluating LLM Performance: Metrics & Methods',
-      excerpt: 'Comprehensive guide to evaluating LLM performance. Learn about evaluation metrics, testing strategies, and how to ensure model quality.',
-      imageClass: 'evaluation-image',
-      tag: 'Advanced Techniques',
-      readingTime: '13 min read',
-      publishDate: 'March 27, 2025',
-      link: '/blogs/llm-evaluation-guide'
-    },
+    */
 
     // Security & Ethics
+      /*
     {
       id: 'llm-security',
       title: 'Security Best Practices for LLM Applications',
@@ -330,7 +346,7 @@ const Blogs: React.FC = () => {
       publishDate: 'April 1, 2025',
       link: '/blogs/llm-ethics-guide'
     },
-
+  */
     // Tools & Frameworks
     {
       id: 'langchain',

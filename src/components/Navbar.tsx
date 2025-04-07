@@ -156,11 +156,11 @@ const Navbar: React.FC = () => {
             <Link to="/blogs?tag=Fundamentals" className={`nav-link ${isActive('/blogs?tag=Fundamentals')}`}>
               LLM Fundamentals
             </Link>
-            <Link to="/blogs?tag=Advanced%20Techniques" className={`nav-link ${isActive('/blogs?tag=Prompts')}`}>
+            <Link to="/blogs?tag=Advanced%20Techniques" className={`nav-link ${isActive('/blogs?tag=Advanced%20Techniques')}`}>
               Next-Gen AI Techniques
             </Link>
-            <Link to="/blogs?tag=Agents" className={`nav-link ${isActive('/blogs?tag=Agents')}`}>
-              AI Agents
+            <Link to="/blogs?tag=LLM%20Models" className={`nav-link ${isActive('/blogs?tag=LLM%20Models')}`}>
+              LLM Models
             </Link>
             
             <div className="dropdown-divider"></div>
