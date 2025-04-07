@@ -358,6 +358,114 @@
     padding: 0 16px;
   }
 }
+
+/* Agent Category Banners */
+.agent-basic-banner {
+  background: linear-gradient(135deg, #4FD1C5 0%, #319795 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.agent-basic-banner::before {
+  content: "LLM Agent Development";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.agent-basic-banner::after {
+  content: "Building Intelligent AI Agents";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  max-width: 600px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.agent-market-banner {
+  background: linear-gradient(135deg, #F6AD55 0%, #ED8936 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.agent-sport-banner {
+  background: linear-gradient(135deg, #68D391 0%, #38A169 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.agent-book-banner {
+  background: linear-gradient(135deg, #B794F4 0%, #805AD5 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+@media (max-width: 768px) {
+  .agent-basic-banner,
+  .agent-market-banner,
+  .agent-sport-banner,
+  .agent-book-banner {
+    min-height: 200px;
+  }
+
+  .agent-basic-banner::before,
+  .agent-market-banner::before,
+  .agent-sport-banner::before,
+  .agent-book-banner::before {
+    font-size: 2.5rem;
+  }
+
+  .agent-basic-banner::after,
+  .agent-market-banner::after,
+  .agent-sport-banner::after,
+  .agent-book-banner::after {
+    font-size: 1rem;
+    top: 65%;
+    max-width: 90%;
+    padding: 0 16px;
+  }
+}
 /* Blog Banner Styles */
 
 /* Generic banner style */

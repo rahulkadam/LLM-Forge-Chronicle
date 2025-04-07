@@ -36,7 +36,7 @@ const Home: React.FC = () => {
                 <p>Techniques to optimize your prompts for better, more consistent results</p>
               </div>
             </Link>
-            <Link to="/agent/marketmind" className="resource-card">
+            <Link to="/blogs?tag=Agents" className="resource-card">
               <div className="resource-icon">🤖</div>
               <div className="resource-content">
                 <h3>Building LLM Agents</h3>

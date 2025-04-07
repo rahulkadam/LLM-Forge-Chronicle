@@ -81,6 +81,16 @@ const Blogs: React.FC = () => {
       publishDate: 'January 20, 2025',
       link: '/blogs/openai-api-guide'
     },
+    {
+      id: 'llm-agent',
+      title: 'LLM Agents: Just Functions with a Fancy Name',
+      excerpt: "Demystifying LLM Agents - they're just functions that use language models to do specific tasks.",
+      imageClass: 'llm-agent-image',
+      tag: 'Fundamentals',
+      readingTime: '5 min read',
+      publishDate: 'March 22, 2025',
+      link: '/blogs/llm-agent-guide'
+    },
 
     // Advanced Techniques & Architecture
     {
@@ -257,15 +267,46 @@ const Blogs: React.FC = () => {
       publishDate: 'February 22, 2025',
       link: '/blogs/function-calling-guide'
     }, */
+    // Agents
     {
-      id: 'llm-agent',
-      title: 'LLM Agents: Just Functions with a Fancy Name',
-      excerpt: "Demystifying LLM Agents - they're just functions that use language models to do specific tasks.",
-      imageClass: 'llm-agent-image',
-      tag: 'Fundamentals',
-      readingTime: '5 min read',
-      publishDate: 'March 22, 2025',
-      link: '/blogs/llm-agent-guide'
+      id: 'agent-basic',
+      title: 'Building LLM Agents: A Complete Guide',
+      excerpt: 'Learn how to build, test, and deploy LLM-powered agents. From basic concepts to advanced implementations with real-world examples.',
+      imageClass: 'agent-basic-image',
+      tag: 'Agents',
+      readingTime: '15 min read',
+      publishDate: 'April 7, 2025',
+      link: '/llm-agent/basic'
+    },
+    {
+      id: 'agent-market',
+      title: 'MarketMind AI: Building a Market Analysis Agent',
+      excerpt: 'Step-by-step guide to creating an AI agent for market analysis and financial insights using LLMs and specialized tools.',
+      imageClass: 'agent-market-image',
+      tag: 'Agents',
+      readingTime: '12 min read',
+      publishDate: 'April 7, 2025',
+      link: '/agent/marketmind'
+    },
+    {
+      id: 'agent-sport',
+      title: 'AthleteInsight AI: Sports Analytics Agent',
+      excerpt: 'Create an intelligent agent for sports data analysis, player performance tracking, and strategic insights using LLM capabilities.',
+      imageClass: 'agent-sport-image',
+      tag: 'Agents',
+      readingTime: '10 min read',
+      publishDate: 'April 7, 2025',
+      link: '/agent/athlete-insight'
+    },
+    {
+      id: 'agent-book',
+      title: 'BookBuddy: Your AI Reading Companion',
+      excerpt: 'Build a personalized book recommendation and analysis agent that helps users discover and understand literature.',
+      imageClass: 'agent-book-image',
+      tag: 'Agents',
+      readingTime: '12 min read',
+      publishDate: 'April 7, 2025',
+      link: '/agent/bookbuddy'
     },
 
     // Production & Deployment

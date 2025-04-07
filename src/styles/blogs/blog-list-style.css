@@ -704,3 +704,44 @@
   font-size: 1.4rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+/* Agent card images */
+.agent-basic-image {
+  background: linear-gradient(135deg, #4FD1C5 0%, #319795 100%);
+}
+
+.agent-basic-image::before {
+  content: "LLM Agent Development";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.agent-market-image {
+  background: linear-gradient(135deg, #F6AD55 0%, #ED8936 100%);
+}
+
+.agent-market-image::before {
+  content: "Market Analysis Agent";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.agent-sport-image {
+  background: linear-gradient(135deg, #68D391 0%, #38A169 100%);
+}
+
+.agent-sport-image::before {
+  content: "Sports Analytics Agent";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.agent-book-image {
+  background: linear-gradient(135deg, #B794F4 0%, #805AD5 100%);
+}
+
+.agent-book-image::before {
+  content: "Book Buddy Agent";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
