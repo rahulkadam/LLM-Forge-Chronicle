@@ -1,3 +1,8 @@
+import DeepSeekModelGuide from './pages/blogs/llm-models/deepseek';
+import MistralModelGuide from './pages/blogs/llm-models/mistral';
+import LlamaModelGuide from './pages/blogs/llm-models/llama';
+import ManusModelGuide from './pages/blogs/llm-models/manus';
+
 import ChatGPTModelGuide from './pages/blogs/llm-models/chatgpt';
 import ClaudeModelGuide from './pages/blogs/llm-models/claude';
 import GeminiModelGuide from './pages/blogs/llm-models/gemini';
@@ -121,6 +126,10 @@ const AppContent: React.FC = () => {
           <Route path="/blogs/llm-models/chatgpt" element={<ChatGPTModelGuide />} />
           <Route path="/blogs/llm-models/claude" element={<ClaudeModelGuide />} />
           <Route path="/blogs/llm-models/gemini" element={<GeminiModelGuide />} />
+          <Route path="/blogs/llm-models/deepseek" element={<DeepSeekModelGuide />} />
+          <Route path="/blogs/llm-models/mistral" element={<MistralModelGuide />} />
+          <Route path="/blogs/llm-models/llama" element={<LlamaModelGuide />} />
+          <Route path="/blogs/llm-models/manus" element={<ManusModelGuide />} />
           
           
           {/* Redirects from old routes to new routes */}

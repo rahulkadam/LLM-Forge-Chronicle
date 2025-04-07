@@ -1,3 +1,120 @@
+/* Additional LLM Models */
+.deepseek-model-image {
+  background: linear-gradient(135deg, #2c3e50 0%, #1a242f 100%);
+}
+
+.deepseek-model-image::before {
+  content: "DeepSeek: Next-Gen LLM";
+}
+
+.mistral-model-image {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+}
+
+.mistral-model-image::before {
+  content: "Mistral AI";
+}
+
+.llama-model-image {
+  background: linear-gradient(135deg, #ff6b6b 0%, #cc5555 100%);
+}
+
+.llama-model-image::before {
+  content: "Meta's Llama";
+}
+
+.manus-model-image {
+  background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+}
+
+.manus-model-image::before {
+  content: "Manus AI";
+}
+
+.deepseek-banner {
+  background: linear-gradient(135deg, #2c3e50 0%, #1a242f 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.deepseek-banner::before {
+  content: "DeepSeek: Next-Gen Open Source LLM";
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.mistral-banner {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.mistral-banner::before {
+  content: "Mistral AI: French Innovation in AI";
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.llama-banner {
+  background: linear-gradient(135deg, #ff6b6b 0%, #cc5555 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.llama-banner::before {
+  content: "Meta's Llama: Open Innovation in AI";
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.manus-banner {
+  background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.manus-banner::before {
+  content: "Manus AI: Specialized Task Automation";
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 /* Banner styles for LLM model blog posts */
 .chatgpt-banner {
   background: linear-gradient(135deg, #10a37f 0%, #0d8a6f 100%);

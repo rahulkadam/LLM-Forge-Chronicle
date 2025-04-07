@@ -42,6 +42,46 @@ const Blogs: React.FC = () => {
   const allBlogPosts: BlogPost[] = [
     // LLM Models Deep Dives
     {
+      id: 'deepseek-model',
+      title: "DeepSeek: Next-Gen Open Source LLM",
+      excerpt: "Explore DeepSeek's innovative approach to language modeling, its open-source nature, and how it's pushing the boundaries of AI accessibility.",
+      imageClass: 'deepseek-model-image',
+      tag: 'LLM Models',
+      readingTime: '10 min read',
+      publishDate: 'April 7, 2025',
+      link: '/blogs/llm-models/deepseek'
+    },
+    {
+      id: 'mistral-model',
+      title: "Mistral AI: French Innovation in Language Models",
+      excerpt: "Deep dive into Mistral AI's unique architecture, its European roots, and how it's challenging the status quo in the LLM landscape.",
+      imageClass: 'mistral-model-image',
+      tag: 'LLM Models',
+      readingTime: '10 min read',
+      publishDate: 'April 7, 2025',
+      link: '/blogs/llm-models/mistral'
+    },
+    {
+      id: 'llama-model',
+      title: "Meta's Llama: Open Innovation in AI",
+      excerpt: "Understanding Meta's Llama family of models, their impact on open-source AI, and how they're democratizing access to powerful language models.",
+      imageClass: 'llama-model-image',
+      tag: 'LLM Models',
+      readingTime: '10 min read',
+      publishDate: 'April 7, 2025',
+      link: '/blogs/llm-models/llama'
+    },
+    {
+      id: 'manus-model',
+      title: "Manus AI: Specialized Task Automation",
+      excerpt: "Discover how Manus AI is revolutionizing task automation with its specialized language models and unique approach to AI problem-solving.",
+      imageClass: 'manus-model-image',
+      tag: 'LLM Models',
+      readingTime: '10 min read',
+      publishDate: 'April 7, 2025',
+      link: '/blogs/llm-models/manus'
+    },
+    {
       id: 'chatgpt-model',
       title: "ChatGPT: A Comprehensive Guide to OpenAI's Revolutionary LLM",
       excerpt: "Deep dive into ChatGPT's architecture, capabilities, and impact. Understanding how OpenAI's breakthrough model works and how to leverage it effectively.",
