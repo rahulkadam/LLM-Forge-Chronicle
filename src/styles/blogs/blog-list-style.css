@@ -745,3 +745,14 @@
   font-size: 1.4rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+/* Practical Prompt Engineering card image */
+.prompt-practical-image {
+  background: linear-gradient(135deg, #4C51BF 0%, #434190 100%);
+}
+
+.prompt-practical-image::before {
+  content: "Developer Prompt Guide";
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

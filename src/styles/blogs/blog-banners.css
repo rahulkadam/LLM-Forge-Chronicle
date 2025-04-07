@@ -466,6 +466,46 @@
     padding: 0 16px;
   }
 }
+
+/* Practical Prompt Engineering Banner */
+.prompt-practical-banner {
+  background: linear-gradient(135deg, #4C51BF 0%, #434190 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.prompt-practical-banner::before {
+  content: "Developer Prompt Guide";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.prompt-practical-banner::after {
+  content: "Real-World Prompt Engineering";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  max-width: 600px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 /* Blog Banner Styles */
 
 /* Generic banner style */

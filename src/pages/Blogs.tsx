@@ -447,6 +447,16 @@ const Blogs: React.FC = () => {
       publishDate: 'April 7, 2025',
       link: '/prompt-engineering/advanced'
     },
+    {
+      id: 'developer-prompts',
+      title: 'Practical Prompt Engineering for Developers',
+      excerpt: 'A comprehensive guide to crafting effective prompts for development tasks, including code generation, documentation, testing, and debugging.',
+      imageClass: 'prompt-practical-image',
+      tag: 'Prompt Engineering',
+      readingTime: '15 min read',
+      publishDate: 'April 8, 2025',
+      link: '/blogs/prompt-engineering/developer-prompts'
+    },
     // Tools & Frameworks
     {
       id: 'langchain',

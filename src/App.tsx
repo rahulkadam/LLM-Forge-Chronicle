@@ -7,6 +7,7 @@ import DeepSeekModelGuide from './pages/blogs/llm-models/deepseek';
 import MistralModelGuide from './pages/blogs/llm-models/mistral';
 import LlamaModelGuide from './pages/blogs/llm-models/llama';
 import ManusModelGuide from './pages/blogs/llm-models/manus';
+import DeveloperPromptGuide from './pages/blogs/prompt-engineering/developer-prompts';
 
 import ChatGPTModelGuide from './pages/blogs/llm-models/chatgpt';
 import ClaudeModelGuide from './pages/blogs/llm-models/claude';
@@ -126,6 +127,7 @@ const AppContent: React.FC = () => {
           <Route path="/blogs/model-context-server" element={<ModelContextServer />} />
           <Route path="/blogs/llm-model-comparison" element={<LLMModelComparison />} />
           <Route path="/blogs/vector-database-guide/vector-llm-guide" element={<VectorDatabaseGuide />} />
+          <Route path="/blogs/prompt-engineering/developer-prompts" element={<DeveloperPromptGuide />} />
           
           {/* LLM Model Guides */}
           <Route path="/blogs/llm-models/chatgpt" element={<ChatGPTModelGuide />} />
