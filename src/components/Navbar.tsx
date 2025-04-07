@@ -140,11 +140,46 @@ const Navbar: React.FC = () => {
           </div>
         </li>
         
-        {/* Blogs - single link */}
-        <li>
-          <Link to="/blogs" className={`nav-link ${isActive('/blogs')}`}>
-            Blogs
-          </Link>
+        {/* Blogs dropdown */}
+        <li className="dropdown">
+          <button 
+            className="dropdown-trigger"
+            onClick={(e) => {
+              e.stopPropagation();
+              toggleDropdown('blogs');
+            }}
+          >
+            Blogs <span className="arrow">▾</span>
+          </button>
+          <div className={`dropdown-content ${activeDropdown === 'blogs' ? 'show' : ''}`}>
+            <div className="dropdown-header">Categories:</div>
+            <Link to="/blogs?tag=Fundamentals" className={`nav-link ${isActive('/blogs?tag=Fundamentals')}`}>
+              LLM Fundamentals
+            </Link>
+            <Link to="/blogs?tag=Advanced%20Techniques" className={`nav-link ${isActive('/blogs?tag=Prompts')}`}>
+              Next-Gen AI Techniques
+            </Link>
+            <Link to="/blogs?tag=Agents" className={`nav-link ${isActive('/blogs?tag=Agents')}`}>
+              AI Agents
+            </Link>
+            
+            <div className="dropdown-divider"></div>
+            <div className="dropdown-header">Featured:</div>
+            <Link to="/blogs/rag-tutorial" className={`nav-link ${isActive('/blogs/rag-tutorial')}`}>
+              RAG Tutorial
+            </Link>
+            <Link to="/blogs/model-context-server" className={`nav-link ${isActive('/blogs/model-context-server')}`}>
+              MCP Server Guide
+            </Link>
+            <Link to="/blogs/vector-database-guide/vector-llm-guide" className={`nav-link ${isActive('/blogs/vector-database-guide/vector-llm-guide')}`}>
+              Vector DB Guide
+            </Link>
+            
+            <div className="dropdown-divider"></div>
+            <Link to="/blogs" className={`nav-link ${isActive('/blogs')}`}>
+              All Blogs
+            </Link>
+          </div>
         </li>
         
         {/* About - single link */}

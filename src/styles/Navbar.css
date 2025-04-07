@@ -62,8 +62,6 @@
   background-color: rgba(33, 150, 243, 0.1);
 }
 
-
-
 /* Dropdown styling */
 .dropdown {
   position: relative;
@@ -153,6 +151,35 @@
   margin: 0.5rem 0;
   background-color: #e0e0e0;
 }
+
+/* Blog dropdown specific styles */
+.dropdown-content .nav-link[href*="?tag="] {
+  padding-left: 2.5rem;
+  position: relative;
+}
+
+.dropdown-content .nav-link[href*="?tag="]:before {
+  content: '#';
+  position: absolute;
+  left: 1.5rem;
+  color: #4a5568;
+  opacity: 0.7;
+}
+
+.dropdown-content .nav-link[href*="/blogs/"] {
+  font-weight: 500;
+  color: #2196F3;
+}
+
+.dropdown-content .nav-link[href="/blogs"] {
+  color: #1a1a1a;
+  font-weight: 600;
+  background: #f5f5f5;
+  margin-top: 0.5rem;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+}
+
 /* Mobile responsive design */
 @media (max-width: 768px) {
   .navbar {
@@ -220,5 +247,13 @@
   
   .dropdown-header {
     padding-left: 1.5rem;
+  }
+
+  .dropdown-content .nav-link[href*="?tag="] {
+    padding-left: 3rem;
+  }
+
+  .dropdown-content .nav-link[href*="?tag="]:before {
+    left: 2rem;
   }
 }
