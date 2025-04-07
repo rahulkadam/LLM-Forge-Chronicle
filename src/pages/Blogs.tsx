@@ -42,6 +42,26 @@ const Blogs: React.FC = () => {
   const allBlogPosts: BlogPost[] = [
     // Getting Started & Fundamentals
     {
+      id: 'code-migration-llm',
+      title: 'LLM-Powered Code Migration: From Legacy to Modern Frameworks',
+      excerpt: 'Learn how companies like Airbnb and Agoda are using LLMs to automate large-scale code migrations, including real case studies of framework transitions.',
+      imageClass: 'ai-it-banner',
+      tag: 'AI-Driven IT',
+      readingTime: '15 min read',
+      publishDate: 'April 7, 2025',
+      link: '/blogs/ai-driven-it/code-migration'
+    },
+    {
+      id: 'enterprise-integrations',
+      title: 'LLM Integration Guide: Enhancing Enterprise Tools',
+      excerpt: 'Learn how to integrate LLMs with enterprise tools like JIRA, Slack, Teams, Confluence, GitHub, and more to enhance team productivity and automate workflows.',
+      imageClass: 'ai-it-banner',
+      tag: 'AI-Driven IT',
+      readingTime: '15 min read',
+      publishDate: 'April 7, 2025',
+      link: '/blogs/ai-driven-it/enterprise-integrations'
+    },
+    {
       id: 'llm-getting-started',
       title: "Getting Started with LLMs: A Beginner's Q&A Guide",
       excerpt: 'A friendly question-answer guide to help beginners understand and start using Large Language Models effectively without feeling overwhelmed.',
@@ -347,6 +367,16 @@ const Blogs: React.FC = () => {
       link: '/blogs/llm-ethics-guide'
     },
   */
+    {
+      id: 'ai-it-transformation',
+      title: 'AI-Driven IT: Transforming Modern Software Development',
+      excerpt: 'Discover how IT companies are leveraging AI and LLMs to revolutionize development workflows, enhance productivity, and build better software.',
+      imageClass: 'ai-it-banner',
+      tag: 'AI-Driven IT',
+      readingTime: '12 min read',
+      publishDate: 'April 7, 2025',
+      link: '/blogs/ai-driven-it/ai-transformation'
+    },
     // Tools & Frameworks
     {
       id: 'langchain',

@@ -1,4 +1,7 @@
+import CodeMigrationLLM from './pages/blogs/ai-driven-it/code-migration';
+import EnterpriseIntegrations from './pages/blogs/ai-driven-it/enterprise-integrations';
 import GrokModelGuide from './pages/blogs/llm-models/grok';
+import AIItTransformation from './pages/blogs/ai-driven-it/ai-transformation';
 import DeepSeekModelGuide from './pages/blogs/llm-models/deepseek';
 import MistralModelGuide from './pages/blogs/llm-models/mistral';
 import LlamaModelGuide from './pages/blogs/llm-models/llama';
@@ -127,6 +130,9 @@ const AppContent: React.FC = () => {
           <Route path="/blogs/llm-models/chatgpt" element={<ChatGPTModelGuide />} />
           <Route path="/blogs/llm-models/claude" element={<ClaudeModelGuide />} />
           <Route path="/blogs/llm-models/gemini" element={<GeminiModelGuide />} />
+          <Route path="/blogs/ai-driven-it/code-migration" element={<CodeMigrationLLM />} />
+          <Route path="/blogs/ai-driven-it/enterprise-integrations" element={<EnterpriseIntegrations />} />
+          <Route path="/blogs/ai-driven-it/ai-transformation" element={<AIItTransformation />} />
           <Route path="/blogs/llm-models/grok" element={<GrokModelGuide />} />
           <Route path="/blogs/llm-models/deepseek" element={<DeepSeekModelGuide />} />
           <Route path="/blogs/llm-models/mistral" element={<MistralModelGuide />} />
