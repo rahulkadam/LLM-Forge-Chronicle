@@ -23,7 +23,7 @@ interface StockMetrics {
 const MarketMindAI: React.FC = () => {
   const [userInput, setUserInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [showCode, setShowCode] = useState<'server' | 'agents' | 'prompts' | null>(null);
+  const [showCode, setShowCode] = useState<'server' | 'agents' | 'prompts' | null>('server');
   const [error, setError] = useState<string | null>(null);
 
   // Mock data for demonstration

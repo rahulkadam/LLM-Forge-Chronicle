@@ -20,7 +20,7 @@ const AthleteInsightAI: React.FC = () => {
   const [recommendations, setRecommendations] = useState<Player[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [showCode, setShowCode] = useState<CodeExampleType | null>(null);
+  const [showCode, setShowCode] = useState<CodeExampleType | null>('server');
 
   // Mock database with player examples
   const mockPlayerDatabase: { [key: string]: Player[] } = {

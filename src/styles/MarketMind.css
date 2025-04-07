@@ -25,7 +25,7 @@
 
 .subtitle {
   font-size: 1.2rem;
-  color: #e0e0e0;
+  color: #e0e0e0 !important;
   max-width: 800px;
   margin: 0 auto;
 }

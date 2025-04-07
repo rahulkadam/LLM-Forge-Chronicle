@@ -20,7 +20,7 @@ const BookBuddy: React.FC = () => {
   const [recommendations, setRecommendations] = useState<Book[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [showCode, setShowCode] = useState<CodeExampleType | null>(null);
+  const [showCode, setShowCode] = useState<CodeExampleType | null>('rag');
 
   // Mock database for demonstration
   const mockBookDatabase: { [key: string]: Book[] } = {

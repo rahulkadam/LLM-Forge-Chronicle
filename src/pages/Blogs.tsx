@@ -46,7 +46,7 @@ const Blogs: React.FC = () => {
       title: "Getting Started with LLMs: A Beginner's Q&A Guide",
       excerpt: 'A friendly question-answer guide to help beginners understand and start using Large Language Models effectively without feeling overwhelmed.',
       imageClass: 'getting-started-image',
-      tag: 'Tutorials & Guides',
+      tag: 'Fundamentals',
       readingTime: '7 min read',
       publishDate: 'March 25, 2025',
       link: '/blogs/llm-getting-started-guide'
@@ -76,7 +76,7 @@ const Blogs: React.FC = () => {
       title: 'Connecting to OpenAI API: A Complete Guide',
       excerpt: "A step-by-step tutorial to set up and use OpenAI's API for your applications, including authentication, handling requests, and managing API limits.",
       imageClass: 'openai-image',
-      tag: 'Tutorials & Guides',
+      tag: 'Fundamentals',
       readingTime: '8 min read',
       publishDate: 'January 20, 2025',
       link: '/blogs/openai-api-guide'
@@ -108,7 +108,7 @@ const Blogs: React.FC = () => {
       title: 'Model Context Server (MCP): Efficient Context Management for LLMs',
       excerpt: 'Explore how Model Context Servers solve context window limitations in LLMs by efficiently managing, storing, and retrieving context to enable more coherent AI experiences.',
       imageClass: 'mcp-image',
-      tag: 'Architecture',
+      tag: 'Advanced Techniques',
       readingTime: '8 min read',
       publishDate: 'March 30, 2025',
       link: '/blogs/model-context-server'
@@ -286,7 +286,7 @@ const Blogs: React.FC = () => {
       title: 'What is OpenRouter and Why Use It?',
       excerpt: 'Explore how OpenRouter can give you access to multiple LLMs through a unified API, simplifying your multi-model workflow and reducing integration complexity.',
       imageClass: 'openrouter-image',
-      tag: 'Platforms & Services',
+      tag: 'Fundamentals',
       readingTime: '6 min read',
       publishDate: 'January 15, 2025',
       link: '/blogs/openrouter-platform-guide'
@@ -298,7 +298,7 @@ const Blogs: React.FC = () => {
       title: 'AI-Powered Developer & Agent Tools',
       excerpt: 'Discover powerful tools for agent development and AI-assisted coding to supercharge your workflow. From code generation to intelligent assistance, find the right tools for your needs.',
       imageClass: 'ai-tools-image',
-      tag: 'Resources',
+      tag: 'Tools & Frameworks',
       readingTime: '15 min read',
       publishDate: 'March 31, 2025',
       link: '/ai-tools'
@@ -308,7 +308,7 @@ const Blogs: React.FC = () => {
       title: 'LLM Resources & References',
       excerpt: 'A curated collection of tools, services, and learning materials for LLM development. Find the best resources for building and deploying language model applications.',
       imageClass: 'resources-image',
-      tag: 'Resources',
+      tag: 'Tools & Frameworks',
       readingTime: '10 min read', 
       publishDate: 'March 29, 2025',
       link: '/resources'
