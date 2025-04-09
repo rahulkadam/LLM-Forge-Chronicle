@@ -151,9 +151,9 @@ const Blogs: React.FC = () => {
   return (
     <div className="blogs-page">
       <div className="blogs-header">
-        <h1>LLM Blog & Tutorials</h1>
+        <h1>Unlock LLM Potential: Blog & Tutorials</h1>
         <p className="blogs-subtitle">
-          Practical guides, tutorials, and insights about Large Language Models and AI development
+          Your guide to mastering LLM Agents, LLMs, and AI development.
         </p>
       </div>
 

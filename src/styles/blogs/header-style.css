@@ -21,7 +21,9 @@
   font-size: 3.5rem;
   margin-bottom: 24px;
   position: relative;
+  opacity: 0.9;
   z-index: 1;
+  color: white !important;
 }
 
 .blogs-subtitle {
@@ -31,6 +33,7 @@
   opacity: 0.9;
   position: relative;
   z-index: 1;
+  color: white !important;
 }
 
 /* Category Filters */

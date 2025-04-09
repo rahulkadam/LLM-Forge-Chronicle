@@ -82,7 +82,7 @@ const AppContent: React.FC = () => {
       <main>
         <Suspense fallback={<div className="loading">Loading...</div>}>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Blogs />} />
           <Route path="/about" element={<About />} />
           <Route path="/tutorial" element={<Tutorial />} />
           <Route path="/ai-tutorial" element={<AITutorial />} />
