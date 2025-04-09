@@ -1,0 +1,104 @@
+/* Main Layout */
+.blogs-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Hero Section */
+.blogs-header {
+  background: linear-gradient(135deg, #1a365d 0%, #2a4365 100%);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.blogs-header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.blogs-subtitle {
+  font-size: 1.4rem;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.9;
+  position: relative;
+  z-index: 1;
+}
+
+/* Category Filters */
+.blog-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+  justify-content: center;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 20px;
+  z-index: 10;
+}
+
+.category-button {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.category-button:hover {
+  background: #edf2f7;
+  transform: translateY(-1px);
+}
+
+.category-button.active {
+  background: #4299e1;
+  color: white;
+  border-color: #3182ce;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blogs-header {
+    padding: 60px 20px;
+    margin-bottom: 30px;
+  }
+
+  .blogs-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .blogs-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .blog-categories {
+    padding: 15px;
+    overflow-x: auto;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+    position: relative;
+    top: 0;
+  }
+
+  .category-button {
+    flex-shrink: 0;
+    padding: 6px 14px;
+    font-size: 0.9rem;
+  }
+}

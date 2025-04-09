@@ -1,185 +1,159 @@
-.blogs-page {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-.blog-title-page {
-  font-size: 2rem;
-  color: #1a365d;
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
-  word-wrap: break-word;
-}
-
-/* LLM Model Blog Images */
-.chatgpt-model-image {
-  background: linear-gradient(135deg, #10a37f 0%, #0d8a6f 100%);
-}
-
-.chatgpt-model-image::before {
-  content: "ChatGPT Architecture & Guide";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.claude-model-image {
-  background: linear-gradient(135deg, #7b2ff7 0%, #5f1bc9 100%);
-}
-
-.claude-model-image::before {
-  content: "Claude AI Assistant";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.gemini-model-image {
-  background: linear-gradient(135deg, #4285f4 0%, #0f9d58 100%);
-}
-
-.gemini-model-image::before {
-  content: "Google Gemini";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Header styles */
-.blogs-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.blogs-header h1 {
-  font-size: 3rem;
-  color: #1a365d;
-  margin-bottom: 20px;
-}
-
-.blogs-subtitle {
-  font-size: 1.2rem;
-  color: #4a5568;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-/* Category filters */
-.blog-categories {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 50px;
-}
-
-.category-button {
-  background-color: #f7fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 30px;
-  padding: 8px 20px;
-  font-size: 0.9rem;
-  color: #4a5568;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.category-button:hover:not(.active) {
-  background-color: #edf2f7;
-}
-
-.category-button.active {
-  background-color: #4299e1;
-  color: white;
-  border-color: #4299e1;
-}
-
-/* Blog grid */
+/* Blog Cards */
 .blogs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
-/* Blog card styles */
 .blog-card {
-  background-color: white;
-  border-radius: 10px;
+  background: white;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 .blog-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
+/* Blog Card Images */
 .blog-card-image {
-  height: 120px;
-  background-size: cover;
-  background-position: center;
+  height: 160px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-weight: bold;
+  padding: 1.5rem;
   text-align: center;
-  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* New blog card images for AI Tools and Resources */
-.ai-tools-image {
-  background: linear-gradient(135deg, #FF6B6B 0%, #D32F2F 100%);
+.blog-card-image::before {
+  content: attr(data-title);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
 }
 
-.ai-tools-image::before {
-  content: "AI-Powered Developer Tools";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+/* Featured Cards */
+.featured .blog-card-image {
+  height: 180px;
 }
 
-.resources-image {
-  background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+/* Prompt Engineering Banners */
+.prompt-basic-image {
+  background: linear-gradient(135deg, #38B2AC 0%, #319795 100%);
 }
 
-.resources-image::before {
-  content: "LLM Resources & References";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+.prompt-basic-image::before {
+  content: "Prompt Engineering Basics";
 }
 
-.llm-terminology-image {
-  background: linear-gradient(135deg, #2D3748 0%, #1A365D 100%);
+.prompt-intermediate-image {
+  background: linear-gradient(135deg, #ED8936 0%, #DD6B20 100%);
 }
 
-.llm-terminology-image::before {
-  content: "LLM Terminology Guide";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+.prompt-intermediate-image::before {
+  content: "Advanced Prompt Patterns";
 }
 
-.openai-image {
-  background: linear-gradient(135deg, #10a37f 0%, #0A8C6E 100%);
+.prompt-advanced-image {
+  background: linear-gradient(135deg, #9F7AEA 0%, #805AD5 100%);
 }
 
-.openai-image::before {
-  content: "OpenAI API Connection Guide";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+.prompt-advanced-image::before {
+  content: "Expert Prompt Engineering";
 }
 
-.openrouter-image {
-  background: linear-gradient(135deg, #7952B3 0%, #5C3B97 100%);
+.prompt-practical-image {
+  background: linear-gradient(135deg, #4C51BF 0%, #434190 100%);
 }
 
-.openrouter-image::before {
-  content: "OpenRouter Integration";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+.prompt-practical-image::before {
+  content: "Developer Prompt Engineering";
+}
+
+/* LLM Models Banners */
+.grok-model-image {
+  background: linear-gradient(135deg, #1DA1F2 0%, #0F8CDB 100%);
+}
+
+.grok-model-image::before {
+  content: "Grok AI Model";
+}
+
+.deepseek-model-image {
+  background: linear-gradient(135deg, #2B6CB0 0%, #1A4A7F 100%);
+}
+
+.deepseek-model-image::before {
+  content: "DeepSeek LLM";
+}
+
+.mistral-model-image {
+  background: linear-gradient(135deg, #805AD5 0%, #6B46C1 100%);
+}
+
+.mistral-model-image::before {
+  content: "Mistral AI";
+}
+
+.llama-model-image {
+  background: linear-gradient(135deg, #38A169 0%, #2F855A 100%);
+}
+
+.llama-model-image::before {
+  content: "Meta's Llama";
+}
+
+.manus-model-image {
+  background: linear-gradient(135deg, #D53F8C 0%, #B83280 100%);
+}
+
+.manus-model-image::before {
+  content: "Manus AI";
+}
+
+.chatgpt-model-image {
+  background: linear-gradient(135deg, #10A37F 0%, #0D8A6F 100%);
+}
+
+.chatgpt-model-image::before {
+  content: "ChatGPT Guide";
+}
+
+.claude-model-image {
+  background: linear-gradient(135deg, #7B2FF7 0%, #5F1BC9 100%);
+}
+
+.claude-model-image::before {
+  content: "Claude AI";
+}
+
+.gemini-model-image {
+  background: linear-gradient(135deg, #4285F4 0%, #0F9D58 100%);
+}
+
+.gemini-model-image::before {
+  content: "Google Gemini";
+}
+
+/* Advanced Techniques Banners */
+.vector-db-image {
+  background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+}
+
+.vector-db-image::before {
+  content: "Vector Databases";
 }
 
 .rag-image {
@@ -187,459 +161,18 @@
 }
 
 .rag-image::before {
-  content: "Retrieval Augmented Generation";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  content: "RAG Systems";
 }
 
-.prompt-image {
-  background: linear-gradient(135deg, #ED8936 0%, #DD6B20 100%);
-}
-
-.prompt-image::before {
-  content: "Advanced Prompt Engineering";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.functions-image {
-  background: linear-gradient(135deg, #38B2AC 0%, #2C7A7B 100%);
-}
-
-.functions-image::before {
-  content: "Function Calling with LLMs";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.langchain-image {
-  background: linear-gradient(135deg, #667EEA 0%, #5A67D8 100%);
-}
-
-.langchain-image::before {
-  content: "LangChain Framework";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.llm-agent-image {
-  background: linear-gradient(135deg, #2D3748 0%, #1A365D 100%);
-}
-
-.llm-agent-image::before {
-  content: "LLM Agent";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.getting-started-image {
-  background: linear-gradient(135deg, #3182CE 0%, #2B6CB0 100%);
-}
-
-.getting-started-image::before {
-  content: "Getting Started with LLMs";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-.cursor-workflows-image {
-  background: linear-gradient(135deg, #7D57C2 0%, #5E35B1 100%);
-}
-
-.cursor-workflows-image::before {
-  content: "Cursor Custom Workflows";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-
-.mcp-image {
+.model-context-image {
   background: linear-gradient(135deg, #2196F3 0%, #0D47A1 100%);
 }
 
-.mcp-image::before {
-  content: "Model Context Server";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+.model-context-image::before {
+  content: "Context Management";
 }
 
-.vector-db-image {
-  background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
-}
-
-.vector-db-image::before {
-  content: "Vector Databases & LLMs";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.deployment-image {
-  background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
-}
-
-.deployment-image::before {
-  content: "LLM Deployment Guide";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.cost-opt-image {
-  background: linear-gradient(135deg, #00695C 0%, #004D40 100%);
-}
-
-.cost-opt-image::before {
-  content: "Cost Optimization";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.security-image {
-  background: linear-gradient(135deg, #C62828 0%, #B71C1C 100%);
-}
-
-.security-image::before {
-  content: "Security & Safety";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.fine-tuning-image {
-  background: linear-gradient(135deg, #6A1B9A 0%, #4A148C 100%);
-}
-
-.fine-tuning-image::before {
-  content: "Fine-tuning LLMs";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.evaluation-image {
-  background: linear-gradient(135deg, #283593 0%, #1A237E 100%);
-}
-
-.evaluation-image::before {
-  content: "Model Evaluation";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.multi-modal-image {
-  background: linear-gradient(135deg, #0277BD 0%, #01579B 100%);
-}
-
-.multi-modal-image::before {
-  content: "Multi-Modal LLMs";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.quantization-image {
-  background: linear-gradient(135deg, #3949AB 0%, #283593 100%);
-}
-
-.quantization-image::before {
-  content: "LLM Optimization";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.local-llm-image {
-  background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
-}
-
-.local-llm-image::before {
-  content: "Local LLM Deployment";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.testing-image {
-  background: linear-gradient(135deg, #00796B 0%, #00695C 100%);
-}
-
-.testing-image::before {
-  content: "LLM Testing";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.governance-image {
-  background: linear-gradient(135deg, #455A64 0%, #37474F 100%);
-}
-
-.governance-image::before {
-  content: "AI Governance";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.ethics-image {
-  background: linear-gradient(135deg, #5E35B1 0%, #4527A0 100%);
-}
-
-.ethics-image::before {
-  content: "AI Ethics";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.comparison-image {
-  background: linear-gradient(135deg, #00ACC1 0%, #0097A7 100%);
-}
-
-.comparison-image::before {
-  content: "LLM Model Comparison";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.model-comparison-banner {
-  background: linear-gradient(135deg, #00ACC1 0%, #0097A7 100%);
-}
-
-.model-comparison-banner::before {
-  content: "LLM Model Comparison";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.gemini-image {
-  background: linear-gradient(135deg, #4285f4 0%, #0F9D58 100%);
-}
-
-.gemini-image::before {
-  content: "Google Gemini";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.blog-card-content {
-  padding: 25px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.blog-tag {
-  display: inline-block;
-  background-color: #ebf8ff;
-  color: #3182ce;
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 4px 12px;
-  border-radius: 20px;
-  margin-bottom: 15px;
-}
-
-.blog-title {
-  font-size: 1.4rem;
-  color: #2d3748;
-  margin-bottom: 15px;
-  line-height: 1.3;
-}
-
-.blog-excerpt {
-  color: #4a5568;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  flex-grow: 1;
-}
-
-.blog-footer-page {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: auto;
-}
-
-.blog-meta {
-  display: flex;
-  flex-direction: column;
-  font-size: 0.8rem;
-  color: #718096;
-}
-
-.reading-time {
-  margin-bottom: 5px;
-}
-
-.read-more-link {
-  color: #4299e1;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.read-more-link:hover {
-  color: #3182ce;
-}
-
-/* Newsletter section */
-.blogs-newsletter {
-  background: linear-gradient(135deg, #1a365d 0%, #2a4365 100%);
-  border-radius: 10px;
-  padding: 50px 30px;
-  color: white;
-  margin-bottom: 60px;
-}
-
-.newsletter-content {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.newsletter-content h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.newsletter-content p {
-  margin-bottom: 30px;
-  color: #e2e8f0;
-}
-
-.newsletter-form {
-  display: flex;
-  gap: 10px;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.newsletter-form input {
-  flex-grow: 1;
-  padding: 12px 20px;
-  border-radius: 5px;
-  border: none;
-  font-size: 1rem;
-}
-
-.newsletter-form button {
-  background-color: #4299e1;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 12px 25px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.newsletter-form button:hover {
-  background-color: #3182ce;
-}
-
-/* Pagination */
-.blogs-pagination {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.pagination-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid #e2e8f0;
-  background-color: white;
-  color: #4a5568;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.pagination-button.active {
-  background-color: #4299e1;
-  color: white;
-  border-color: #4299e1;
-}
-
-.pagination-button:hover:not(.active) {
-  background-color: #f7fafc;
-  border-color: #cbd5e0;
-}
-
-/* No results message */
-.no-results {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: #f7fafc;
-  border-radius: 10px;
-  margin-bottom: 60px;
-}
-
-.no-results h2 {
-  color: #2d3748;
-  margin-bottom: 15px;
-  font-size: 1.8rem;
-}
-
-.no-results p {
-  color: #4a5568;
-  margin-bottom: 20px;
-}
-
-/* Pagination enhancements */
-.pagination-button.prev,
-.pagination-button.next {
-  width: auto;
-  padding: 0 20px;
-  border-radius: 20px;
-}
-
-.pagination-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-/* Tag interactions */
-.blog-tag {
-  position: relative;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.blog-tag:hover {
-  background-color: #bee3f8;
-}
-
-.blog-tag:focus {
-  outline: 2px solid #4299e1;
-  outline-offset: 2px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .blogs-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .newsletter-form {
-    flex-direction: column;
-  }
-  
-  .newsletter-form button {
-    width: 100%;
-  }
-  
-  .blogs-header h1 {
-    font-size: 2.5rem;
-  }
-  
-  .blog-categories {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding-bottom: 15px;
-    justify-content: flex-start;
-  }
-  
-  .category-button {
-    flex-shrink: 0;
-  }
-}
-/* AI-Driven IT card images */
+/* AI-Driven IT Banners */
 .ai-transformation-image {
   background: linear-gradient(135deg, #00C6FF 0%, #0072FF 100%);
 }
@@ -653,15 +186,7 @@
 }
 
 .enterprise-tools-image::before {
-  content: "Enterprise Tools Integration";
-}
-
-.code-migration-image {
-  background: linear-gradient(135deg, #059669 0%, #047857 100%);
-}
-
-.code-migration-image::before {
-  content: "LLM-Powered Migration";
+  content: "Enterprise Integration";
 }
 
 .developer-efficiency-image {
@@ -669,51 +194,24 @@
 }
 
 .developer-efficiency-image::before {
-  content: "Developer Productivity Guide";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  content: "Developer Productivity";
 }
 
-/* Prompt Engineering card images */
-.prompt-basic-image {
-  background: linear-gradient(135deg, #38B2AC 0%, #319795 100%);
+.code-migration-image {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
 }
 
-.prompt-basic-image::before {
-  content: "Prompt Engineering Basics";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+.code-migration-image::before {
+  content: "Code Migration";
 }
 
-.prompt-intermediate-image {
-  background: linear-gradient(135deg, #ED8936 0%, #DD6B20 100%);
-}
-
-.prompt-intermediate-image::before {
-  content: "Advanced Prompt Patterns";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.prompt-advanced-image {
-  background: linear-gradient(135deg, #9F7AEA 0%, #805AD5 100%);
-}
-
-.prompt-advanced-image::before {
-  content: "Expert Prompt Engineering";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Agent card images */
+/* Agent Banners */
 .agent-basic-image {
   background: linear-gradient(135deg, #4FD1C5 0%, #319795 100%);
 }
 
 .agent-basic-image::before {
   content: "LLM Agent Development";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .agent-market-image {
@@ -721,9 +219,7 @@
 }
 
 .agent-market-image::before {
-  content: "Market Analysis Agent";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  content: "MarketMind AI";
 }
 
 .agent-sport-image {
@@ -731,9 +227,7 @@
 }
 
 .agent-sport-image::before {
-  content: "Sports Analytics Agent";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  content: "AthleteInsight AI";
 }
 
 .agent-book-image {
@@ -741,18 +235,205 @@
 }
 
 .agent-book-image::before {
-  content: "Book Buddy Agent";
-  font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  content: "BookBuddy AI";
 }
 
-/* Practical Prompt Engineering card image */
-.prompt-practical-image {
-  background: linear-gradient(135deg, #4C51BF 0%, #434190 100%);
+/* Tool & Framework Banners */
+.langchain-image {
+  background: linear-gradient(135deg, #667EEA 0%, #5A67D8 100%);
 }
 
-.prompt-practical-image::before {
-  content: "Developer Prompt Guide";
+.langchain-image::before {
+  content: "LangChain Guide";
+}
+
+.cursor-workflows-image {
+  background: linear-gradient(135deg, #7D57C2 0%, #5E35B1 100%);
+}
+
+.cursor-workflows-image::before {
+  content: "Cursor Workflows";
+}
+
+.ai-tools-image {
+  background: linear-gradient(135deg, #FF6B6B 0%, #D32F2F 100%);
+}
+
+.ai-tools-image::before {
+  content: "AI Development Tools";
+}
+
+.resources-image {
+  background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+}
+
+.resources-image::before {
+  content: "LLM Resources";
+}
+
+/* Fundamentals Banners */
+.getting-started-image {
+  background: linear-gradient(135deg, #3182CE 0%, #2B6CB0 100%);
+}
+
+.getting-started-image::before {
+  content: "Getting Started with LLMs";
+}
+
+.llm-terminology-image {
+  background: linear-gradient(135deg, #2D3748 0%, #1A365D 100%);
+}
+
+.llm-terminology-image::before {
+  content: "LLM Terminology";
+}
+
+.openai-image {
+  background: linear-gradient(135deg, #10A37F 0%, #0A8C6E 100%);
+}
+
+.openai-image::before {
+  content: "OpenAI API Guide";
+}
+
+.openrouter-image {
+  background: linear-gradient(135deg, #7952B3 0%, #5C3B97 100%);
+}
+
+.openrouter-image::before {
+  content: "OpenRouter Platform";
+}
+
+/* Blog Content */
+.blog-card-content {
+  padding: 20px;
+}
+
+.blog-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #ebf8ff;
+  color: #3182ce;
+  border-radius: 15px;
+  font-size: 0.875rem;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.blog-title-page {
   font-size: 1.4rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #2d3748;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.blog-excerpt {
+  color: #4a5568;
+  margin-bottom: 16px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.blog-footer-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  font-size: 0.875rem;
+}
+
+.blog-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #718096;
+}
+
+.read-more-link {
+  color: #4299e1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.read-more-link:hover {
+  color: #3182ce;
+}
+
+/* Newsletter Section */
+.blogs-newsletter {
+  background: linear-gradient(135deg, #4299e1 0%, #2b6cb0 100%);
+  padding: 40px 20px;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.newsletter-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.newsletter-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.newsletter-content p {
+  margin-bottom: 24px;
+  opacity: 0.9;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.newsletter-form button {
+  padding: 12px 24px;
+  background: #2d3748;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.newsletter-form button:hover {
+  background: #1a202c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blogs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+  }
+
+  .blog-card-image {
+    height: 140px;
+  }
+
+  .featured .blog-card-image {
+    height: 160px;
+  }
 }

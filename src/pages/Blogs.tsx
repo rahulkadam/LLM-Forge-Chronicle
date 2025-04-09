@@ -1,33 +1,35 @@
 import React, { useState, useMemo, useCallback, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import type { BlogPost } from '../data/blogPosts';
+import { allBlogPosts } from '../data/blogPosts';
+import { FEATURED_POSTS, LATEST_POSTS, TRENDING_POSTS } from '../data/blogLists';
+import { sortBlogPosts } from '../data/blogUtils';
+import '../styles/blogs/header-style.css';
+import '../styles/blogs/featured-section.css';
+import '../styles/blogs/pagination-style.css';
 import '../styles/blogs/blog-list-style.css';
 
-// Define the interface for a blog post
-interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  imageClass: string;
-  tag: string;
-  readingTime: string;
-  publishDate: string;
-  link: string;
-}
+// Constants
+const ITEMS_PER_PAGE = 30;
 
 const Blogs: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
   
+  const getFeaturedBlogPosts = useCallback(() => {
+    return FEATURED_POSTS
+      .map(id => allBlogPosts.find(post => post.id === id))
+      .filter((post): post is BlogPost => post !== undefined);
+  }, []);
+
   // Get initial tag from URL query parameters if available
-  const getInitialTag = () => {
+  const getInitialTag = useCallback(() => {
     const params = new URLSearchParams(location.search);
     return params.get('tag') || 'All';
-  };
-
-  // State for the active category/tag filter and current page
+  }, [location.search]);
+  
   const [activeCategory, setActiveCategory] = useState<string>(getInitialTag());
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const ITEMS_PER_PAGE = 10;
 
   // Update URL when active category changes
   useEffect(() => {
@@ -38,493 +40,29 @@ const Blogs: React.FC = () => {
     }
   }, [activeCategory, navigate]);
 
-  // Complete list of blog posts
-  const allBlogPosts: BlogPost[] = [
-    // Getting Started & Fundamentals
-    {
-      id: 'llm-getting-started',
-      title: "Getting Started with LLMs: A Beginner's Q&A Guide",
-      excerpt: 'A friendly question-answer guide to help beginners understand and start using Large Language Models effectively without feeling overwhelmed.',
-      imageClass: 'getting-started-image',
-      tag: 'Fundamentals',
-      readingTime: '7 min read',
-      publishDate: 'March 25, 2025',
-      link: '/blogs/llm-getting-started-guide'
-    },
-    {
-      id: 'llm-terminology',
-      title: 'Understanding LLM Terminology: A Comprehensive Guide',
-      excerpt: 'A detailed guide to essential terms and concepts in Large Language Models, from tokens to fine-tuning, helping you navigate the world of AI language processing.',
-      imageClass: 'llm-terminology-image',
-      tag: 'Fundamentals',
-      readingTime: '8 min read',
-      publishDate: 'March 21, 2025',
-      link: '/blogs/llm-technology-guide'
-    },
-    {
-      id: 'model-comparison',
-      title: 'Comparing LLM Families: GPT vs Claude vs Llama vs Mistral',
-      excerpt: 'In-depth comparison of major LLM families, their strengths, weaknesses, and ideal use cases. Help choose the right model for your needs.',
-      imageClass: 'comparison-image',
-      tag: 'Fundamentals',
-      readingTime: '18 min read',
-      publishDate: 'March 31, 2025',
-      link: '/blogs/llm-model-comparison'
-    },
-    {
-      id: 'openai-api',
-      title: 'Connecting to OpenAI API: A Complete Guide',
-      excerpt: "A step-by-step tutorial to set up and use OpenAI's API for your applications, including authentication, handling requests, and managing API limits.",
-      imageClass: 'openai-image',
-      tag: 'Fundamentals',
-      readingTime: '8 min read',
-      publishDate: 'January 20, 2025',
-      link: '/blogs/openai-api-guide'
-    },
-    {
-      id: 'llm-agent',
-      title: 'LLM Agents: Just Functions with a Fancy Name',
-      excerpt: "Demystifying LLM Agents - they're just functions that use language models to do specific tasks.",
-      imageClass: 'llm-agent-image',
-      tag: 'Fundamentals',
-      readingTime: '5 min read',
-      publishDate: 'March 22, 2025',
-      link: '/blogs/llm-agent-guide'
-    },
-
-    // Advanced Techniques & Architecture
-    {
-      id: 'vector-database-guide',
-      title: 'Vector Databases: The Backbone of Modern LLM Applications',
-      excerpt: 'Learn how vector databases power modern AI applications, from fundamentals to implementation. Discover best practices for integrating vector search with LLMs.',
-      imageClass: 'vector-db-image',
-      tag: 'Advanced Techniques',
-      readingTime: '10 min read',
-      publishDate: 'April 3, 2025',
-      link: '/blogs/vector-database-guide/vector-llm-guide'
-    },
-    {
-      id: 'rag-tutorial',
-      title: 'Building Your First RAG System',
-      excerpt: 'A comprehensive tutorial on implementing Retrieval Augmented Generation (RAG) to enhance your LLMs with external data sources and improve response accuracy.',
-      imageClass: 'rag-image',
-      tag: 'Advanced Techniques',
-      readingTime: '12 min read',
-      publishDate: 'February 18, 2025',
-      link: '/blogs/rag-tutorial'
-    },
-    {
-      id: 'model-context-server',
-      title: 'Model Context Server (MCP): Efficient Context Management for LLMs',
-      excerpt: 'Explore how Model Context Servers solve context window limitations in LLMs by efficiently managing, storing, and retrieving context to enable more coherent AI experiences.',
-      imageClass: 'mcp-image',
-      tag: 'Advanced Techniques',
-      readingTime: '8 min read',
-      publishDate: 'March 30, 2025',
-      link: '/blogs/model-context-server'
-    },
-      /*
-    {
-      id: 'model-quantization',
-      title: 'LLM Quantization & Optimization Guide',
-      excerpt: 'Learn how to optimize and compress LLMs for efficient deployment. Covers techniques like quantization, pruning, and model distillation.',
-      imageClass: 'quantization-image',
-      tag: 'Advanced Techniques',
-      readingTime: '15 min read',
-      publishDate: 'April 5, 2025',
-      link: '/blogs/llm-quantization-guide'
-    },
-    {
-      id: 'local-llm',
-      title: 'Running LLMs Locally: A Complete Guide',
-      excerpt: 'Step-by-step guide to running LLMs on your own hardware. From model selection to optimization techniques for resource-constrained environments.',
-      imageClass: 'local-llm-image',
-      tag: 'Advanced Techniques',
-      readingTime: '20 min read',
-      publishDate: 'April 4, 2025',
-      link: '/blogs/local-llm-guide'
-    },
-    {
-      id: 'fine-tuning',
-      title: 'Fine-tuning LLMs: From Theory to Practice',
-      excerpt: 'Master the art of fine-tuning language models. Learn about dataset preparation, training strategies, evaluation metrics, and best practices.',
-      imageClass: 'fine-tuning-image',
-      tag: 'Advanced Techniques',
-      readingTime: '18 min read',
-      publishDate: 'March 28, 2025',
-      link: '/blogs/llm-fine-tuning-guide'
-    },
-    {
-      id: 'multi-modal',
-      title: 'Multi-Modal LLMs: Beyond Text',
-      excerpt: 'Explore the world of multi-modal LLMs that can handle text, images, audio, and video. Learn about GPT-4V, Claude 3, and other multi-modal models.',
-      imageClass: 'multi-modal-image',
-      tag: 'Advanced Techniques',
-      readingTime: '16 min read',
-      publishDate: 'March 26, 2025',
-      link: '/blogs/multi-modal-llms'
-    },
-      {
-      id: 'model-evaluation',
-      title: 'Evaluating LLM Performance: Metrics & Methods',
-      excerpt: 'Comprehensive guide to evaluating LLM performance. Learn about evaluation metrics, testing strategies, and how to ensure model quality.',
-      imageClass: 'evaluation-image',
-      tag: 'Advanced Techniques',
-      readingTime: '13 min read',
-      publishDate: 'March 27, 2025',
-      link: '/blogs/llm-evaluation-guide'
-    },
-      */
-    {
-      id: 'grok-model',
-      title: "Grok: X.AI's Innovative LLM Model",
-      excerpt: "Explore Grok, the latest addition to X.AI's lineup, combining real-time data access with advanced language processing capabilities.",
-      imageClass: 'grok-model-image',
-      tag: 'LLM Models',
-      readingTime: '10 min read',
-      publishDate: 'April 7, 2025',
-      link: '/blogs/llm-models/grok'
-    },
-    // LLM Models Deep Dives
-    {
-      id: 'deepseek-model',
-      title: "DeepSeek: Next-Gen Open Source LLM",
-      excerpt: "Explore DeepSeek's innovative approach to language modeling, its open-source nature, and how it's pushing the boundaries of AI accessibility.",
-      imageClass: 'deepseek-model-image',
-      tag: 'LLM Models',
-      readingTime: '10 min read',
-      publishDate: 'April 7, 2025',
-      link: '/blogs/llm-models/deepseek'
-    },
-    {
-      id: 'mistral-model',
-      title: "Mistral AI: French Innovation in Language Models",
-      excerpt: "Deep dive into Mistral AI's unique architecture, its European roots, and how it's challenging the status quo in the LLM landscape.",
-      imageClass: 'mistral-model-image',
-      tag: 'LLM Models',
-      readingTime: '10 min read',
-      publishDate: 'April 7, 2025',
-      link: '/blogs/llm-models/mistral'
-    },
-    {
-      id: 'llama-model',
-      title: "Meta's Llama: Open Innovation in AI",
-      excerpt: "Understanding Meta's Llama family of models, their impact on open-source AI, and how they're democratizing access to powerful language models.",
-      imageClass: 'llama-model-image',
-      tag: 'LLM Models',
-      readingTime: '10 min read',
-      publishDate: 'April 7, 2025',
-      link: '/blogs/llm-models/llama'
-    },
-    {
-      id: 'manus-model',
-      title: "Manus AI: Specialized Task Automation",
-      excerpt: "Discover how Manus AI is revolutionizing task automation with its specialized language models and unique approach to AI problem-solving.",
-      imageClass: 'manus-model-image',
-      tag: 'LLM Models',
-      readingTime: '10 min read',
-      publishDate: 'April 7, 2025',
-      link: '/blogs/llm-models/manus'
-    },
-    {
-      id: 'chatgpt-model',
-      title: "ChatGPT: A Comprehensive Guide to OpenAI's Revolutionary LLM",
-      excerpt: "Deep dive into ChatGPT's architecture, capabilities, and impact. Understanding how OpenAI's breakthrough model works and how to leverage it effectively.",
-      imageClass: 'chatgpt-model-image',
-      tag: 'LLM Models',
-      readingTime: '10 min read',
-      publishDate: 'April 7, 2025',
-      link: '/blogs/llm-models/chatgpt'
-    },
-    {
-      id: 'claude-model',
-      title: "Claude: Anthropic's Advanced AI Assistant",
-      excerpt: "Explore Claude's unique approach to AI safety, its constitutional AI framework, and how it differs from other leading language models.",
-      imageClass: 'claude-model-image',
-      tag: 'LLM Models',
-      readingTime: '10 min read',
-      publishDate: 'April 7, 2025',
-      link: '/blogs/llm-models/claude'
-    },
-    {
-      id: 'gemini-model',
-      title: "Google's Gemini: The Next Generation AI Model",
-      excerpt: "Understanding Gemini's multimodal capabilities, its position in the AI landscape, and how it compares to other leading language models.",
-      imageClass: 'gemini-model-image',
-      tag: 'LLM Models',
-      readingTime: '10 min read',
-      publishDate: 'April 7, 2025',
-      link: '/blogs/llm-models/gemini'
-    },
-      /*
-    {
-      id: 'function-calling',
-      title: 'Mastering Function Calling with LLMs',
-      excerpt: 'How to use function calling capabilities in modern LLMs to create powerful applications that can interact with external tools and APIs.',
-      imageClass: 'functions-image',
-      tag: 'Advanced Techniques',
-      readingTime: '9 min read',
-      publishDate: 'February 22, 2025',
-      link: '/blogs/function-calling-guide'
-    }, */
-    // Agents
-    {
-      id: 'agent-basic',
-      title: 'Building LLM Agents: A Complete Guide',
-      excerpt: 'Learn how to build, test, and deploy LLM-powered agents. From basic concepts to advanced implementations with real-world examples.',
-      imageClass: 'agent-basic-image',
-      tag: 'Agents',
-      readingTime: '15 min read',
-      publishDate: 'April 7, 2025',
-      link: '/llm-agent/basic'
-    },
-    {
-      id: 'agent-market',
-      title: 'MarketMind AI: Building a Market Analysis Agent',
-      excerpt: 'Step-by-step guide to creating an AI agent for market analysis and financial insights using LLMs and specialized tools.',
-      imageClass: 'agent-market-image',
-      tag: 'Agents',
-      readingTime: '12 min read',
-      publishDate: 'April 7, 2025',
-      link: '/agent/marketmind'
-    },
-    {
-      id: 'agent-sport',
-      title: 'AthleteInsight AI: Sports Analytics Agent',
-      excerpt: 'Create an intelligent agent for sports data analysis, player performance tracking, and strategic insights using LLM capabilities.',
-      imageClass: 'agent-sport-image',
-      tag: 'Agents',
-      readingTime: '10 min read',
-      publishDate: 'April 7, 2025',
-      link: '/agent/athlete-insight'
-    },
-    {
-      id: 'agent-book',
-      title: 'BookBuddy: Your AI Reading Companion',
-      excerpt: 'Build a personalized book recommendation and analysis agent that helps users discover and understand literature.',
-      imageClass: 'agent-book-image',
-      tag: 'Agents',
-      readingTime: '12 min read',
-      publishDate: 'April 7, 2025',
-      link: '/agent/bookbuddy'
-    },
-
-    // Production & Deployment
-      /*
-    {
-      id: 'llm-deployment',
-      title: 'Deploying LLMs in Production: A Complete Guide',
-      excerpt: 'Learn how to effectively deploy LLM applications in production, including scaling, monitoring, and maintaining reliability. Best practices for production-ready AI systems.',
-      imageClass: 'deployment-image',
-      tag: 'Production',
-      readingTime: '15 min read',
-      publishDate: 'April 4, 2025',
-      link: '/blogs/llm-deployment-guide'
-    },
-    {
-      id: 'cost-optimization',
-      title: 'LLM Cost Optimization Strategies',
-      excerpt: 'Practical strategies for optimizing costs when working with LLMs. Learn about caching, batching, model selection, and other techniques to reduce API costs.',
-      imageClass: 'cost-opt-image',
-      tag: 'Production',
-      readingTime: '12 min read',
-      publishDate: 'April 2, 2025',
-      link: '/blogs/llm-cost-optimization'
-    },
-    {
-      id: 'llm-testing',
-      title: 'Comprehensive LLM Testing Strategies',
-      excerpt: 'Learn how to effectively test LLM applications, including unit testing, integration testing, and automated evaluation frameworks.',
-      imageClass: 'testing-image',
-      tag: 'Production',
-      readingTime: '14 min read',
-      publishDate: 'April 3, 2025',
-      link: '/blogs/llm-testing-guide'
-    },
-    */
-
-    // Security & Ethics
-      /*
-    {
-      id: 'llm-security',
-      title: 'Security Best Practices for LLM Applications',
-      excerpt: 'Comprehensive guide to securing your LLM applications. Learn about prompt injection, data privacy, authentication, and other security considerations.',
-      imageClass: 'security-image',
-      tag: 'Security & Safety',
-      readingTime: '14 min read',
-      publishDate: 'April 1, 2025',
-      link: '/blogs/llm-security-guide'
-    },
-    {
-      id: 'ai-governance',
-      title: 'AI Governance & Compliance Guide',
-      excerpt: 'Navigate the complex landscape of AI governance, compliance, and ethical considerations when deploying LLM applications.',
-      imageClass: 'governance-image',
-      tag: 'Security & Safety',
-      readingTime: '16 min read',
-      publishDate: 'April 2, 2025',
-      link: '/blogs/ai-governance-guide'
-    },
-    {
-      id: 'llm-ethics',
-      title: 'Ethical Considerations in LLM Development',
-      excerpt: 'Explore ethical challenges and best practices in LLM development, including bias mitigation, transparency, and responsible AI principles.',
-      imageClass: 'ethics-image',
-      tag: 'Security & Safety',
-      readingTime: '12 min read',
-      publishDate: 'April 1, 2025',
-      link: '/blogs/llm-ethics-guide'
-    },
-  */
-    {
-      id: 'ai-it-transformation',
-      title: 'AI-Driven IT: Transforming Modern Software Development',
-      excerpt: 'Discover how IT companies are leveraging AI and LLMs to revolutionize development workflows, enhance productivity, and build better software.',
-      imageClass: 'code-migration-image',
-      tag: 'AI-Driven IT',
-      readingTime: '12 min read',
-      publishDate: 'April 7, 2025',
-      link: '/blogs/ai-driven-it/ai-transformation'
-    },
-    {
-      id: 'code-migration-llm',
-      title: 'LLM-Powered Code Migration: From Legacy to Modern Frameworks',
-      excerpt: 'Learn how companies like Airbnb and Agoda are using LLMs to automate large-scale code migrations, including real case studies of framework transitions.',
-      imageClass: 'ai-transformation-image',
-      tag: 'AI-Driven IT',
-      readingTime: '15 min read',
-      publishDate: 'April 7, 2025',
-      link: '/blogs/ai-driven-it/code-migration'
-    },
-    {
-      id: 'enterprise-integrations',
-      title: 'LLM Integration Guide: Enhancing Enterprise Tools',
-      excerpt: 'Learn how to integrate LLMs with enterprise tools like JIRA, Slack, Teams, Confluence, GitHub, and more to enhance team productivity and automate workflows.',
-      imageClass: 'enterprise-tools-image',
-      tag: 'AI-Driven IT',
-      readingTime: '15 min read',
-      publishDate: 'April 7, 2025',
-      link: '/blogs/ai-driven-it/enterprise-integrations'
-    },
-    {
-      id: 'developer-efficiency',
-      title: 'The LLM-Powered Developer: A Productivity Guide',
-      excerpt: 'Comprehensive guide to integrating LLMs into your daily development workflow. Learn how to leverage AI tools for coding, documentation, and communication tasks.',
-      imageClass: 'developer-efficiency-image',
-      tag: 'AI-Driven IT',
-      readingTime: '15 min read',
-      publishDate: 'April 7, 2025',
-      link: '/blogs/ai-driven-it/developer-efficiency'
-    },
-    // Prompt Engineering Series
-    {
-      id: 'prompt-engineering-basics',
-      title: 'Prompt Engineering Basics: Foundation for LLM Communication',
-      excerpt: 'Learn the fundamentals of prompt engineering, from basic syntax to best practices. Perfect for beginners starting with LLMs.',
-      imageClass: 'prompt-basic-image',
-      tag: 'Prompt Engineering',
-      readingTime: '8 min read',
-      publishDate: 'April 7, 2025',
-      link: '/prompt-engineering'
-    },
-    {
-      id: 'prompt-engineering-intermediate',
-      title: 'Advanced Prompt Patterns & Techniques',
-      excerpt: 'Master intermediate prompt engineering concepts including context windows, few-shot learning, and chain-of-thought prompting.',
-      imageClass: 'prompt-intermediate-image',
-      tag: 'Prompt Engineering',
-      readingTime: '12 min read',
-      publishDate: 'April 7, 2025',
-      link: '/prompt-engineering/intermediate'
-    },
-    {
-      id: 'prompt-engineering-advanced',
-      title: 'Expert Prompt Engineering: System Design & Optimization',
-      excerpt: 'Advanced techniques for prompt system design, including recursive prompting, multi-agent systems, and performance optimization.',
-      imageClass: 'prompt-advanced-image',
-      tag: 'Prompt Engineering',
-      readingTime: '15 min read',
-      publishDate: 'April 7, 2025',
-      link: '/prompt-engineering/advanced'
-    },
-    {
-      id: 'developer-prompts',
-      title: 'Practical Prompt Engineering for Developers',
-      excerpt: 'A comprehensive guide to crafting effective prompts for development tasks, including code generation, documentation, testing, and debugging.',
-      imageClass: 'prompt-practical-image',
-      tag: 'Prompt Engineering',
-      readingTime: '15 min read',
-      publishDate: 'April 8, 2025',
-      link: '/blogs/prompt-engineering/developer-prompts'
-    },
-    // Tools & Frameworks
-    {
-      id: 'langchain',
-      title: 'Getting Started with LangChain',
-      excerpt: 'An introduction to LangChain, a popular framework for developing applications powered by language models, with practical examples.',
-      imageClass: 'langchain-image',
-      tag: 'Tools & Frameworks',
-      readingTime: '11 min read',
-      publishDate: 'January 10, 2025',
-      link: '/blogs/langchain-introduction'
-    },
-    {
-      id: 'cursor-workflows',
-      title: 'Mastering Cursor Custom Workflows: Automate Your Coding Tasks',
-      excerpt: 'Learn how to create and optimize custom workflows in Cursor to automate coding tasks, improve productivity, and streamline your development process.',
-      imageClass: 'cursor-workflows-image',
-      tag: 'Tools & Frameworks',
-      readingTime: '8 min read',
-      publishDate: 'March 12, 2025',
-      link: '/blogs/cursor-custom-workflows'
-    },
-    {
-      id: 'openrouter',
-      title: 'What is OpenRouter and Why Use It?',
-      excerpt: 'Explore how OpenRouter can give you access to multiple LLMs through a unified API, simplifying your multi-model workflow and reducing integration complexity.',
-      imageClass: 'openrouter-image',
-      tag: 'Fundamentals',
-      readingTime: '6 min read',
-      publishDate: 'January 15, 2025',
-      link: '/blogs/openrouter-platform-guide'
-    },
-
-    // Resources & Tools
-    {
-      id: 'ai-tools',
-      title: 'AI-Powered Developer & Agent Tools',
-      excerpt: 'Discover powerful tools for agent development and AI-assisted coding to supercharge your workflow. From code generation to intelligent assistance, find the right tools for your needs.',
-      imageClass: 'ai-tools-image',
-      tag: 'Tools & Frameworks',
-      readingTime: '15 min read',
-      publishDate: 'March 31, 2025',
-      link: '/ai-tools'
-    },
-    {
-      id: 'llm-resources',
-      title: 'LLM Resources & References',
-      excerpt: 'A curated collection of tools, services, and learning materials for LLM development. Find the best resources for building and deploying language model applications.',
-      imageClass: 'resources-image',
-      tag: 'Tools & Frameworks',
-      readingTime: '10 min read', 
-      publishDate: 'March 29, 2025',
-      link: '/resources'
-    }
-  ];
-
-  // Extract unique categories from blog posts
+  // Extract unique categories and sort them in a logical order
   const categories = useMemo(() => {
-    const tags = allBlogPosts.map(post => post.tag);
-    return ['All', ...Array.from(new Set(tags))];
-  }, [allBlogPosts]);
+    const categoryOrder = [
+      'All',
+      'Fundamentals',
+      'Prompt Engineering',
+      'LLM Models',
+      'Advanced Techniques',
+      'AI-Driven IT',
+      'Tools & Frameworks',
+      'Agents'
+    ];
+    const tags = new Set(allBlogPosts.map(post => post.tag));
+    return categoryOrder.filter(cat => cat === 'All' || tags.has(cat));
+  }, []);
 
-  // Filter blog posts based on active category
+  // Filter and sort blog posts based on active category
   const filteredBlogPosts = useMemo(() => {
-    if (activeCategory === 'All') {
-      return allBlogPosts;
-    }
-    return allBlogPosts.filter(post => post.tag === activeCategory);
-  }, [allBlogPosts, activeCategory]);
+    const posts = activeCategory === 'All' 
+      ? allBlogPosts 
+      : allBlogPosts.filter(post => post.tag === activeCategory);
+    return sortBlogPosts(posts);
+  }, [activeCategory]);
 
   // Calculate pagination
   const totalPages = Math.ceil(filteredBlogPosts.length / ITEMS_PER_PAGE);
@@ -538,12 +76,12 @@ const Blogs: React.FC = () => {
   // Handle category change
   const handleCategoryChange = useCallback((category: string) => {
     setActiveCategory(category);
-    setCurrentPage(1); // Reset to first page when changing category
+    setCurrentPage(1);
   }, []);
 
-  // Handle tag click within blog card
+  // Handle tag click
   const handleTagClick = useCallback((tag: string, e: React.MouseEvent) => {
-    e.preventDefault(); // Prevent default link behavior
+    e.preventDefault();
     handleCategoryChange(tag);
   }, [handleCategoryChange]);
 
@@ -551,7 +89,6 @@ const Blogs: React.FC = () => {
   const goToPage = useCallback((page: number) => {
     if (page >= 1 && page <= totalPages) {
       setCurrentPage(page);
-      // Scroll to top of page
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }, [totalPages]);
@@ -562,7 +99,6 @@ const Blogs: React.FC = () => {
 
     const buttons = [];
     
-    // Previous button
     buttons.push(
       <button 
         key="prev" 
@@ -575,7 +111,6 @@ const Blogs: React.FC = () => {
       </button>
     );
     
-    // Page number buttons
     const maxButtons = 3;
     let startPage = Math.max(1, currentPage - 1);
     let endPage = Math.min(totalPages, startPage + maxButtons - 1);
@@ -598,7 +133,6 @@ const Blogs: React.FC = () => {
       );
     }
     
-    // Next button
     buttons.push(
       <button 
         key="next" 
@@ -621,6 +155,23 @@ const Blogs: React.FC = () => {
         <p className="blogs-subtitle">
           Practical guides, tutorials, and insights about Large Language Models and AI development
         </p>
+      </div>
+
+      <div className="featured-section">
+        <h2>Featured Posts</h2>
+        <div className="featured-grid">
+          {getFeaturedBlogPosts().map(post => (
+            <div className="blog-card featured" key={post.id}>
+              <div className={`blog-card-image ${post.imageClass}`}></div>
+              <div className="blog-card-content">
+                <div className="blog-tag">{post.tag}</div>
+                <h3 className="blog-title">{post.title}</h3>
+                <p className="blog-excerpt">{post.excerpt}</p>
+                <Link to={post.link} className="read-more-link">Read Article →</Link>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="blog-categories">
@@ -657,7 +208,6 @@ const Blogs: React.FC = () => {
                   <div 
                     className="blog-tag" 
                     onClick={(e) => handleTagClick(post.tag, e)}
-                    style={{ cursor: 'pointer' }}
                     role="button"
                     tabIndex={0}
                     onKeyPress={(e) => {
