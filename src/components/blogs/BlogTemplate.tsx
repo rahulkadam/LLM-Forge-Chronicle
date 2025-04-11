@@ -1,22 +1,74 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import Comments from '../Comments';
-import { getAllBlogPosts, getFeaturedBlogPosts } from '../../data/blogData';
+import { 
+  getAllBlogPosts, 
+  getFeaturedBlogPosts, 
+  BLOG_CATEGORIES,
+  type BlogCategory,
+  getPostsByCategory
+} from '../../data/blogData';
+import type { BlogPost } from '../../data/blogPosts';
 import '../../styles/blogs/blog-base-style.css';
 import '../../styles/blogs/blog-viewport-fix.css';
 import '../../styles/blogs/blog-banners.css';
 import '../../styles/blogs/blog-three-column.css';
+import '../../styles/blogs/blog-categories.css';
+import '../../styles/blogs/featured-blog.css';
 
 interface BlogPostProps {
   title: string;
   date: string;
   readTime: string;
-  category?: string;
+  category?: BlogCategory;
   bannerClassName: string;
   tableOfContents: Array<{ id: string; title: string }>;
   children: ReactNode;
   className?: string;
 }
+
+// Helper function to get banner text based on category
+const getBannerText = (category: string): string => {
+  switch (category) {
+    case 'Fundamentals':
+      return 'Master the Basics';
+    case 'Prompt Engineering':
+      return 'Craft Better Prompts';
+    case 'LLM Models':
+      return 'Explore LLM Models';
+    case 'Advanced Techniques':
+      return 'Advanced AI Concepts';
+    case 'AI-Driven IT':
+      return 'Transform IT with AI';
+    case 'Tools & Frameworks':
+      return 'Essential AI Tools';
+    case 'Agents':
+      return 'Build AI Agents';
+    default:
+      return 'Featured Article';
+  }
+};
+
+const FeaturedBlogCard: React.FC<{ blog: BlogPost }> = ({ blog }) => (
+  <div className="featured-blog-card">
+    <div className={`featured-blog-banner banner-${blog.tag.replace(/\s+/g, '-')}`}>
+      {getBannerText(blog.tag)}
+    </div>
+    <div className="featured-blog-content">
+      <span className="featured-blog-tag">{blog.tag}</span>
+      <h3>
+        <Link to={blog.link}>{blog.title}</Link>
+      </h3>
+      <p>{blog.excerpt}</p>
+      <div className="featured-blog-meta">
+        <span className="reading-time">{blog.readingTime}</span>
+        <Link to={blog.link} className="read-more-link">
+          Read More
+        </Link>
+      </div>
+    </div>
+  </div>
+);
 
 const BlogTemplate: React.FC<BlogPostProps> = ({
   title,
@@ -28,21 +80,63 @@ const BlogTemplate: React.FC<BlogPostProps> = ({
   children,
   className = ''
 }) => {
-  const allPosts = getAllBlogPosts();
-  const featuredPosts = getFeaturedBlogPosts();
+  const allPosts = useMemo(() => getAllBlogPosts(), []);
+  const featuredPosts = useMemo(() => getFeaturedBlogPosts(), []);
+  
+  // State to track expanded categories
+  const [expandedCategories, setExpandedCategories] = useState<BlogCategory[]>([category]);
+
+  // Group posts by category
+  const postsByCategory = useMemo(() => 
+    getPostsByCategory(allPosts), [allPosts]
+  );
+
+  // Toggle category expansion
+  const toggleCategory = (category: BlogCategory) => {
+    setExpandedCategories(prev => 
+      prev.includes(category)
+        ? prev.filter(c => c !== category)
+        : [...prev, category]
+    );
+  };
 
   return (
     <div className={`blog-three-column-layout ${className}`}>
-      {/* Left Sidebar - Blog List */}
+      {/* Left Sidebar - Collapsible Blog List */}
       <aside className="blog-sidebar-left">
-        <h2 className="blog-list-title">All Articles</h2>
-        <ul className="blog-list">
-          {allPosts.map((post) => (
-            <li key={post.id}>
-              <Link to={post.link}>{post.title}</Link>
-            </li>
-          ))}
-        </ul>
+        <h2 className="blog-list-title">Blog Categories</h2>
+        <div className="blog-categories-list">
+          {BLOG_CATEGORIES.map(categoryName => {
+            const posts = postsByCategory.get(categoryName) || [];
+            return (
+              <div key={categoryName} className="blog-category-section">
+                <button 
+                  className={`category-toggle ${expandedCategories.includes(categoryName) ? 'expanded' : ''}`}
+                  onClick={() => toggleCategory(categoryName)}
+                >
+                  <span className="category-name">{categoryName}</span>
+                  <span className="post-count">{posts.length}</span>
+                  <span className="toggle-icon"></span>
+                </button>
+                <ul className={`category-posts ${expandedCategories.includes(categoryName) ? 'expanded' : ''}`}>
+                  {posts.map((post, index) => (
+                    <li 
+                      key={post.id}
+                      style={{ '--item-index': index } as React.CSSProperties}
+                    >
+                      <Link 
+                        to={post.link}
+                        className={post.title === title ? 'active' : ''}
+                      >
+                        {post.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
       </aside>
 
       {/* Main Content */}
@@ -90,20 +184,7 @@ const BlogTemplate: React.FC<BlogPostProps> = ({
       <aside className="blog-sidebar-right">
         <h2 className="featured-blogs-title">Featured Articles</h2>
         {featuredPosts.map((post) => (
-          <div key={post.id} className="featured-blog-card">
-            <div className={`featured-blog-image ${post.imageClass}`}></div>
-            <div className="featured-blog-content">
-              <span className="featured-blog-tag">{post.tag}</span>
-              <h3>
-                <Link to={post.link}>{post.title}</Link>
-              </h3>
-              <p>{post.excerpt}</p>
-              <div className="featured-blog-meta">
-                <span className="reading-time">{post.readingTime}</span>
-                <Link to={post.link} className="read-more-link">Read More →</Link>
-              </div>
-            </div>
-          </div>
+          <FeaturedBlogCard key={post.id} blog={post} />
         ))}
       </aside>
     </div>

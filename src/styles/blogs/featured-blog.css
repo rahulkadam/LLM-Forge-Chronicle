@@ -1,0 +1,212 @@
+/* Featured Blog Section Styles */
+.blog-sidebar-right {
+  position: sticky;
+  top: 120px;
+  height: calc(100vh - 140px);
+  overflow-y: auto;
+  padding: 0 15px 20px 25px;
+  background: #ffffff;
+}
+
+.featured-blogs-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #3498db;
+  color: #2c3e50;
+}
+
+/* Featured Blog Card */
+.featured-blog-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.featured-blog-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Text-based Banner Styles */
+.featured-blog-banner {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+}
+
+/* Category-specific banner styles */
+.banner-Fundamentals {
+  background: linear-gradient(135deg, #4299e1, #2b6cb0);
+}
+
+.banner-Prompt-Engineering {
+  background: linear-gradient(135deg, #48bb78, #2f855a);
+}
+
+.banner-LLM-Models {
+  background: linear-gradient(135deg, #ed8936, #c05621);
+}
+
+.banner-Advanced-Techniques {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.banner-AI-Driven-IT {
+  background: linear-gradient(135deg, #f6ad55, #dd6b20);
+}
+
+.banner-Tools-Frameworks {
+  background: linear-gradient(135deg, #4fd1c5, #319795);
+}
+
+.banner-Agents {
+  background: linear-gradient(135deg, #9f7aea, #6b46c1);
+}
+
+/* Banner Icons */
+.featured-blog-banner::before {
+  content: '';
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  width: 100px;
+  height: 100px;
+  opacity: 0.1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* Featured Blog Content */
+.featured-blog-content {
+  padding: 16px;
+}
+
+.featured-blog-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: #edf2f7;
+  color: #4a5568;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.featured-blog-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  line-height: 1.4;
+  color: #2d3748;
+}
+
+.featured-blog-card h3 a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.featured-blog-card h3 a:hover {
+  color: #3498db;
+}
+
+.featured-blog-card p {
+  font-size: 0.9rem;
+  color: #718096;
+  margin: 0 0 15px 0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Featured Blog Meta */
+.featured-blog-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid #edf2f7;
+}
+
+.reading-time {
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+.read-more-link {
+  font-size: 0.875rem;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.read-more-link:hover {
+  color: #2980b9;
+}
+
+.read-more-link::after {
+  content: '→';
+  margin-left: 4px;
+  transition: transform 0.2s ease;
+}
+
+.read-more-link:hover::after {
+  transform: translateX(3px);
+}
+
+/* Scrollbar Styling */
+.blog-sidebar-right::-webkit-scrollbar {
+  width: 4px;
+}
+
+.blog-sidebar-right::-webkit-scrollbar-track {
+  background: #f7fafc;
+}
+
+.blog-sidebar-right::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 2px;
+}
+
+.blog-sidebar-right::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .featured-blog-banner {
+    height: 80px;
+    font-size: 0.9rem;
+  }
+  
+  .featured-blog-card h3 {
+    font-size: 1rem;
+  }
+  
+  .featured-blog-content {
+    padding: 12px;
+  }
+}

@@ -26,6 +26,128 @@
   border-bottom: 2px solid #2c3e50;
 }
 
+/* Category List Styles */
+.blog-categories-list {
+  margin: 0;
+  padding: 0;
+}
+
+.blog-category-section {
+  margin-bottom: 10px;
+}
+
+.category-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.category-toggle:hover {
+  background: #f0f2f5;
+}
+
+.category-toggle.expanded {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background: #e9ecef;
+}
+
+.category-name {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.post-count {
+  padding: 2px 6px;
+  background: #e9ecef;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.toggle-icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.toggle-icon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #666;
+  border-bottom: 2px solid #666;
+  transition: transform 0.2s ease;
+}
+
+.category-toggle:not(.expanded) .toggle-icon::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.category-toggle.expanded .toggle-icon::before {
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+.category-posts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background: #ffffff;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+}
+
+.category-posts.expanded {
+  max-height: 1000px;
+  border-bottom: 1px solid #e0e0e0;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.category-posts li {
+  margin: 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.category-posts li:first-child {
+  border-top: none;
+}
+
+.category-posts a {
+  display: block;
+  padding: 8px 12px;
+  color: #2c3e50;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.category-posts a:hover {
+  background: #f8f9fa;
+  color: #3498db;
+}
+
+.category-posts a.active {
+  background: #e9ecef;
+  color: #3498db;
+  font-weight: 500;
+}
+
 .blog-list {
   list-style: none;
   padding: 0;
