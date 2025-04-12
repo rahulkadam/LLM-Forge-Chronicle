@@ -10,7 +10,47 @@ export interface BlogPost {
 }
 
 export const allBlogPosts: BlogPost[] = [
-  // Prompt Engineering Series
+  // AI Basics Series
+  {
+    id: 'ai-basics',
+    title: 'Understanding AI Fundamentals',
+    excerpt: 'A comprehensive introduction to Artificial Intelligence, covering core concepts, types of AI, and their real-world applications.',
+    imageClass: 'ai-basics-image',
+    tag: 'Fundamentals',
+    readingTime: '8 min read',
+    publishDate: 'April 10, 2025',
+    link: '/ai-basics'
+  },
+  {
+    id: 'chatgpt-guide',
+    title: 'Mastering ChatGPT: A Comprehensive Guide',
+    excerpt: 'Deep dive into ChatGPT capabilities, best practices, and advanced techniques for optimal usage.',
+    imageClass: 'chatgpt-guide-image',
+    tag: 'Tutorials',
+    readingTime: '10 min read',
+    publishDate: 'April 11, 2025',
+    link: '/ai-basics/chatgpt-guide'
+  },
+  {
+    id: 'llm-agent-intro',
+    title: 'Introduction to LLM Agents',
+    excerpt: 'Explore the world of LLM-powered agents, their architecture, capabilities, and how they are revolutionizing automation.',
+    imageClass: 'llm-agent-image',
+    tag: 'Advanced',
+    readingTime: '12 min read',
+    publishDate: 'April 12, 2025',
+    link: '/llm-agent'
+  },
+  {
+    id: 'building-llm-agent',
+    title: 'Building Your First LLM Agent',
+    excerpt: 'Step-by-step guide to building a custom LLM agent with practical code examples and best practices.',
+    imageClass: 'build-agent-image',
+    tag: 'Development',
+    readingTime: '15 min read',
+    publishDate: 'April 12, 2025',
+    link: '/BuildingLLMAgent'
+  },  // Prompt Engineering Series
   {
     id: 'prompt-engineering-basics',
     title: 'Prompt Engineering Basics: Foundation for LLM Communication',

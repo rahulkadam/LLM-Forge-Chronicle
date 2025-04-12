@@ -150,11 +150,6 @@ const AppContent: React.FC = () => {
           <Route path="/blogs/agents/athlete-insight" element={<AthleteInsightAI />} />
           <Route path="/blogs/agents/bookbuddy" element={<BookBuddy />} />
 
-          {/* Legacy agent routes - redirect to new locations */}
-          <Route path="/agent/marketmind" element={<Navigate to="/blogs/agents/marketmind" replace />} />
-          <Route path="/agent/athlete-insight" element={<Navigate to="/blogs/agents/athlete-insight" replace />} />
-          <Route path="/agent/bookbuddy" element={<Navigate to="/blogs/agents/bookbuddy" replace />} />
-
           {/* Catch all route for 404 pages - keep at bottom */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

@@ -27,7 +27,8 @@ export const BLOG_CATEGORIES = [
   'Tools & Frameworks',
   'Agents',
   'Technical',
-   'About',
+  'About',
+  'Others'
 ] as const;
 
 // Category type
