@@ -1,8 +1,9 @@
 import React from 'react';
+
+import "../../../styles/blogs/blog-base-style.css";
 import BlogTemplate from '../../../components/blogs/BlogTemplate';
 import { BlogSection, InfoBox } from '../../../components/blogs/BlogComponents';
 import useBlogBehavior from '../../../hooks/useBlogBehavior';
-import '../../../styles/blogs/blog-layout-update.css';
 
 const LLMGettingStartedGuide: React.FC = () => {
   useBlogBehavior();
@@ -23,7 +24,6 @@ const LLMGettingStartedGuide: React.FC = () => {
       date="March 25, 2025"
       readTime="7 min"
       category="Fundamentals"
-      bannerClassName="llm-getting-started-banner"
       tableOfContents={tableOfContents}
     >{/* Rest of the component content remains the same */}</BlogTemplate>
   );

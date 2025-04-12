@@ -1,10 +1,11 @@
 import React from 'react';
+
+import "../../../styles/blogs/blog-base-style.css";
 import BlogTemplate from '../../../components/blogs/BlogTemplate';
 import { BlogSection, CodeExample } from '../../../components/blogs/BlogComponents';
 import useBlogBehavior from '../../../hooks/useBlogBehavior';
 import '../mobile-viewport-fix.css';
 import './langchain-introduction.css';
-import '../../../styles/blogs/blog-layout-update.css';
 
 const LangchainIntroduction: React.FC = () => {
   // Use the blog behavior hook
@@ -27,7 +28,6 @@ const LangchainIntroduction: React.FC = () => {
       date="March 25, 2025"
       readTime="7 min"
       category="Tools & Frameworks"
-      bannerClassName="langchain-banner"
       tableOfContents={tableOfContents}
       className="langchain-introduction"
     >{/* Rest of the component content remains the same */}</BlogTemplate>

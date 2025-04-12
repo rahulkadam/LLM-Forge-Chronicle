@@ -5,8 +5,6 @@ import { allBlogPosts } from '../../data/blogPosts';
 import { FEATURED_POSTS, LATEST_POSTS, TRENDING_POSTS } from '../../data/blogLists';
 import { sortBlogPosts } from '../../data/blogUtils';
 import '../../styles/blogs/blog-base-style.css';
-import '../../styles/blogs/blog-layout-update.css';
-import '../../styles/blogs/blog-content.css';
 import '../../styles/blogs/featured-section.css';
 import '../../styles/blogs/pagination-style.css';
 import '../../styles/blogs/blog-list-style.css';

@@ -1,8 +1,9 @@
 import React from 'react';
+
+import "../../../styles/blogs/blog-base-style.css";
 import BlogTemplate from '../../../components/blogs/BlogTemplate';
 import { BlogSection, InfoBox } from '../../../components/blogs/BlogComponents';
 import useBlogBehavior from '../../../hooks/useBlogBehavior';
-import '../../../styles/blogs/blog-layout-update.css';
 
 const VectorLLMGuide: React.FC = () => {
   useBlogBehavior();
@@ -23,7 +24,6 @@ const VectorLLMGuide: React.FC = () => {
       date="April 3, 2025"
       readTime="10 min"
       category="Advanced Techniques"
-      bannerClassName="vector-db-banner"
       tableOfContents={tableOfContents}
     >{/* Rest of the component content remains the same */}</BlogTemplate>
   );

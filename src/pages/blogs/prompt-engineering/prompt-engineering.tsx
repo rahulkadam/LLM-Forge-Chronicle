@@ -1,9 +1,10 @@
 import React from 'react';
+
+import "../../../styles/blogs/blog-base-style.css";
 import BlogTemplate from '../../../components/blogs/BlogTemplate';
 import { BlogSection, InfoBox } from '../../../components/blogs/BlogComponents';
 import useBlogBehavior from '../../../hooks/useBlogBehavior';
 import type { BlogCategory } from '../../../data/blogData';
-import '../../../styles/blogs/blog-layout-update.css';
 import './prompt-engineering.css';
 
 const PromptEngineeringGuide: React.FC = () => {
@@ -29,7 +30,6 @@ const PromptEngineeringGuide: React.FC = () => {
       date="April 12, 2025"
       readTime="25 min"
       category={category}
-      bannerClassName="prompt-engineering-banner"
       tableOfContents={tableOfContents}
     >
       <BlogSection id="introduction" title="Introduction">

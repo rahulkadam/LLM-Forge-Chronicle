@@ -1,8 +1,9 @@
 import React from 'react';
+
+import "../../../styles/blogs/blog-base-style.css";
 import BlogTemplate from '../../../components/blogs/BlogTemplate';
 import { BlogSection, CodeExample, InfoBox } from '../../../components/blogs/BlogComponents';
 import useBlogBehavior from '../../../hooks/useBlogBehavior';
-import '../../../styles/blogs/blog-layout-update.css';
 
 const OpenAIAPIGuide: React.FC = () => {
   useBlogBehavior();
@@ -23,7 +24,6 @@ const OpenAIAPIGuide: React.FC = () => {
       date="January 20, 2025"
       readTime="8 min"
       category="Fundamentals"
-      bannerClassName="openai-api-banner"
       tableOfContents={tableOfContents}
     >{/* Rest of the component content remains the same */}</BlogTemplate>
   );

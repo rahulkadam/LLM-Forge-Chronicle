@@ -1,8 +1,9 @@
 import React from 'react';
+
+import "../../../styles/blogs/blog-base-style.css";
 import BlogTemplate from '../../../components/blogs/BlogTemplate';
 import { BlogSection, CodeExample, InfoBox } from '../../../components/blogs/BlogComponents';
 import useBlogBehavior from '../../../hooks/useBlogBehavior';
-import '../../../styles/blogs/blog-layout-update.css';
 
 const RAGTutorial: React.FC = () => {
   useBlogBehavior();
@@ -25,7 +26,6 @@ const RAGTutorial: React.FC = () => {
       date="February 18, 2025"
       readTime="12 min"
       category="Advanced Techniques"
-      bannerClassName="rag-tutorial-banner"
       tableOfContents={tableOfContents}
     >{/* Rest of the component content remains the same */}</BlogTemplate>
   );

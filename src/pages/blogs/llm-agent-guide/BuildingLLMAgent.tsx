@@ -3,8 +3,7 @@ import BlogTemplate from '../../../components/blogs/BlogTemplate';
 import { BlogSection } from '../../../components/blogs/BlogComponents';
 import type { BlogCategory } from '../../../data/blogData';
 import '../../../styles/blogs/blog-base-style.css';
-import '../../../styles/blogs/blog-content.css';
-import '../../../styles/blogs/blog-layout-update.css';
+
 
 const BuildingLLMAgent: React.FC = () => {
   const category: BlogCategory = 'Technical';
@@ -27,7 +26,7 @@ const BuildingLLMAgent: React.FC = () => {
       readTime="25 min"
       category={category}
       tableOfContents={tableOfContents}
-      bannerClassName={'blog-banner'}>
+      >
       <BlogSection id="overview" title="Project Overview">
         <p className="tutorial-description">
           In this tutorial, we'll build a practical LLM agent that can help users manage their file system

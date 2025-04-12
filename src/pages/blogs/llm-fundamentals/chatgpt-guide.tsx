@@ -1,10 +1,11 @@
 import React from 'react';
+
+import "../../../styles/blogs/blog-base-style.css";
 import { Link } from 'react-router-dom';
 import BlogTemplate from '../../../components/blogs/BlogTemplate';
 import { BlogSection, InfoBox } from '../../../components/blogs/BlogComponents';
 import useBlogBehavior from '../../../hooks/useBlogBehavior';
 import type { BlogCategory } from '../../../data/blogData';
-import '../../../styles/blogs/blog-layout-update.css';
 import './llm-fundamentals.css';
 
 const ChatGPTGuide: React.FC = () => {
@@ -28,7 +29,6 @@ const ChatGPTGuide: React.FC = () => {
       date="April 12, 2025"
       readTime="12 min"
       category={category}
-      bannerClassName="chatgpt-guide-banner"
       tableOfContents={tableOfContents}
     >
       <BlogSection id="introduction" title="What is ChatGPT?">

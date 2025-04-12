@@ -3,8 +3,6 @@ import BlogTemplate from '../../components/blogs/BlogTemplate';
 import { BlogSection } from '../../components/blogs/BlogComponents';
 import type { BlogCategory } from '../../data/blogData';
 import '../../styles/blogs/blog-base-style.css';
-import '../../styles/blogs/blog-content.css';
-import '../../styles/blogs/blog-layout-update.css';
 
 const About: React.FC = () => {
   const category: BlogCategory = 'About';

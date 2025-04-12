@@ -1,10 +1,11 @@
 import React from 'react';
+
+import "../../../styles/blogs/blog-base-style.css";
 import { Link } from 'react-router-dom';
 import BlogTemplate from '../../../components/blogs/BlogTemplate';
 import { BlogSection, InfoBox } from '../../../components/blogs/BlogComponents';
 import useBlogBehavior from '../../../hooks/useBlogBehavior';
-import '../../../styles/blogs/blog-layout-update.css';
-import '../../../styles/blogs/llm-models.css';
+
 
 const MistralGuide: React.FC = () => {
   useBlogBehavior();
@@ -27,7 +28,6 @@ const MistralGuide: React.FC = () => {
       date="April 7, 2025"
       readTime="10 min"
       category="LLM Models"
-      bannerClassName="mistral-banner"
       tableOfContents={tableOfContents}
     >
       <BlogSection id="introduction" title="Introduction">

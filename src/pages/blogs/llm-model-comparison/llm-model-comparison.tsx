@@ -1,4 +1,6 @@
 import React from 'react';
+
+import "../../../styles/blogs/blog-base-style.css";
 import { Link } from 'react-router-dom';
 import BlogTemplate from '../../../components/blogs/BlogTemplate';
 import { BlogSection, Card } from '../../../components/blogs/BlogComponents';
@@ -29,7 +31,6 @@ const LLMModelComparison: React.FC = () => {
       date="April 6, 2025"
       readTime="18 min"
       category="Fundamentals"
-      bannerClassName="model-comparison-banner"
       tableOfContents={tableOfContents}
       className="llm-comparison-guide"
     >

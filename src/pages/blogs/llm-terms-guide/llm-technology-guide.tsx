@@ -1,4 +1,6 @@
 import React from 'react';
+
+import "../../../styles/blogs/blog-base-style.css";
 import { Link } from 'react-router-dom';
 import BlogTemplate from '../../../components/blogs/BlogTemplate';
 import { BlogSection, Card } from '../../../components/blogs/BlogComponents';
@@ -32,7 +34,6 @@ const LLMTerminology: React.FC = () => {
           date="March 21, 2025"
           readTime="8 min"
           category="Fundamentals"
-          bannerClassName="llm-terms-banner"
           tableOfContents={tableOfContents}
           className="llm-terms-guide" // Add class for specific styles if needed
       >

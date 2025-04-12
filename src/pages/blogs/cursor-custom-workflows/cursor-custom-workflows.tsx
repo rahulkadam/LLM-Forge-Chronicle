@@ -1,10 +1,11 @@
 import React from 'react';
+
+import "../../../styles/blogs/blog-base-style.css";
 import BlogTemplate from '../../../components/blogs/BlogTemplate';
 import { BlogSection, CodeExample, InfoBox } from '../../../components/blogs/BlogComponents';
 import useBlogBehavior from '../../../hooks/useBlogBehavior';
 import '../mobile-viewport-fix.css';
 import './cursor-custom-workflows.css';
-import '../../../styles/blogs/blog-layout-update.css';
 
 const CursorCustomWorkflows: React.FC = () => {
   // Use the blog behavior hook
@@ -28,7 +29,6 @@ const CursorCustomWorkflows: React.FC = () => {
       date="March 25, 2025"
       readTime="8 min"
       category="Tools & Frameworks"
-      bannerClassName="cursor-workflows-banner"
       tableOfContents={tableOfContents}
       className="cursor-custom-workflows-guide"
     >{/* Rest of the component content remains the same */}</BlogTemplate>

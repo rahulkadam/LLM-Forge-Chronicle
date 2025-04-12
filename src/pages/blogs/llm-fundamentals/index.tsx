@@ -1,4 +1,6 @@
 import React from 'react';
+
+import "../../../styles/blogs/blog-base-style.css";
 import './styles.css';
 
 const LLMFundamentals: React.FC = () => {

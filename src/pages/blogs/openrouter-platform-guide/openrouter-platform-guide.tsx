@@ -1,8 +1,9 @@
 import React from 'react';
+
+import "../../../styles/blogs/blog-base-style.css";
 import BlogTemplate from '../../../components/blogs/BlogTemplate';
 import { BlogSection, CodeExample, InfoBox } from '../../../components/blogs/BlogComponents';
 import useBlogBehavior from '../../../hooks/useBlogBehavior';
-import '../../../styles/blogs/blog-layout-update.css';
 
 const OpenRouterPlatformGuide: React.FC = () => {
   useBlogBehavior();
@@ -23,7 +24,6 @@ const OpenRouterPlatformGuide: React.FC = () => {
       date="January 15, 2025"
       readTime="6 min"
       category="Fundamentals"
-      bannerClassName="openrouter-banner"
       tableOfContents={tableOfContents}
     >{/* Rest of the component content remains the same */}</BlogTemplate>
   );

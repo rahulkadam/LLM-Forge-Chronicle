@@ -80,6 +80,7 @@ const AppContent: React.FC = () => {
       <main>
         <Suspense fallback={<div className="loading">Loading...</div>}>
         <Routes>
+          <Route path="/" element={<OpenAIApiGuide />} />
           <Route path="/about" element={<About />} />
           <Route path="/ai-tutorial" element={<AITutorial />} />
           <Route path="/foundation" element={<Foundation />} />

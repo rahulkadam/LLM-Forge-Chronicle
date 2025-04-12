@@ -1,10 +1,11 @@
 import React from 'react';
+
+import "../../../styles/blogs/blog-base-style.css";
 import { Link } from 'react-router-dom';
 import BlogTemplate from '../../../components/blogs/BlogTemplate';
 import { BlogSection, InfoBox } from '../../../components/blogs/BlogComponents';
 import useBlogBehavior from '../../../hooks/useBlogBehavior';
-import '../../../styles/blogs/blog-layout-update.css';
-import '../../../styles/blogs/llm-models.css';
+
 
 const DeveloperPromptGuide: React.FC = () => {
   useBlogBehavior();
@@ -26,7 +27,6 @@ const DeveloperPromptGuide: React.FC = () => {
       date="April 8, 2025"
       readTime="15 min"
       category="Prompt Engineering"
-      bannerClassName="prompt-practical-banner"
       tableOfContents={tableOfContents}
     >
       <BlogSection id="introduction" title="Introduction">
