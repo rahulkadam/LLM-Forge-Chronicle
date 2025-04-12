@@ -1,0 +1,170 @@
+/* LLM Fundamentals Blog Section Styles */
+
+/* Main content wrapper */
+.llm-fundamentals-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Article header styles */
+.llm-fundamentals-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.llm-fundamentals-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.llm-fundamentals-header .meta {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+/* Content section styles */
+.llm-fundamentals-content {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #2c3e50;
+}
+
+.llm-fundamentals-content h2 {
+  font-size: 1.8rem;
+  color: #34495e;
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #eee;
+}
+
+.llm-fundamentals-content h3 {
+  font-size: 1.4rem;
+  color: #34495e;
+  margin: 1.5rem 0 1rem;
+}
+
+.llm-fundamentals-content p {
+  margin-bottom: 1.2rem;
+}
+
+/* List styles */
+.llm-fundamentals-content ul,
+.llm-fundamentals-content ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.llm-fundamentals-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* Code block styles */
+.llm-fundamentals-content pre {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.llm-fundamentals-content code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+}
+
+/* Info box styles */
+.info-box {
+  background-color: #e3f2fd;
+  border-left: 4px solid #2196f3;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.warning-box {
+  background-color: #fff3e0;
+  border-left: 4px solid #ff9800;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Table styles */
+.llm-fundamentals-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.llm-fundamentals-content th,
+.llm-fundamentals-content td {
+  padding: 0.75rem;
+  border: 1px solid #dee2e6;
+  text-align: left;
+}
+
+.llm-fundamentals-content th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+/* Image styles */
+.llm-fundamentals-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .llm-fundamentals-wrapper {
+    padding: 1rem;
+  }
+
+  .llm-fundamentals-header h1 {
+    font-size: 2rem;
+  }
+
+  .llm-fundamentals-content {
+    font-size: 1rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .llm-fundamentals-content {
+    color: #e2e8f0;
+  }
+
+  .llm-fundamentals-content h2,
+  .llm-fundamentals-content h3 {
+    color: #f8fafc;
+  }
+
+  .llm-fundamentals-content pre {
+    background-color: #1a1a1a;
+  }
+
+  .info-box {
+    background-color: #1a365d;
+    border-left-color: #3182ce;
+  }
+
+  .warning-box {
+    background-color: #3d2f00;
+    border-left-color: #d97706;
+  }
+
+  .llm-fundamentals-content th {
+    background-color: #1a1a1a;
+  }
+
+  .llm-fundamentals-content th,
+  .llm-fundamentals-content td {
+    border-color: #2d3748;
+  }
+}

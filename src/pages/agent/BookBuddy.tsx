@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../styles/BookBuddy.css';
+import '../../styles/agents/book-buddy.css';
 
 interface Book {
   title: string;

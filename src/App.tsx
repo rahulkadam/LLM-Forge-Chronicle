@@ -18,27 +18,25 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { initGA } from './utils/analytics';
 import usePageTracking from './hooks/usePageTracking';
 import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import About from './pages/About';
-import Tutorial from './pages/Tutorial';
-import AITutorial from './pages/AITutorial';
-import LLMAgent from './pages/LLMAgent';
-import BuildingLLMAgent from './pages/BuildingLLMAgent';
-import BasicLLMAgent from './pages/BasicLLMAgent';
-import Foundation from './pages/foundation';
-import PythonModule from './pages/python-module';
-import Professional from './pages/Professional';
-import Expert from './pages/Expert';
-import GettingStarted from './pages/GettingStarted';
-import AITools from './pages/AITools';
+import About from './pages/blogs/about';
+import AITutorial from './pages/blogs/ai-tools/AITutorial';
+import LLMAgent from './pages/blogs/llm-agent-guide/LLMAgent';
+import BuildingLLMAgent from './pages/blogs/llm-agent-guide/BuildingLLMAgent';
+import BasicLLMAgent from './pages/blogs/llm-fundamentals/BasicLLMAgent';
+import Foundation from './pages/blogs/roadmap/foundation';
+import PythonModule from './pages/blogs/roadmap/python-module';
+import Professional from './pages/blogs/roadmap/Professional';
+import Expert from './pages/blogs/roadmap/Expert';
+import GettingStarted from './pages/blogs/getting-started';
+import AITools from './pages/blogs/ai-tools/AITools';
 import PromptEngineeringBasics from './pages/blogs/prompt-engineering/basics';
 import PromptEngineeringIntermediate from './pages/blogs/prompt-engineering/intermediate';
 import PromptEngineeringAdvanced from './pages/blogs/prompt-engineering/advanced';
-import Resources from './pages/Resources';
-import LLMTechnical from './pages/LLMTechnical';
-import ProfessionalExample from './pages/ProfessionalExample';
-import Community from './pages/Community';
-import Blogs from './pages/Blogs';
+import Resources from './pages/blogs/ai-tools/Resources';
+import LLMTechnical from './pages/blogs/llm-agent-guide/LLMTechnical';
+import ProfessionalExample from './pages/blogs/roadmap/ProfessionalExample';
+import Community from './pages/blogs/community';
+import BlogsPage from './pages/blogs/BlogsPage';
 import OpenAIApiGuide from './pages/blogs/openai-api-guide/openai-api-guide';
 import OpenRouterPlatformGuide from "./pages/blogs/openrouter-platform-guide/openrouter-platform-guide";
 import LLMTechnologyGuide from "./pages/blogs/llm-terms-guide/llm-technology-guide";
@@ -50,19 +48,19 @@ import CursorCustomWorkflows from './pages/blogs/cursor-custom-workflows/cursor-
 import ModelContextServer from './pages/blogs/model-context-server/model-context-server';
 import LLMModelComparison from './pages/blogs/llm-model-comparison/llm-model-comparison';
 import VectorDatabaseGuide from './pages/blogs/vector-database-guide/vector-llm-guide';
-import BookBuddy from './pages/agent/BookBuddy';
 
-import AthleteInsightAI from './pages/agent/AthleteInsightAI';
-import MarketMindAI from './pages/agent/MarketMindAI';
-import DeveloperQuickStart from './pages/llm-fundamentals/developer-quick-start';
-import LLMFundamentals from './pages/llm-fundamentals';
-import ChatGPTGuide from './pages/llm-fundamentals/chatgpt-guide';
+// Updated agent imports
+import BookBuddy from './pages/blogs/agents/BookBuddy';
+import AthleteInsightAI from './pages/blogs/agents/AthleteInsightAI';
+import MarketMindAI from './pages/blogs/agents/MarketMindAI';
 
-// Original components for redirection
-import AIBasics from './pages/ai-basics';
-import OldChatGPTGuide from './pages/ai-basics/chatgpt-guide';
-import PromptBasics from './pages/ai-basics/prompt-basics';
-import Examples from './pages/ai-basics/examples';
+import DeveloperQuickStart from './pages/blogs/llm-fundamentals/developer-quick-start';
+import LLMFundamentals from './pages/blogs/llm-fundamentals';
+
+// Import blog-formatted components
+import LLMIntroduction from './pages/blogs/llm-fundamentals/introduction';
+import ChatGPTBlogGuide from './pages/blogs/llm-fundamentals/chatgpt-guide';
+import LLMCapabilities from './pages/blogs/llm-fundamentals/capabilities';
 
 import './App.css';
 
@@ -82,9 +80,7 @@ const AppContent: React.FC = () => {
       <main>
         <Suspense fallback={<div className="loading">Loading...</div>}>
         <Routes>
-          <Route path="/" element={<Blogs />} />
           <Route path="/about" element={<About />} />
-          <Route path="/tutorial" element={<Tutorial />} />
           <Route path="/ai-tutorial" element={<AITutorial />} />
           <Route path="/foundation" element={<Foundation />} />
           <Route path="/python-module" element={<PythonModule />} />
@@ -94,9 +90,6 @@ const AppContent: React.FC = () => {
           <Route path="/llm-agent/building" element={<BuildingLLMAgent />} />
           <Route path="/llm-agent/basic" element={<BasicLLMAgent />} />
           <Route path="/llm-technical" element={<LLMTechnical />} />
-          {/* Removed the simple-chat-app route as requested */}
-          {/* Removed simple-agent-demo route as requested */}
-          {/* CricketMatchAgent route removed as requested */}
           <Route path="/BuildingLLMAgent" element={<BuildingLLMAgent />} />
           <Route path="/getting-started" element={<GettingStarted />} />
           <Route path="/roadmap" element={<Navigate to="/getting-started" replace />} />
@@ -108,14 +101,13 @@ const AppContent: React.FC = () => {
           
           {/* New routes */}
           <Route path="/llm-fundamentals" element={<LLMFundamentals />} />
-          <Route path="/llm-fundamentals/chatgpt-guide" element={<ChatGPTGuide />} />
+          <Route path="/llm-fundamentals/chatgpt-guide" element={<ChatGPTBlogGuide />} />
           <Route path="/llm-fundamentals/developer-quick-start" element={<DeveloperQuickStart />} />
           <Route path="/professional-example" element={<ProfessionalExample />} />
           <Route path="/professional/example" element={<ProfessionalExample />} />
           <Route path="/community" element={<Community />} />
           
           {/* Blog routes */}
-          <Route path="/blogs" element={<Blogs />} />
           <Route path="/blogs/openai-api-guide" element={<OpenAIApiGuide />} />
           <Route path="/blogs/openrouter-platform-guide" element={<OpenRouterPlatformGuide />} />
           <Route path="/blogs/llm-technology-guide" element={<LLMTechnologyGuide />} />
@@ -143,21 +135,26 @@ const AppContent: React.FC = () => {
           <Route path="/blogs/llm-models/llama" element={<LlamaModelGuide />} />
           <Route path="/blogs/llm-models/manus" element={<ManusModelGuide />} />
           
-          
-          {/* Redirects from old routes to new routes */}
-          <Route path="/ai-basics" element={<Navigate to="/llm-fundamentals" replace />} />
-          <Route path="/ai-basics/chatgpt-guide" element={<Navigate to="/llm-fundamentals/chatgpt-guide" replace />} />
+          {/* LLM Fundamentals using new blog format */}
+          <Route path="/ai-basics" element={<LLMIntroduction />} />
+          <Route path="/llm-agent" element={<LLMCapabilities />} />
+          <Route path="/ai-basics/chatgpt-guide" element={<ChatGPTBlogGuide />} />
           
           {/* Keep old routes temporarily for backward compatibility */}
-          <Route path="/ai-basics/old" element={<AIBasics />} />
-          <Route path="/ai-basics/chatgpt-guide/old" element={<OldChatGPTGuide />} />
-          <Route path="/ai-basics/prompt-basics" element={<PromptBasics />} />
-          <Route path="/ai-basics/examples" element={<Examples />} />
+          <Route path="/ai-basics/prompt-basics" element={<PromptEngineeringBasics />} />
+          <Route path="/ai-basics/examples" element={<LLMCapabilities />} />
 
-          <Route path="/agent/marketmind" element={<MarketMindAI />} />
-          <Route path="/agent/athlete-insight" element={<AthleteInsightAI />} />
-          <Route path="/agent/bookbuddy" element={<BookBuddy />} />
-  {/* Catch all route for 404 pages - keep at bottom */}
+          {/* Updated agent routes */}
+          <Route path="/blogs/agents/marketmind" element={<MarketMindAI />} />
+          <Route path="/blogs/agents/athlete-insight" element={<AthleteInsightAI />} />
+          <Route path="/blogs/agents/bookbuddy" element={<BookBuddy />} />
+
+          {/* Legacy agent routes - redirect to new locations */}
+          <Route path="/agent/marketmind" element={<Navigate to="/blogs/agents/marketmind" replace />} />
+          <Route path="/agent/athlete-insight" element={<Navigate to="/blogs/agents/athlete-insight" replace />} />
+          <Route path="/agent/bookbuddy" element={<Navigate to="/blogs/agents/bookbuddy" replace />} />
+
+          {/* Catch all route for 404 pages - keep at bottom */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         </Suspense>

@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
-import '../../styles/agents/market-mind.css';
+import BlogTemplate from '../../../components/blogs/BlogTemplate';
+import { BlogSection } from '../../../components/blogs/BlogComponents';
+import type { BlogCategory } from '../../../data/blogData';
+import '../../../styles/blogs/blog-base-style.css';
+import '../../../styles/blogs/blog-content.css';
+import '../../../styles/blogs/blog-layout-update.css';
 
 interface CompanyInfo {
   name: string;
@@ -21,10 +26,19 @@ interface StockMetrics {
 }
 
 const MarketMindAI: React.FC = () => {
+  const category: BlogCategory = 'Agents';
   const [userInput, setUserInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [showCode, setShowCode] = useState<'server' | 'agents' | 'prompts' | null>('server');
+  const [showCode, setShowCode] = useState<'server' | 'agents' | 'prompts'>('server');
   const [error, setError] = useState<string | null>(null);
+  const [results, setResults] = useState<any>(null);
+
+  const tableOfContents = [
+    { id: 'demo', title: 'Interactive Demo' },
+    { id: 'implementation', title: 'Multi-Agent Implementation' },
+    { id: 'features', title: 'Key Features' },
+    { id: 'next', title: 'Next Steps' }
+  ];
 
   // Mock data for demonstration
   const mockCompanyData = {
@@ -248,139 +262,141 @@ Provide response as JSON:
     }
   };
 
-  const [results, setResults] = useState<any>(null);
-
   return (
-    <div className="agent-container">
-      <section className="header-section">
-        <h1>MarketMind AI</h1>
-        <p className="subtitle">Multi-Agent System for Company & Stock Analysis</p>
-      </section>
+    <BlogTemplate
+      title="MarketMind AI - Multi-Agent Stock Analysis System"
+      date="April 12, 2025"
+      readTime="15 min"
+      category={category}
+      tableOfContents={tableOfContents}
+    >
+      <BlogSection id="demo" title="Interactive Demo">
+        <p>
+          Experience our advanced multi-agent system for comprehensive company
+          and stock market analysis, powered by specialized AI agents.
+        </p>
 
-      <section className="demo-section">
-        <h2>Try the Demo</h2>
-        <form onSubmit={handleSubmit} className="search-form">
-          <input
-            type="text"
-            value={userInput}
-            onChange={(e) => setUserInput(e.target.value)}
-            placeholder="Enter company name (e.g., Apple, Microsoft, Tesla)"
-            className="search-input"
-          />
-          <button type="submit" disabled={isLoading || !userInput.trim()}>
-            {isLoading ? 'Analyzing...' : 'Analyze'}
-          </button>
-        </form>
+        <div className="demo-container">
+          <form onSubmit={handleSubmit} className="input-form">
+            <input
+              type="text"
+              value={userInput}
+              onChange={(e) => setUserInput(e.target.value)}
+              placeholder="Enter company name (e.g., Apple, Microsoft, Tesla)"
+              className="search-input"
+            />
+            <button type="submit" disabled={isLoading || !userInput.trim()}>
+              {isLoading ? 'Analyzing...' : 'Analyze'}
+            </button>
+          </form>
 
-        {isLoading && (
-          <div className="loading-message">
-            <p>MarketMind agents are analyzing the company...</p>
-          </div>
-        )}
+          {isLoading && (
+            <div className="info-box">
+              <p>MarketMind agents are analyzing the company...</p>
+            </div>
+          )}
 
-        {error && (
-          <div className="error-message">
-            {error}
-          </div>
-        )}
+          {error && (
+            <div className="warning-box">
+              {error}
+            </div>
+          )}
 
-        {results && (
-          <div className="results-container">
-            <div className="company-card">
-              <h3>{results.info.name}</h3>
-              <p className="description">{results.info.description}</p>
-              
-              <div className="info-grid">
-                <div className="info-item">
-                  <span className="label">Sector</span>
-                  <span className="value">{results.info.sector}</span>
+          {results && (
+            <div className="content-grid">
+              <div className="content-card">
+                <h3>{results.info.name}</h3>
+                <p>{results.info.description}</p>
+                
+                <div className="data-table">
+                  <div>
+                    <span>Sector:</span>
+                    <span>{results.info.sector}</span>
+                  </div>
+                  <div>
+                    <span>Industry:</span>
+                    <span>{results.info.industry}</span>
+                  </div>
+                  <div>
+                    <span>Employees:</span>
+                    <span>{results.info.employees.toLocaleString()}</span>
+                  </div>
+                  <div>
+                    <span>Founded:</span>
+                    <span>{results.info.founded}</span>
+                  </div>
                 </div>
-                <div className="info-item">
-                  <span className="label">Industry</span>
-                  <span className="value">{results.info.industry}</span>
-                </div>
-                <div className="info-item">
-                  <span className="label">Employees</span>
-                  <span className="value">{results.info.employees.toLocaleString()}</span>
-                </div>
-                <div className="info-item">
-                  <span className="label">Founded</span>
-                  <span className="value">{results.info.founded}</span>
+              </div>
+
+              <div className="content-card">
+                <h3>Stock Metrics</h3>
+                <div className="data-table">
+                  <div>
+                    <span>Market Cap:</span>
+                    <span>{results.metrics.marketCap}</span>
+                  </div>
+                  <div>
+                    <span>P/E Ratio:</span>
+                    <span>{results.metrics.peRatio}</span>
+                  </div>
+                  <div>
+                    <span>Dividend Yield:</span>
+                    <span>{results.metrics.dividend}</span>
+                  </div>
+                  <div>
+                    <span>Volume:</span>
+                    <span>{results.metrics.volume}</span>
+                  </div>
+                  <div>
+                    <span>52W High:</span>
+                    <span>{results.metrics.weekHigh}</span>
+                  </div>
+                  <div>
+                    <span>52W Low:</span>
+                    <span>{results.metrics.weekLow}</span>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <div className="metrics-card">
-              <h3>Stock Metrics</h3>
-              <div className="metrics-grid">
-                <div className="metric-item">
-                  <span className="label">Market Cap</span>
-                  <span className="value">{results.metrics.marketCap}</span>
-                </div>
-                <div className="metric-item">
-                  <span className="label">P/E Ratio</span>
-                  <span className="value">{results.metrics.peRatio}</span>
-                </div>
-                <div className="metric-item">
-                  <span className="label">Dividend Yield</span>
-                  <span className="value">{results.metrics.dividend}</span>
-                </div>
-                <div className="metric-item">
-                  <span className="label">Volume</span>
-                  <span className="value">{results.metrics.volume}</span>
-                </div>
-                <div className="metric-item">
-                  <span className="label">52W High</span>
-                  <span className="value">{results.metrics.weekHigh}</span>
-                </div>
-                <div className="metric-item">
-                  <span className="label">52W Low</span>
-                  <span className="value">{results.metrics.weekLow}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-      </section>
-
-      <section className="implementation-section">
-        <h2>Multi-Agent Implementation</h2>
-        <div className="code-nav">
-          <button
-            className={`nav-button ${showCode === 'server' ? 'active' : ''}`}
-            onClick={() => setShowCode('server')}
-          >
-            Server Implementation
-          </button>
-          <button
-            className={`nav-button ${showCode === 'agents' ? 'active' : ''}`}
-            onClick={() => setShowCode('agents')}
-          >
-            Specialized Agents
-          </button>
-          <button
-            className={`nav-button ${showCode === 'prompts' ? 'active' : ''}`}
-            onClick={() => setShowCode('prompts')}
-          >
-            Agent Prompts
-          </button>
-        </div>
-
-        <div className="code-section">
-          {showCode ? (
-            <pre className="code-example">
-              <code>{codeExamples[showCode]}</code>
-            </pre>
-          ) : (
-            <p className="code-prompt">Select a section above to view the implementation</p>
           )}
         </div>
-      </section>
+      </BlogSection>
 
-      <section className="features-section">
-        <h2>Key Features</h2>
-        <div className="features-grid">
-          <div className="feature-card">
+      <BlogSection id="implementation" title="Multi-Agent Implementation">
+        <p>
+          Explore the technical implementation of our multi-agent system,
+          featuring specialized agents for company and stock analysis.
+        </p>
+
+        <div className="button-group">
+          <button
+            className={`tag ${showCode === 'server' ? 'active' : ''}`}
+            onClick={() => setShowCode('server')}
+          >
+            Server
+          </button>
+          <button
+            className={`tag ${showCode === 'agents' ? 'active' : ''}`}
+            onClick={() => setShowCode('agents')}
+          >
+            Agents
+          </button>
+          <button
+            className={`tag ${showCode === 'prompts' ? 'active' : ''}`}
+            onClick={() => setShowCode('prompts')}
+          >
+            Prompts
+          </button>
+        </div>
+
+        <div className="code-block">
+          <pre>{codeExamples[showCode]}</pre>
+        </div>
+      </BlogSection>
+
+      <BlogSection id="features" title="Key Features">
+        <div className="content-grid">
+          <div className="content-card">
             <h3>Company Analysis Agent</h3>
             <ul>
               <li>Business model analysis</li>
@@ -389,7 +405,8 @@ Provide response as JSON:
               <li>Competitive analysis</li>
             </ul>
           </div>
-          <div className="feature-card">
+
+          <div className="content-card">
             <h3>Stock Analysis Agent</h3>
             <ul>
               <li>Financial metrics analysis</li>
@@ -398,7 +415,8 @@ Provide response as JSON:
               <li>Investment insights</li>
             </ul>
           </div>
-          <div className="feature-card">
+
+          <div className="content-card">
             <h3>Implementation Benefits</h3>
             <ul>
               <li>Specialized agent expertise</li>
@@ -408,8 +426,24 @@ Provide response as JSON:
             </ul>
           </div>
         </div>
-      </section>
-    </div>
+      </BlogSection>
+
+      <BlogSection id="next" title="Next Steps">
+        <div className="content-grid">
+          <div className="content-card">
+            <h3>Future Enhancements</h3>
+            <ul>
+              <li>Integration with real-time market data APIs</li>
+              <li>Advanced technical analysis capabilities</li>
+              <li>Portfolio optimization recommendations</li>
+              <li>Sentiment analysis from news and social media</li>
+              <li>Custom alerts and monitoring</li>
+              <li>Machine learning-based predictions</li>
+            </ul>
+          </div>
+        </div>
+      </BlogSection>
+    </BlogTemplate>
   );
 };
 

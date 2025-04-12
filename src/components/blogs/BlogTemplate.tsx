@@ -21,7 +21,7 @@ interface BlogPostProps {
   date: string;
   readTime: string;
   category?: BlogCategory;
-  bannerClassName: string;
+  bannerClassName?: string;
   tableOfContents: Array<{ id: string; title: string }>;
   children: ReactNode;
   className?: string;
@@ -75,7 +75,7 @@ const BlogTemplate: React.FC<BlogPostProps> = ({
   date,
   readTime,
   category = 'Fundamentals',
-  bannerClassName,
+  bannerClassName = '',
   tableOfContents,
   children,
   className = ''

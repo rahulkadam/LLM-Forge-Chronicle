@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../styles/AthleteInsight.css';
+import '../../styles/agents/athlete-insight.css';
 
 interface Player {
   name: string;
