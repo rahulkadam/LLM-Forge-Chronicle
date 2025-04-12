@@ -319,6 +319,59 @@
 }
 
 /* Blog Content */
+
+/* AI Transformation Banner */
+.ai-transformation-banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-transformation-banner::before {
+  content: "MASTER THE WORLD OF LLM";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: rgba(37, 99, 235, 0.08);
+  font-weight: bold;
+  white-space: nowrap;
+  z-index: 1;
+  pointer-events: none;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+/* AI Transformation Banner */
+.blog-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-content::before {
+  content: attr(data-banner-text);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-10deg);
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  white-space: nowrap;
+  z-index: 1;
+  pointer-events: none;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  width: 100%;
+  text-align: center;
+}
+
+
 .blog-content {
   color: var(--color-text);
   line-height: 1.7;
@@ -342,9 +395,9 @@
   margin: 1.5rem 0;
 }
 
-/* Featured Blog Cards */
+/* Card Styling */
 .featured-blog-card {
-  background: var(--color-surface);
+  background: var(--color-background-alt);
   border: 1px solid var(--color-border);
   border-radius: 8px;
   overflow: hidden;
@@ -352,12 +405,14 @@
   transition: all 0.2s ease;
   display: flex;
   flex-direction: row;
+  box-shadow: var(--shadow-sm);
 }
 
 .featured-blog-card:hover {
   transform: translateY(-2px);
   border-color: var(--color-primary);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
+  background: white;
 }
 
 .featured-blog-banner {
@@ -366,8 +421,9 @@
 }
 
 .featured-blog-content {
-  padding: 1rem;
+  padding: 1.25rem;
   flex: 1;
+  background: transparent;
 }
 
 .blog-tag {

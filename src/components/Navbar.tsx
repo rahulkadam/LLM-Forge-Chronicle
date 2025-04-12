@@ -20,13 +20,11 @@ const Navbar: React.FC = () => {
     }
   };
 
-  // Close mobile menu and dropdowns when route changes
   useEffect(() => {
     setIsOpen(false);
     setActiveDropdown(null);
   }, [location]);
 
-  // Close mobile menu and dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
@@ -66,189 +64,118 @@ const Navbar: React.FC = () => {
       </button>
       
       <ul className={`nav-links ${isOpen ? 'show' : ''}`}>
+        {/* Home */}
         <li>
           <Link 
-            to="/getting-started" 
-            className={`nav-link ${isActive('/getting-started')}`}
+            to="/" 
+            className={`nav-link ${isActive('/')}`}
             onClick={() => setIsOpen(false)}
           >
-            Getting Started
+            Home
           </Link>
         </li>
-        
+
+        {/* Learn dropdown - Quick access to learning paths */}
         <li className="dropdown">
           <button 
             className="dropdown-trigger"
-            onClick={(e) => toggleDropdown(e, 'fundamentals')}
-            aria-expanded={activeDropdown === 'fundamentals'}
+            onClick={(e) => toggleDropdown(e, 'learn')}
+            aria-expanded={activeDropdown === 'learn'}
           >
-            LLM Fundamentals <span className="arrow">▾</span>
+            Learn <span className="arrow">▾</span>
           </button>
-          <div className={`dropdown-content ${activeDropdown === 'fundamentals' ? 'show' : ''}`}>
-            <div className="dropdown-header">Core Concepts</div>
+          <div className={`dropdown-content ${activeDropdown === 'learn' ? 'show' : ''}`}>
             <Link 
-              to="/ai-basics" 
-              className={`nav-link ${isActive('/ai-basics')}`}
+              to="/blogs/fundamentals/introduction" 
+              className={`nav-link ${isActive('/blogs/fundamentals/introduction')}`}
               onClick={() => setIsOpen(false)}
             >
-              LLM Introduction
+              Start Here
             </Link>
             <Link 
-              to="/llm-agent" 
-              className={`nav-link ${isActive('/llm-agent')}`}
+              to="/blogs/fundamentals/chatgpt-guide" 
+              className={`nav-link ${isActive('/blogs/fundamentals/chatgpt-guide')}`}
               onClick={() => setIsOpen(false)}
             >
-              LLM Capabilities
+              ChatGPT Guide
             </Link>
             <Link 
-              to="/ai-basics/chatgpt-guide" 
-              className={`nav-link ${isActive('/ai-basics/chatgpt-guide')}`}
+              to="/blogs/prompts/basics" 
+              className={`nav-link ${isActive('/blogs/prompts/basics')}`}
               onClick={() => setIsOpen(false)}
             >
-              ChatGPT & LLM Use Cases
-            </Link>
-            
-            <div className="dropdown-divider"></div>
-            <div className="dropdown-header">Prompt Engineering</div>
-            <Link 
-              to="/prompt-engineering" 
-              className={`nav-link ${isActive('/prompt-engineering')}`}
-              onClick={() => setIsOpen(false)}
-            >
-              Fundamentals
+              Prompt Engineering
             </Link>
             <Link 
-              to="/prompt-engineering/intermediate" 
-              className={`nav-link ${isActive('/prompt-engineering/intermediate')}`}
+              to="/blogs/agents/introduction" 
+              className={`nav-link ${isActive('/blogs/agents/introduction')}`}
               onClick={() => setIsOpen(false)}
             >
-              Intermediate
-            </Link>
-            <Link 
-              to="/prompt-engineering/advanced" 
-              className={`nav-link ${isActive('/prompt-engineering/advanced')}`}
-              onClick={() => setIsOpen(false)}
-            >
-              Advanced
+              LLM Agents
             </Link>
           </div>
         </li>
 
+        {/* Examples dropdown - Quick access to practical examples */}
         <li className="dropdown">
           <button 
             className="dropdown-trigger"
-            onClick={(e) => toggleDropdown(e, 'agents')}
-            aria-expanded={activeDropdown === 'agents'}
+            onClick={(e) => toggleDropdown(e, 'examples')}
+            aria-expanded={activeDropdown === 'examples'}
           >
-            Agents <span className="arrow">▾</span>
+            Examples <span className="arrow">▾</span>
           </button>
-          <div className={`dropdown-content ${activeDropdown === 'agents' ? 'show' : ''}`}>
-            <div className="dropdown-header">Agent Development</div>
+          <div className={`dropdown-content ${activeDropdown === 'examples' ? 'show' : ''}`}>
             <Link 
-              to="/llm-agent/basic" 
-              className={`nav-link ${isActive('/llm-agent/basic')}`}
+              to="/blogs/agents/building-guide" 
+              className={`nav-link ${isActive('/blogs/agents/building-guide')}`}
               onClick={() => setIsOpen(false)}
             >
-              Basic LLM Agent
+              Build an Agent
             </Link>
             <Link 
-              to="/BuildingLLMAgent" 
-              className={`nav-link ${isActive('/BuildingLLMAgent')}`}
+              to="/blogs/advanced/rag-tutorial" 
+              className={`nav-link ${isActive('/blogs/advanced/rag-tutorial')}`}
               onClick={() => setIsOpen(false)}
             >
-              File System Agent Example
+              RAG System
             </Link>
             <Link 
-              to="/agent/marketmind" 
-              className={`nav-link ${isActive('/agent/marketmind')}`}
+              to="/blogs/tools/langchain" 
+              className={`nav-link ${isActive('/blogs/tools/langchain')}`}
               onClick={() => setIsOpen(false)}
             >
-              MarketMind AI
+              LangChain
             </Link>
             <Link 
-              to="/agent/athlete-insight" 
-              className={`nav-link ${isActive('/agent/athlete-insight')}`}
+              to="/blogs/advanced/vector-databases" 
+              className={`nav-link ${isActive('/blogs/advanced/vector-databases')}`}
               onClick={() => setIsOpen(false)}
             >
-              AthleteInsight AI
+              Vector DBs
             </Link>
           </div>
         </li>
-        
-        <li className="dropdown">
-          <button 
-            className="dropdown-trigger"
-            onClick={(e) => toggleDropdown(e, 'blogs')}
-            aria-expanded={activeDropdown === 'blogs'}
-          >
-            Blogs <span className="arrow">▾</span>
-          </button>
-          <div className={`dropdown-content ${activeDropdown === 'blogs' ? 'show' : ''}`}>
-            <div className="dropdown-header">Categories</div>
-            <Link 
-              to="/blogs?tag=Fundamentals" 
-              className={`nav-link ${isActive('/blogs?tag=Fundamentals')}`}
-              onClick={() => setIsOpen(false)}
-            >
-              LLM Fundamentals
-            </Link>
-            <Link 
-              to="/blogs?tag=Advanced%20Techniques" 
-              className={`nav-link ${isActive('/blogs?tag=Advanced%20Techniques')}`}
-              onClick={() => setIsOpen(false)}
-            >
-              Next-Gen AI Techniques
-            </Link>
-            <Link 
-              to="/blogs?tag=LLM%20Models" 
-              className={`nav-link ${isActive('/blogs?tag=LLM%20Models')}`}
-              onClick={() => setIsOpen(false)}
-            >
-              LLM Models
-            </Link>
-            
-            <div className="dropdown-divider"></div>
-            <div className="dropdown-header">Featured</div>
-            <Link 
-              to="/blogs/rag-tutorial" 
-              className={`nav-link ${isActive('/blogs/rag-tutorial')}`}
-              onClick={() => setIsOpen(false)}
-            >
-              RAG Tutorial
-            </Link>
-            <Link 
-              to="/blogs/model-context-server" 
-              className={`nav-link ${isActive('/blogs/model-context-server')}`}
-              onClick={() => setIsOpen(false)}
-            >
-              MCP Server Guide
-            </Link>
-            <Link 
-              to="/blogs/vector-database-guide" 
-              className={`nav-link ${isActive('/blogs/vector-database-guide')}`}
-              onClick={() => setIsOpen(false)}
-            >
-              Vector DB Guide
-            </Link>
-            
-            <div className="dropdown-divider"></div>
-            <Link 
-              to="/blogs" 
-              className={`nav-link ${isActive('/blogs')}`}
-              onClick={() => setIsOpen(false)}
-            >
-              All Blogs
-            </Link>
-          </div>
-        </li>
-        
+
+        {/* Resources */}
         <li>
           <Link 
-            to="/about" 
-            className={`nav-link ${isActive('/about')}`}
+            to="/blogs/tools/resources" 
+            className={`nav-link ${isActive('/blogs/tools/resources')}`}
             onClick={() => setIsOpen(false)}
           >
-            About
+            Resources
+          </Link>
+        </li>
+
+        {/* Community */}
+        <li>
+          <Link 
+            to="/community" 
+            className={`nav-link ${isActive('/community')}`}
+            onClick={() => setIsOpen(false)}
+          >
+            Community
           </Link>
         </li>
       </ul>

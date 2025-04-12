@@ -1,0 +1,168 @@
+/* Positioning System */
+
+/* Base Container */
+.content-container {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Absolute Positioned Elements */
+.absolute-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Transform Centering Utilities */
+.translate-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.translate-x-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.translate-y-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Transform Origin Utilities */
+.origin-center { transform-origin: center center; }
+.origin-top { transform-origin: top center; }
+.origin-bottom { transform-origin: bottom center; }
+.origin-left { transform-origin: center left; }
+.origin-right { transform-origin: center right; }
+
+/* Transform Scale Utilities */
+.scale-hover {
+  transition: transform 0.2s ease;
+}
+
+.scale-hover:hover {
+  transform: scale(1.05);
+}
+
+.scale-active {
+  transition: transform 0.1s ease;
+}
+
+.scale-active:active {
+  transform: scale(0.95);
+}
+
+/* Transform Rotate Utilities */
+.rotate-45 { transform: rotate(45deg); }
+.rotate-90 { transform: rotate(90deg); }
+.rotate-180 { transform: rotate(180deg); }
+
+/* Combined Transform Effects */
+.hover-float {
+  transition: transform 0.2s ease;
+}
+
+.hover-float:hover {
+  transform: translateY(-5px);
+}
+
+.card-transform {
+  transition: all 0.3s ease;
+}
+
+.card-transform:hover {
+  transform: translate(-50%, -52%) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Transform Groups */
+.transform-group {
+  position: relative;
+  perspective: 1000px;
+}
+
+.transform-group-item {
+  transition: transform 0.3s ease;
+}
+
+.transform-group:hover .transform-group-item {
+  transform: translate(-50%, -50%) rotateY(10deg);
+}
+
+/* 3D Transform Utilities */
+.transform-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.rotate-3d-hover {
+  transition: transform 0.3s ease;
+}
+
+.rotate-3d-hover:hover {
+  transform: translate(-50%, -50%) rotate3d(1, 1, 0, 15deg);
+}
+
+/* Animation Keyframes */
+@keyframes float {
+  0% { transform: translate(-50%, -50%) translateY(0px); }
+  50% { transform: translate(-50%, -50%) translateY(-10px); }
+  100% { transform: translate(-50%, -50%) translateY(0px); }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Performance Optimization */
+.hardware-accelerated {
+  transform: translate3d(-50%, -50%, 0);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+/* Pattern Overlays */
+.pattern-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Content Positioning */
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .content-container {
+    padding: 1rem;
+  }
+
+  .transform-group:hover .transform-group-item {
+    transform: translate(-50%, -50%) rotateY(5deg);
+  }
+
+  .scale-hover:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .card-transform:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+}
