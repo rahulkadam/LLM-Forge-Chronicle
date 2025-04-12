@@ -33,7 +33,9 @@ const BlogTemplate: React.FC<BlogPostProps> = ({
   const location = useLocation();
   const allPosts = useMemo(() => getAllBlogPosts(), []);
   const featuredPosts = useMemo(() => getFeaturedBlogPosts(), []);
-  const [expandedCategories, setExpandedCategories] = useState<BlogCategory[]>([category]);
+  
+  // Initialize with all categories expanded - create a mutable copy
+  const [expandedCategories, setExpandedCategories] = useState<BlogCategory[]>([...BLOG_CATEGORIES]);
   const [searchTerm, setSearchTerm] = useState('');
   
   const postsByCategory = useMemo(() => 
