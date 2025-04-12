@@ -98,7 +98,7 @@ const Navbar: React.FC = () => {
             <div className="dropdown-divider"></div>
             <div className="dropdown-header">Prompt Engineering:</div>
             <Link to="/prompt-engineering" className={`nav-link ${isActive('/prompt-engineering')}`}>
-              Basics
+              Fundamentals
             </Link>
             <Link to="/prompt-engineering/intermediate" className={`nav-link ${isActive('/prompt-engineering/intermediate')}`}>
               Intermediate
