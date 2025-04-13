@@ -148,7 +148,7 @@ const AIBasics: React.FC = () => {
           <a href="/prompt-engineering" className="resource-link">
             Learn Effective Prompt Engineering →
           </a>
-          <a href="/blogs/llm-agent-guide/BuildingLLMAgent" className="resource-link">
+          <a href="/blogs/agents/llm-agent-guide/BuildingLLMAgent" className="resource-link">
             Building Your First LLM Application →
           </a>
         </div>

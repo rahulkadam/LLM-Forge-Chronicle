@@ -1,8 +1,8 @@
 import React from 'react';
-import BlogTemplate from '../../../components/blogs/BlogTemplate';
-import { BlogSection } from '../../../components/blogs/BlogComponents';
-import type { BlogCategory } from '../../../data/blogData';
-import '../../../styles/blogs/blog-base-style.css';
+import BlogTemplate from '../../../../components/blogs/BlogTemplate';
+import { BlogSection } from '../../../../components/blogs/BlogComponents';
+import type { BlogCategory } from '../../../../data/blogData';
+import '../../../../styles/blogs/blog-base-style.css';
 
 
 const LLMTechnical: React.FC = () => {

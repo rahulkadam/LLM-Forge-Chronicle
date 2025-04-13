@@ -1,8 +1,8 @@
 import React from 'react';
 
-import "../../../styles/blogs/blog-base-style.css";
-import BlogTemplate from '../../../components/blogs/BlogTemplate';
-import useBlogBehavior from '../../../hooks/useBlogBehavior';
+import "../../../../styles/blogs/blog-base-style.css";
+import BlogTemplate from '../../../../components/blogs/BlogTemplate';
+import useBlogBehavior from '../../../../hooks/useBlogBehavior';
 import './cursor-custom-workflows.css';
 
 const CursorCustomWorkflows: React.FC = () => {

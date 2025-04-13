@@ -9,10 +9,10 @@ import LLMIntroduction from './pages/blogs/llm-fundamentals/introduction';
 import ChatGPTBlogGuide from './pages/blogs/llm-fundamentals/chatgpt-guide';
 import LLMCapabilities from './pages/blogs/llm-fundamentals/capabilities';
 import DeveloperQuickStart from './pages/blogs/llm-fundamentals/developer-quick-start';
-import LLMGettingStartedGuide from './pages/blogs/llm-getting-started-guide/llm-getting-started-guide';
-import LLMTechnologyGuide from "./pages/blogs/llm-terms-guide/llm-technology-guide";
-import OpenAIApiGuide from './pages/blogs/openai-api-guide/openai-api-guide';
-import OpenRouterPlatformGuide from "./pages/blogs/openrouter-platform-guide/openrouter-platform-guide";
+import LLMGettingStartedGuide from './pages/blogs/llm-fundamentals/llm-getting-started-guide/llm-getting-started-guide';
+import LLMTechnologyGuide from "./pages/blogs/llm-fundamentals/llm-terms-guide/llm-technology-guide";
+import OpenAIApiGuide from './pages/blogs/advance/openai-api-guide/openai-api-guide';
+import OpenRouterPlatformGuide from "./pages/blogs/llm-fundamentals/openrouter-platform-guide/openrouter-platform-guide";
 
 // LLM Models
 import ChatGPTModelGuide from './pages/blogs/llm-models/chatgpt';
@@ -23,7 +23,7 @@ import DeepSeekModelGuide from './pages/blogs/llm-models/deepseek';
 import MistralModelGuide from './pages/blogs/llm-models/mistral';
 import LlamaModelGuide from './pages/blogs/llm-models/llama';
 import ManusModelGuide from './pages/blogs/llm-models/manus';
-import LLMModelComparison from './pages/blogs/llm-model-comparison/llm-model-comparison';
+import LLMModelComparison from './pages/blogs/llm-models/llm-model-comparison/llm-model-comparison';
 
 // Prompt Engineering
 import PromptEngineeringBasics from './pages/blogs/prompt-engineering/basics';
@@ -32,10 +32,10 @@ import PromptEngineeringAdvanced from './pages/blogs/prompt-engineering/advanced
 import DeveloperPromptGuide from './pages/blogs/prompt-engineering/developer-prompts';
 
 // Agents
-import LLMAgent from './pages/blogs/llm-agent-guide/LLMAgent';
-import BuildingLLMAgent from './pages/blogs/llm-agent-guide/BuildingLLMAgent';
+import LLMAgent from './pages/blogs/agents/llm-agent-guide/LLMAgent';
+import BuildingLLMAgent from './pages/blogs/agents/llm-agent-guide/BuildingLLMAgent';
 import BasicLLMAgent from './pages/blogs/llm-fundamentals/BasicLLMAgent';
-import LLMAgentGuide from './pages/blogs/llm-agent-guide/llm-agent-guide';
+import LLMAgentGuide from './pages/blogs/agents/llm-agent-guide/llm-agent-guide';
 import BookBuddy from './pages/blogs/agents/BookBuddy';
 import AthleteInsightAI from './pages/blogs/agents/AthleteInsightAI';
 import MarketMindAI from './pages/blogs/agents/MarketMindAI';
@@ -47,19 +47,19 @@ import EnterpriseIntegrations from './pages/blogs/ai-driven-it/enterprise-integr
 import AIItTransformation from './pages/blogs/ai-driven-it/ai-transformation';
 
 // Advanced Techniques
-import RAGTutorial from './pages/blogs/rag-tutorial/rag-tutorial';
-import VectorDatabaseGuide from './pages/blogs/vector-database-guide/vector-llm-guide';
-import ModelContextServer from './pages/blogs/model-context-server/model-context-server';
+import RAGTutorial from './pages/blogs/advance/rag-tutorial/rag-tutorial';
+import VectorDatabaseGuide from './pages/blogs/advance/vector-database-guide/vector-llm-guide';
+import ModelContextServer from './pages/blogs/advance/model-context-server/model-context-server';
 
 // Tools & Framework
 import AITools from './pages/blogs/ai-tools/AITools';
 import Resources from './pages/blogs/ai-tools/Resources';
-import LangchainIntroduction from './pages/blogs/langchain-introduction/langchain-introduction';
-import CursorCustomWorkflows from './pages/blogs/cursor-custom-workflows/cursor-custom-workflows';
+import LangchainIntroduction from './pages/blogs/advance/langchain-introduction/langchain-introduction';
+import CursorCustomWorkflows from './pages/blogs/advance/cursor-custom-workflows/cursor-custom-workflows';
 
 // Other Pages
 import About from './pages/blogs/about';
-import Community from './pages/blogs/community';
+import Community from './pages/blogs/roadmap/community';
 
 import './App.css';
 import HomePage from "./pages/HomePage";
