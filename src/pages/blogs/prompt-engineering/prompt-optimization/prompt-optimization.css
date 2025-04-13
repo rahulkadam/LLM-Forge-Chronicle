@@ -1,0 +1,146 @@
+.resource-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.resource-link {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #2a2a2a;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.resource-link:hover {
+  background-color: #e5e5e5;
+  transform: translateX(5px);
+}
+
+/* Cost metrics styling */
+.cost-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.metric-card {
+  background-color: #f8f9fa;
+  padding: 1.2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4a90e2;
+}
+
+/* Optimization example styling */
+.optimization-example {
+  background-color: #f1f8ff;
+  border: 1px solid #c8e1ff;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+}
+
+.optimization-example h4 {
+  margin-top: 0;
+  color: #0366d6;
+}
+
+/* Token visualization styling */
+.token-viz {
+  background-color: #e9ecef;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+  display: inline-block;
+  font-family: 'Fira Code', monospace;
+}
+
+/* Best practices list styling */
+.best-practices-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.best-practices-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.best-practices-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #4a90e2;
+}
+
+/* Comparison table styling */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 0.8rem;
+  border: 1px solid #dee2e6;
+  text-align: left;
+}
+
+.comparison-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+/* Warning box styling */
+.warning-box {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 6px;
+}
+
+/* Cost savings indicator */
+.savings-indicator {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  background-color: #28a745;
+  color: white;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .resource-links {
+    gap: 0.8rem;
+  }
+
+  .resource-link {
+    padding: 0.6rem 1rem;
+  }
+
+  .cost-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-table {
+    display: block;
+    overflow-x: auto;
+  }
+}

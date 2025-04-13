@@ -1,0 +1,127 @@
+/* Styles for LLM Use Cases Blog */
+
+.use-case-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.use-case-card {
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.use-case-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.use-case-card h4 {
+  margin-top: 0;
+  color: #2a2a2a;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.use-case-card ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.use-case-card li {
+  margin: 0.5rem 0;
+  color: #4a4a4a;
+}
+
+.best-practices-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.best-practices-list h4 {
+  margin: 0;
+  color: #2a2a2a;
+  font-size: 1.1rem;
+}
+
+.best-practices-list ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.best-practices-list li {
+  margin: 0.25rem 0;
+  color: #4a4a4a;
+}
+
+.resource-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.resource-link {
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #2a2a2a;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+.resource-link:hover {
+  background-color: #e9ecef;
+  transform: translateX(5px);
+}
+
+/* Code example styling */
+.code-example {
+  margin: 1rem 0;
+  border-radius: 8px;
+}
+
+.code-example pre {
+  margin: 0;
+  padding: 1rem;
+  background-color: #f6f8fa;
+  border-radius: 6px;
+}
+
+/* InfoBox customization */
+.info-box {
+  margin: 1.5rem 0;
+}
+
+.info-box ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.info-box li {
+  margin: 0.25rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .use-case-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .use-case-card {
+    padding: 1rem;
+  }
+
+  .resource-links {
+    margin: 1rem 0;
+  }
+
+  .best-practices-list {
+    gap: 1rem;
+  }
+}

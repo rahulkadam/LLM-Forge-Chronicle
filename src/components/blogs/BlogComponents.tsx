@@ -66,7 +66,7 @@ export const Card = ({ title, children, className = 'use-case' }: CardProps) => 
 
 // Info Box Component
 interface InfoBoxProps {
-  type: 'tip' | 'warning';
+  type: 'tip' | 'warning' | 'info' | 'note' | 'error' | 'success' | 'question' | 'example';
   title?: string;
   children: ReactNode;
 }

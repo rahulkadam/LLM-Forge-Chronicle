@@ -5,6 +5,18 @@ import usePageTracking from './hooks/usePageTracking';
 import Navbar from './components/Navbar';
 
 // Fundamentals
+import PromptOptimization from './pages/blogs/prompt-engineering/prompt-optimization/prompt-optimization';
+import PromptDebugging from './pages/blogs/prompt-engineering/prompt-debugging/prompt-debugging';
+import PromptTemplates from './pages/blogs/prompt-engineering/prompt-templates/prompt-templates';
+import RoleSystemInstructions from './pages/blogs/prompt-engineering/role-system-instructions/role-system-instructions';
+import PromptPatterns from './pages/blogs/prompt-engineering/patterns/prompt-patterns';
+import PromptEngineeringIntro from './pages/blogs/prompt-engineering/introduction/prompt-engineering-intro';
+import KeyConcepts from './pages/blogs/llm-fundamentals/key-concepts/key-concepts';
+import ModelComparison from './pages/blogs/llm-fundamentals/model-comparison/model-comparison';
+import LLMvsTraditional from './pages/blogs/llm-fundamentals/llm-vs-traditional/llm-vs-traditional';
+import LLMUseCases from './pages/blogs/llm-fundamentals/llm-use-cases/llm-use-cases';
+import LLMTrainingApproaches from './pages/blogs/llm-fundamentals/training-approaches/training-approaches';
+import HowLLMsWork from './pages/blogs/llm-fundamentals/how-llms-work/how-llms-work';
 import LLMIntroduction from './pages/blogs/llm-fundamentals/introduction';
 import ChatGPTBlogGuide from './pages/blogs/llm-fundamentals/chatgpt-guide';
 import LLMCapabilities from './pages/blogs/llm-fundamentals/capabilities';
@@ -95,6 +107,12 @@ const AppContent: React.FC = () => {
           <Route path="/blogs/fundamentals/developer-start" element={<DeveloperQuickStart />} />
           <Route path="/blogs/fundamentals/chatgpt-guide" element={<ChatGPTBlogGuide />} />
           <Route path="/blogs/fundamentals/capabilities" element={<LLMCapabilities />} />
+          <Route path="/blogs/fundamentals/how-llms-work" element={<HowLLMsWork />} />
+          <Route path="/blogs/fundamentals/training-approaches" element={<LLMTrainingApproaches />} />
+          <Route path="/blogs/fundamentals/use-cases" element={<LLMUseCases />} />
+          <Route path="/blogs/fundamentals/vs-traditional" element={<LLMvsTraditional />} />
+          <Route path="/blogs/fundamentals/model-comparison" element={<ModelComparison />} />
+          <Route path="/blogs/fundamentals/key-concepts" element={<KeyConcepts />} />
 
           {/* LLM Models */}
           <Route path="/blogs/models" element={<ChatGPTModelGuide />} />
@@ -114,6 +132,12 @@ const AppContent: React.FC = () => {
           <Route path="/blogs/prompts/intermediate" element={<PromptEngineeringIntermediate />} />
           <Route path="/blogs/prompts/advanced" element={<PromptEngineeringAdvanced />} />
           <Route path="/blogs/prompts/developer-guide" element={<DeveloperPromptGuide />} />
+          <Route path="/blogs/prompts/introduction" element={<PromptEngineeringIntro />} />
+          <Route path="/blogs/prompts/patterns" element={<PromptPatterns />} />
+          <Route path="/blogs/prompts/role-system-instructions" element={<RoleSystemInstructions />} />
+          <Route path="/blogs/prompts/templates" element={<PromptTemplates />} />
+          <Route path="/blogs/prompts/debugging" element={<PromptDebugging />} />
+          <Route path="/blogs/prompts/optimization" element={<PromptOptimization />} />
 
           {/* Agents */}
           <Route path="/blogs/agents" element={<LLMAgent />} />

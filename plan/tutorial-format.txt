@@ -1,0 +1,90 @@
+✅ ChronoPrompt Blog Format (Reusable Template)
+🏷️ Meta (used internally or for SEO)
+Title: Clear & precise
+
+Slug: /category/title (e.g., /prompt-engineering/few-shot-prompting)
+
+Tags: ["prompt engineering", "few-shot", "LLM"]
+
+Author: Optional
+
+Published Date / Last Updated
+
+Reading Time: ~5 mins
+
+🧠 1. Introduction
+A brief hook (1–2 sentences)
+
+What this blog will cover
+
+Why it matters / use case
+
+📘 Example:
+Few-shot prompting lets you guide LLMs better using examples. This blog walks through how, when, and why to use it — with real examples and prompt patterns.
+
+🔍 2. Background / Concepts (if needed)
+Define any key terms (e.g., “embedding”, “token window”)
+
+Contextual history if relevant (e.g., “Introduced in GPT-3…”)
+
+⚙️ 3. Core Content / Walkthrough
+Break this into reusable blocks, depending on type:
+
+🔸 For Conceptual Blogs:
+Definition
+
+Benefits
+
+Challenges / Pitfalls
+
+Examples / Comparisons
+
+🔹 For Tutorials / Technical How-Tos:
+Prerequisites
+
+Step-by-step (with code blocks / visuals)
+
+Sample outputs
+
+Links to working code / GitHub if applicable
+
+🔹 For Comparisons:
+Comparison table
+
+Use case mapping
+
+Pros/Cons
+
+💡 4. Real-World Use Cases / Examples
+How it’s used in production
+
+Examples from tools, open-source, industry
+
+(Optional) Demo video / GIF
+
+🔁 5. Common Mistakes / Gotchas (Optional)
+What to avoid
+
+What most people do wrong
+
+📚 6. Further Reading / Related Blogs
+Link to related topics on ChronoPrompt
+
+External trusted sources if relevant (papers, GitHub, docs)
+
+🧾 7. Summary / Takeaways
+Wrap it up with a TL;DR-style bullet list
+
+When to use it
+
+Final thoughts
+
+💬 8. Call to Action (CTA)
+"Try it with our open source repo"
+
+"Read next: [Link to related blog]"
+
+"Subscribe to updates"
+
+"Comment your favorite technique below"
+

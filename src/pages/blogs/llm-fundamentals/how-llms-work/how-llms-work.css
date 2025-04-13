@@ -1,0 +1,51 @@
+/* Specific styles for the How LLMs Work blog */
+
+.resource-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.resource-link {
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #2a2a2a;
+  transition: all 0.3s ease;
+}
+
+.resource-link:hover {
+  background-color: #f5f5f5;
+  transform: translateX(5px);
+}
+
+/* Style for code examples */
+pre {
+  background-color: #f6f8fa;
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+/* Style for lists in InfoBoxes */
+.info-box ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.info-box li {
+  margin: 0.25rem 0;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .resource-links {
+    gap: 0.5rem;
+  }
+  
+  .resource-link {
+    padding: 0.75rem;
+  }
+}

@@ -9,7 +9,127 @@ export interface BlogPost {
   link: string;
 }
 
-export const allBlogPosts: BlogPost[] = [
+export const allBlogPosts: BlogPost[] = [  {
+    id: 'prompt-optimization',
+    title: 'Prompt Compression and Cost Optimization: A Developer\'s Guide',
+    excerpt: 'Learn techniques for optimizing prompt length, reducing token usage, and minimizing costs while maintaining effectiveness in LLM applications.',
+    imageClass: 'prompt-optimization-image',
+    tag: 'Prompt Engineering',
+    readingTime: '25 min read',
+    publishDate: 'April 14, 2025',
+    link: '/blogs/prompts/optimization'
+  },
+  {
+    id: 'prompt-debugging',
+    title: 'Prompt Debugging and Iteration: A Systematic Approach',
+    excerpt: 'Learn systematic approaches to debugging prompts, optimizing performance, and iteratively improving your LLM interactions.',
+    imageClass: 'prompt-debugging-image',
+    tag: 'Prompt Engineering',
+    readingTime: '25 min read',
+    publishDate: 'April 14, 2025',
+    link: '/blogs/prompts/debugging'
+  },
+  {
+    id: 'prompt-templates',
+    title: 'Prompt Templates for Common Tasks: A Practical Guide',
+    excerpt: 'A comprehensive collection of reusable prompt templates for development, content creation, and analysis tasks with customization guidelines.',
+    imageClass: 'prompt-templates-image',
+    tag: 'Prompt Engineering',
+    readingTime: '20 min read',
+    publishDate: 'April 14, 2025',
+    link: '/blogs/prompts/templates'
+  },
+  {
+    id: 'role-system-instructions',
+    title: 'Role Prompting and System Instructions: Mastering LLM Behavior',
+    excerpt: 'Learn how to effectively use role prompting and system instructions to control and optimize LLM responses for various applications.',
+    imageClass: 'role-instructions-image',
+    tag: 'Prompt Engineering',
+    readingTime: '20 min read',
+    publishDate: 'April 14, 2025',
+    link: '/blogs/prompts/role-system-instructions'
+  },
+  {
+    id: 'prompt-patterns',
+    title: 'Advanced Prompt Patterns: Few-shot, Chain-of-Thought, ReAct, and More',
+    excerpt: 'Master advanced prompt engineering patterns including Few-shot learning, Chain-of-Thought reasoning, and ReAct pattern with practical examples.',
+    imageClass: 'prompt-patterns-image',
+    tag: 'Prompt Engineering',
+    readingTime: '20 min read',
+    publishDate: 'April 14, 2025',
+    link: '/blogs/prompts/patterns'
+  },
+  {
+    id: 'prompt-engineering-intro',
+    title: 'Introduction to Prompt Engineering: Mastering LLM Communication',
+    excerpt: 'Learn the fundamentals of prompt engineering, from basic concepts to best practices, with practical examples and real-world applications.',
+    imageClass: 'prompt-engineering-image',
+    tag: 'Prompt Engineering',
+    readingTime: '15 min read',
+    publishDate: 'April 14, 2025',
+    link: '/blogs/prompts/introduction'
+  },
+  {
+    id: 'key-concepts',
+    title: 'Key LLM Concepts: Zero-shot, Few-shot, and Chain-of-Thought',
+    excerpt: 'Master essential LLM concepts including Zero-shot learning, Few-shot learning, and Chain-of-Thought prompting with practical examples.',
+    imageClass: 'key-concepts-image',
+    tag: 'Fundamentals',
+    readingTime: '15 min read',
+    publishDate: 'April 14, 2025',
+    link: '/blogs/fundamentals/key-concepts'
+  },
+  {
+    id: 'model-comparison',
+    title: 'Open Source vs Closed Source LLM Models: A Comprehensive Comparison',
+    excerpt: 'Deep dive into the differences between open and closed source LLM models, their advantages, trade-offs, and ideal use cases.',
+    imageClass: 'model-comparison-image',
+    tag: 'Fundamentals',
+    readingTime: '15 min read',
+    publishDate: 'April 14, 2025',
+    link: '/blogs/fundamentals/model-comparison'
+  },
+  {
+    id: 'llm-vs-traditional',
+    title: 'LLMs vs Traditional NLP Models: A Comprehensive Comparison',
+    excerpt: 'Deep dive into the differences between LLMs and traditional NLP approaches, their strengths, weaknesses, and ideal use cases.',
+    imageClass: 'llm-comparison-image',
+    tag: 'Fundamentals',
+    readingTime: '15 min read',
+    publishDate: 'April 14, 2025',
+    link: '/blogs/fundamentals/vs-traditional'
+  },
+  {
+    id: 'llm-use-cases',
+    title: 'Common Use Cases of LLMs: A Practical Guide',
+    excerpt: 'Comprehensive guide to popular LLM applications across different domains, from content creation to research and analysis.',
+    imageClass: 'llm-use-cases-image',
+    tag: 'Fundamentals',
+    readingTime: '15 min read',
+    publishDate: 'April 14, 2025',
+    link: '/blogs/fundamentals/use-cases'
+  },
+  {
+    id: 'llm-training-approaches',
+    title: 'LLM Training Approaches: Pretraining, Fine-tuning, and Instruction Tuning',
+    excerpt: 'Deep dive into different approaches to training LLMs, their purposes, and when to use each method.',
+    imageClass: 'llm-training-image',
+    tag: 'Fundamentals',
+    readingTime: '12 min read',
+    publishDate: 'April 14, 2025',
+    link: '/blogs/fundamentals/training-approaches'
+  },
+  {
+    id: 'how-llms-work',
+    title: 'How LLMs Work: Understanding the Core Mechanics',
+    excerpt: 'Deep dive into tokenization, attention mechanisms, and transformer architecture that power Large Language Models.',
+    imageClass: 'llm-mechanics-image',
+    tag: 'Fundamentals',
+    readingTime: '15 min read',
+    publishDate: 'April 14, 2025',
+    link: '/blogs/fundamentals/how-llms-work'
+  },
+
   // Fundamentals
   {
     id: 'llm-introduction',
@@ -18,7 +138,7 @@ export const allBlogPosts: BlogPost[] = [
     imageClass: 'ai-basics-image',
     tag: 'Fundamentals',
     readingTime: '8 min read',
-    publishDate: 'April 10, 2025',
+    publishDate: 'April 15, 2025',
     link: '/blogs/fundamentals/introduction'
   },
   {
@@ -48,7 +168,7 @@ export const allBlogPosts: BlogPost[] = [
     imageClass: 'llm-terminology-image',
     tag: 'Fundamentals',
     readingTime: '8 min read',
-    publishDate: 'March 21, 2025',
+    publishDate: 'April 14, 2025',
     link: '/blogs/fundamentals/terminology'
   },
   {

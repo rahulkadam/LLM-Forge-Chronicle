@@ -1,0 +1,175 @@
+/* Styles for LLM vs Traditional NLP Models Blog */
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.model-card {
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.model-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.model-card h4 {
+  margin-top: 0;
+  color: #2a2a2a;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.model-card ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.model-card li {
+  margin: 0.5rem 0;
+  color: #4a4a4a;
+}
+
+.capability-table {
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.capability-table table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.capability-table th,
+.capability-table td {
+  padding: 1rem;
+  text-align: left;
+  border: 1px solid #e0e0e0;
+}
+
+.capability-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.capability-table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.capability-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.capability-list h4 {
+  margin: 0;
+  color: #2a2a2a;
+  font-size: 1.1rem;
+}
+
+.capability-list ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.capability-list li {
+  margin: 0.25rem 0;
+  color: #4a4a4a;
+}
+
+.use-case-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.use-case-card {
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+}
+
+.challenges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.challenge-card {
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+}
+
+.trade-offs-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.trade-offs-list h4 {
+  margin: 0;
+  color: #2a2a2a;
+  font-size: 1.1rem;
+}
+
+.trade-offs-list ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.resource-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.resource-link {
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #2a2a2a;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+.resource-link:hover {
+  background-color: #e9ecef;
+  transform: translateX(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .comparison-grid,
+  .use-case-grid,
+  .challenges-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .capability-table {
+    margin: 1rem -1rem;
+  }
+
+  .model-card,
+  .use-case-card,
+  .challenge-card {
+    padding: 1rem;
+  }
+
+  .resource-links {
+    margin: 1rem 0;
+  }
+}
