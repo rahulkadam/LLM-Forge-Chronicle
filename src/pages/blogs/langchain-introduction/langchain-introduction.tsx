@@ -2,9 +2,7 @@ import React from 'react';
 
 import "../../../styles/blogs/blog-base-style.css";
 import BlogTemplate from '../../../components/blogs/BlogTemplate';
-import { BlogSection, CodeExample } from '../../../components/blogs/BlogComponents';
 import useBlogBehavior from '../../../hooks/useBlogBehavior';
-import '../mobile-viewport-fix.css';
 import './langchain-introduction.css';
 
 const LangchainIntroduction: React.FC = () => {

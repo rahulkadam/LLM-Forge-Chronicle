@@ -1,11 +1,11 @@
-/* Blogs Page Layout */
+/* Main Layout */
 .blogs-page {
   max-width: 1400px;
   margin: 0 auto;
   padding: 2rem;
 }
 
-/* Banner styles */
+/* Header Banner */
 .blogs-header {
   position: relative;
   padding: 4rem 2rem;
@@ -102,8 +102,8 @@
   justify-content: center;
 }
 
-/* Category-specific backgrounds */
-.blog-card-image.fundamentals { background: #d36436; }
+/* Blog Card Category Themes */
+.blog-card-image.fundamentals { background: #2563eb; }
 .blog-card-image.prompt-engineering { background: #7c3aed; }
 .blog-card-image.llm-models { background: #475569; }
 .blog-card-image.advanced-techniques { background: #0284c7; }
@@ -111,7 +111,6 @@
 .blog-card-image.tools-frameworks { background: #7c3aed; }
 .blog-card-image.agents { background: #ca8a04; }
 
-/* Banner text effect */
 .blog-card-image span {
   font-size: 1.2rem;
   font-weight: 800;
@@ -137,16 +136,9 @@
   font-size: 0.875rem;
   font-weight: 500;
   margin-bottom: 1rem;
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
 }
-
-/* Category-specific tag colors */
-.blog-tag[data-category="fundamentals"] { background: rgba(37, 99, 235, 0.1); color: #2563eb; }
-.blog-tag[data-category="prompt-engineering"] { background: rgba(124, 58, 237, 0.1); color: #7c3aed; }
-.blog-tag[data-category="llm-models"] { background: rgba(71, 85, 105, 0.1); color: #475569; }
-.blog-tag[data-category="advanced-techniques"] { background: rgba(2, 132, 199, 0.1); color: #0284c7; }
-.blog-tag[data-category="ai-driven-it"] { background: rgba(13, 148, 136, 0.1); color: #0d9488; }
-.blog-tag[data-category="tools-frameworks"] { background: rgba(124, 58, 237, 0.1); color: #7c3aed; }
-.blog-tag[data-category="agents"] { background: rgba(202, 138, 4, 0.1); color: #ca8a04; }
 
 .blog-title {
   font-size: 1.5rem;
@@ -285,11 +277,11 @@
   }
 
   .blogs-header {
-    display: none; /* Hide header on mobile */
+    display: none;
   }
 
   .featured-section {
-    margin-top: 1rem; /* Adjust top margin since header is hidden */
+    margin-top: 1rem;
   }
 
   .featured-grid,

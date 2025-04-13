@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import BlogTemplate from '../../../components/blogs/BlogTemplate';
 import { BlogSection, Card } from '../../../components/blogs/BlogComponents';
 import useBlogBehavior from '../../../hooks/useBlogBehavior';
-import '../mobile-viewport-fix.css';
 import './llm-model-comparison.css';
 
 const LLMModelComparison: React.FC = () => {
