@@ -12,7 +12,7 @@
   margin: -2rem -2rem 3rem;
   overflow: hidden;
   color: white;
-  background: #1d326e;
+  background: linear-gradient(135deg,#1a365d,#2a4365);
   border-radius: 12px;
 }
 
@@ -40,7 +40,7 @@
 
 /* Featured Section */
 .featured-section {
-  margin: 3rem 0;
+  margin: 4rem 0;
 }
 
 .featured-section h2 {
@@ -52,6 +52,26 @@
 }
 
 .featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Learning Paths Section */
+.learning-paths-section {
+  margin: 4rem 0;
+}
+
+.learning-paths-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #1e293b;
+}
+
+.learning-paths-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
@@ -94,7 +114,7 @@
 }
 
 .blog-card-image {
-  height: 200px;
+  height: 150px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -102,14 +122,37 @@
   justify-content: center;
 }
 
-/* Blog Card Category Themes */
-.blog-card-image.fundamentals { background: #2563eb; }
-.blog-card-image.prompt-engineering { background: #7c3aed; }
-.blog-card-image.llm-models { background: #475569; }
-.blog-card-image.advanced-techniques { background: #0284c7; }
-.blog-card-image.ai-driven-it { background: #0d9488; }
-.blog-card-image.tools-frameworks { background: #7c3aed; }
-.blog-card-image.agents { background: #ca8a04; }
+/* Card Category Themes */
+.blog-card-image.fundamentals,
+.learning-path-card.fundamentals .learning-path-header { 
+  background: linear-gradient(135deg,#00c6ff,#0072ff);
+}
+
+.blog-card-image.prompt-engineering,
+.learning-path-card.prompt-engineering .learning-path-header { 
+  background: linear-gradient(135deg,#7952b3,#5c3b97);
+}
+
+.blog-card-image.llm-models { 
+  background: linear-gradient(135deg,#4c51bf,#434190);
+}
+
+.blog-card-image.advanced-techniques { 
+  background: #0284c7; 
+}
+
+.blog-card-image.ai-driven-it { 
+  background: linear-gradient(135deg,#ff6b6b,#ee5253);
+}
+
+.blog-card-image.tools-frameworks { 
+  background: #7c3aed; 
+}
+
+.blog-card-image.agents,
+.learning-path-card.agents .learning-path-header { 
+  background: linear-gradient(135deg,#4c51bf,#434190);
+}
 
 .blog-card-image span {
   font-size: 1.2rem;
@@ -121,7 +164,58 @@
   padding: 0 1rem;
 }
 
-.blog-card-content {
+/* Learning Path Card */
+.learning-path-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.learning-path-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.learning-path-header {
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  color: white;
+  text-align: center;
+  background: var(--header-bg, #2563eb);
+}
+
+.learning-path-header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.learning-path-icon {
+  font-size: 2.5rem;
+}
+
+.learning-path-header h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.learning-path-content {
   padding: 1.5rem;
   flex: 1;
   display: flex;
@@ -129,49 +223,38 @@
   background: white;
 }
 
-.blog-tag {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  background: rgba(37, 99, 235, 0.1);
-  color: #2563eb;
-}
-
-.blog-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #1e293b;
-  line-height: 1.3;
-}
-
-.blog-excerpt {
+.learning-path-description {
   color: #64748b;
   margin-bottom: 1.5rem;
   line-height: 1.6;
   flex-grow: 1;
 }
 
-.blog-footer {
+.learning-path-topics {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: auto;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.topic-tag {
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.learning-path-footer {
   padding-top: 1rem;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.blog-meta {
   display: flex;
-  gap: 1rem;
-  color: #64748b;
-  font-size: 0.875rem;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.read-more-link {
+.learning-path-link {
   color: #2563eb;
   font-weight: 500;
   text-decoration: none;
@@ -181,8 +264,29 @@
   transition: all 0.2s ease;
 }
 
-.read-more-link:hover {
+.learning-path-link:hover {
   color: #1d4ed8;
+}
+
+/* Card Content Shared Styles */
+.blog-card-content,
+.learning-path-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+/* Footer Shared Styles */
+.blog-footer,
+.learning-path-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* View All Section */
@@ -265,7 +369,8 @@
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-  .featured-grid {
+  .featured-grid,
+  .learning-paths-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -280,22 +385,26 @@
     display: none;
   }
 
-  .featured-section {
+  .featured-section,
+  .learning-paths-section {
     margin-top: 1rem;
   }
 
   .featured-grid,
-  .recent-posts-grid {
+  .recent-posts-grid,
+  .learning-paths-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  .blog-card-image span {
+  .blog-card-image span,
+  .learning-path-header h3 {
     font-size: 1.5rem;
   }
 
   .featured-section h2,
-  .recent-posts-section h2 {
+  .recent-posts-section h2,
+  .learning-paths-section h2 {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
   }

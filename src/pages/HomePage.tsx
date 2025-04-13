@@ -38,7 +38,7 @@ const BlogCard: React.FC<{ post: BlogPost; featured?: boolean }> = ({ post, feat
     </div>
     <div className="blog-card-content">
       <div className="blog-tag">{post.tag}</div>
-      <h3 className="blog-title">{post.title}</h3>
+      <h3 className="home-blog-title">{post.title}</h3>
       <p className="blog-excerpt">{post.excerpt}</p>
       <div className="blog-footer">
         <div className="blog-meta">
@@ -53,6 +53,48 @@ const BlogCard: React.FC<{ post: BlogPost; featured?: boolean }> = ({ post, feat
   </div>
 );
 
+interface LearningPathCardProps {
+  title: string;
+  description: string;
+  icon: string;
+  link: string;
+  topics: string[];
+}
+
+const LearningPathCard: React.FC<LearningPathCardProps> = ({ title, description, icon, link, topics }) => {
+  const getPathClass = () => {
+    const titleLower = title.toLowerCase();
+    if (titleLower.includes('fundamental')) return 'fundamentals';
+    if (titleLower.includes('prompt')) return 'prompt-engineering';
+    if (titleLower.includes('agent')) return 'agents';
+    return '';
+  };
+
+  return (
+    <div className={`learning-path-card ${getPathClass()}`}>
+      <div className="learning-path-header">
+        <div className="learning-path-header-content">
+          <span className="learning-path-icon">{icon}</span>
+          <h3>{title}</h3>
+        </div>
+      </div>
+      <div className="learning-path-content">
+        <p className="learning-path-description">{description}</p>
+        <div className="learning-path-topics">
+          {topics.map((topic, index) => (
+            <span key={index} className="topic-tag">{topic}</span>
+          ))}
+        </div>
+        <div className="learning-path-footer">
+          <Link to={link} className="learning-path-link">
+            Start Learning →
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const HomePage: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -65,13 +107,37 @@ const HomePage: React.FC = () => {
       .filter((post): post is BlogPost => post !== undefined);
   }, []);
 
-  // Get recent posts (limit to 6)
+  // Get recent posts (limit to 3)
   const recentPosts = useMemo(() => {
     return LATEST_POSTS
-      .slice(0, 6)
+      .slice(0, 3)
       .map(id => allBlogPosts.find(post => post.id === id))
       .filter((post): post is BlogPost => post !== undefined);
   }, []);
+
+  const learningPaths = [
+    {
+      title: "LLM Fundamentals",
+      description: "Master the basics of Large Language Models and understand how they work.",
+      icon: "🎓",
+      link: "/blogs/fundamentals",
+      topics: ["Model Types", "Architecture", "Use Cases", "Best Practices"]
+    },
+    {
+      title: "Prompt Engineering",
+      description: "Learn the art of crafting effective prompts for optimal LLM responses.",
+      icon: "⚡",
+      link: "/blogs/prompts",
+      topics: ["Prompt Patterns", "Context Design", "Response Optimization", "Chain of Thought"]
+    },
+    {
+      title: "Agent Development",
+      description: "Build intelligent AI agents that can perform complex tasks autonomously.",
+      icon: "🤖",
+      link: "/blogs/agents",
+      topics: ["Agent Types", "Tools Integration", "Memory Systems", "Planning Strategies"]
+    }
+  ];
 
   return (
     <div className="blogs-page">
@@ -80,8 +146,7 @@ const HomePage: React.FC = () => {
         <div className="banner-content">
           <h1>Master the World of LLM Development</h1>
           <p className="blogs-subtitle">
-            Explore comprehensive tutorials, best practices, and expert insights on LLM development,
-            AI integration, and cutting-edge machine learning technologies.
+            Your guide to mastering LLM Agents, LLMs, and AI development.
           </p>
         </div>
       </div>
@@ -96,10 +161,20 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
+      {/* Learning Paths Section */}
+      <section className="learning-paths-section">
+        <h2>Start Your LLM Journey</h2>
+        <div className="learning-paths-grid">
+          {learningPaths.map((path, index) => (
+            <LearningPathCard key={index} {...path} />
+          ))}
+        </div>
+      </section>
+
       {/* Recent Posts Section */}
       <section className="recent-posts-section">
         <h2>Recent Articles</h2>
-        <div className="recent-posts-grid">
+        <div className="featured-grid">
           {recentPosts.map(post => (
             <BlogCard key={post.id} post={post} />
           ))}

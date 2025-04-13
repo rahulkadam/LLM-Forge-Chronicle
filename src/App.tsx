@@ -87,6 +87,7 @@ const AppContent: React.FC = () => {
           <Route path="/blogs" element={<HomePage />} />
 
           {/* Fundamentals */}
+          <Route path="/blogs/fundamentals" element={<LLMIntroduction />} />
           <Route path="/blogs/fundamentals/introduction" element={<LLMIntroduction />} />
           <Route path="/blogs/fundamentals/getting-started" element={<LLMGettingStartedGuide />} />
           <Route path="/blogs/fundamentals/terminology" element={<LLMTechnologyGuide />} />
@@ -97,6 +98,7 @@ const AppContent: React.FC = () => {
           <Route path="/blogs/fundamentals/capabilities" element={<LLMCapabilities />} />
 
           {/* LLM Models */}
+          <Route path="/blogs/models" element={<ChatGPTModelGuide />} />
           <Route path="/blogs/models/chatgpt" element={<ChatGPTModelGuide />} />
           <Route path="/blogs/models/claude" element={<ClaudeModelGuide />} />
           <Route path="/blogs/models/gemini" element={<GeminiModelGuide />} />
@@ -108,12 +110,14 @@ const AppContent: React.FC = () => {
           <Route path="/blogs/models/comparison" element={<LLMModelComparison />} />
 
           {/* Prompt Engineering */}
+          <Route path="/blogs/prompts" element={<PromptEngineeringBasics />} />
           <Route path="/blogs/prompts/basics" element={<PromptEngineeringBasics />} />
           <Route path="/blogs/prompts/intermediate" element={<PromptEngineeringIntermediate />} />
           <Route path="/blogs/prompts/advanced" element={<PromptEngineeringAdvanced />} />
           <Route path="/blogs/prompts/developer-guide" element={<DeveloperPromptGuide />} />
 
           {/* Agents */}
+          <Route path="/blogs/agents" element={<LLMAgent />} />
           <Route path="/blogs/agents/introduction" element={<LLMAgent />} />
           <Route path="/blogs/agents/building-guide" element={<BuildingLLMAgent />} />
           <Route path="/blogs/agents/basics" element={<BasicLLMAgent />} />
@@ -123,6 +127,7 @@ const AppContent: React.FC = () => {
           <Route path="/blogs/agents/bookbuddy" element={<BookBuddy />} />
 
           {/* AI-Driven IT */}
+          <Route path="/blogs/ai-it" element={<DeveloperEfficiency />} />
           <Route path="/blogs/ai-it/developer-efficiency" element={<DeveloperEfficiency />} />
           <Route path="/blogs/ai-it/code-migration" element={<CodeMigrationLLM />} />
           <Route path="/blogs/ai-it/enterprise-integrations" element={<EnterpriseIntegrations />} />
