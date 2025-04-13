@@ -62,7 +62,7 @@ import About from './pages/blogs/about';
 import Community from './pages/blogs/community';
 
 import './App.css';
-import Blogs from "./pages/Blogs";
+import HomePage from "./pages/HomePage";
 
 // Initialize Google Analytics if measurement ID is available
 const GA_MEASUREMENT_ID = process.env.REACT_APP_GA_MEASUREMENT_ID;
@@ -81,10 +81,10 @@ const AppContent: React.FC = () => {
         <Suspense fallback={<div className="loading">Loading...</div>}>
         <Routes>
           {/* Main Routes */}
-          <Route path="/" element={<Blogs />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/community" element={<Community />} />
-          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs" element={<HomePage />} />
 
           {/* Fundamentals */}
           <Route path="/blogs/fundamentals/introduction" element={<LLMIntroduction />} />

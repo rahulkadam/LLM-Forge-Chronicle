@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import '../styles/AdSense.css';
+import './AdSense.css';
 
 // Declare the global adsbygoogle type
 declare global {

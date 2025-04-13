@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar';
 import AdSense from './AdSense';
-import '../styles/AdSense.css';
+import './AdSense.css';
 
 interface LayoutProps {
   children: React.ReactNode;

@@ -8,7 +8,6 @@ import {
   type BlogCategory,
   getPostsByCategory
 } from '../../data/blogData';
-import type { BlogPost } from '../../data/blogPosts';
 import '../../styles/blogs/blog-base-style.css';
 import '../../styles/blogs/mobile-navigation.css';
 

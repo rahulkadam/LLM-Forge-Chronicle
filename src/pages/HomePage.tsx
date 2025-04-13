@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import type { BlogPost } from '../data/blogPosts';
 import { allBlogPosts } from '../data/blogPosts';
 import { FEATURED_POSTS, LATEST_POSTS } from '../data/blogLists';
-import '../styles/blogs.css';
+import '../styles/HomePage.css';
 
 const getCategoryTheme = (category: string) => {
   const themeMap: { [key: string]: string } = {
@@ -53,7 +53,7 @@ const BlogCard: React.FC<{ post: BlogPost; featured?: boolean }> = ({ post, feat
   </div>
 );
 
-const Blogs: React.FC = () => {
+const HomePage: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
   
@@ -131,4 +131,4 @@ const Blogs: React.FC = () => {
   );
 };
 
-export default Blogs;
+export default HomePage;

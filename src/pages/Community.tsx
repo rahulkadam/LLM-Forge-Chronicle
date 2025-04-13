@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/Community.css';
 
 const Community: React.FC = () => {
   return (
