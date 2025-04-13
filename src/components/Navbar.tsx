@@ -171,11 +171,11 @@ const Navbar: React.FC = () => {
         {/* Community */}
         <li>
           <Link 
-            to="/community" 
-            className={`nav-link ${isActive('/community')}`}
+            to="/About"
+            className={`nav-link ${isActive('/About')}`}
             onClick={() => setIsOpen(false)}
           >
-            Community
+            About
           </Link>
         </li>
       </ul>

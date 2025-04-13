@@ -22,10 +22,10 @@ export const BLOG_CATEGORIES = [
   'Fundamentals',
   'Prompt Engineering',
   'LLM Models',
-  'Advanced Techniques',
-  'AI-Driven IT',
-  'Tools & Frameworks',
   'Agents',
+  'AI-Driven IT',
+  'Advanced Techniques',
+  'Tools & Frameworks',
   'Technical',
   'About',
   'Others'

@@ -83,7 +83,6 @@ const AppContent: React.FC = () => {
           {/* Main Routes */}
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />
-          <Route path="/community" element={<Community />} />
           <Route path="/blogs" element={<HomePage />} />
 
           {/* Fundamentals */}

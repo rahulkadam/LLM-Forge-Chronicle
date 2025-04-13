@@ -74,7 +74,11 @@ const BlogTemplate: React.FC<BlogPostProps> = ({
       {BLOG_CATEGORIES.map(categoryName => {
         const posts = postsByCategory.get(categoryName) || [];
         const isExpanded = expandedCategories.includes(categoryName);
-        
+
+        if (posts.length == 0) {
+          return ;
+        }
+
         return (
           <div key={categoryName} className="category-section">
             <button 
