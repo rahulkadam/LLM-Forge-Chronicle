@@ -22,6 +22,7 @@ export const BLOG_CATEGORIES = [
   'Fundamentals',
   'Prompt Engineering',
   'LLM Models',
+  'LLM Integration',
   'Agents',
   'AI-Driven IT',
   'Advanced Techniques',

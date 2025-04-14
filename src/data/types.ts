@@ -11,4 +11,4 @@ export interface BlogPost {
 }
 
 // Export blog categories type
-export type BlogCategory = 'Fundamentals' | 'Prompt Engineering' | 'LLM Models' | 'Agents' | 'AI-Driven IT' | 'Advanced Techniques' | 'Tools & Frameworks';
+export type BlogCategory = 'Fundamentals' | 'Prompt Engineering' | 'LLM Models' | 'Agents' | 'AI-Driven IT' | 'Advanced Techniques' | 'Tools & Frameworks' |  'LLM Integration';
