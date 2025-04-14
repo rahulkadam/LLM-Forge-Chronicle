@@ -7,6 +7,9 @@ import { BlogSection, Card } from '../../../../components/blogs/BlogComponents';
 import useBlogBehavior from '../../../../hooks/useBlogBehavior';
 import './llm-model-comparison.css';
 
+import LLMCostCalculator from '../../../../components/blogs/LLMCostCalculator';
+import LLMComparisonTool from '../../../../components/blogs/LLMComparisonTool';
+
 const LLMModelComparison: React.FC = () => {
   useBlogBehavior();
 
@@ -313,6 +316,8 @@ const LLMModelComparison: React.FC = () => {
       </BlogSection>
 
       <BlogSection id="comparison" title="Head-to-Head Comparison">
+        <LLMComparisonTool className="interactive-comparison" />
+
         <div className="comparison-table">
           <h3>Feature Comparison Matrix</h3>
           <table>
@@ -433,7 +438,9 @@ const LLMModelComparison: React.FC = () => {
       <BlogSection id="cost-analysis" title="Cost Analysis">
         <div className="cost-comparison">
           <h3>Cost Comparison Scenarios</h3>
-          <div className="cost-scenarios">
+          <LLMCostCalculator className="interactive-calculator" />
+
+        <div className="cost-scenarios">
             <Card title="Small Scale (1M tokens/month)">
               <ul>
                 <li>GPT-4: ~$400-600</li>                <li>Gemini Pro: ~$200-300</li>

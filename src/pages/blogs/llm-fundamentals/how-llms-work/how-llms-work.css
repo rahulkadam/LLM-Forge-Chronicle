@@ -21,13 +21,6 @@
   transform: translateX(5px);
 }
 
-/* Style for code examples */
-pre {
-  background-color: #f6f8fa;
-  border-radius: 6px;
-  padding: 1rem;
-  overflow-x: auto;
-}
 
 /* Style for lists in InfoBoxes */
 .info-box ul {

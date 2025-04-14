@@ -26,6 +26,11 @@ import LLMTechnologyGuide from "./pages/blogs/llm-fundamentals/llm-terms-guide/l
 import OpenAIApiGuide from './pages/blogs/advance/openai-api-guide/openai-api-guide';
 import OpenRouterPlatformGuide from "./pages/blogs/llm-fundamentals/openrouter-platform-guide/openrouter-platform-guide";
 
+import LLMOverview from './pages/blogs/llm-models/overview/llm-overview';
+import OpenSourceEcosystem from './pages/blogs/llm-models/open-source/open-source-ecosystem';
+import TokenizersVocabulary from './pages/blogs/llm-models/tokenizers/tokenizers-vocabulary';
+import QuantizationBasics from './pages/blogs/llm-models/quantization/quantization-basics';
+import ModelSelectionGuide from './pages/blogs/llm-models/model-selection/model-selection-guide';
 // LLM Models
 import ChatGPTModelGuide from './pages/blogs/llm-models/chatgpt';
 import ClaudeModelGuide from './pages/blogs/llm-models/claude';
@@ -43,6 +48,7 @@ import PromptEngineeringIntermediate from './pages/blogs/prompt-engineering/inte
 import PromptEngineeringAdvanced from './pages/blogs/prompt-engineering/advanced';
 import DeveloperPromptGuide from './pages/blogs/prompt-engineering/developer-prompts';
 
+import LLMAgentsIntro from './pages/blogs/agents/introduction/llm-agents-intro';
 // Agents
 import LLMAgent from './pages/blogs/agents/llm-agent-guide/LLMAgent';
 import BuildingLLMAgent from './pages/blogs/agents/llm-agent-guide/BuildingLLMAgent';
@@ -75,6 +81,7 @@ import Community from './pages/blogs/roadmap/community';
 
 import './App.css';
 import HomePage from "./pages/HomePage";
+import MultiAgentSystems from "./pages/blogs/agents/multi-agent-collaboration/multi-agent-systems";
 
 // Initialize Google Analytics if measurement ID is available
 const GA_MEASUREMENT_ID = process.env.REACT_APP_GA_MEASUREMENT_ID;
@@ -119,6 +126,11 @@ const AppContent: React.FC = () => {
           <Route path="/blogs/models/chatgpt" element={<ChatGPTModelGuide />} />
           <Route path="/blogs/models/claude" element={<ClaudeModelGuide />} />
           <Route path="/blogs/models/gemini" element={<GeminiModelGuide />} />
+                              <Route path="/blogs/models/tokenizers" element={<TokenizersVocabulary />} />
+          <Route path="/blogs/models/quantization" element={<QuantizationBasics />} />
+                    <Route path="/blogs/models/selection" element={<ModelSelectionGuide />} />
+          <Route path="/blogs/models/overview" element={<LLMOverview />} />
+                    <Route path="/blogs/models/open-source" element={<OpenSourceEcosystem />} />
           <Route path="/blogs/models/grok" element={<GrokModelGuide />} />
           <Route path="/blogs/models/deepseek" element={<DeepSeekModelGuide />} />
           <Route path="/blogs/models/mistral" element={<MistralModelGuide />} />
@@ -141,6 +153,7 @@ const AppContent: React.FC = () => {
 
           {/* Agents */}
           <Route path="/blogs/agents" element={<LLMAgent />} />
+                    <Route path="/blogs/agents/what-are-agents" element={<LLMAgentsIntro />} />
           <Route path="/blogs/agents/introduction" element={<LLMAgent />} />
           <Route path="/blogs/agents/building-guide" element={<BuildingLLMAgent />} />
           <Route path="/blogs/agents/basics" element={<BasicLLMAgent />} />
@@ -148,6 +161,7 @@ const AppContent: React.FC = () => {
           <Route path="/blogs/agents/marketmind" element={<MarketMindAI />} />
           <Route path="/blogs/agents/athlete-insight" element={<AthleteInsightAI />} />
           <Route path="/blogs/agents/bookbuddy" element={<BookBuddy />} />
+          <Route path="/blogs/agents/multi-agent-collaboration" element={<MultiAgentSystems />} />
 
           {/* AI-Driven IT */}
           <Route path="/blogs/ai-it" element={<DeveloperEfficiency />} />

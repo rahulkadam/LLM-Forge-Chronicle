@@ -1,0 +1,156 @@
+.llm-comparison-tool {
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.llm-comparison-tool h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.llm-comparison-tool h4 {
+  margin: 1.5rem 0 1rem;
+  color: var(--text-primary);
+}
+
+/* Model Selection */
+.model-selection {
+  margin-bottom: 2rem;
+}
+
+.model-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.model-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.model-checkbox:hover {
+  background: var(--bg-highlight);
+}
+
+.model-checkbox input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+}
+
+/* Metric Focus */
+.metric-focus select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--bg-input);
+  color: var(--text-primary);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Comparison Results */
+.comparison-results {
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.comparison-results table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--border-color);
+}
+
+.comparison-results th,
+.comparison-results td {
+  padding: 1rem;
+  text-align: left;
+  border: 1px solid var(--border-color);
+}
+
+.comparison-results th {
+  background: var(--bg-highlight);
+  font-weight: 600;
+}
+
+.comparison-results tr.highlight-row {
+  background: var(--bg-highlight);
+}
+
+.comparison-results tr:hover {
+  background: var(--bg-hover);
+}
+
+/* Model Descriptions */
+.model-descriptions {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.model-description {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--bg-card);
+  border-radius: 6px;
+}
+
+.model-description h5 {
+  margin: 0 0 0.5rem;
+  color: var(--text-primary);
+}
+
+.model-description p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .llm-comparison-tool {
+    padding: 1.5rem;
+  }
+
+  .model-checkboxes {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-results {
+    margin: 1.5rem -1.5rem;
+    width: calc(100% + 3rem);
+  }
+
+  .comparison-results table {
+    font-size: 0.9rem;
+  }
+
+  .comparison-results th,
+  .comparison-results td {
+    padding: 0.75rem;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .model-checkbox:hover {
+    background: var(--bg-hover-dark);
+  }
+
+  .comparison-results tr.highlight-row {
+    background: var(--bg-highlight-dark);
+  }
+
+  .comparison-results tr:hover {
+    background: var(--bg-hover-dark);
+  }
+}

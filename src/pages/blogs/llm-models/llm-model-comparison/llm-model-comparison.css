@@ -196,6 +196,20 @@
     grid-template-columns: 1fr;
   }
 
+/* Interactive Components */
+.interactive-comparison {
+  margin: 2rem 0;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.interactive-calculator {
+  margin: 2rem 0;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+
   .comparison-table {
     margin: 1rem -1rem;
     width: calc(100% + 2rem);
