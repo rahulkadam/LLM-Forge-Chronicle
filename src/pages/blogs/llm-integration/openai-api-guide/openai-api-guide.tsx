@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import "../../../../styles/blogs/blog-base-style.css";
 import BlogTemplate from '../../../../components/blogs/BlogTemplate';
-import { BlogSection, CodeExample, InfoBox } from '../../../../components/blogs/BlogComponents';
+import { BlogSection, InfoBox } from '../../../../components/blogs/BlogComponents';
+import CodeExample from '../../../../components/blogs/CodeExample';
 import useBlogBehavior from '../../../../hooks/useBlogBehavior';
 import type { BlogCategory } from '../../../../data/blogData';
 
@@ -52,7 +53,6 @@ const OpenAIAPIGuide: React.FC = () => {
         <p>First, install the OpenAI Node.js library:</p>
 
         <CodeExample
-          language="bash"
           code={`# Using npm
 npm install openai
 
@@ -61,6 +61,8 @@ yarn add openai
 
 # Using pnpm
 pnpm add openai`}
+          language="bash"
+          title="Installing OpenAI SDK"
         />
 
         <InfoBox type="tip" title="Version Information">
@@ -72,13 +74,14 @@ pnpm add openai`}
 
         <h3>Initial Setup</h3>
         <CodeExample
-          language="typescript"
           code={`import OpenAI from 'openai';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
   organization: 'org-...', // Optional
 });`}
+          language="typescript"
+          title="Initial Configuration"
         />
       </BlogSection>
 
@@ -101,7 +104,6 @@ const openai = new OpenAI({
 
         <h3>Environment Configuration</h3>
         <CodeExample
-          language="typescript"
           code={`// .env file
 OPENAI_API_KEY=sk-...
 OPENAI_ORG_ID=org-...
@@ -109,6 +111,8 @@ OPENAI_ORG_ID=org-...
 // Load environment variables
 import dotenv from 'dotenv';
 dotenv.config();`}
+          language="typescript"
+          title="Environment Setup"
         />
       </BlogSection>
 
@@ -117,7 +121,6 @@ dotenv.config();`}
         <p>Here's a basic example of using the chat completion API:</p>
 
         <CodeExample
-          language="typescript"
           code={`async function getChatCompletion(prompt: string) {
   try {
     const completion = await openai.chat.completions.create({
@@ -133,6 +136,8 @@ dotenv.config();`}
     throw error;
   }
 }`}
+          language="typescript"
+          title="Basic Chat Completion"
         />
 
         <InfoBox type="tip" title="Important Parameters">
@@ -150,7 +155,6 @@ dotenv.config();`}
         <p>For real-time responses, use streaming:</p>
 
         <CodeExample
-          language="typescript"
           code={`async function streamCompletion(prompt: string) {
   const stream = await openai.chat.completions.create({
     messages: [{ role: 'user', content: prompt }],
@@ -163,11 +167,12 @@ dotenv.config();`}
     process.stdout.write(content);
   }
 }`}
+          language="typescript"
+          title="Streaming Response Handler"
         />
 
         <h3>Function Calling</h3>
         <CodeExample
-          language="typescript"
           code={`const completion = await openai.chat.completions.create({
   messages: [{ role: 'user', content: 'What's the weather in Boston?' }],
   model: 'gpt-3.5-turbo',
@@ -185,6 +190,8 @@ dotenv.config();`}
     }
   }]
 });`}
+          language="typescript"
+          title="Function Calling Example"
         />
       </BlogSection>
 
@@ -204,7 +211,6 @@ dotenv.config();`}
             <strong>Error Handling</strong>
             <p>Implement robust error handling:</p>
             <CodeExample
-              language="typescript"
               code={`const makeRequest = async (retries = 3) => {
   for (let i = 0; i < retries; i++) {
     try {
@@ -220,6 +226,8 @@ dotenv.config();`}
     }
   }
 };`}
+              language="typescript"
+              title="Retry Handler"
             />
           </li>
         </ol>
@@ -239,7 +247,6 @@ dotenv.config();`}
         <p>Handle various API errors effectively:</p>
 
         <CodeExample
-          language="typescript"
           code={`type APIError = {
   status: number;
   message: string;
@@ -262,6 +269,8 @@ async function handleAPIErrors() {
     }
   }
 }`}
+          language="typescript"
+          title="Error Handler"
         />
 
         <InfoBox type="warning" title="Error Types">

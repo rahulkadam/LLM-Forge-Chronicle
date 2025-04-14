@@ -1,0 +1,179 @@
+/* Modern code editor styling */
+.code-example-container {
+  margin: 1.5rem 0;
+  background: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Header styling */
+.code-example-header {
+  background: #252525;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.code-example-title {
+  color: #e1e1e1;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.code-example-caption {
+  color: #888;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+/* Toolbar styling */
+.code-example-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: #2d2d2d;
+  border-bottom: 1px solid #333;
+}
+
+.code-example-language {
+  color: #888;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.code-example-copy {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #383838;
+  border: none;
+  color: #e1e1e1;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.code-example-copy:hover {
+  background: #454545;
+}
+
+.code-example-copy svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Code block styling */
+.code-example-container pre {
+  margin: 0 !important;
+  padding: 1rem !important;
+  background: #1e1e1e !important;
+  overflow-x: auto;
+}
+
+.code-example-container code {
+  font-family: 'Fira Code', 'JetBrains Mono', monospace !important;
+  font-size: 0.9rem !important;
+  line-height: 1.5 !important;
+}
+
+/* Line numbers styling */
+.code-example-container .line-numbers .line-numbers-rows {
+  border-right-color: #333;
+  padding: 1rem 0;
+}
+
+.code-example-container .line-numbers-rows > span:before {
+  color: #666;
+}
+
+/* Syntax highlighting customization */
+.code-example-container .token.comment,
+.code-example-container .token.prolog,
+.code-example-container .token.doctype,
+.code-example-container .token.cdata {
+  color: #608b4e;
+}
+
+.code-example-container .token.punctuation {
+  color: #d4d4d4;
+}
+
+.code-example-container .token.property,
+.code-example-container .token.tag,
+.code-example-container .token.boolean,
+.code-example-container .token.number,
+.code-example-container .token.constant,
+.code-example-container .token.symbol,
+.code-example-container .token.deleted {
+  color: #b5cea8;
+}
+
+.code-example-container .token.selector,
+.code-example-container .token.attr-name,
+.code-example-container .token.string,
+.code-example-container .token.char,
+.code-example-container .token.builtin,
+.code-example-container .token.inserted {
+  color: #ce9178;
+}
+
+.code-example-container .token.operator,
+.code-example-container .token.entity,
+.code-example-container .token.url,
+.code-example-container .language-css .token.string,
+.code-example-container .style .token.string {
+  color: #d4d4d4;
+}
+
+.code-example-container .token.atrule,
+.code-example-container .token.attr-value,
+.code-example-container .token.keyword {
+  color: #569cd6;
+}
+
+.code-example-container .token.function,
+.code-example-container .token.class-name {
+  color: #dcdcaa;
+}
+
+.code-example-container .token.regex,
+.code-example-container .token.important,
+.code-example-container .token.variable {
+  color: #9cdcfe;
+}
+
+/* Scrollbar styling */
+.code-example-container pre::-webkit-scrollbar {
+  height: 8px;
+  background-color: #1e1e1e;
+}
+
+.code-example-container pre::-webkit-scrollbar-thumb {
+  background-color: #424242;
+  border-radius: 4px;
+}
+
+.code-example-container pre::-webkit-scrollbar-thumb:hover {
+  background-color: #4f4f4f;
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+  .code-example-container {
+    margin: 1rem -1rem;
+    border-radius: 0;
+  }
+  
+  .code-example-copy span {
+    display: none;
+  }
+  
+  .code-example-container code {
+    font-size: 0.8rem !important;
+  }
+}

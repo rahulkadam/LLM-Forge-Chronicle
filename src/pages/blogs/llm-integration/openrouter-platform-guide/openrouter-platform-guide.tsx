@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import "../../../../styles/blogs/blog-base-style.css";
 import BlogTemplate from '../../../../components/blogs/BlogTemplate';
-import { BlogSection, CodeExample, InfoBox } from '../../../../components/blogs/BlogComponents';
+import { BlogSection, InfoBox } from '../../../../components/blogs/BlogComponents';
+import CodeExample from '../../../../components/blogs/CodeExample';
 import useBlogBehavior from '../../../../hooks/useBlogBehavior';
 import type { BlogCategory } from '../../../../data/blogData';
-import './openrouter-platform-guide.css';
 
 const OpenRouterPlatformGuide: React.FC = () => {
   useBlogBehavior();
@@ -103,6 +103,7 @@ yarn add openrouter
 
 # Using pnpm
 pnpm add openrouter`}
+              title="Installing OpenRouter SDK"
             />
           </li>
         </ol>
@@ -194,6 +195,7 @@ async function getCompletion(prompt: string) {
     throw error;
   }
 }`}
+          title="Basic OpenRouter Integration"
         />
 
         <h3>Model Fallback</h3>
@@ -220,6 +222,7 @@ async function getCompletionWithFallback(prompt: string) {
   }
   throw new Error('All models failed');
 }`}
+          title="Model Fallback Implementation"
         />
       </BlogSection>
 
@@ -257,6 +260,7 @@ async function getCostEfficientCompletion(prompt: string, maxCost: number) {
   }
   throw new Error('No affordable models available');
 }`}
+          title="Cost-Aware Model Selection"
         />
 
         <InfoBox type="warning" title="Cost Control Tips">
@@ -289,6 +293,7 @@ async function getCostEfficientCompletion(prompt: string, maxCost: number) {
     throw error;
   }
 }`}
+              title="Error Handling Example"
             />
           </li>
           <li>
@@ -331,6 +336,7 @@ const completion = await router.chat.completions.create({
   model: 'openai/gpt-4',  // Just add provider prefix
   messages: [{ role: 'user', content: prompt }]
 });`}
+          title="Migration from OpenAI Example"
         />
 
         <InfoBox type="tip" title="Migration Tips">
