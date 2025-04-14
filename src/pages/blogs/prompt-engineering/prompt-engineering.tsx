@@ -5,7 +5,7 @@ import BlogTemplate from '../../../components/blogs/BlogTemplate';
 import { BlogSection, InfoBox } from '../../../components/blogs/BlogComponents';
 import useBlogBehavior from '../../../hooks/useBlogBehavior';
 import type { BlogCategory } from '../../../data/blogData';
-import './prompt-engineering.css';
+
 
 const PromptEngineeringGuide: React.FC = () => {
   useBlogBehavior();

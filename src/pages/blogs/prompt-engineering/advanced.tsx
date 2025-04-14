@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import BlogTemplate from '../../../components/blogs/BlogTemplate';
 import { BlogSection, InfoBox } from '../../../components/blogs/BlogComponents';
 import useBlogBehavior from '../../../hooks/useBlogBehavior';
-import './prompt-engineering.css';
+
 
 const PromptEngineeringAdvanced: React.FC = () => {
   useBlogBehavior();

@@ -3,7 +3,6 @@ import "../../../../styles/blogs/blog-base-style.css";
 import BlogTemplate from '../../../../components/blogs/BlogTemplate';
 import { BlogSection, InfoBox, CodeExample } from '../../../../components/blogs/BlogComponents';
 import type { BlogCategory } from '../../../../data/blogData';
-import './prompt-patterns.css';
 import {Link} from "react-router-dom";
 
 const PromptPatterns: React.FC = () => {

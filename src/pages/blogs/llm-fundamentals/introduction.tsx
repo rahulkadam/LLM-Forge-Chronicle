@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import BlogTemplate from '../../../components/blogs/BlogTemplate';
 import { BlogSection, InfoBox } from '../../../components/blogs/BlogComponents';
 import type { BlogCategory } from '../../../data/blogData';
-import './llm-fundamentals.css';
 
 const LLMIntroduction: React.FC = () => {
   const tableOfContents = [

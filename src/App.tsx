@@ -23,8 +23,8 @@ import LLMCapabilities from './pages/blogs/llm-fundamentals/capabilities';
 import DeveloperQuickStart from './pages/blogs/llm-fundamentals/developer-quick-start';
 import LLMGettingStartedGuide from './pages/blogs/llm-fundamentals/llm-getting-started-guide/llm-getting-started-guide';
 import LLMTechnologyGuide from "./pages/blogs/llm-fundamentals/llm-terms-guide/llm-technology-guide";
-import OpenAIApiGuide from './pages/blogs/advance/openai-api-guide/openai-api-guide';
-import OpenRouterPlatformGuide from "./pages/blogs/llm-fundamentals/openrouter-platform-guide/openrouter-platform-guide";
+import OpenAIApiGuide from './pages/blogs/llm-integration/openai-api-guide/openai-api-guide';
+import OpenRouterPlatformGuide from "./pages/blogs/llm-integration/openrouter-platform-guide/openrouter-platform-guide";
 
 import LLMOverview from './pages/blogs/llm-models/overview/llm-overview';
 import OpenSourceEcosystem from './pages/blogs/llm-models/open-source/open-source-ecosystem';
