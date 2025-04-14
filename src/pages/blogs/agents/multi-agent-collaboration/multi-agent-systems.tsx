@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import BlogTemplate from '../../../../components/blogs/BlogTemplate';
 import { BlogSection, InfoBox } from '../../../../components/blogs/BlogComponents';
 import type { BlogCategory } from '../../../../data/blogData';
-import './multi-agent-systems.css';
 
 const MultiAgentSystems: React.FC = () => {
   const tableOfContents = [

@@ -1,0 +1,195 @@
+// Blog creation template
+{
+  "type": "blog",
+  "steps": [
+    {
+      "action": "create_directory",
+      "path": "/src/pages/blogs/{category}/{blog-id}"
+    },
+    {
+      "action": "create_file",
+      "path": "/src/pages/blogs/{category}/{blog-id}/{blog-id}.tsx",
+      "template": "blog_tsx"
+    },
+    {
+      "action": "create_file",
+      "path": "/src/pages/blogs/{category}/{blog-id}/{blog-id}.css",
+      "template": "blog_css"
+    },
+    {
+      "action": "update_file",
+      "path": "/src/data/blogPosts.ts",
+      "type": "append_to_category",
+      "template": "blog_entry"
+    },
+    {
+      "action": "update_file",
+      "path": "/src/App.tsx",
+      "type": "add_route",
+      "template": "route_entry"
+    }
+  ],
+  "templates": {
+    "blog_tsx": {
+      "content": [
+        "import React from 'react';",
+        "import { Link } from 'react-router-dom';",
+        "import BlogTemplate from '../../../../components/blogs/BlogTemplate';",
+        "import { BlogSection, InfoBox } from '../../../../components/blogs/BlogComponents';",
+        "import type { BlogCategory } from '../../../../data/blogData';",
+        "import './{blog-id}.css';",
+        "",
+        "const {ComponentName}: React.FC = () => {",
+        "  const tableOfContents = [",
+        "    { id: 'introduction', title: 'Introduction' },",
+        "    { id: 'key-concepts', title: 'Key Concepts' },",
+        "    { id: 'implementation', title: 'Implementation' },",
+        "    { id: 'best-practices', title: 'Best Practices' },",
+        "    { id: 'conclusion', title: 'Conclusion' }",
+        "  ];",
+        "",
+        "  const category: BlogCategory = '{category}';",
+        "",
+        "  return (",
+        "    <BlogTemplate",
+        "      title=\"{title}\"",
+        "      date=\"{date}\"",
+        "      readTime=\"{readTime}\"",
+        "      category={category}",
+        "      tableOfContents={tableOfContents}",
+        "    >",
+        "      {blog_sections}",
+        "    </BlogTemplate>",
+        "  );",
+        "};",
+        "",
+        "export default {ComponentName};"
+      ]
+    },
+    "blog_css": {
+      "content": [
+        "/* Styles for {title} */",
+        ".blog-image {",
+        "  max-width: 100%;",
+        "  height: auto;",
+        "  margin: 20px 0;",
+        "  border-radius: 8px;",
+        "}",
+        "",
+        ".resource-links {",
+        "  display: flex;",
+        "  flex-direction: column;",
+        "  gap: 10px;",
+        "  margin-top: 20px;",
+        "}",
+        "",
+        ".resource-link {",
+        "  color: var(--primary-color);",
+        "  text-decoration: none;",
+        "  padding: 10px;",
+        "  border-radius: 4px;",
+        "  background-color: var(--background-secondary);",
+        "  transition: background-color 0.3s ease;",
+        "}",
+        "",
+        ".resource-link:hover {",
+        "  background-color: var(--background-tertiary);",
+        "}"
+      ]
+    },
+    "blog_entry": {
+      "content": [
+        "  {",
+        "    id: '{blog-id}',",
+        "    title: '{title}',",
+        "    excerpt: '{excerpt}',",
+        "    imageClass: '{blog-id}-image',",
+        "    tag: '{category}',",
+        "    readingTime: '{readTime} min read',",
+        "    publishDate: '{date}',",
+        "    link: '/blogs/{category-path}/{blog-id}'",
+        "  }"
+      ]
+    },
+    "route_entry": {
+      "content": [
+        "          <Route path=\"/blogs/{category-path}/{blog-id}\" element={<{ComponentName} />} />"
+      ]
+    },
+    "blog_sections": {
+      "content": [
+        "      <BlogSection id=\"introduction\" title=\"Introduction\">",
+        "        <p>",
+        "          {excerpt}",
+        "        </p>",
+        "",
+        "        <InfoBox type=\"note\" title=\"Key Takeaways\">",
+        "          <ul>",
+        "            <li>First key point about {title}</li>",
+        "            <li>Second key point about the topic</li>",
+        "            <li>Third important consideration</li>",
+        "          </ul>",
+        "        </InfoBox>",
+        "      </BlogSection>",
+        "",
+        "      <BlogSection id=\"key-concepts\" title=\"Key Concepts\">",
+        "        <h3>Core Concepts</h3>",
+        "        <p>Key concepts content...</p>",
+        "",
+        "        <InfoBox type=\"tip\" title=\"Important Concepts\">",
+        "          <ul>",
+        "            <li>Concept 1</li>",
+        "            <li>Concept 2</li>",
+        "            <li>Concept 3</li>",
+        "          </ul>",
+        "        </InfoBox>",
+        "      </BlogSection>",
+        "",
+        "      <BlogSection id=\"implementation\" title=\"Implementation\">",
+        "        <h3>Implementation Guide</h3>",
+        "        <p>Implementation steps and guidance...</p>",
+        "",
+        "        <InfoBox type=\"warning\" title=\"Important Considerations\">",
+        "          <ul>",
+        "            <li>Consideration 1</li>",
+        "            <li>Consideration 2</li>",
+        "            <li>Consideration 3</li>",
+        "          </ul>",
+        "        </InfoBox>",
+        "      </BlogSection>",
+        "",
+        "      <BlogSection id=\"best-practices\" title=\"Best Practices\">",
+        "        <h3>Recommended Practices</h3>",
+        "        <ol>",
+        "          <li>",
+        "            <strong>Practice 1:</strong>",
+        "            <p>Description of first practice...</p>",
+        "          </li>",
+        "          <li>",
+        "            <strong>Practice 2:</strong>",
+        "            <p>Description of second practice...</p>",
+        "          </li>",
+        "        </ol>",
+        "      </BlogSection>",
+        "",
+        "      <BlogSection id=\"conclusion\" title=\"Conclusion\">",
+        "        <p>",
+        "          Concluding thoughts and next steps...",
+        "        </p>",
+        "",
+        "        <div className=\"next-steps\">",
+        "          <h3>Further Reading</h3>",
+        "          <div className=\"resource-links\">",
+        "            <Link to=\"/blogs/{category-path}/related-1\" className=\"resource-link\">",
+        "              Related Topic 1 →",
+        "            </Link>",
+        "            <Link to=\"/blogs/{category-path}/related-2\" className=\"resource-link\">",
+        "              Related Topic 2 →",
+        "            </Link>",
+        "          </div>",
+        "        </div>",
+        "      </BlogSection>"
+      ]
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "title": "Example Blog Title",
+    "author": "Author Name",
+    "date": "Month DD, YYYY",
+    "category": "category-name",
+    "tags": ["tag1", "tag2"],
+    "readTime": "X min",
+    "excerpt": "Brief description of the blog post"
+  },
+  "structure": {
+    "tableOfContents": [
+      { "id": "introduction", "title": "Introduction" },
+      { "id": "key-concepts", "title": "Key Concepts" },
+      { "id": "implementation", "title": "Implementation" },
+      { "id": "best-practices", "title": "Best Practices" },
+      { "id": "conclusion", "title": "Conclusion" }
+    ]
+  },
+  "content": {
+    "introduction": {
+      "text": "Opening paragraph that introduces the topic...",
+      "keyPoints": [
+        "First key point about the topic",
+        "Second key point about the topic",
+        "Third important consideration"
+      ],
+      "infoBox": {
+        "type": "note",
+        "title": "Key Takeaways",
+        "content": [
+          "First key point",
+          "Second key point",
+          "Third key point"
+        ]
+      }
+    },
+    "key-concepts": {
+      "title": "Key Concepts",
+      "sections": [
+        {
+          "heading": "Core Concepts",
+          "content": "Description of core concepts...",
+          "infoBox": {
+            "type": "tip",
+            "title": "Important Concepts",
+            "content": [
+              "Concept 1",
+              "Concept 2",
+              "Concept 3"
+            ]
+          }
+        }
+      ]
+    },
+    "implementation": {
+      "title": "Implementation",
+      "sections": [
+        {
+          "heading": "Implementation Guide",
+          "content": "Implementation steps and guidance...",
+          "infoBox": {
+            "type": "warning",
+            "title": "Important Considerations",
+            "content": [
+              "Consideration 1",
+              "Consideration 2",
+              "Consideration 3"
+            ]
+          }
+        }
+      ]
+    },
+    "best-practices": {
+      "title": "Best Practices",
+      "sections": [
+        {
+          "heading": "Recommended Practices",
+          "practices": [
+            {
+              "title": "Practice 1",
+              "description": "Description of first practice..."
+            },
+            {
+              "title": "Practice 2",
+              "description": "Description of second practice..."
+            }
+          ]
+        }
+      ]
+    },
+    "conclusion": {
+      "title": "Conclusion",
+      "content": "Concluding thoughts and next steps...",
+      "furtherReading": [
+        {
+          "title": "Related Topic 1",
+          "link": "/blogs/category-name/related-1"
+        },
+        {
+          "title": "Related Topic 2",
+          "link": "/blogs/category-name/related-2"
+        }
+      ]
+    }
+  },
+  "styling": {
+    "customClasses": {
+      "images": "blog-image",
+      "resourceLinks": "resource-links",
+      "resourceLink": "resource-link"
+    }
+  }
+}
