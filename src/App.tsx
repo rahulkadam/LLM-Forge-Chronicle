@@ -124,11 +124,11 @@ const AppContent: React.FC = () => {
           <Route path="/blogs/models/chatgpt" element={<ChatGPTModelGuide />} />
           <Route path="/blogs/models/claude" element={<ClaudeModelGuide />} />
           <Route path="/blogs/models/gemini" element={<GeminiModelGuide />} />
-                              <Route path="/blogs/models/tokenizers" element={<TokenizersVocabulary />} />
+          <Route path="/blogs/models/tokenizers" element={<TokenizersVocabulary />} />
           <Route path="/blogs/models/quantization" element={<QuantizationBasics />} />
-                    <Route path="/blogs/models/selection" element={<ModelSelectionGuide />} />
+          <Route path="/blogs/models/selection" element={<ModelSelectionGuide />} />
           <Route path="/blogs/models/overview" element={<LLMOverview />} />
-                    <Route path="/blogs/models/open-source" element={<OpenSourceEcosystem />} />
+          <Route path="/blogs/models/open-source" element={<OpenSourceEcosystem />} />
           <Route path="/blogs/models/grok" element={<GrokModelGuide />} />
           <Route path="/blogs/models/deepseek" element={<DeepSeekModelGuide />} />
           <Route path="/blogs/models/mistral" element={<MistralModelGuide />} />
