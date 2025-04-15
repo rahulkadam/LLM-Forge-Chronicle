@@ -10,8 +10,6 @@ mkdir src/pages/blogs/[category]/[blog-name]
 
 ### Step 2: Create Required Files
 1. Main Blog File (`[blog-name].tsx`)
-2. Optional CSS File (`[blog-name].css`)
-3. Optional Assets Directory (`assets/`)
 
 ### Step 3: Basic Template Structure
 ```typescript
@@ -20,7 +18,7 @@ import "../../../styles/blogs/blog-base-style.css";
 import BlogTemplate from '../../../components/blogs/BlogTemplate';
 import { BlogSection, InfoBox } from '../../../components/blogs/BlogComponents';
 import type { BlogCategory } from '../../../data/blogData';
-import './[blog-name].css';  // If needed
+import CodeExample from '../../../../components/blogs/CodeExample';
 
 const BlogComponent: React.FC = () => {
   const tableOfContents = [
@@ -120,7 +118,6 @@ export default BlogComponent;
 
 ### 4. Styling Guidelines
 - Use existing CSS classes from blog-base-style.css
-- Create blog-specific styles in separate CSS file
 - Follow responsive design patterns
 - Maintain consistent spacing
 
@@ -158,5 +155,11 @@ Before submitting a new blog:
 - [ ] Spelling and grammar checked
 
 
-import 'import {Link} from "react-router-dom";' when required,
-<BlogSection id="introduction" title={'Introduction'}> always missing title , add title also
+- Important point to consider, only make changes in 3 files
+  - create new blog-name.tsx file under blog-name directory src/pages/blogs/[category]/[blog-name]
+  - add blog meta data in src/data/categories/[category].ts
+  - add route in App.tsx
+
+- Blog Content
+  - Add content based on topic, user should engage with content, if coding add some code related example
+  - if theory add some text, but it should not be too much , easy to read for user and engage

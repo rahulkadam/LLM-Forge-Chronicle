@@ -25,7 +25,11 @@ import LLMGettingStartedGuide from './pages/blogs/llm-fundamentals/llm-getting-s
 import LLMTechnologyGuide from "./pages/blogs/llm-fundamentals/llm-terms-guide/llm-technology-guide";
 import OpenAIApiGuide from './pages/blogs/llm-integration/openai-api-guide/openai-api-guide';
 import OpenRouterPlatformGuide from "./pages/blogs/llm-integration/openrouter-platform-guide/openrouter-platform-guide";
+import ChainComparison from './pages/blogs/llm-integration/chain-comparison/chain-comparison';
 
+import LangchainLlamaGuide from './pages/blogs/llm-integration/langchain-llama-guide/langchain-llama-guide';
+import EventDrivenLLM from './pages/blogs/llm-integration/event-driven/event-driven-llm';
+import BackendLLMIntegration from './pages/blogs/llm-integration/backend-integration/backend-llm-integration';
 import LLMOverview from './pages/blogs/llm-models/overview/llm-overview';
 import OpenSourceEcosystem from './pages/blogs/llm-models/open-source/open-source-ecosystem';
 import TokenizersVocabulary from './pages/blogs/llm-models/tokenizers/tokenizers-vocabulary';
@@ -68,6 +72,9 @@ import AIItTransformation from './pages/blogs/ai-driven-it/ai-transformation';
 import RAGTutorial from './pages/blogs/advance/rag-tutorial/rag-tutorial';
 import VectorDatabaseGuide from './pages/blogs/advance/vector-database-guide/vector-llm-guide';
 import ModelContextServer from './pages/blogs/advance/model-context-server/model-context-server';
+
+// LLM Integration
+import FrontendLLMIntegration from './pages/blogs/llm-integration/frontend-frameworks/frontend-llm-integration';
 
 // Tools & Framework
 import AITools from './pages/blogs/ai-tools/AITools';
@@ -152,6 +159,11 @@ const AppContent: React.FC = () => {
           {/* LLM Integration */}
           <Route path="/blogs/llm-integration/openai-api" element={<OpenAIApiGuide />} />
           <Route path="/blogs/llm-integration/openrouter" element={<OpenRouterPlatformGuide />} />
+          <Route path="/blogs/llm-integration/chain-comparison" element={<ChainComparison />} />
+          <Route path="/blogs/llm-integration/langchain-llama-guide" element={<LangchainLlamaGuide />} />
+          <Route path="/blogs/llm-integration/event-driven" element={<EventDrivenLLM />} />
+          <Route path="/blogs/llm-integration/backend-integration" element={<BackendLLMIntegration />} />
+          <Route path="/blogs/llm-integration/frontend-frameworks" element={<FrontendLLMIntegration />} />
 
           {/* Agents */}
           <Route path="/blogs/agents" element={<LLMAgent />} />

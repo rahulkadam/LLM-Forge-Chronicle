@@ -1,17 +1,66 @@
 import type { BlogPost } from '../types';
 
 export const llmIntegrationPosts: BlogPost[] = [
-{
-    id: 'openrouter',
+    {
+        id: 'frontend-llm-integration',
+        title: "Integrating LLMs in Frontend: React, Streamlit, and More",
+        excerpt: "Comprehensive guide to implementing LLM interfaces in different frontend frameworks.",
+        imageClass: 'frontend-llm-image',
+        tag: 'LLM Integration',
+        readingTime: '12 min read',
+        publishDate: 'April 15, 2025',
+        link: '/blogs/llm-integration/frontend-frameworks'
+    },
+    {
+        id: 'backend-llm-integration',
+        title: "LLM Integration in Backend Systems: Java, Python, and Node.js",
+        excerpt: "Learn how to integrate LLMs into backend systems using different programming languages.",
+        imageClass: 'backend-llm-image',
+        tag: 'LLM Integration',
+        readingTime: '15 min read',
+        publishDate: 'April 15, 2025',
+        link: '/blogs/llm-integration/backend-integration'
+    },
+    {
+        id: 'event-driven-llm',
+        title: "Event-Driven LLM Integration: Building Scalable AI Systems",
+        excerpt: "Learn how to build scalable LLM applications using event-driven architecture patterns.",
+        imageClass: 'event-driven-image',
+        tag: 'LLM Integration',
+        readingTime: '12 min read',
+        publishDate: 'April 15, 2025',
+        link: '/blogs/llm-integration/event-driven'
+    },
+    {
+        id: 'langchain-llama-guide',
+        title: "LangChain and LlamaIndex: Complete Integration Guide",
+        excerpt: "Learn how to effectively integrate LLMs using LangChain and LlamaIndex frameworks.",
+        imageClass: 'langchain-llama-image',
+        tag: 'LLM Integration',
+        readingTime: '15 min read',
+        publishDate: 'April 15, 2025',
+        link: '/blogs/llm-integration/langchain-llama-guide'
+    },
+    {
+        id: 'chain-comparison',
+        title: "Prompt Chaining vs Function Chaining: A Comprehensive Comparison",
+        excerpt: "Understanding different chaining approaches in LLM applications and their best use cases.",
+        imageClass: 'chain-comparison-image',
+        tag: 'LLM Integration',
+        readingTime: '10 min read',
+        publishDate: 'April 15, 2025',
+        link: '/blogs/llm-integration/chain-comparison'
+    },
+    {
+        id: 'openrouter',
         title: 'What is OpenRouter and Why Use It?',
-    excerpt: 'Explore how OpenRouter can give you access to multiple LLMs through a unified API.',
-    imageClass: 'openrouter-image',
-    tag: 'LLM Integration',
-    readingTime: '6 min read',
-    publishDate: 'April 7, 2025', // Ninth in sequence
-    link: '/blogs/llm-integration/openrouter'
-},
-    // Section 4: Technical Implementation
+        excerpt: 'Explore how OpenRouter can give you access to multiple LLMs through a unified API.',
+        imageClass: 'openrouter-image',
+        tag: 'LLM Integration',
+        readingTime: '6 min read',
+        publishDate: 'April 7, 2025',
+        link: '/blogs/llm-integration/openrouter'
+    },
     {
         id: 'openai-api',
         title: 'Connecting to OpenAI API: A Complete Guide',
@@ -19,7 +68,7 @@ export const llmIntegrationPosts: BlogPost[] = [
         imageClass: 'openai-image',
         tag: 'LLM Integration',
         readingTime: '8 min read',
-        publishDate: 'April 8, 2025', // Eighth in sequence
+        publishDate: 'April 8, 2025',
         link: '/blogs/llm-integration/openai-api'
     },
 ];
