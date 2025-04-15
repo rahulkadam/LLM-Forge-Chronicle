@@ -16,24 +16,6 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ id, title, children })
   );
 };
 
-// Blog Code Example Component
-interface CodeExampleProps {
-  code: string;
-  language?: string;
-}
-
-export const CodeExample: React.FC<CodeExampleProps> = ({ code, language = '' }) => {
-  return (
-    <div className="code-example">
-      <pre>
-        <code className={language ? `language-${language}` : ''}>
-          {code}
-        </code>
-      </pre>
-    </div>
-  );
-};
-
 // Blog Card Grid
 interface CardGridProps {
   children: ReactNode;

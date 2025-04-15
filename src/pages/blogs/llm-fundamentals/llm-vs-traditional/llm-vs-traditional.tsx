@@ -1,7 +1,8 @@
 import React from 'react';
 import "../../../../styles/blogs/blog-base-style.css";
 import BlogTemplate from '../../../../components/blogs/BlogTemplate';
-import { BlogSection, InfoBox, CodeExample } from '../../../../components/blogs/BlogComponents';
+import { BlogSection, InfoBox } from '../../../../components/blogs/BlogComponents';
+import CodeExample from '../../../../components/blogs/CodeExample';
 import type { BlogCategory } from '../../../../data/blogData';
 import './llm-vs-traditional.css';
 import {Link} from "react-router-dom";
