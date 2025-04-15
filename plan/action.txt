@@ -1,0 +1,9 @@
+LLMs in Development everyday
+LLMs in DevOps & IT Automation
+Generating Configs, Scripts, YAMLs with AI
+IT Chatbots & Internal Support Agents
+AI in Log Analysis and Monitoring
+Incident Detection & Root Cause Summarization
+AI for Knowledge Base & Documentation
+LLMs + APIs for Infrastructure Tasks
+

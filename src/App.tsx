@@ -55,6 +55,11 @@ import PromptEngineeringIntermediate from './pages/blogs/prompt-engineering/inte
 import PromptEngineeringAdvanced from './pages/blogs/prompt-engineering/advanced';
 import DeveloperPromptGuide from './pages/blogs/prompt-engineering/developer-prompts';
 
+import AgentFunctionCalling from './pages/blogs/agents/function-calling/agent-function-calling';
+import AgentArchitectures from './pages/blogs/agents/architectures/agent-architectures';
+import AgentMemory from './pages/blogs/agents/memory/agent-memory';
+import AgentToolsFrameworks from './pages/blogs/agents/tools-frameworks/agent-tools-frameworks';
+import AgentEvaluation from './pages/blogs/agents/evaluation/agent-evaluation';
 import LLMAgentsIntro from './pages/blogs/agents/introduction/llm-agents-intro';
 // Agents
 import LLMAgent from './pages/blogs/agents/llm-agent-guide/LLMAgent';
@@ -173,7 +178,13 @@ const AppContent: React.FC = () => {
 
           {/* Agents */}
           <Route path="/blogs/agents" element={<LLMAgent />} />
-                    <Route path="/blogs/agents/what-are-agents" element={<LLMAgentsIntro />} />
+                    <Route path="/blogs/agents/function-calling" element={<AgentFunctionCalling />} />
+          <Route path="/blogs/agents/architectures" element={<AgentArchitectures />} />
+          <Route path="/blogs/agents/memory" element={<AgentMemory />} />
+          <Route path="/blogs/agents/tools-frameworks" element={<AgentToolsFrameworks />} />
+          <Route path="/blogs/agents/evaluation" element={<AgentEvaluation />} />
+          <Route path="/blogs/agents/multi-agent-collaboration" element={<MultiAgentSystems />} />
+          <Route path="/blogs/agents/what-are-agents" element={<LLMAgentsIntro />} />
           <Route path="/blogs/agents/introduction" element={<LLMAgent />} />
           <Route path="/blogs/agents/building-guide" element={<BuildingLLMAgent />} />
           <Route path="/blogs/agents/basics" element={<BasicLLMAgent />} />
