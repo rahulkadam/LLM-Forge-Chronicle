@@ -71,6 +71,10 @@ import AthleteInsightAI from './pages/blogs/agents/AthleteInsightAI';
 import MarketMindAI from './pages/blogs/agents/MarketMindAI';
 
 // AI-Driven IT
+import LLMsDailyDev from './pages/blogs/ai-driven-it/daily-development/llms-daily-dev';
+import ITSupportAgents from './pages/blogs/ai-driven-it/support-agents/it-support-agents';
+import LogAnalysisAI from './pages/blogs/ai-driven-it/log-analysis/log-analysis-ai';
+import IncidentDetection from './pages/blogs/ai-driven-it/incident-detection/incident-detection';
 import DeveloperEfficiency from './pages/blogs/ai-driven-it/developer-efficiency';
 import CodeMigrationLLM from './pages/blogs/ai-driven-it/code-migration';
 import EnterpriseIntegrations from './pages/blogs/ai-driven-it/enterprise-integrations';
@@ -196,6 +200,10 @@ const AppContent: React.FC = () => {
 
           {/* AI-Driven IT */}
           <Route path="/blogs/ai-it" element={<DeveloperEfficiency />} />
+          <Route path="/blogs/ai-it/daily-development" element={<LLMsDailyDev />} />
+          <Route path="/blogs/ai-it/support-agents" element={<ITSupportAgents />} />
+          <Route path="/blogs/ai-it/log-analysis" element={<LogAnalysisAI />} />
+          <Route path="/blogs/ai-it/incident-detection" element={<IncidentDetection />} />
           <Route path="/blogs/ai-it/developer-efficiency" element={<DeveloperEfficiency />} />
           <Route path="/blogs/ai-it/code-migration" element={<CodeMigrationLLM />} />
           <Route path="/blogs/ai-it/enterprise-integrations" element={<EnterpriseIntegrations />} />
