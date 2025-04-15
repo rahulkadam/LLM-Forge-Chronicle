@@ -27,9 +27,12 @@ import OpenAIApiGuide from './pages/blogs/llm-integration/openai-api-guide/opena
 import OpenRouterPlatformGuide from "./pages/blogs/llm-integration/openrouter-platform-guide/openrouter-platform-guide";
 import ChainComparison from './pages/blogs/llm-integration/chain-comparison/chain-comparison';
 
+import SpringAIMCP from './pages/blogs/llm-integration/spring-ai-mcp/spring-ai-mcp';
 import LangchainLlamaGuide from './pages/blogs/llm-integration/langchain-llama-guide/langchain-llama-guide';
 import EventDrivenLLM from './pages/blogs/llm-integration/event-driven/event-driven-llm';
 import BackendLLMIntegration from './pages/blogs/llm-integration/backend-integration/backend-llm-integration';
+import ExternalAPIIntegration from './pages/blogs/llm-integration/external-apis/external-api-integration';
+import VertexAIGenAI from './pages/blogs/llm-integration/vertex-ai/vertex-ai-genai';
 import LLMOverview from './pages/blogs/llm-models/overview/llm-overview';
 import OpenSourceEcosystem from './pages/blogs/llm-models/open-source/open-source-ecosystem';
 import TokenizersVocabulary from './pages/blogs/llm-models/tokenizers/tokenizers-vocabulary';
@@ -157,12 +160,15 @@ const AppContent: React.FC = () => {
           <Route path="/blogs/prompts/optimization" element={<PromptOptimization />} />
 
           {/* LLM Integration */}
+          <Route path="/blogs/llm-integration/spring-ai-mcp" element={<SpringAIMCP />} />
           <Route path="/blogs/llm-integration/openai-api" element={<OpenAIApiGuide />} />
           <Route path="/blogs/llm-integration/openrouter" element={<OpenRouterPlatformGuide />} />
           <Route path="/blogs/llm-integration/chain-comparison" element={<ChainComparison />} />
           <Route path="/blogs/llm-integration/langchain-llama-guide" element={<LangchainLlamaGuide />} />
           <Route path="/blogs/llm-integration/event-driven" element={<EventDrivenLLM />} />
           <Route path="/blogs/llm-integration/backend-integration" element={<BackendLLMIntegration />} />
+          <Route path="/blogs/llm-integration/external-apis" element={<ExternalAPIIntegration />} />
+          <Route path="/blogs/llm-integration/vertex-ai" element={<VertexAIGenAI />} />
           <Route path="/blogs/llm-integration/frontend-frameworks" element={<FrontendLLMIntegration />} />
 
           {/* Agents */}

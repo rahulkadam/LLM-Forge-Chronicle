@@ -12,6 +12,26 @@ export const llmIntegrationPosts: BlogPost[] = [
         link: '/blogs/llm-integration/frontend-frameworks'
     },
     {
+        id: 'spring-ai-mcp',
+        title: 'Spring AI MCP Server: Multi-LLM Management Made Easy',
+        excerpt: 'Learn how to implement and manage multiple LLMs using Spring AI\'s Model Control Plane (MCP) server.',
+        imageClass: 'spring-ai-image',
+        tag: 'LLM Integration',
+        readingTime: '8 min read',
+        publishDate: 'April 15, 2025',
+        link: '/blogs/llm-integration/spring-ai-mcp'
+    },
+    {
+        id: 'vertex-ai-genai',
+        title: "Google Vertex AI GenAI SDK Integration Guide",
+        excerpt: "Learn how to integrate Google's Vertex AI GenAI SDK for text, image, and chat capabilities.",
+        imageClass: 'vertex-ai-image',
+        tag: 'LLM Integration',
+        readingTime: '15 min read',
+        publishDate: 'April 15, 2025',
+        link: '/blogs/llm-integration/vertex-ai'
+    },
+    {
         id: 'backend-llm-integration',
         title: "LLM Integration in Backend Systems: Java, Python, and Node.js",
         excerpt: "Learn how to integrate LLMs into backend systems using different programming languages.",
@@ -20,6 +40,16 @@ export const llmIntegrationPosts: BlogPost[] = [
         readingTime: '15 min read',
         publishDate: 'April 15, 2025',
         link: '/blogs/llm-integration/backend-integration'
+    },
+    {
+        id: 'external-api-integration',
+        title: "Connecting LLMs with External APIs & Tools",
+        excerpt: "Learn how to integrate LLMs with external APIs and tools for enhanced functionality.",
+        imageClass: 'external-api-image',
+        tag: 'LLM Integration',
+        readingTime: '12 min read',
+        publishDate: 'April 15, 2025',
+        link: '/blogs/llm-integration/external-apis'
     },
     {
         id: 'event-driven-llm',
