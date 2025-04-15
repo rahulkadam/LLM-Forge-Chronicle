@@ -70,5 +70,15 @@ export const llmModelsPosts: BlogPost[] = [
     readingTime: '10 min read',
     publishDate: 'April 7, 2025',
     link: '/blogs/models/gemini'
-  }
+  },
+  {
+    id: 'chatgpt-guide',
+    title: 'Mastering ChatGPT: A Comprehensive Guide',
+    excerpt: 'Deep dive into ChatGPT capabilities, best practices, and advanced techniques for optimal usage.',
+    imageClass: 'chatgpt-guide-image',
+    tag: 'LLM Models',
+    readingTime: '10 min read',
+    publishDate: 'April 9, 2025', // Seventh in sequence
+    link: '/blogs/models/chatgpt-guide'
+  },
 ];

@@ -17,8 +17,8 @@ import LLMvsTraditional from './pages/blogs/llm-fundamentals/llm-vs-traditional/
 import LLMUseCases from './pages/blogs/llm-fundamentals/llm-use-cases/llm-use-cases';
 import LLMTrainingApproaches from './pages/blogs/llm-fundamentals/training-approaches/training-approaches';
 import HowLLMsWork from './pages/blogs/llm-fundamentals/how-llms-work/how-llms-work';
-import LLMIntroduction from './pages/blogs/llm-fundamentals/introduction';
-import ChatGPTBlogGuide from './pages/blogs/llm-fundamentals/chatgpt-guide';
+import LLMIntroduction from './pages/blogs/llm-fundamentals/llm-introduction';
+import ChatGPTBlogGuide from './pages/blogs/llm-models/chatgpt-guide';
 import LLMCapabilities from './pages/blogs/llm-fundamentals/capabilities';
 import DeveloperQuickStart from './pages/blogs/llm-fundamentals/developer-quick-start';
 import LLMGettingStartedGuide from './pages/blogs/llm-fundamentals/llm-getting-started-guide/llm-getting-started-guide';
@@ -109,10 +109,8 @@ const AppContent: React.FC = () => {
           <Route path="/blogs/fundamentals/introduction" element={<LLMIntroduction />} />
           <Route path="/blogs/fundamentals/getting-started" element={<LLMGettingStartedGuide />} />
           <Route path="/blogs/fundamentals/terminology" element={<LLMTechnologyGuide />} />
-          <Route path="/blogs/fundamentals/openai-api" element={<OpenAIApiGuide />} />
-          <Route path="/blogs/fundamentals/openrouter" element={<OpenRouterPlatformGuide />} />
           <Route path="/blogs/fundamentals/developer-start" element={<DeveloperQuickStart />} />
-          <Route path="/blogs/fundamentals/chatgpt-guide" element={<ChatGPTBlogGuide />} />
+          <Route path="/blogs/models/chatgpt-guide" element={<ChatGPTBlogGuide />} />
           <Route path="/blogs/fundamentals/capabilities" element={<LLMCapabilities />} />
           <Route path="/blogs/fundamentals/how-llms-work" element={<HowLLMsWork />} />
           <Route path="/blogs/fundamentals/training-approaches" element={<LLMTrainingApproaches />} />
@@ -150,6 +148,10 @@ const AppContent: React.FC = () => {
           <Route path="/blogs/prompts/templates" element={<PromptTemplates />} />
           <Route path="/blogs/prompts/debugging" element={<PromptDebugging />} />
           <Route path="/blogs/prompts/optimization" element={<PromptOptimization />} />
+
+          {/* LLM Integration */}
+          <Route path="/blogs/llm-integration/openai-api" element={<OpenAIApiGuide />} />
+          <Route path="/blogs/llm-integration/openrouter" element={<OpenRouterPlatformGuide />} />
 
           {/* Agents */}
           <Route path="/blogs/agents" element={<LLMAgent />} />

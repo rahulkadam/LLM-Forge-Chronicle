@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import BlogTemplate from '../../../../components/blogs/BlogTemplate';
 import { BlogSection, Card } from '../../../../components/blogs/BlogComponents';
 import useBlogBehavior from '../../../../hooks/useBlogBehavior';
-import './llm-term-guide.css'; // Import the custom styles for this blog
 
 const LLMTerminology: React.FC = () => {
   // Use the blog behavior hook

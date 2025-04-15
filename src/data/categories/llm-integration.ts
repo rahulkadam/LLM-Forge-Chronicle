@@ -9,7 +9,7 @@ export const llmIntegrationPosts: BlogPost[] = [
     tag: 'LLM Integration',
     readingTime: '6 min read',
     publishDate: 'April 7, 2025', // Ninth in sequence
-    link: '/blogs/fundamentals/openrouter'
+    link: '/blogs/llm-integration/openrouter'
 },
     // Section 4: Technical Implementation
     {
@@ -20,6 +20,6 @@ export const llmIntegrationPosts: BlogPost[] = [
         tag: 'LLM Integration',
         readingTime: '8 min read',
         publishDate: 'April 8, 2025', // Eighth in sequence
-        link: '/blogs/fundamentals/openai-api'
+        link: '/blogs/llm-integration/openai-api'
     },
 ];

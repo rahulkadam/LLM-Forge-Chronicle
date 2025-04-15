@@ -150,7 +150,7 @@ const LLMFundamentals: React.FC = () => {
         <section className="resources">
           <h2>Next Steps in Your Learning</h2>
           <div className="resource-links">
-            <a href="/blogs/llm-fundamentals/chatgpt-guide" className="resource-link">
+            <a href="/blogs/llm-models/chatgpt-guide" className="resource-link">
               ChatGPT Guide for Beginners →
             </a>
             <a href="/prompt-engineering" className="resource-link">

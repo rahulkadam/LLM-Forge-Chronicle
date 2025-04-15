@@ -66,16 +66,6 @@ export const fundamentalsPosts: BlogPost[] = [
     publishDate: 'April 10, 2025', // Sixth in sequence
     link: '/blogs/fundamentals/use-cases'
   },
-  {
-    id: 'chatgpt-guide',
-    title: 'Mastering ChatGPT: A Comprehensive Guide',
-    excerpt: 'Deep dive into ChatGPT capabilities, best practices, and advanced techniques for optimal usage.',
-    imageClass: 'chatgpt-guide-image',
-    tag: 'Fundamentals',
-    readingTime: '10 min read',
-    publishDate: 'April 9, 2025', // Seventh in sequence
-    link: '/blogs/fundamentals/chatgpt-guide'
-  },
   
   // Section 5: Advanced Topics
   {
